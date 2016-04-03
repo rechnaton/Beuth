@@ -2,7 +2,7 @@
 <resources>
 
     <string name="app_name">BeuthSoftwareProject</string>
-    <string name="einleitung">Willkommen bei CheatSheets!</string>
+    <string name="einleitung">Willkommen bei PEAT!</string>
     <string name="StarteQuiz">Nächste Frage</string>
     <string name="Score">Antwort</string>
     <string name="action_settings">Settings</string>
