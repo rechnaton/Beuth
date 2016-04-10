@@ -1,0 +1,17 @@
+# Expose
+- Projektziel
+  - Leistungsumfang
+  - Muss-Kriterien
+  - Kann-Kriterien
+  - Abgrenzungskriterien
+- Erforderliche Arbeitsschritte
+  - Ist- und Soll-Analyse
+  - Erstellung des Anforderungskataloges
+- Marktanalyse
+- Projektablauf
+  - Projektstart - Kick-Off
+  - Projektablauf
+  - Projektdauer
+- Arbeitsschritte im Gantt-Diagramm
+- Projektkommunikation
+- Statusberichte
