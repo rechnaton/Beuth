@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Peat</string>
+    <string name="app_name">#peat</string>
     <string name="einleitung">Spielend lernen! Nie wieder vergessen!</string>
     <string name="StarteQuiz">Nächste Frage</string>
     <string name="Score">Antwort</string>
