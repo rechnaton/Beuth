@@ -1,15 +1,14 @@
-1) Titel
-Exposé zum Softwaretechnik-Projekt
+#Exposé zum Softwaretechnik-Projekt
 Beuth Hochschule, Wirtschaftsinformatik, 4. Semester
 
 --------------------------------------------------
 
-2) Projektname
-#peat
+1) Projektname: #peat
 
 --------------------------------------------------
 
-3) Stammdaten
+2) Stammdaten
+
 a) Gruppenmitglieder
 - Thomas Ricklinkat (s58372@beuth-hochschule.de, Matr.-Nr. 821644)
 - Andreas Mosig (s58395@beuth-hochschule.de, Matr.-Nr. 817272)
@@ -29,15 +28,16 @@ Darüber hinaus verfügt jede Projektgruppe ihren eigenen, prorjektinternen Slack-
 	
 --------------------------------------------------
 
-4) Kurzbeschreibung
+3) Kurzbeschreibung
+
 Lernapp #peat (Android App, ggf. auch Web).
 
-Erlerntes spielend wiederholen und nie wieder vergessen!
-#peat hilft dir, dein erworbenes Wissen durch intelligente Wiederholung zu verfestigen und damit ins Langzeitgedächtnis zu überführen. Und das funktioniert so: hinterlege in deinem Account offene oder geschlossene Fragen zu verschiedenen Themenbereichen sowie deren Antwortmöglichkeiten und sage #peat, wann bzw. wie häufig dich #peat abfragen soll. Fertig. #peat fragt dich ab sofort bequem per Push-Notification auf deinem Smartphone ab und du kannst die Frage direkt beantworten oder ignorieren. Am Ende des Tages kannst du dir deinen Lernerfolg darstellen lassen. Re #peat!
+Erlerntes spielend wiederholen und nie wieder vergessen! #peat hilft dir, dein erworbenes Wissen durch intelligente Wiederholung zu verfestigen und damit ins Langzeitgedächtnis zu überführen. Und das funktioniert so: hinterlege in deinem Account offene oder geschlossene Fragen zu verschiedenen Themenbereichen sowie deren Antwortmöglichkeiten und sage #peat, wann bzw. wie häufig dich #peat abfragen soll. Fertig. #peat fragt dich ab sofort bequem per Push-Notification auf deinem Smartphone ab und du kannst die Frage direkt beantworten oder ignorieren. Am Ende des Tages kannst du dir deinen Lernerfolg darstellen lassen. Re #peat!
 
 --------------------------------------------------
 
-5) Projektziel & detaillierte Projektbeschreibung
+4) Projektziel & detaillierte Projektbeschreibung
+
 Ausgehend von unserer Implementierungsidee einer Lernapp ergeben sich folgende Fragen hinsichtlich der Lösung und Umsetzung:
 
 a) Inhaltliche Fragen (Ist-Analyse)
@@ -61,7 +61,8 @@ c) Projektbezogene Belange: siehe Punkt 7).
 
 --------------------------------------------------
 
-6) Lösungsweg und Entwicklung
+5) Lösungsweg und Entwicklung
+
 a) Werkzeuge
 - Für die verschiedenen Komponenten und Schnittstellen sind unterschiedliche Technologien und Werkzeuge notwendig. Zum Entwickeln der Android-App in Java möchten wir Eclipse sowie dafür notwendige Plugins (Android Suite oder alternativ SDK/AVD, JUnit, etc.) verwenden. Für die Weboberfläche wird ein Webframework benötigt. Aktuell tendieren wir zu Bootstrap, ein auf CSS/LESS und JavaScript basierendes UI-Framework. Für diverse Funktionaltitäten, wie Bentnutzerkontensteuerung und Authentifizierung sind gegebenfalls andere Frameworks und zusätlich ein Content Management System notwendig, deren Notwendigkeit uns aber Stand heute noch unbekannt ist (Ruby on Rails, Silverstripe). Für die Erstellung des konzeptuellen und logischen Datenbankschemas werden wir DBDesignerFork verwenden und erzeugen daraus das entsprechende MySQL-DDL-Skript. Offen ist noch, wo wir mittels dieses Skripts die Datenbank aufsetzen. Möglich sind die Bereitstellung von Ressourcen seitens der Beuth Hochschule (Frage an Sie), die Anschaffung eines eigenen Webservers (SAAS - Frage Kosten?), oder die lokale Einrichtung eines Webservers (LAMP/XAMPP, Zugriff per DynDNS). Eine Anbindung an externe Webservices ist für unseren Prototypen nicht notwendig.
 
@@ -75,21 +76,22 @@ c) Architekturbild (Vision)
 	  	
 --------------------------------------------------
 
-7) Projektablauf
+6) Projektablauf
+
 a) Milestone-Plan
-Sprint 0) Semesterstart (29.03.2016)
-Sprint 1) Projekt-KickOff E-Mail durch den BA (DONE, 07.04.2016)
-Sprint 2) UML-Diagramme, Architekturbild, GUI-Entwurf (17.04.2016)
-Sprint 3) Exposé (17.04.2016)
-Sprint 4) Freigabe des Exposés/Projekts durch den BA
-Sprint 5) Erstellung des Datenbankschemas
-Sprint 6) Einrichten des Webservers inkl. Datenbank
-Sprint 7) Erzeugung des Prototypen (App)
-Sprint 8) Erzeugung des Prototypen (Web)
-Sprint 9) Programmierung und Tests der Komponenten
-Sprint 10) Fertigstellung der Enddokumentation
-Sprint 11) Abgabe und Präsentation
-Sprint 12) Entgegenahme des Preisgeldes :)
+- Sprint 0) Semesterstart (29.03.2016)
+- Sprint 1) Projekt-KickOff E-Mail durch den BA (DONE, 07.04.2016)
+- Sprint 2) UML-Diagramme, Architekturbild, GUI-Entwurf (17.04.2016)
+- Sprint 3) Exposé (17.04.2016)
+- Sprint 4) Freigabe des Exposés/Projekts durch den BA
+- Sprint 5) Erstellung des Datenbankschemas
+- Sprint 6) Einrichten des Webservers inkl. Datenbank
+- Sprint 7) Erzeugung des Prototypen (App)
+- Sprint 8) Erzeugung des Prototypen (Web)
+- Sprint 9) Programmierung und Tests der Komponenten
+- Sprint 10) Fertigstellung der Enddokumentation
+- Sprint 11) Abgabe und Präsentation
+- Sprint 12) Entgegenahme des Preisgeldes :)
 
 b) Projektkommunikation
 Es gibt regelmäßig Austausch mit dem BA: Minimum alle zwei Wochen. Dank der direkten Anbindung mittels zweier	Werkzeuge (Github, Slack) ist es möglich, ohne viel Aufwand und Wartezeit mit den Projektmitarbeitern und dem BA zu kommunizieren und eventuelle Anpassungen hinsichtlich der Terminabsprachen und Anforderungen an die Software vorzunehmen.
