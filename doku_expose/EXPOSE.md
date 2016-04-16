@@ -1,4 +1,21 @@
-# Expose (genauere Aufgabenbeschreibung (1 Seite) und dazu Fahrplan / Teilschritte, Architektur(bild!), Technologien)
+Exposé zum Softwaretechnik-Projekt
+Beuth Hochschule, Wirtschaftsinformatik, 4. Semester
+
+Projekt:
+	Peat
+
+Stammdaten:
+		
+	
+Kurzbeschreibung:
+	# Peat
+	Erlerntes spielend wiederholen und nie wieder vergessen!
+	
+	Peat hilft dir, dein erworbenes Wissen durch intelligente Wiederholung zu verfestigen und damit ins Langzeitgedächtnis zu überführen. Und das funktioniert so: hinterlege in deinem Account offene oder geschlossene Fragen zu verschiedenen Themenbereichen sowie deren Antwortmöglichkeiten und sage Peat, wann bzw. wie häufig dich Peat abfragen soll. Fertig.
+	
+	Peat fragt dich ab sofort bequem per Push-Notification auf deinem Smartphone ab und du kannst die Frage direkt beantworten oder ignorieren. Am Ende des Tages kannst du dir deinen Lernerfolg darstellen lassen.
+	
+	Re Peat!
 
 - Projektziel
 	Das Projektziel ist das Entwickeln einer Implementierungsidee für ein (virtuelles) Start-UP, hin zu
@@ -39,7 +56,7 @@
   - Erstellung des Anforderungskataloges
 	
 	
-  - Verwendete Technologien
+  - Verwendete Technologien und Werkzeuge
 	Verwendete Technologien sind Eclipse Luna (basierend auf JAVA) sowie diverse Android Plugins.
 	
 	Des Weiteren mussten Android SDK Tools installiert werden, welche unter anderem einen Emulator enthalten, über welchen sich diverse
@@ -65,6 +82,8 @@
 	Eine erste Entwicklung hat testhalber bereits stattgefunden, um sich mit der Entwicklung von Android-Apps vertraut zu machen.
 	Nach den ersten Gesprächen mit dem Auftraggeber wurden einige Werkzeuge für unnötig erklärt und mit dem Verfassen des Exposés
 	begonnen.
+	
+  - Arbeitsschritte
 	Im Zuge des Verfassens des Exposés wurden die Aufgaben für die einzelnen Projektmitarbeiter besprochen und wie folgt verabschiedet:
 
 	Thomas Ricklinkat:
@@ -75,20 +94,20 @@
 	- (bis .2016)
 	- (bis .2016)
 
-  - Projektablauf
+  - Projektdauer
+	Die Dauer des Projektes beträgt 3,5 Monate und endet demnach in der ersten Monatshälfte im Juli.
+
+- Milestoneplan
 	
+	
+- Projektkommunikation
 	Es gibt regelmäßig Austausch mit dem Auftraggeber: Minimum alle zwei Wochen. Dank der direkten Anbindung mittels zweier
 	Werkzeuge (Github, Slack) ist es möglich, ohne viel Aufwand und Wartezeit mit den Projektmitarbeitern und dem Auftraggeber
 	zu kommunizieren und eventuelle Anpassungen hinsichtlich der Terminabsprachen und Anforderungen an die Software vorzunehmen.
 
-  - Projektdauer
-	Die Dauer des Projektes beträgt 3,5 Monate und endet demnach in der ersten Monatshälfte im Juli.
-
-- Arbeitsschritte (im Gantt-Diagramm)
-	
-- Projektkommunikation
-	Die Projektkommunikation findet via der bereits erwähnten Technologien Github und Slack statt.
-
 - Statusberichte
 	Statusberichte werden alle ein bis zwei Wochen per E-Mail an Herrn Prof. Dr. Edlich samt der Verlinkungen zu den bereits
 	angesprochenen Tools geschickt.
+
+- Architekturbild
+	
