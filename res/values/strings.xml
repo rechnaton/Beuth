@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">BeuthSoftwareProject</string>
-    <string name="einleitung">Willkommen bei PEAT!</string>
+    <string name="app_name">#peat</string>
+    <string name="einleitung">Spielend lernen! Nie wieder vergessen!</string>
     <string name="StarteQuiz">Nächste Frage</string>
     <string name="Score">Antwort</string>
-    <string name="action_settings">Settings</string>
+    <string name="action_settings">Einstellungen</string>
     
 </resources>
