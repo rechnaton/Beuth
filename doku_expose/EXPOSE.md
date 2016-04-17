@@ -71,9 +71,9 @@ b) Vorgehensweise
 
 c) Architekturbild (Vision)
 - Bei unserem System handelt es sich um eine Client-Server-Architektur, mit Thin Client (Webbrowser) und einem Rich Client (Android App). Um die Systemarchitektur abzubilden, wurden sowohl ein Komponenten- als auch ein Deploymentdiagramm erstellt:
-Deployment-Diagramm: https://github.com/rechnaton/Beuth/blob/master/doku_expose/peat-deployment.png
-Paket-Diagramm: https://github.com/rechnaton/Beuth/blob/master/doku_expose/peat-package.png
-Komponenten-Diagramm: https://github.com/rechnaton/Beuth/blob/master/doku_expose/peat-component.png
+-- Deployment-Diagramm: https://github.com/rechnaton/Beuth/blob/master/doku_expose/peat-deployment.png
+-- Paket-Diagramm: https://github.com/rechnaton/Beuth/blob/master/doku_expose/peat-package.png
+-- Komponenten-Diagramm: https://github.com/rechnaton/Beuth/blob/master/doku_expose/peat-component.png
 Daraus ergibt sich eine typische Mehrschichtenarchitektur (N-Tier) mit UI, Logiken, Persistenz/Datenbank.
 	  	
 --------------------------------------------------
