@@ -14,13 +14,13 @@ a) Gruppenmitglieder
 - Andreas Mosig (s58395@beuth-hochschule.de, Matr.-Nr. 817272)
 	
 b) Projektdauer
-Die Dauer des Projektes beträgt 3,5 Monate und endet demnach in der ersten Monatshälfte im Juli.
+- Die Dauer des Projektes beträgt 3,5 Monate und endet demnach in der ersten Monatshälfte im Juli.
 
 c) Projektmanagement-Werkzeuge
 - Für den allgemeinen Austauch und für die Projekt- sowie interne Kommunikation mit dem Auftraggeber (Business Angel, im Nachfolgenden BA genannt) und allen Kommilitonen, wurde eine allgemein zugängliche Slack-Gruppe zu http://beuthswtprojekt.slack.com vom BA eingerichtet.
 Darüber hinaus verfügt jede Projektgruppe ihren eigenen, prorjektinternen Slack-Kanal. Für unser Projekt ist es der Kanal "peat".
 
-- Das Projektmanagement findet via asana.com (https://app.asana.com/0/105766113985042/105766113985043), welches synchron mit unserem Slack-Kanal verbunden ist. Jegliche asana-Kommunikation ist im Slack-Kanal nachvollziehbar.
+- Das Projektmanagement findet via asana.com statt (https://app.asana.com/0/105766113985042/105766113985043), welches synchron mit unserem Slack-Kanal verbunden ist. Jegliche asana-Kommunikation ist im Slack-Kanal nachvollziehbar.
 
 - Für die agile Software-Entwicklung mit Scrum arbeiten wir mit easyBacklog.
 
@@ -57,7 +57,7 @@ Siehe hierzu Deployment.png.
 
 - Das entwickelte theoretische Konzept mündet schlussendlich im Design respektive in der Entwicklung eines explorativen Prototyps.
 
-c) Projektbezogene Belange: siehe Punkt 7).
+c) Projektbezogene Belange: siehe Punkt 6).
 
 --------------------------------------------------
 
@@ -94,6 +94,6 @@ a) Milestone-Plan
 - Sprint 12) Entgegenahme des Preisgeldes :)
 
 b) Projektkommunikation
-Es gibt regelmäßig Austausch mit dem BA: Minimum alle zwei Wochen. Dank der direkten Anbindung mittels zweier	Werkzeuge (Github, Slack) ist es möglich, ohne viel Aufwand und Wartezeit mit den Projektmitarbeitern und dem BA zu kommunizieren und eventuelle Anpassungen hinsichtlich der Terminabsprachen und Anforderungen an die Software vorzunehmen.
+- Es gibt regelmäßig Austausch mit dem BA: Minimum alle zwei Wochen. Dank der direkten Anbindung mittels zweier	Werkzeuge (Github, Slack) ist es möglich, ohne viel Aufwand und Wartezeit mit den Projektmitarbeitern und dem BA zu kommunizieren und eventuelle Anpassungen hinsichtlich der Terminabsprachen und Anforderungen an die Software vorzunehmen.
 
 c) Statusberichte werden alle ein bis zwei Wochen per E-Mail an Herrn Prof. Dr. Edlich samt der Verlinkungen zu den bereits angesprochenen Tools geschickt.
