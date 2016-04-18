@@ -1,5 +1,5 @@
-#ExposÃ© zum Softwaretechnik-Projekt
-Beuth Hochschule fÃ¼r Technik Berlin, Wirtschaftsinformatik, 4. Semester, SS2016
+#Exposé zum Softwaretechnik-Projekt
+Beuth Hochschule für Technik Berlin, Wirtschaftsinformatik, 4. Semester, Sommersemester 2016
 
 --------------------------------------------------
 
@@ -14,12 +14,12 @@ a) Gruppenmitglieder
 - Andreas Mosig (s58395@beuth-hochschule.de, Matr.-Nr. 817272)
 	
 b) Projektdauer
-Die Dauer des Projektes betrÃ¤gt 3,5 Monate und endet demnach in der ersten MonatshÃ¤lfte im Juli.
+- Die Dauer des Projektes beträgt 3,5 Monate und endet demnach in der ersten Monatshälfte im Juli.
 
 c) Projektmanagement-Werkzeuge
-- FÃ¼r den allgemeinen Austauch und fÃ¼r die Projekt- sowie interne Kommunikation mit dem Auftraggeber (Business Angel, im Nachfolgenden BA genannt) und allen Kommilitonen, wurde eine allgemein zugÃ¤ngliche Slack-Gruppe zu http://beuthswtprojekt.slack.com vom BA eingerichtet. DarÃ¼ber hinaus verfÃ¼gt jede Projektgruppe ihren eigenen, prorjektinternen Slack-Kanal. FÃ¼r unser Projekt ist es der Kanal "peat".
+- Für den allgemeinen Austauch und für die Projekt- sowie interne Kommunikation mit dem Auftraggeber (Business Angel, im Nachfolgenden BA genannt) und allen Kommilitonen, wurde eine allgemein zugängliche Slack-Gruppe zu http://beuthswtprojekt.slack.com vom BA eingerichtet. Darüber hinaus verfügt jede Projektgruppe ihren eigenen, prorjektinternen Slack-Kanal. Für unser Projekt ist es der Kanal "peat".
 
-- Das Projektmanagement findet via asana.com (https://app.asana.com/0/105766113985042/105766113985043), welches mit unserem Slack-Kanal verbunden ist. Jegliche asana-Kommunikation ist im Slack-Kanal nachvollziehbar.
+- Das Projektmanagement findet via asana.com statt (https://app.asana.com/0/105766113985042/105766113985043), welches synchron mit unserem Slack-Kanal verbunden ist. Jegliche asana-Kommunikation ist im Slack-Kanal nachvollziehbar.
 
 - FÃ¼r die agile Software-Entwicklung mit Scrum arbeiten wir mit easyBacklog.
 
@@ -40,22 +40,22 @@ Erlerntes spielend wiederholen und nie wieder vergessen! #peat hilft dir, dein e
 Ausgehend von unserer Implementierungsidee einer Lernapp ergeben sich folgende Fragen hinsichtlich der LÃ¶sung und Umsetzung:
 
 a) Inhaltliche Fragen (Ist-Analyse)
-- Das Projektziel ist das Entwickeln einer Implementierungsidee fÃ¼r ein (virtuelles) Start-UP, hin zu einem lauffÃ¤higen Prototypen. Dieses soll dem BA, welcher sich als Business Angel versteht, prÃ¤sentiert werden, um seine finanzielle Beteiligung an dem Projekt in HÃ¶he von 300.000 â‚¬ zu erwirken. WÃ¤hrend des Entwicklungsprozesses ist des Weiteren eine ausfÃ¼hrliche Dokumentation zu erstellen (Vorgabe: ca. 20 Seiten inkl. Diagramme und ggf. Bildschirmfotografien). Neben der Projektdokumentation liegt der Fokus auf dem Kodieren (Applikation, Interfaces) und einer gesunden Gruppendynamik.
+- Das Projektziel ist das Entwickeln einer Implementierungsidee für ein (virtuelles) Start-UP, hin zu einem lauffähigen Prototypen. Dieses soll dem BA, welcher sich als Business Angel versteht, präsentiert werden, um seine finanzielle Beteiligung an dem Projekt in Höhe von 300.000 EUR zu erwirken. Während des Entwicklungsprozesses ist des Weiteren eine ausführliche Dokumentation zu erstellen (Vorgabe: ca. 20 Seiten inkl. Diagramme und ggf. Bildschirmfotografien). Neben der Projektdokumentation liegt der Fokus auf dem Kodieren (Applikation, Interfaces) und einer gesunden Gruppendynamik.
 
-- Fachwissen aneignen: Es ist zu klÃ¤ren, welche Arten von Fragen es gibt, welchen Einfluss diese wiederum auf das zu programmierende System haben kÃ¶nnen und welche wir schlussendlich abbilden wollen. Weiterhin muss analysiert werden, wie sich erworbenes Wissen durch eine intelligente Reihenfolge der Fragestellung, eine optimale Wiederholungsrate und ein automatisches Steuern der Zeitpunkte (Push-Notification, Wiederholungslogik) verfestigen und damit ins LangzeitgedÃ¤chtnis Ã¼berfÃ¼hren lÃ¤sst. (Hierbei geht es um die FÃ¶rderung des deklarativen GedÃ¤chtnisses (Wissen und Fakten). Stetes Wiederholen hilft dabei, Informationen vernetzter zu speichern und sein Wissen zu festigen.)
+- Fachwissen aneignen: Es ist zu klären, welche Arten von Fragen es gibt, welchen Einfluss diese wiederum auf das zu programmierende System haben können und welche wir schlussendlich abbilden wollen. Weiterhin muss analysiert werden, wie sich erworbenes Wissen durch eine intelligente Reihenfolge der Fragestellung, eine optimale Wiederholungsrate und ein automatisches Steuern der Zeitpunkte (Push-Notification, Wiederholungslogik) verfestigen und damit ins Langzeitgedächtnis überführen lässt. Hierbei geht es um die Förderung des deklarativen Gedächtnisses (Wissen und Fakten). Stetes Wiederholen hilft dabei, Informationen vernetzter zu speichern und sein Wissen zu festigen.
 
 - Da der Projektfokus auf dem Programmieren liegt, ist die Grundlage der Ãœberlegung diese Lernapp zu entwickeln, dass es auf dem Markt kein vergleichbares Produkt gibt und davon auszugehen ist, dass #peat seine Zielgruppe erreichen wird. Gedanken zur Marktanalyse sowie zur DurchfÃ¼hrbarkeit und Risikoanalyse werden hier daher nicht betrachtet, aber in der Enddokumentation kurz erlÃ¤utert. 
 
 - Es muss sich mit den Stakeholdern und der Zielgruppe auseinandergesetzt werden, um zu verstehen, welche Interessengruppen hinsichtlich der Umsetzung und u.a. auch rechtlicher Belange zu berÃ¼cksichtigen sind.
 
 b) Technische Fragen (Soll-Konzept)
-- Auf der Systemidee aufbauend, werden AnwendungsfÃ¤lle und Use Cases analysiert und modelliert (UML) und daraus wiederum RÃ¼ckschlÃ¼sse auf Systemanforderungen und -aufbau gezogen. Die modellierten Use Cases bilden anschlieÃŸend die Basis fÃ¼r die vom System zu erfÃ¼llenden FunktionalitÃ¤ten (Bsp. benutzerseitige Konfiguration, Push-Notification): https://github.com/andreasmosig/Beuth/blob/master/doku_expose/peat-use-case.png.
+- Auf der Systemidee aufbauend, werden Anwendungsfälle und Use Cases analysiert und modelliert (UML) und daraus wiederum Rückschlüsse auf Systemanforderungen und -aufbau gezogen. Die modellierten Use Cases bilden anschließend die Basis für die vom System zu erfüllenden Funktionalitäten (Bsp. benutzerseitige Konfiguration, Push-Notification): https://github.com/andreasmosig/Beuth/blob/master/doku_expose/peat-use-case.png.
 
-- Es gilt herauszufinden, aus welchen Komponenten das System besteht und welche funktionalen Anforderungen die Komponenten erfÃ¼llen sollen. Daraus ergeben sich notwendige Schnittstellen, welche es in der Folge zu analysieren und umzusetzen gilt (Mensch-Maschine, Maschine-Maschine). Per heute ist davon auszugehen, dass es zwei BenutzeroberflÃ¤chen geben wird (Web, App), die auf eine gemeinsame, auf einem Webserver installierte Datenbank (LAMP) zugreifen. Dabei dient die Web-GUI zum Erfassen und Lesen von Daten (Schreib-, Lesezugriff per Benutzerkonto), wohingegen die App-GUI das Lesen der Daten sowie das Konfigurieren der Wiederholungslogik zulÃ¤sst.
+- Es gilt herauszufinden, aus welchen Komponenten das System besteht und welche funktionalen Anforderungen die Komponenten erfüllen sollen. Daraus ergeben sich notwendige Schnittstellen, welche es in der Folge zu analysieren und umzusetzen gilt (Mensch-Maschine, Maschine-Maschine). Per heute ist davon auszugehen, dass es zwei Benutzeroberflächen geben wird (Web, App), die auf eine gemeinsame, auf einem Webserver installierte Datenbank (LAMP) zugreifen. Dabei dient die Web-GUI zum Erfassen und Lesen von Daten (Schreib-, Lesezugriff per Benutzerkonto), wohingegen die App-GUI das Lesen der Daten sowie das Konfigurieren der Wiederholungslogik zulässt.
 
 - Das entwickelte theoretische Konzept mÃ¼ndet schlussendlich im Design respektive in der Entwicklung eines explorativen Prototyps.
 
-c) Projektbezogene Belange: siehe Punkt 7).
+c) Projektbezogene Belange: siehe Punkt 6).
 
 --------------------------------------------------
 
@@ -96,6 +96,6 @@ a) Milestone-Plan
 - Sprint 12) Entgegenahme des Preisgeldes :)
 
 b) Projektkommunikation
-Es gibt regelmÃ¤ÃŸig Austausch mit dem BA: Minimum alle zwei Wochen. Dank der direkten Anbindung mittels zweier	Werkzeuge (Github, Slack) ist es mÃ¶glich, ohne viel Aufwand und Wartezeit mit den Projektmitarbeitern und dem BA zu kommunizieren und eventuelle Anpassungen hinsichtlich der Terminabsprachen und Anforderungen an die Software vorzunehmen.
+- Es gibt regelmäßig Austausch mit dem BA: Minimum alle zwei Wochen. Dank der direkten Anbindung mittels zweier	Werkzeuge (Github, Slack) ist es möglich, ohne viel Aufwand und Wartezeit mit den Projektmitarbeitern und dem BA zu kommunizieren und eventuelle Anpassungen hinsichtlich der Terminabsprachen und Anforderungen an die Software vorzunehmen.
 
 c) Statusberichte werden alle ein bis zwei Wochen per E-Mail an Herrn Prof. Dr. Edlich samt der Verlinkungen zu den bereits angesprochenen Tools geschickt.
