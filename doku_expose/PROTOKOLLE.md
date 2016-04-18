@@ -12,6 +12,6 @@ Thomas Ricklinkat:
 - UML-Diagramme modellieren (Use Cases, Paket-, Klassen-, Deployment- und Komponentendiagramm)
 
 Andreas Mosig:
-- GUIs entwerden
+- GUIs entwerfen
 
 ------------------------------------------------------------------------------------------
