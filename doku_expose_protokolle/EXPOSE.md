@@ -49,7 +49,7 @@ a) Inhaltliche Fragen (Ist-Analyse)
 - Es muss sich mit den Stakeholdern und der Zielgruppe auseinandergesetzt werden, um zu verstehen, welche Interessengruppen hinsichtlich der Umsetzung und u.a. auch rechtlicher Belange zu berücksichtigen sind.
 
 b) Technische Fragen (Soll-Konzept)
-- Auf der Systemidee aufbauend, werden Anwendungsfälle und Use Cases analysiert und modelliert (UML) und daraus wiederum Rückschlüsse auf Systemanforderungen und -aufbau gezogen. Die modellierten Use Cases bilden anschließend die Basis für die vom System zu erfüllenden Funktionalitäten (Bsp. benutzerseitige Konfiguration, Push-Notification): https://github.com/andreasmosig/Beuth/blob/master/doku_expose/peat-use-case.png.
+- Auf der Systemidee aufbauend, werden Anwendungsfälle und Use Cases analysiert und modelliert (UML) und daraus wiederum Rückschlüsse auf Systemanforderungen und -aufbau gezogen. Die modellierten Use Cases bilden anschließend die Basis für die vom System zu erfüllenden Funktionalitäten (Bsp. benutzerseitige Konfiguration, Push-Notification): https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/UML/peat-use-case.png.
 
 - Es gilt herauszufinden, aus welchen Komponenten das System besteht und welche funktionalen Anforderungen die Komponenten erfüllen sollen. Daraus ergeben sich notwendige Schnittstellen, welche es in der Folge zu analysieren und umzusetzen gilt (Mensch-Maschine, Maschine-Maschine). Per heute ist davon auszugehen, dass es zwei Benutzeroberflächen geben wird (Web, App), die auf eine gemeinsame, auf einem Webserver installierte Datenbank (LAMP) zugreifen. Dabei dient die Web-GUI zum Erfassen und Lesen von Daten (Schreib-, Lesezugriff per Benutzerkonto), wohingegen die App-GUI das Lesen der Daten sowie das Konfigurieren der Wiederholungslogik zulässt.
 
@@ -71,11 +71,15 @@ b) Vorgehensweise
 
 c) Architekturbild (Vision)
 - Bei unserem System handelt es sich um eine Client-Server-Architektur, mit Thin Client (Webbrowser) und einem Rich Client (Android App). Um die Systemarchitektur abzubilden, wurden sowohl ein Komponenten- als auch ein Deploymentdiagramm erstellt:
-- Deployment-Diagramm: https://github.com/andreasmosig/Beuth/blob/master/doku_expose/peat-deployment.png
-- Paket-Diagramm: https://github.com/andreasmosig/Beuth/blob/master/doku_expose/peat-package.png
-- Komponenten-Diagramm: https://github.com/andreasmosig/Beuth/blob/master/doku_expose/peat-component.png
+- Deployment-Diagramm: https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/UML/peat-deployment.png
+- Paket-Diagramm: https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/UML/peat-package.png
+- Komponenten-Diagramm: https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/UML/peat-component.png
 - Daraus ergibt sich eine typische Mehrschichtenarchitektur (N-Tier) mit UI, Logiken, Persistenz/Datenbank.
-	  	
+
+d) Mockups
+- App: https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/MOCKUPS/APP/
+- Web: https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/MOCKUPS/WEB/
+	
 --------------------------------------------------
 
 6) Projektablauf
@@ -83,8 +87,8 @@ c) Architekturbild (Vision)
 a) Milestone-Plan
 - Sprint 0) Semesterstart (29.03.2016)
 - Sprint 1) Projekt-KickOff E-Mail durch den BA (DONE, 07.04.2016)
-- Sprint 2) UML-Diagramme, Architekturbild, GUI-Entwurf (17.04.2016)
-- Sprint 3) Exposé (17.04.2016)
+- Sprint 2) UML-Diagramme, Architekturbild, GUI-Entwurf (18.04.2016)
+- Sprint 3) Exposé (18.04.2016)
 - Sprint 4) Freigabe des Exposés/Projekts durch den BA
 - Sprint 5) Erstellung des Datenbankschemas
 - Sprint 6) Einrichten des Webservers inkl. Datenbank
