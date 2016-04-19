@@ -12,7 +12,8 @@ Beuth Hochschule für Technik Berlin, Wirtschaftsinformatik, 4. Semester, Sommers
 a) Gruppenmitglieder
 - Thomas Ricklinkat (s58372@beuth-hochschule.de, Matr.-Nr. 821644)
 - Andreas Mosig (s58395@beuth-hochschule.de, Matr.-Nr. 817272)
-	
+- Steven Pawellek (s45848@beuth-hochschule.de, Matr.-Nr. 776340)
+
 b) Projektdauer
 - Die Dauer des Projektes beträgt 3,5 Monate und endet demnach in der ersten Monatshälfte im Juli.
 
