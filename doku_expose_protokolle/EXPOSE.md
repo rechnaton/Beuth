@@ -78,13 +78,15 @@ c) Architekturbild (Vision)
 - Daraus ergibt sich eine typische Mehrschichtenarchitektur (N-Tier) mit UI, Logiken, Persistenz/Datenbank.
 
 d) Mockups
-- App: 
+- App:
+
 ![Push] (https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/MOCKUPS/APP/pushnotification.png)
 ![FrageJaNein] (https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/MOCKUPS/APP/janeinfrage.png)
 ![Multiple] (https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/MOCKUPS/APP/multiplechoice.png)
 ![Antwort] (https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/MOCKUPS/APP/antwort.png)
 ![Einstellungen] (https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/MOCKUPS/APP/einstellungen.png)
-- Web: 
+- Web:
+
 ![Landing] (https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/MOCKUPS/WEB/landing.png)
 ![Konfiguration] (https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/MOCKUPS/WEB/konfiguration.png)
 	
