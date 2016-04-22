@@ -74,8 +74,7 @@ c) Architekturbild (Vision)
 - Bei unserem System handelt es sich um eine Client-Server-Architektur, mit Thin Client (Webbrowser) und einem Rich Client (Android App). Um die Systemarchitektur abzubilden, wurden sowohl ein Komponenten- als auch ein Deploymentdiagramm erstellt:
 - Deployment-Diagramm: ![Alt-Text](https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/UML/peat-deployment.png)
 - Paket-Diagramm: ![Alt-Text](https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/UML/peat-package.png)
-- Komponenten-Diagramm:
-- ![Alt-Text](https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/UML/peat-component.png)
+- Komponenten-Diagramm: ![Alt-Text](https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/UML/peat-component.png)
 - Daraus ergibt sich eine typische Mehrschichtenarchitektur (N-Tier) mit UI, Logiken, Persistenz/Datenbank.
 
 d) Mockups
