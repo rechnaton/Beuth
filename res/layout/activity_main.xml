@@ -40,11 +40,22 @@
     	
     	/>
 	
+	<Button
+        android:id="@+id/pause"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/score"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/Hinweis"
+    	
+    	/>
+	
 	<TextView
         android:id="@+id/totaloutput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/score"
+        android:layout_below="@+id/pause"
         android:layout_centerHorizontal="true"
         android:gravity="center"
         android:layout_marginTop="20dp"

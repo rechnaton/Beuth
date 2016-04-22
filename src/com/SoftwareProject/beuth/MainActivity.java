@@ -14,37 +14,52 @@ import android.widget.TextView;
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class MainActivity extends AppCompatActivity {
 	
-	Button quiz, score;
+	Button quiz, score, pause;
 	TextView anzeige;
-	String frage;
-	String antwort;
-
+	String frageA;
+	String antwortA;
+	String hinweis;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		frage = " ";
-		antwort = " ";
+		frageA = " ";
+		antwortA = " ";
+		hinweis = " ";
 		quiz = (Button) findViewById(R.id.quiz);
 		score = (Button) findViewById(R.id.score);
+		pause = (Button) findViewById(R.id.pause);
 		anzeige = (TextView) findViewById(R.id.totaloutput);
+				
 		quiz.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				frage = "Ist der BVB der beste Club der Welt?";
-				anzeige.setText("Frage: " + frage);
-			}
+				frageA = "Ist der BVB der beste Club der Welt?";
+				anzeige.setText("Frage: " + frageA);
+				}
 		});
+		
 		score.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				antwort = "Ja lautet die Antwort! Dein Punktestand ist: 1";
-				anzeige.setText("Antwort: " + antwort);
-			}
+				antwortA = "Ja lautet die Antwort! Dein Punktestand ist: 1";
+				anzeige.setText("Antwort: " + antwortA);
+				}
+		});
+		
+		pause.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				hinweis = "Wird für später gespeichert!";
+				anzeige.setText("Achtung: " + hinweis);
+				}
 		});
 	}
 
