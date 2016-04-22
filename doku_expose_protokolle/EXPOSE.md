@@ -50,7 +50,7 @@ a) Inhaltliche Fragen (Ist-Analyse)
 
 b) Technische Fragen (Soll-Konzept)
 - Auf der Systemidee aufbauend, werden Anwendungsfälle und Use Cases analysiert und modelliert (UML) und daraus wiederum Rückschlüsse auf Systemanforderungen und -aufbau gezogen. Die modellierten Use Cases bilden anschließend die Basis für die vom System zu erfüllenden Funktionalitäten (Bsp. benutzerseitige Konfiguration, Push-Notification):
-![Alt-Text](peat-use-case.png).
+![Alt-Text](https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/UML/peat-use-case.png)
 
 - Es gilt herauszufinden, aus welchen Komponenten das System besteht und welche funktionalen Anforderungen die Komponenten erfüllen sollen. Daraus ergeben sich notwendige Schnittstellen, welche es in der Folge zu analysieren und umzusetzen gilt (Mensch-Maschine, Maschine-Maschine). Per heute ist davon auszugehen, dass es zwei Benutzeroberflächen geben wird (Web, App), die auf eine gemeinsame, auf einem Webserver installierte Datenbank (LAMP) zugreifen. Dabei dient die Web-GUI zum Erfassen und Lesen von Daten (Schreib-, Lesezugriff per Benutzerkonto), wohingegen die App-GUI das Lesen der Daten sowie das Konfigurieren der Wiederholungslogik zulässt.
 
