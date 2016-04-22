@@ -78,8 +78,15 @@ c) Architekturbild (Vision)
 - Daraus ergibt sich eine typische Mehrschichtenarchitektur (N-Tier) mit UI, Logiken, Persistenz/Datenbank.
 
 d) Mockups
-- App: https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/MOCKUPS/APP/
-- Web: https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/MOCKUPS/WEB/
+- App: 
+![Push] (https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/MOCKUPS/APP/pushnotification.png)
+![FrageJaNein] (https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/MOCKUPS/APP/janeinfrage.png)
+![Multiple] (https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/MOCKUPS/APP/multiplechoice.png)
+![Antwort] (https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/MOCKUPS/APP/antwort.png)
+![Einstellungen] (https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/MOCKUPS/APP/einstellungen.png)
+- Web: 
+![Landing] (https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/MOCKUPS/WEB/landing.png)
+![Konfiguration] (https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/MOCKUPS/WEB/konfiguration.png)
 	
 --------------------------------------------------
 
@@ -88,9 +95,9 @@ d) Mockups
 a) Milestone-Plan
 - Sprint 0) Semesterstart (29.03.2016)
 - Sprint 1) Projekt-KickOff E-Mail durch den BA (DONE, 07.04.2016)
-- Sprint 2) UML-Diagramme, Architekturbild, GUI-Entwurf (18.04.2016)
-- Sprint 3) Exposé (18.04.2016)
-- Sprint 4) Freigabe des Exposés/Projekts durch den BA
+- Sprint 2) UML-Diagramme, Architekturbild, GUI-Entwurf (DONE, 18.04.2016)
+- Sprint 3) Exposé (DONE, 18.04.2016)
+- Sprint 4) Freigabe des Exposés/Projekts durch den BA (DONE, 23.04.2016)
 - Sprint 5) Erstellung des Datenbankschemas
 - Sprint 6) Einrichten des Webservers inkl. Datenbank
 - Sprint 7) Erzeugung des Prototypen (App)
