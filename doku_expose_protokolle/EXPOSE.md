@@ -24,7 +24,7 @@ c) Projektmanagement-Werkzeuge
 
 - Für die agile Software-Entwicklung mit Scrum arbeiten wir mit easyBacklog.
 
-- Das Versionsmanagement erfolgt via GitHub (Master-Branch: https://github.com/andreasmosig/Beuth). Analog zu asana laufen alle Aktivitäten im privaten Slack-Kanal zusammen und sind für den BA einsehbar.
+- Das Versionsmanagement erfolgt via GitHub (Master-Branch: https://github.com/andreasmosig/peat). Analog zu asana laufen alle Aktivitäten im privaten Slack-Kanal zusammen und sind für den BA einsehbar.
 	
 --------------------------------------------------
 
@@ -51,7 +51,7 @@ a) Inhaltliche Fragen (Ist-Analyse)
 
 b) Technische Fragen (Soll-Konzept)
 - Auf der Systemidee aufbauend, werden Anwendungsfälle und Use Cases analysiert und modelliert (UML) und daraus wiederum Rückschlüsse auf Systemanforderungen und -aufbau gezogen. Die modellierten Use Cases bilden anschließend die Basis für die vom System zu erfüllenden Funktionalitäten (Bsp. benutzerseitige Konfiguration, Push-Notification):
-![Alt-Text](https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/UML/peat-use-case.png)
+![Alt-Text](https://github.com/andreasmosig/peat/blob/master/doku_expose_protokolle/UML/peat-use-case.png)
 
 - Es gilt herauszufinden, aus welchen Komponenten das System besteht und welche funktionalen Anforderungen die Komponenten erfüllen sollen. Daraus ergeben sich notwendige Schnittstellen, welche es in der Folge zu analysieren und umzusetzen gilt (Mensch-Maschine, Maschine-Maschine). Per heute ist davon auszugehen, dass es zwei Benutzeroberflächen geben wird (Web, App), die auf eine gemeinsame, auf einem Webserver installierte Datenbank (LAMP) zugreifen. Dabei dient die Web-GUI zum Erfassen und Lesen von Daten (Schreib-, Lesezugriff per Benutzerkonto), wohingegen die App-GUI das Lesen der Daten sowie das Konfigurieren der Wiederholungslogik zulässt.
 
@@ -75,27 +75,27 @@ c) Architekturbild (Vision)
 - Bei unserem System handelt es sich um eine Client-Server-Architektur, mit Thin Client (Webbrowser) und einem Rich Client (Android App). Um die Systemarchitektur abzubilden, wurden sowohl ein Komponenten- als auch ein Deploymentdiagramm erstellt:
 - Deployment-Diagramm:
 
-![Alt-Text](https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/UML/peat-deployment.png)
+![Alt-Text](https://github.com/andreasmosig/peat/blob/master/doku_expose_protokolle/UML/peat-deployment.png)
 - Paket-Diagramm:
 
-![Alt-Text](https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/UML/peat-package.png)
+![Alt-Text](https://github.com/andreasmosig/peat/blob/master/doku_expose_protokolle/UML/peat-package.png)
 - Komponenten-Diagramm:
 
-![Alt-Text](https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/UML/peat-component.png)
+![Alt-Text](https://github.com/andreasmosig/peat/blob/master/doku_expose_protokolle/UML/peat-component.png)
 - Daraus ergibt sich eine typische Mehrschichtenarchitektur (N-Tier) mit UI, Logiken, Persistenz/Datenbank.
 
 d) Mockups
 - App:
 
-![Push] (https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/MOCKUPS/APP/pushnotification.png)
-![FrageJaNein] (https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/MOCKUPS/APP/janeinfrage.png)
-![Multiple] (https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/MOCKUPS/APP/multiplechoice.png)
-![Antwort] (https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/MOCKUPS/APP/antwort.png)
-![Einstellungen] (https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/MOCKUPS/APP/einstellungen.png)
+![Push] (https://github.com/andreasmosig/peat/blob/master/doku_expose_protokolle/MOCKUPS/APP/pushnotification.png)
+![FrageJaNein] (https://github.com/andreasmosig/peat/blob/master/doku_expose_protokolle/MOCKUPS/APP/janeinfrage.png)
+![Multiple] (https://github.com/andreasmosig/peat/blob/master/doku_expose_protokolle/MOCKUPS/APP/multiplechoice.png)
+![Antwort] (https://github.com/andreasmosig/peat/blob/master/doku_expose_protokolle/MOCKUPS/APP/antwort.png)
+![Einstellungen] (https://github.com/andreasmosig/peat/blob/master/doku_expose_protokolle/MOCKUPS/APP/einstellungen.png)
 - Web:
 
-![Landing] (https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/MOCKUPS/WEB/landing.png)
-![Konfiguration] (https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/MOCKUPS/WEB/konfiguration.png)
+![Landing] (https://github.com/andreasmosig/peat/blob/master/doku_expose_protokolle/MOCKUPS/WEB/landing.png)
+![Konfiguration] (https://github.com/andreasmosig/peat/blob/master/doku_expose_protokolle/MOCKUPS/WEB/konfiguration.png)
 	
 --------------------------------------------------
 
