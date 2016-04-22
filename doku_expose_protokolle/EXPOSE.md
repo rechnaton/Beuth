@@ -75,7 +75,7 @@ c) Architekturbild (Vision)
 - Deployment-Diagramm: ![Alt-Text](https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/UML/peat-deployment.png)
 - Paket-Diagramm: ![Alt-Text](https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/UML/peat-package.png)
 - Komponenten-Diagramm:
-![Alt-Text](https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/UML/peat-component.png)
+- ![Alt-Text](https://github.com/andreasmosig/Beuth/blob/master/doku_expose_protokolle/UML/peat-component.png)
 - Daraus ergibt sich eine typische Mehrschichtenarchitektur (N-Tier) mit UI, Logiken, Persistenz/Datenbank.
 
 d) Mockups
