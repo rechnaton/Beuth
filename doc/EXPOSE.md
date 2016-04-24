@@ -103,10 +103,10 @@ d) Mockups
 
 a) Milestone-Plan
 - Sprint 0) Semesterstart (29.03.2016)
-- Sprint 1) Projekt-KickOff E-Mail durch den BA (DONE, 07.04.2016)
-- Sprint 2) UML-Diagramme, Architekturbild, GUI-Entwurf (DONE, 18.04.2016)
-- Sprint 3) Exposé (DONE, 18.04.2016)
-- Sprint 4) Freigabe des Exposés/Projekts durch den BA (DONE, 23.04.2016)
+- Sprint 1) Projekt-KickOff E-Mail durch den BA (07.04.2016)
+- Sprint 2) UML-Diagramme, Architekturbild, GUI-Entwurf (18.04.2016)
+- Sprint 3) Exposé (18.04.2016)
+- Sprint 4) Freigabe des Exposés/Projekts durch den BA (23.04.2016)
 - Sprint 5) Erstellung des Datenbankschemas
 - Sprint 6) Einrichten des Webservers inkl. Datenbank
 - Sprint 7) Erzeugung des Prototypen (App)
