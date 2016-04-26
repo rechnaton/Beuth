@@ -5,6 +5,7 @@
     <string name="einleitung">Spielend lernen! Nie wieder vergessen!</string>
     <string name="StarteQuiz">Nächste Frage</string>
     <string name="Score">Antwort</string>
+    <string name="Hinweis">Später</string>
     <string name="action_settings">Einstellungen</string>
     
 </resources>
