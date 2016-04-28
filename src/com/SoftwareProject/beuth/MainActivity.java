@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				antwortA = "Ja lautet die Antwort! Dein Punktestand ist: 1";
+				antwortA = "Ja lautet die Antwort! Gut gemacht!";
 				anzeige.setText("Antwort: " + antwortA);
 				}
 		});
