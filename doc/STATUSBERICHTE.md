@@ -1,5 +1,5 @@
 #Status
-Aktueller Stand (28.04.2016)
+Stand (28.04.2016)
 
 - Sprint 0) Semesterstart (29.03.2016) - DONE
 - Sprint 1) Projekt-KickOff E-Mail durch den BA (07.04.2016) - DONE
@@ -15,13 +15,11 @@ Aktueller Stand (28.04.2016)
 	- (23./24.04.2016)
 		- Erweiterung #peat um 3. Button (pause)
 		- Versionierung / Tagging in GitHub (Version v1.0.0-0001 > Prototyp für die Präsenz)
-
 	- (26.04.2016)
 		- Primäre Anforderungen an die Android App (Use Cases) in EasyBacklog eingetragen > https://easybacklog.com/users/sign_in
 		- Erweiterung #peat um Splashsound
 		- Export der peat.apk, Installation auf Android-Smartphone und erfolgreicher Test des Prototypen > https://www.dropbox.com/sh/8djn2di76w9jqga/AABS1uvujSAhcy7iVWHPvo9oa?dl=0
 		- Versionierung /Tagging in GitHub (Version v1.0.0-0002 > lauffähiger Prototyp, ohne Erfüllung der Use Cases)
-
 	- (bis 01.05.2016)
 		- Weitere Planung: vorläufige Ablaufplanung sowie Aufgabenverteilung (Datenbankschema, App-Entwicklung, Webserver, etc. : Online-Meeting 01.05.2016, 19:30 Uhr)
 - Sprint 5) Erstellung des Datenbankschemas - PENDING
@@ -31,4 +29,4 @@ Aktueller Stand (28.04.2016)
 - Sprint 9) Programmierung und Tests der Komponenten - IN PROGRESS
 - Sprint 10) Fertigstellung der Enddokumentation - PENDING
 - Sprint 11) Abgabe und Präsentation (08.07.2016)
-- Sprint 12) Entgegenahme des Preisgeldes :)
+- Sprint 12) Entgegenahme des Preisgeldes :wink:
