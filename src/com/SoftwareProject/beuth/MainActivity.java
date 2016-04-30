@@ -2,6 +2,8 @@ package com.SoftwareProject.beuth;
 
 import android.support.v7.app.AppCompatActivity;
 import android.annotation.TargetApi;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,16 +11,20 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-
+import android.preference.PreferenceManager;
+import android.content.SharedPreferences;
 
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class MainActivity extends AppCompatActivity {
 	
-	Button quiz, score, pause;
+	Button quiz, score, pause, wiki;
 	TextView anzeige;
 	String frageA;
 	String antwortA;
 	String hinweis;
+	String gotowikipedia;
+	
+	private static final int RESULT_SETTINGS = 1;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +37,7 @@ public class MainActivity extends AppCompatActivity {
 		score = (Button) findViewById(R.id.score);
 		pause = (Button) findViewById(R.id.pause);
 		anzeige = (TextView) findViewById(R.id.totaloutput);
+		wiki = (Button) findViewById(R.id.wiki);
 				
 		quiz.setOnClickListener(new View.OnClickListener() {
 			
@@ -57,9 +64,18 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				hinweis = "Wird für später gespeichert!";
+				hinweis = "Frage wurde für später gespeichert!";
 				anzeige.setText("Achtung: " + hinweis);
 				}
+		});
+		
+		wiki.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				  Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.wikipedia.de/"));
+				  startActivity(browserIntent);
+			}
 		});
 	}
 
@@ -77,8 +93,50 @@ public class MainActivity extends AppCompatActivity {
 		// as you specify a parent activity in AndroidManifest.xml.
 		int id = item.getItemId();
 		if (id == R.id.action_settings) {
+			startActivity(new Intent(this, EinstellungenActivity.class));
 			return true;
 		}
+		
+		switch (item.getItemId()) {
+        
+        case R.id.action_settings:
+            Intent i = new Intent(this, EinstellungenActivity.class);
+            startActivityForResult(i, RESULT_SETTINGS);
+            break;
+        }
+
 		return super.onOptionsItemSelected(item);
 	}
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+ 
+        switch (requestCode) {
+        case RESULT_SETTINGS:
+            showUserSettings();
+            break;
+        }
+ 
+    }
+
+    private void showUserSettings() {
+        SharedPreferences sharedPrefs = PreferenceManager
+                .getDefaultSharedPreferences(this);
+ 
+        StringBuilder builder = new StringBuilder();
+ 
+        builder.append("\n Benutzername: "
+                + sharedPrefs.getString("prefUsername", "NULL"));
+ 
+        builder.append("\n Bericht senden:"
+                + sharedPrefs.getBoolean("prefSendReport", false));
+ 
+        builder.append("\n Wiederholung: "
+                + sharedPrefs.getString("prefSyncFrequency", "NULL"));
+ 
+        TextView settingsTextView = (TextView) findViewById(R.id.textUserSettings);
+ 
+        settingsTextView.setText(builder.toString());
+    }
+ 
 }
