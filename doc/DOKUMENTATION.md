@@ -40,3 +40,5 @@ http://www.lac.ane.pl/pdf/5409.pdf
 ## Ausblick
 
 Statt lokale Datenbank SQLite einen „Backend-as-a-Service“-Anbieter wie Parse: http://t3n.de/news/backend-as-a-service-parse-504596/
+
+Rating von Fragen / Selbstreinigung
