@@ -63,4 +63,22 @@
     	android:textAppearance="?android:attr/textAppearanceLarge"
     	
     	/>
+	
+	<Button
+        android:id="@+id/wiki"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/totaloutput"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="@string/GotoWikipedia"
+    	
+    	/>
+	
+	 <TextView
+        android:id="@+id/textUserSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity" />
+	
 </RelativeLayout>

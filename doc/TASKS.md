@@ -1,13 +1,15 @@
-#Upcoming Tasks:
-- Planung der nächsten Sprints.
-- Einsatz einer Datenbank hinterfragen/planen.
-- Einsatz eines Webservices hinterfragen/planen.
+#Tasks
 
-Tasks (bis 01.05.2016)
+Tasks (bis ca. 01.05.2016):
 - Fachwissen aneignen und in Doku notieren (alle)
-- Use Cases (Expose) prüfen (alle)
+- Use Cases (Exposé) prüfen (alle)
 - und diese als Stories in easyBacklog eingeben (Thomas)
+- Statusbericht an Prof. Edlich schicken (Andreas)
 - Sprints planen (alle)
-- DB-Schema (ER)(Steven)
+- DB-Schema entwerfen (ER)(Steven)
 - Doku parallel pflegen (Andreas)
 - Prototyp weiterentwickeln (nach jedem Sprint neue, lauffähige Version > releases in git) (alle)
+
+Offen:
+- Einsatz einer Datenbank hinterfragen/planen (SQLite)
+- Einsatz eines Webservices hinterfragen/planen
