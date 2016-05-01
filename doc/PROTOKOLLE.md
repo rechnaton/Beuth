@@ -66,19 +66,19 @@ Tasks (bis 01.05.2016)
 #16.04.2016 (Online Meeting via Team Viewer)
 
 - Fehler/Kompilierfehler mit Studio bei Steven (Theme.AppCompat.Light-Library)
-- Thomas testet am selben Abend noch SDK und AVD und gibt Steven Bescheid, ob dieselben Fehler auftreten > wenn nicht, arbeitet Steven via Eclipse (+SDK, AVD)
+- Thomas testet am selben Abend (01.05.2016) noch SDK und AVD und gibt Steven Bescheid, ob dieselben Fehler auftreten > wenn nicht, arbeitet Steven via Eclipse (+SDK, AVD)
 - Steven muss noch Pullrequest ziehen (Datensatz nicht aktuell)
 - Steven hat DB DesignerFork erstes Shema gemacht
  mit den wichtigsten Attributen (erklärt es)
 
-- LOGIK: Nutzer > alle 5 Min > Frage richtig > isIgnore false, lastShown Date, isLastAnswerCorrect true > nächste Frage ... > falsch beantwortete Fragen wiederholt (sortiert nach lastShown) > User kann bereits richtig beantwortete Fragen ignorieren (isIgnore true) > bis alle Fragen richtig gewesen sind > und keine Fragen mehr, die User noch nicht gesehen hat (lastShown) > Report / Statistik
+- WIEDERHOLUNGSLOGIK: Nutzer > alle 5 Min > Frage richtig > isIgnore false, lastShown Date, isLastAnswerCorrect true > nächste Frage ... > falsch beantwortete Fragen wiederholt (sortiert nach lastShown) > User kann bereits richtig beantwortete Fragen ignorieren (isIgnore true) > bis alle Fragen richtig gewesen sind > und keine Fragen mehr, die User noch nicht gesehen hat (lastShown) > Report / Statistik
 
 Tasks:
 
 Alle (04.05.2016):
 - Java-Version (master) 1.8.0_91 (prüfen)
 - Libraries prüfen > Build / Run as Android Application
-- alle aktuell, alles ausführbaren Code
+- alle aktuell, alle haben ausführbaren Code
 
 Steven (13.05.2016):
 - Steven lädt DB-Schema-XML-Datei hoch und ergänzt in Dokumentation (bis 04.05.2016)
@@ -95,7 +95,7 @@ Thomas (13.05.2016):
 - GUI erweitern (Themenauswahl, Frage stellen; PeatUser_has_Themes)
 
 Ausblick:
-- Fragetypen (Multiple Choice, Ja/Nein)
+- Fragetypen (Multiple Choice, Offene Fragen)
 - Neuanlage von Fragen
 - Wiederholung > länger werdende Zeiträume
 - Spacing Effekt
