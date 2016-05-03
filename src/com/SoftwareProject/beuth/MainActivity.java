@@ -9,7 +9,11 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
 import android.widget.TextView;
 import android.preference.PreferenceManager;
 import android.content.SharedPreferences;
@@ -17,13 +21,18 @@ import android.content.SharedPreferences;
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class MainActivity extends AppCompatActivity {
 	
-	Button quiz, score, pause, wiki;
+	Button quiz, buttonAnswer, pause, wiki;
+	// Button score;
 	TextView anzeige;
 	String frageA;
 	String antwortA;
 	String hinweis;
 	String gotowikipedia;
 	
+	private RadioGroup radioGroup;
+	private RadioButton radioAnswerButton;
+	// private Button buttonAnswer;
+	  
 	private static final int RESULT_SETTINGS = 1;
 	
 	@Override
@@ -34,7 +43,8 @@ public class MainActivity extends AppCompatActivity {
 		antwortA = " ";
 		hinweis = " ";
 		quiz = (Button) findViewById(R.id.quiz);
-		score = (Button) findViewById(R.id.score);
+		// score = (Button) findViewById(R.id.score);
+		buttonAnswer = (Button) findViewById(R.id.buttonAnswer);
 		pause = (Button) findViewById(R.id.pause);
 		anzeige = (TextView) findViewById(R.id.totaloutput);
 		wiki = (Button) findViewById(R.id.wiki);
@@ -49,15 +59,16 @@ public class MainActivity extends AppCompatActivity {
 				}
 		});
 		
-		score.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				antwortA = "Ja lautet die Antwort! Gut gemacht!";
-				anzeige.setText("Antwort: " + antwortA);
-				}
-		});
+		// score.setOnClickListener(new View.OnClickListener() {
+		// score.setOnClickListener(new View.OnClickListener() {
+		//			
+		//	@Override
+		//	public void onClick(View v) {
+		//		// TODO Auto-generated method stub
+		//		antwortA = "Ja lautet die Antwort! Gut gemacht!";
+		//		anzeige.setText("Antwort: " + antwortA);
+		//		}
+		// });
 		
 		pause.setOnClickListener(new View.OnClickListener() {
 			
@@ -77,6 +88,8 @@ public class MainActivity extends AppCompatActivity {
 				  startActivity(browserIntent);
 			}
 		});
+		
+		addListenerOnButton();
 	}
 
 	@Override
@@ -138,5 +151,33 @@ public class MainActivity extends AppCompatActivity {
  
         settingsTextView.setText(builder.toString());
     }
+    
+    public void addListenerOnButton() {
+
+    	radioGroup = (RadioGroup) findViewById(R.id.radioQuestion);
+    	buttonAnswer = (Button) findViewById(R.id.buttonAnswer);
+
+    	buttonAnswer.setOnClickListener(new OnClickListener() {
+
+    		@Override
+    		public void onClick(View v) {
+
+    		// get selected radio button from radioGroup
+    		int selectedId = radioGroup.getCheckedRadioButtonId();
+
+    		// find the radiobutton by returned id
+    		radioAnswerButton = (RadioButton) findViewById(selectedId);
+
+    		antwortA = "Ja lautet die Antwort! Gut gemacht!";
+    		anzeige.setText("Antwort: " + antwortA);
+    		
+    		Toast.makeText(MainActivity.this,
+    		radioAnswerButton.getText(), Toast.LENGTH_SHORT).show();
+
+    		}
+
+    	});
+
+      }
  
 }
