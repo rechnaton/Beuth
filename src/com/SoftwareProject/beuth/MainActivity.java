@@ -168,12 +168,20 @@ public class MainActivity extends AppCompatActivity {
     		// find the radiobutton by returned id
     		radioAnswerButton = (RadioButton) findViewById(selectedId);
 
-    		antwortA = "Ja lautet die Antwort! Gut gemacht!";
+            if(selectedId == R.id.radioYes){
+            antwortA = "Ja lautet die Antwort! Gut gemacht!";
     		anzeige.setText("Antwort: " + antwortA);
-    		
+            
     		Toast.makeText(MainActivity.this,
     		radioAnswerButton.getText(), Toast.LENGTH_SHORT).show();
-
+            }
+            else if(selectedId == R.id.radioNo){
+            anzeige.setText("Die Antwort ist leider falsch!");
+            
+        	Toast.makeText(MainActivity.this,
+        	radioAnswerButton.getText(), Toast.LENGTH_SHORT).show();
+            }
+            
     		}
 
     	});
