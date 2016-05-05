@@ -9,13 +9,20 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.SoftwareProject.beuth.MainActivity" >
 
+    <!-- Diese Small-Version ist für Handys geeignet.
+    Für Tabletts bitte folgende Änderungen vornehmen:
+    Large: marginTop="20dp" statt 18dp
+    and textSize="30sp" statt 15sp
+    and textAppearance="?android:attr/textAppearanceLarge" statt ...Small
+    -->
+    
     <TextView
         android:id="@+id/entry"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/einleitung"
-    	android:textSize="30sp" />
+    	android:textSize="15sp" />
 
 	<Button
         android:id="@+id/quiz"
@@ -23,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/entry"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="18dp"
         android:text="@string/StarteQuiz" />
 	
 	<RadioGroup
@@ -39,7 +46,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/radio_yes" 
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="18dp"
             android:checked="true" />
 
         <RadioButton
@@ -47,7 +54,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/radio_no"
-            android:layout_marginTop="20dp" />
+            android:layout_marginTop="18dp" />
 
     </RadioGroup>
 
@@ -57,7 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/radioQuestion"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="18dp"
         android:text="@string/button_answer" />  
               
 	<!-- <Button
@@ -76,9 +83,9 @@
         android:layout_below="@+id/buttonAnswer"
         android:layout_centerHorizontal="true"
         android:gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="18dp"
         android:text=""
-    	android:textAppearance="?android:attr/textAppearanceLarge" />
+    	android:textAppearance="?android:attr/textAppearanceSmall" />
 	
 	<Button
         android:id="@+id/pause"
@@ -86,7 +93,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/totaloutput"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="18dp"
         android:text="@string/Hinweis" />
 	    
 	<Button
@@ -95,7 +102,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/pause"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="18dp"
         android:text="@string/GotoWikipedia" />
 	
 	 <TextView
