@@ -8,6 +8,7 @@
     <string name="StarteQuiz">Frage</string>
     <!-- <string name="Score">Antwort</string> -->
     <string name="Hinweis">Pausieren</string>
+    <string name="Weiter">Nächste Frage</string>
     <string name="GotoWikipedia">Wiki-Suche</string>
     
     <string name="action_settings">Einstellungen</string>

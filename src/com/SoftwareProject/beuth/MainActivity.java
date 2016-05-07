@@ -21,13 +21,13 @@ import android.content.SharedPreferences;
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class MainActivity extends AppCompatActivity {
 	
-	Button quiz, buttonAnswer, pause, wiki;
+	Button quiz, buttonAnswer, pause, weiter, wiki;
 	// Button score;
 	TextView anzeige;
 	String frageA;
 	String antwortA;
+	String frageB;
 	String hinweis;
-	String gotowikipedia;
 	
 	private RadioGroup radioGroup;
 	private RadioButton radioAnswerButton;
@@ -41,11 +41,13 @@ public class MainActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_main);
 		frageA = " ";
 		antwortA = " ";
+		frageB = " ";
 		hinweis = " ";
 		quiz = (Button) findViewById(R.id.quiz);
 		// score = (Button) findViewById(R.id.score);
 		buttonAnswer = (Button) findViewById(R.id.buttonAnswer);
 		pause = (Button) findViewById(R.id.pause);
+		weiter = (Button) findViewById(R.id.weiter);
 		anzeige = (TextView) findViewById(R.id.totaloutput);
 		wiki = (Button) findViewById(R.id.wiki);
 				
@@ -77,6 +79,16 @@ public class MainActivity extends AppCompatActivity {
 				// TODO Auto-generated method stub
 				hinweis = "Frage wurde für später gespeichert!";
 				anzeige.setText("Achtung: " + hinweis);
+				}
+		});
+		
+		weiter.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				frageB = "Ist FC Bayern München kacke?";
+				anzeige.setText("Frage: " + frageB);
 				}
 		});
 		
@@ -187,5 +199,4 @@ public class MainActivity extends AppCompatActivity {
     	});
 
       }
- 
 }
