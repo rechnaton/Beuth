@@ -2052,7 +2052,7 @@ containing a value of this type.
         public static final int alertTitle=0x7f0b0031;
         public static final int always=0x7f0b0019;
         public static final int beginning=0x7f0b001e;
-        public static final int buttonAnswer=0x7f0b0056;
+        public static final int buttonAnswer=0x7f0b0057;
         public static final int buttonPanel=0x7f0b002c;
         public static final int cancel_action=0x7f0b005d;
         public static final int checkbox=0x7f0b003a;
@@ -2093,9 +2093,9 @@ containing a value of this type.
         public static final int progress_horizontal=0x7f0b0008;
         public static final int quiz=0x7f0b0052;
         public static final int radio=0x7f0b003c;
-        public static final int radioNo=0x7f0b0055;
-        public static final int radioQuestion=0x7f0b0053;
-        public static final int radioYes=0x7f0b0054;
+        public static final int radioNo=0x7f0b0056;
+        public static final int radioQuestion=0x7f0b0054;
+        public static final int radioYes=0x7f0b0055;
         public static final int screen=0x7f0b0015;
         public static final int scrollIndicatorDown=0x7f0b0036;
         public static final int scrollIndicatorUp=0x7f0b0033;
@@ -2131,7 +2131,7 @@ containing a value of this type.
         public static final int title=0x7f0b002b;
         public static final int title_template=0x7f0b0030;
         public static final int topPanel=0x7f0b002f;
-        public static final int totaloutput=0x7f0b0057;
+        public static final int totaloutput=0x7f0b0053;
         public static final int up=0x7f0b0001;
         public static final int useLogo=0x7f0b0013;
         public static final int weiter=0x7f0b005a;
@@ -2224,8 +2224,6 @@ containing a value of this type.
     }
     public static final class string {
         public static final int GotoWikipedia=0x7f0c0019;
-        /**  <string name="Score">Antwort</string> 
-         */
         public static final int Hinweis=0x7f0c0017;
         public static final int StarteQuiz=0x7f0c0016;
         public static final int Themen_default=0x7f0c001e;

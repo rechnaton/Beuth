@@ -473,7 +473,7 @@ int id activity_chooser_view_content 0x7f0b0024
 int id alertTitle 0x7f0b0031
 int id always 0x7f0b0019
 int id beginning 0x7f0b001e
-int id buttonAnswer 0x7f0b0056
+int id buttonAnswer 0x7f0b0057
 int id buttonPanel 0x7f0b002c
 int id cancel_action 0x7f0b005d
 int id checkbox 0x7f0b003a
@@ -514,9 +514,9 @@ int id progress_circular 0x7f0b0007
 int id progress_horizontal 0x7f0b0008
 int id quiz 0x7f0b0052
 int id radio 0x7f0b003c
-int id radioNo 0x7f0b0055
-int id radioQuestion 0x7f0b0053
-int id radioYes 0x7f0b0054
+int id radioNo 0x7f0b0056
+int id radioQuestion 0x7f0b0054
+int id radioYes 0x7f0b0055
 int id screen 0x7f0b0015
 int id scrollIndicatorDown 0x7f0b0036
 int id scrollIndicatorUp 0x7f0b0033
@@ -552,7 +552,7 @@ int id time 0x7f0b0062
 int id title 0x7f0b002b
 int id title_template 0x7f0b0030
 int id topPanel 0x7f0b002f
-int id totaloutput 0x7f0b0057
+int id totaloutput 0x7f0b0053
 int id up 0x7f0b0001
 int id useLogo 0x7f0b0013
 int id weiter 0x7f0b005a

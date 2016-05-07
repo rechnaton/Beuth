@@ -22,7 +22,6 @@ import android.content.SharedPreferences;
 public class MainActivity extends AppCompatActivity {
 	
 	Button quiz, buttonAnswer, pause, weiter, wiki;
-	// Button score;
 	TextView anzeige;
 	String frageA;
 	String antwortA;
@@ -31,7 +30,6 @@ public class MainActivity extends AppCompatActivity {
 	
 	private RadioGroup radioGroup;
 	private RadioButton radioAnswerButton;
-	// private Button buttonAnswer;
 	  
 	private static final int RESULT_SETTINGS = 1;
 	
@@ -44,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
 		frageB = " ";
 		hinweis = " ";
 		quiz = (Button) findViewById(R.id.quiz);
-		// score = (Button) findViewById(R.id.score);
 		buttonAnswer = (Button) findViewById(R.id.buttonAnswer);
 		pause = (Button) findViewById(R.id.pause);
 		weiter = (Button) findViewById(R.id.weiter);
@@ -60,17 +57,6 @@ public class MainActivity extends AppCompatActivity {
 				anzeige.setText("Frage: " + frageA);
 				}
 		});
-		
-		// score.setOnClickListener(new View.OnClickListener() {
-		// score.setOnClickListener(new View.OnClickListener() {
-		//			
-		//	@Override
-		//	public void onClick(View v) {
-		//		// TODO Auto-generated method stub
-		//		antwortA = "Ja lautet die Antwort! Gut gemacht!";
-		//		anzeige.setText("Antwort: " + antwortA);
-		//		}
-		// });
 		
 		pause.setOnClickListener(new View.OnClickListener() {
 			
