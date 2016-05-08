@@ -77,7 +77,18 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="18dp"
         android:text="@string/button_answer" />  
-
+	
+	<Button
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+		android:orientation="horizontal"        
+		android:layout_toLeftOf="@+id/wiki"
+		android:layout_below="@+id/buttonAnswer"
+        android:layout_marginTop="18dp"
+        android:text="@string/Back" />
+	
 	<Button
         android:id="@+id/wiki"
         android:layout_width="wrap_content"
@@ -110,7 +121,18 @@
 		android:layout_marginTop="18dp"
 		android:text="@string/Weiter" />
 	
-	 <TextView
+	<Button
+		android:id="@+id/close"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:orientation="horizontal"
+		android:layout_toRightOf="@+id/weiter"
+		android:layout_below="@+id/buttonAnswer"
+		android:layout_marginTop="18dp"
+		android:text="@string/Close" />
+	
+	<TextView
         android:id="@+id/textUserSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

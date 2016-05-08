@@ -21,11 +21,12 @@ import android.content.SharedPreferences;
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class MainActivity extends AppCompatActivity {
 	
-	Button quiz, buttonAnswer, pause, weiter, wiki;
+	Button quiz, buttonAnswer, back, pause, weiter, wiki, close;
 	TextView anzeige;
 	String frageA;
 	String antwortA;
 	String frageB;
+	String antwortB;
 	String hinweis;
 	
 	private RadioGroup radioGroup;
@@ -37,23 +38,34 @@ public class MainActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		frageA = " ";
-		antwortA = " ";
-		frageB = " ";
-		hinweis = " ";
+		frageA = "Ist der BVB der beste Club der Welt?";
+		antwortA = "Ja lautet die Antwort! Gut gemacht!";
+		frageB = "Ist FC Bayern München kacke?";
+		antwortB = "Die Antwort ist leider falsch!";
+		hinweis = "Frage wurde für später gespeichert!";
 		quiz = (Button) findViewById(R.id.quiz);
 		buttonAnswer = (Button) findViewById(R.id.buttonAnswer);
 		pause = (Button) findViewById(R.id.pause);
+		back = (Button) findViewById(R.id.back);
 		weiter = (Button) findViewById(R.id.weiter);
 		anzeige = (TextView) findViewById(R.id.totaloutput);
 		wiki = (Button) findViewById(R.id.wiki);
-				
+		close = (Button) findViewById(R.id.close);
+		
 		quiz.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				frageA = "Ist der BVB der beste Club der Welt?";
+				anzeige.setText("Frage: " + frageA);
+				}
+		});
+		
+		back.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
 				anzeige.setText("Frage: " + frageA);
 				}
 		});
@@ -63,7 +75,6 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				hinweis = "Frage wurde für später gespeichert!";
 				anzeige.setText("Achtung: " + hinweis);
 				}
 		});
@@ -73,7 +84,6 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				frageB = "Ist FC Bayern München kacke?";
 				anzeige.setText("Frage: " + frageB);
 				}
 		});
@@ -85,6 +95,14 @@ public class MainActivity extends AppCompatActivity {
 				  Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.wikipedia.de/"));
 				  startActivity(browserIntent);
 			}
+		});
+		
+		close.setOnClickListener(new View.OnClickListener() {
+		     
+			@Override
+		     public void onClick(View v) {
+		        finish();
+		     }
 		});
 		
 		addListenerOnButton();
@@ -167,14 +185,13 @@ public class MainActivity extends AppCompatActivity {
     		radioAnswerButton = (RadioButton) findViewById(selectedId);
 
             if(selectedId == R.id.radioYes){
-            antwortA = "Ja lautet die Antwort! Gut gemacht!";
     		anzeige.setText("Antwort: " + antwortA);
             
     		Toast.makeText(MainActivity.this,
     		radioAnswerButton.getText(), Toast.LENGTH_SHORT).show();
             }
             else if(selectedId == R.id.radioNo){
-            anzeige.setText("Die Antwort ist leider falsch!");
+            anzeige.setText("Antwort: " + antwortB);
             
         	Toast.makeText(MainActivity.this,
         	radioAnswerButton.getText(), Toast.LENGTH_SHORT).show();

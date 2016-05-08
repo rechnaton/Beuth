@@ -103,5 +103,36 @@ Ausblick:
 
 ------------------------------------------------------------------------------------------
 
-#08.05.2016
+#08.05.2016 (Online Meeting via Team Viewer)
 
+Startschwierigkeiten :)
+
+Rückblick:
+- Andreas hat einige Buttons/Funktionen (siehe GitHub) hinzugefügt.
+- Thomas hat das Projekt implementiert und lauffähig gemacht.
+- Steven hat sich weiter hinsichtlich der Datenbank informiert und diese erweitert/vorbereitet.
+
+Tasks:
+
+Alle:
+- Jeder zieht sich noch einmal den aktuellen Stand nach dem heutigen Meeting
+- Sprints werden ggf. nachträglich dokumentarisch erfasst
+- weitere Dokumentation erfolgt nach Fortschritt mit DB (-Anbindung)
+
+Steven:
+- wird das Projekt noch einmal in Eclipse aufbauen, statt Android Studio zu nutzen
+- DB ist bis 15.05. aufgesetzt
+
+Andreas:
+- committed letzten Stand der Entwicklung
+- Wie funktioniert Datenbankanbindung (theoretische Vorbereitung)?
+
+Thomas:
+- GUI erweitern (Themenauswahl, Frage stellen; PeatUser_has_Themes (siehe database https://github.com/andreasmosig/peat/tree/master/doc/DB)
+
+------------------------------------------------------------------------------------------
+
+#16.05.2016 (Online Meeting via Team Viewer)
+21 Uhr
+
+- inkl. Feedback an Prof. Edlich

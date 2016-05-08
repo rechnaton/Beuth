@@ -9,6 +9,11 @@
     <string name="Hinweis">Pausieren</string>
     <string name="Weiter">Nächste Frage</string>
     <string name="GotoWikipedia">Wiki-Suche</string>
+    <string name="radio_yes">Ja</string>
+    <string name="radio_no">Nein</string>
+    <string name="button_answer">Antwort?</string>
+    <string name="Back">#rp</string>    
+    <string name="Close">X</string> 
     
     <string name="action_settings">Einstellungen</string>
     <string name="title_activity_einstellungen">Einstellungen</string>
@@ -23,9 +28,5 @@
     <string name="pref_user_name_summary">Ändere hier deinen Benutzernamen.</string>
     <string name="pref_user_profile">Benutzerprofil</string>
     <string name="pref_update_setting">Quiz-Einstellungen</string>
-    
-    <string name="radio_yes">Ja</string>
-    <string name="radio_no">Nein</string>
-    <string name="button_answer">Antwort?</string>
-    
+
 </resources>
