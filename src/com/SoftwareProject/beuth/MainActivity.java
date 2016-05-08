@@ -21,7 +21,7 @@ import android.content.SharedPreferences;
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class MainActivity extends AppCompatActivity {
 	
-	Button quiz, buttonAnswer, back, pause, weiter, wiki, close;
+	Button quiz, buttonAnswer, back, pause, weiter, wiki, google, close;
 	TextView anzeige;
 	String frageA;
 	String antwortA;
@@ -50,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
 		weiter = (Button) findViewById(R.id.weiter);
 		anzeige = (TextView) findViewById(R.id.totaloutput);
 		wiki = (Button) findViewById(R.id.wiki);
+		google = (Button) findViewById(R.id.google);
 		close = (Button) findViewById(R.id.close);
 		
 		quiz.setOnClickListener(new View.OnClickListener() {
@@ -93,6 +94,15 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View v) {
 				  Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.wikipedia.de/"));
+				  startActivity(browserIntent);
+			}
+		});
+		
+		google.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				  Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.de/"));
 				  startActivity(browserIntent);
 			}
 		});

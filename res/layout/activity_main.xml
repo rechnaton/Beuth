@@ -84,21 +84,10 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
 		android:orientation="horizontal"        
-		android:layout_toLeftOf="@+id/wiki"
-		android:layout_below="@+id/buttonAnswer"
-        android:layout_marginTop="18dp"
-        android:text="@string/Back" />
-	
-	<Button
-        android:id="@+id/wiki"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-		android:orientation="horizontal"        
 		android:layout_toLeftOf="@+id/pause"
 		android:layout_below="@+id/buttonAnswer"
         android:layout_marginTop="18dp"
-        android:text="@string/GotoWikipedia" />
+        android:text="@string/Back" />
 	
 	<Button
 		android:id="@+id/pause"
@@ -122,13 +111,34 @@
 		android:text="@string/Weiter" />
 	
 	<Button
+        android:id="@+id/wiki"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+		android:orientation="horizontal"        
+		android:layout_toLeftOf="@+id/google"
+		android:layout_below="@+id/pause"
+        android:layout_marginTop="18dp"
+        android:text="@string/GotoWikipedia" />
+	
+	<Button
+        android:id="@+id/google"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+		android:orientation="horizontal"        
+		android:layout_below="@+id/pause"
+        android:layout_marginTop="18dp"
+        android:text="@string/GotoGoogle" />
+	
+	<Button
 		android:id="@+id/close"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_centerHorizontal="true"
 		android:orientation="horizontal"
-		android:layout_toRightOf="@+id/weiter"
-		android:layout_below="@+id/buttonAnswer"
+		android:layout_toRightOf="@+id/google"
+		android:layout_below="@+id/pause"
 		android:layout_marginTop="18dp"
 		android:text="@string/Close" />
 	

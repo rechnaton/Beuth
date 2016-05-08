@@ -6,14 +6,15 @@
     <string name="app_name">#peat</string>
     <string name="einleitung">Spielend lernen! Nie wieder vergessen!</string>
     <string name="StarteQuiz">Frage</string>
-    <string name="Hinweis">Pausieren</string>
-    <string name="Weiter">Nächste Frage</string>
-    <string name="GotoWikipedia">Wiki-Suche</string>
+    <string name="Hinweis">Pause</string>
+    <string name="Weiter">Weiter</string>
+    <string name="GotoWikipedia">Wiki</string>
+    <string name="GotoGoogle">Google</string>
     <string name="radio_yes">Ja</string>
     <string name="radio_no">Nein</string>
     <string name="button_answer">Antwort?</string>
-    <string name="Back">#rp</string>    
-    <string name="Close">X</string> 
+    <string name="Back">#repeat</string>    
+    <string name="Close">Close</string> 
     
     <string name="action_settings">Einstellungen</string>
     <string name="title_activity_einstellungen">Einstellungen</string>
