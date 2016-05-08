@@ -17,7 +17,7 @@ Andreas Mosig:
 
 ------------------------------------------------------------------------------------------
 
-#23.04.2016 (Präsenz)
+#23.04.2016 (PrÃ¤senz)
 
 Entwicklung
 QM
@@ -36,16 +36,16 @@ CID Continious Integration/Delivery
 
 Fragen:
 1) Web und App, oder entweder oder? - App, lokale DB, 
-2) Empfehlung für App-Frameworks/Entwicklung? - Eclipse, Plugins, SQLlite
+2) Empfehlung fÃ¼r App-Frameworks/Entwicklung? - Eclipse, Plugins, SQLlite
 3) Versionierung, wie? - releases (git)
 4) Webserver / Webservice? - nein
 
 Ideen:
 1) lokale Datenbank (Abo)
-2) Synchronisation mit Web-DB (User kann neues Thema zum Abo hinzufügen)
+2) Synchronisation mit Web-DB (User kann neues Thema zum Abo hinzufÃ¼gen)
 3) Statusbericht in asana als Terminserie mit Links zu easyBacklog
 4) In easyBacklog:
-4.1) Thema (z.B. App, Weboberfläche, DB)
+4.1) Thema (z.B. App, WeboberflÃ¤che, DB)
 4.2) Story (z.B. UI, Funktion A/B, Farbe, ..)
 4.3) Sprint (z.B. Version 1, Verions 2, ..)
 5) In asana dann die Sprints grob anlegen und managen
@@ -54,34 +54,34 @@ Ideen:
 
 Tasks (bis 01.05.2016)
 - Fachwissen aneignen und in Doku notieren (alle)
-- Use Cases (Expose) prüfen (alle)
+- Use Cases (Expose) prÃ¼fen (alle)
 - und diese als Stories in easyBacklog eingeben (Thomas)
 - Sprints planen (alle)
 - DB-Schema (ER)(Steven)
 - Doku parallel pflegen (Andreas)
-- Prototyp weiterentwickeln (nach jedem Sprint neue, lauffähige Version > releases in git) (alle)
+- Prototyp weiterentwickeln (nach jedem Sprint neue, lauffÃ¤hige Version > releases in git) (alle)
 
 ------------------------------------------------------------------------------------------
 
-#16.04.2016 (Online Meeting via Team Viewer)
+#01.05.2016 (Online Meeting via Team Viewer)
 
 - Fehler/Kompilierfehler mit Studio bei Steven (Theme.AppCompat.Light-Library)
 - Thomas testet am selben Abend (01.05.2016) noch SDK und AVD und gibt Steven Bescheid, ob dieselben Fehler auftreten > wenn nicht, arbeitet Steven via Eclipse (+SDK, AVD)
 - Steven muss noch Pullrequest ziehen (Datensatz nicht aktuell)
 - Steven hat DB DesignerFork erstes Shema gemacht
- mit den wichtigsten Attributen (erklärt es)
+ mit den wichtigsten Attributen (erklÃ¤rt es)
 
-- WIEDERHOLUNGSLOGIK: Nutzer > alle 5 Min > Frage richtig > isIgnore false, lastShown Date, isLastAnswerCorrect true > nächste Frage ... > falsch beantwortete Fragen wiederholt (sortiert nach lastShown) > User kann bereits richtig beantwortete Fragen ignorieren (isIgnore true) > bis alle Fragen richtig gewesen sind > und keine Fragen mehr, die User noch nicht gesehen hat (lastShown) > Report / Statistik
+- WIEDERHOLUNGSLOGIK: Nutzer > alle 5 Min > Frage richtig > isIgnore false, lastShown Date, isLastAnswerCorrect true > nÃ¤chste Frage ... > falsch beantwortete Fragen wiederholt (sortiert nach lastShown) > User kann bereits richtig beantwortete Fragen ignorieren (isIgnore true) > bis alle Fragen richtig gewesen sind > und keine Fragen mehr, die User noch nicht gesehen hat (lastShown) > Report / Statistik
 
 Tasks:
 
 Alle (04.05.2016):
-- Java-Version (master) 1.8.0_91 (prüfen)
-- Libraries prüfen > Build / Run as Android Application
-- alle aktuell, alle haben ausführbaren Code
+- Java-Version (master) 1.8.0_91 (prÃ¼fen)
+- Libraries prÃ¼fen > Build / Run as Android Application
+- alle aktuell, alle haben ausfÃ¼hrbaren Code
 
 Steven (13.05.2016):
-- Steven lädt DB-Schema-XML-Datei hoch und ergänzt in Dokumentation (bis 04.05.2016)
+- Steven lÃ¤dt DB-Schema-XML-Datei hoch und ergÃ¤nzt in Dokumentation (bis 04.05.2016)
 - DB-SQLite-Schema erstellen
 - Prototyp der DB erstellen
 - wie in Android-Projekt hinein?
@@ -97,7 +97,7 @@ Thomas (13.05.2016):
 Ausblick:
 - Fragetypen (Multiple Choice, Offene Fragen)
 - Neuanlage von Fragen
-- Wiederholung > länger werdende Zeiträume
+- Wiederholung > lÃ¤nger werdende ZeitrÃ¤ume
 - Spacing Effekt
 - Rating der User/Contributer/Fragen > Statistiken/Sperre, User-Community
 
@@ -107,16 +107,16 @@ Ausblick:
 
 Startschwierigkeiten :)
 
-Rückblick:
-- Andreas hat einige Buttons/Funktionen (siehe GitHub) hinzugefügt.
-- Thomas hat das Projekt implementiert und lauffähig gemacht.
+RÃ¼ckblick:
+- Andreas hat einige Buttons/Funktionen (siehe GitHub) hinzugefÃ¼gt.
+- Thomas hat das Projekt implementiert und lauffÃ¤hig gemacht.
 - Steven hat sich weiter hinsichtlich der Datenbank informiert und diese erweitert/vorbereitet.
 
 Tasks:
 
 Alle:
 - Jeder zieht sich noch einmal den aktuellen Stand nach dem heutigen Meeting
-- Sprints werden ggf. nachträglich dokumentarisch erfasst
+- Sprints werden ggf. nachtrÃ¤glich dokumentarisch erfasst
 - weitere Dokumentation erfolgt nach Fortschritt mit DB (-Anbindung)
 
 Steven:
