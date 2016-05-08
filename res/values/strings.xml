@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <color name="blue">#51c8fc</color>
+    
     <string name="app_name">#peat</string>
     <string name="einleitung">Spielend lernen! Nie wieder vergessen!</string>
     <string name="StarteQuiz">Frage</string>
-    <string name="Score">Antwort</string>
     <string name="Hinweis">Pausieren</string>
+    <string name="Weiter">Nächste Frage</string>
     <string name="GotoWikipedia">Wiki-Suche</string>
+    
     <string name="action_settings">Einstellungen</string>
     <string name="title_activity_einstellungen">Einstellungen</string>
-    <string name="preference_peat_title">Liste der Themen</string>
-	<string name="preference_peat_key">Themen</string>
-	<string name="preference_peat_default">Fußball, 1. Bundesliga</string>
-	
-    <string name="pref_send_report">Absturzmeldungen senden</string>
+    <string name="Themenliste">Liste der Themen</string>
+	<string name="Themen_title">Themen</string>
+	<string name="Themen_default">Fußball, 1. Bundesliga</string>
+	<string name="pref_send_report">Absturzmeldungen senden</string>
     <string name="pref_send_report_summary">Anhaken, um Fehler schneller zu beheben.</string>
     <string name="pref_sync_frequency">Wiederholungsrate</string>
     <string name="pref_sync_frequency_summary">Wie oft soll dir #peat Fragen stellen?</string>
@@ -21,5 +23,9 @@
     <string name="pref_user_name_summary">Ändere hier deinen Benutzernamen.</string>
     <string name="pref_user_profile">Benutzerprofil</string>
     <string name="pref_update_setting">Quiz-Einstellungen</string>
+    
+    <string name="radio_yes">Ja</string>
+    <string name="radio_no">Nein</string>
+    <string name="button_answer">Antwort?</string>
     
 </resources>

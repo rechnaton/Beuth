@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/blue" >
     
     <EditTextPreference
-        android:title="@string/preference_peat_title"
-        android:key="@string/preference_peat_key"
-        android:defaultValue="@string/preference_peat_default"
+        android:title="@string/Themenliste"
+        android:key="@string/Themen_title"
+        android:defaultValue="@string/Themen_default"
         android:inputType="textMultiLine" />
     
     <PreferenceCategory android:title="@string/pref_user_profile" >
