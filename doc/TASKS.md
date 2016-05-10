@@ -2,14 +2,16 @@
 
 Tasks (bis ca. 01.05.2016):
 - Fachwissen aneignen und in Doku notieren (alle)
-- Use Cases (ExposÈ) pr¸fen (alle)
+- Use Cases (Expos√©) pr√ºfen (alle)
 - und diese als Stories in easyBacklog eingeben (Thomas)
 - Statusbericht an Prof. Edlich schicken (Andreas)
 - Sprints planen (alle)
 - DB-Schema entwerfen (ER)(Steven)
 - Doku parallel pflegen (Andreas)
-- Prototyp weiterentwickeln (nach jedem Sprint neue, lauff‰hige Version > releases in git) (alle)
+- Prototyp weiterentwickeln (nach jedem Sprint neue, lauff√§hige Version > releases in git) (alle)
 
 Offen:
 - Einsatz einer Datenbank hinterfragen/planen (SQLite)
 - Einsatz eines Webservices hinterfragen/planen
+- an edlich den link zur dropbox schicken
+- pr√ºfungsterminwunsch schicken
