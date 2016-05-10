@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.media.MediaPlayer;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -24,8 +25,9 @@ public class MainActivity extends AppCompatActivity {
 	Button quiz, buttonAnswer, back, pause, weiter, wiki, google, close;
 	TextView anzeige;
 	String frageA;
-	String antwortA;
 	String frageB;
+	String frageC;	
+	String antwortA;
 	String antwortB;
 	String hinweis;
 	
@@ -38,9 +40,10 @@ public class MainActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		frageA = "Ist der BVB der beste Club der Welt?";
+		frageA = "Dient Git der Versionsverwaltung für Software?";
+		frageB = "Ist Slack ein webbasierter Instant-Messanger?";
+		frageC = "Ist Trello eine Projektmanagementsoftware?";		
 		antwortA = "Ja lautet die Antwort! Gut gemacht!";
-		frageB = "Ist FC Bayern München kacke?";
 		antwortB = "Die Antwort ist leider falsch!";
 		hinweis = "Frage wurde für später gespeichert!";
 		quiz = (Button) findViewById(R.id.quiz);
@@ -183,6 +186,8 @@ public class MainActivity extends AppCompatActivity {
     	radioGroup = (RadioGroup) findViewById(R.id.radioQuestion);
     	buttonAnswer = (Button) findViewById(R.id.buttonAnswer);
 
+    	final MediaPlayer mpButtonClick = MediaPlayer.create(this, R.raw.onclickyes);
+    	
     	buttonAnswer.setOnClickListener(new OnClickListener() {
 
     		@Override
@@ -196,7 +201,8 @@ public class MainActivity extends AppCompatActivity {
 
             if(selectedId == R.id.radioYes){
     		anzeige.setText("Antwort: " + antwortA);
-            
+    		mpButtonClick.start();
+    		
     		Toast.makeText(MainActivity.this,
     		radioAnswerButton.getText(), Toast.LENGTH_SHORT).show();
             }

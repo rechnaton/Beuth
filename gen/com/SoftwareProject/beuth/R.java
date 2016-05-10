@@ -2223,7 +2223,8 @@ containing a value of this type.
         public static final int main=0x7f0f0000;
     }
     public static final class raw {
-        public static final int splashsound=0x7f060000;
+        public static final int onclickyes=0x7f060000;
+        public static final int splashsound=0x7f060001;
     }
     public static final class string {
         public static final int Back=0x7f0c001e;

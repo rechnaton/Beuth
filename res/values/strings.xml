@@ -20,7 +20,7 @@
     <string name="title_activity_einstellungen">Einstellungen</string>
     <string name="Themenliste">Liste der Themen</string>
 	<string name="Themen_title">Themen</string>
-	<string name="Themen_default">Fußball, 1. Bundesliga</string>
+	<string name="Themen_default">Softwaretechnik, Entwicklung, Scrum</string>
 	<string name="pref_send_report">Absturzmeldungen senden</string>
     <string name="pref_send_report_summary">Anhaken, um Fehler schneller zu beheben.</string>
     <string name="pref_sync_frequency">Wiederholungsrate</string>
