@@ -13,5 +13,5 @@ Tasks (bis ca. 01.05.2016):
 Offen:
 - Einsatz einer Datenbank hinterfragen/planen (SQLite)
 - Einsatz eines Webservices hinterfragen/planen
-- an edlich den link zur dropbox schicken
+- an edlich den apk-prototyp-link zur dropbox schicken
 - prüfungsterminwunsch schicken
