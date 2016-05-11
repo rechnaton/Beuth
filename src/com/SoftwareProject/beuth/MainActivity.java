@@ -24,9 +24,16 @@ public class MainActivity extends AppCompatActivity {
 	
 	Button quiz, buttonAnswer, back, pause, weiter, wiki, google, close;
 	TextView anzeige;
-	String frageA;
-	String frageB;
-	String frageC;	
+	int setNextQuestion=0;
+    String[] question={
+    		"Dient Git der Versionsverwaltung für Software?",
+    		"Ist Slack ein webbasierter Instant-Messanger?",
+    		"Ist Trello eine Projektmanagementsoftware?",
+    		"Ist Android u.a. auch ein Betriebssystem?",
+    		"Bedeutet APK Android Package File?"};
+    // String frageA;
+	// String frageB;
+	// String frageC;	
 	String antwortA;
 	String antwortB;
 	String hinweis;
@@ -40,9 +47,9 @@ public class MainActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		frageA = "Dient Git der Versionsverwaltung für Software?";
-		frageB = "Ist Slack ein webbasierter Instant-Messanger?";
-		frageC = "Ist Trello eine Projektmanagementsoftware?";		
+		// frageA = "Dient Git der Versionsverwaltung für Software?";
+		// frageB = "Ist Slack ein webbasierter Instant-Messanger?";
+		// frageC = "Ist Trello eine Projektmanagementsoftware?";		
 		antwortA = "Ja lautet die Antwort! Gut gemacht!";
 		antwortB = "Die Antwort ist leider falsch!";
 		hinweis = "Frage wurde für später gespeichert!";
@@ -52,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
 		back = (Button) findViewById(R.id.back);
 		weiter = (Button) findViewById(R.id.weiter);
 		anzeige = (TextView) findViewById(R.id.totaloutput);
+		anzeige.setText(question[setNextQuestion]);
 		wiki = (Button) findViewById(R.id.wiki);
 		google = (Button) findViewById(R.id.google);
 		close = (Button) findViewById(R.id.close);
@@ -61,7 +69,8 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				anzeige.setText("Frage: " + frageA);
+				// anzeige.setText("Frage: " + frageA);
+				anzeige.setText("Möchtest du beginnen? Klicke anschließend auf Weiter.");
 				}
 		});
 		
@@ -70,7 +79,15 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				anzeige.setText("Frage: " + frageA);
+				// anzeige.setText("Frage: " + frageA);
+				if(setNextQuestion==0){
+					setNextQuestion=4;
+				}
+				else
+				{
+					setNextQuestion--;
+				}
+				anzeige.setText(question[setNextQuestion]);
 				}
 		});
 		
@@ -88,7 +105,12 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				anzeige.setText("Frage: " + frageB);
+				// anzeige.setText("Frage: " + frageB);
+				setNextQuestion++;
+				if(setNextQuestion == 5){
+					setNextQuestion=0;
+				}
+				anzeige.setText(question[setNextQuestion]);
 				}
 		});
 		

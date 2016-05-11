@@ -86,7 +86,7 @@
 		android:orientation="horizontal"        
 		android:layout_toLeftOf="@+id/pause"
 		android:layout_below="@+id/buttonAnswer"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="16dp"
         android:text="@string/Back" />
 	
 	<Button
@@ -96,7 +96,7 @@
 		android:layout_centerHorizontal="true"
 		android:orientation="horizontal"
 		android:layout_below="@+id/buttonAnswer"
-		android:layout_marginTop="18dp"
+		android:layout_marginTop="16dp"
 		android:text="@string/Hinweis" />
 	
 	<Button
@@ -107,7 +107,7 @@
 		android:orientation="horizontal"
 		android:layout_toRightOf="@+id/pause"
 		android:layout_below="@+id/buttonAnswer"
-		android:layout_marginTop="18dp"
+		android:layout_marginTop="16dp"
 		android:text="@string/Weiter" />
 	
 	<Button
@@ -118,7 +118,7 @@
 		android:orientation="horizontal"        
 		android:layout_toLeftOf="@+id/google"
 		android:layout_below="@+id/pause"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="16dp"
         android:text="@string/GotoWikipedia" />
 	
 	<Button
@@ -128,7 +128,7 @@
         android:layout_centerHorizontal="true"
 		android:orientation="horizontal"        
 		android:layout_below="@+id/pause"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="16dp"
         android:text="@string/GotoGoogle" />
 	
 	<Button
@@ -139,7 +139,7 @@
 		android:orientation="horizontal"
 		android:layout_toRightOf="@+id/google"
 		android:layout_below="@+id/pause"
-		android:layout_marginTop="18dp"
+		android:layout_marginTop="16dp"
 		android:text="@string/Close" />
 	
 	<TextView
