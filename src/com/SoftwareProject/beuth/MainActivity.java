@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
 	TextView anzeige;
 	int setNextQuestion=0;
     String[] question={
+    		" ",
     		"Dient Git der Versionsverwaltung für Software?",
     		"Ist Slack ein webbasierter Instant-Messanger?",
     		"Ist Trello eine Projektmanagementsoftware?",
@@ -81,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
 				// TODO Auto-generated method stub
 				// anzeige.setText("Frage: " + frageA);
 				if(setNextQuestion==0){
-					setNextQuestion=4;
+					setNextQuestion=5;
 				}
 				else
 				{
@@ -107,7 +108,7 @@ public class MainActivity extends AppCompatActivity {
 				// TODO Auto-generated method stub
 				// anzeige.setText("Frage: " + frageB);
 				setNextQuestion++;
-				if(setNextQuestion == 5){
+				if(setNextQuestion == 6){
 					setNextQuestion=0;
 				}
 				anzeige.setText(question[setNextQuestion]);
