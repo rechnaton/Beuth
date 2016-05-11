@@ -77,17 +77,17 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="18dp"
         android:text="@string/button_answer" />  
-
+	
 	<Button
-        android:id="@+id/wiki"
+        android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
 		android:orientation="horizontal"        
 		android:layout_toLeftOf="@+id/pause"
 		android:layout_below="@+id/buttonAnswer"
-        android:layout_marginTop="18dp"
-        android:text="@string/GotoWikipedia" />
+        android:layout_marginTop="15dp"
+        android:text="@string/Back" />
 	
 	<Button
 		android:id="@+id/pause"
@@ -96,7 +96,7 @@
 		android:layout_centerHorizontal="true"
 		android:orientation="horizontal"
 		android:layout_below="@+id/buttonAnswer"
-		android:layout_marginTop="18dp"
+		android:layout_marginTop="15dp"
 		android:text="@string/Hinweis" />
 	
 	<Button
@@ -107,10 +107,42 @@
 		android:orientation="horizontal"
 		android:layout_toRightOf="@+id/pause"
 		android:layout_below="@+id/buttonAnswer"
-		android:layout_marginTop="18dp"
+		android:layout_marginTop="15dp"
 		android:text="@string/Weiter" />
 	
-	 <TextView
+	<Button
+        android:id="@+id/wiki"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+		android:orientation="horizontal"        
+		android:layout_toLeftOf="@+id/google"
+		android:layout_below="@+id/pause"
+        android:layout_marginTop="15dp"
+        android:text="@string/GotoWikipedia" />
+	
+	<Button
+        android:id="@+id/google"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+		android:orientation="horizontal"        
+		android:layout_below="@+id/pause"
+        android:layout_marginTop="15dp"
+        android:text="@string/GotoGoogle" />
+	
+	<Button
+		android:id="@+id/close"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:orientation="horizontal"
+		android:layout_toRightOf="@+id/google"
+		android:layout_below="@+id/pause"
+		android:layout_marginTop="15dp"
+		android:text="@string/Close" />
+	
+	<TextView
         android:id="@+id/textUserSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

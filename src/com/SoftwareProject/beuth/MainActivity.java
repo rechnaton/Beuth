@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.media.MediaPlayer;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -21,11 +22,21 @@ import android.content.SharedPreferences;
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class MainActivity extends AppCompatActivity {
 	
-	Button quiz, buttonAnswer, pause, weiter, wiki;
+	Button quiz, buttonAnswer, back, pause, weiter, wiki, google, close;
 	TextView anzeige;
-	String frageA;
+	int setNextQuestion=0;
+    String[] question={
+    		" ",
+    		"Dient Git der Versionsverwaltung für Software?",
+    		"Ist Slack ein webbasierter Instant-Messanger?",
+    		"Ist Trello eine Projektmanagementsoftware?",
+    		"Ist Android u.a. auch ein Betriebssystem?",
+    		"Bedeutet APK Android Package File?"};
+    // String frageA;
+	// String frageB;
+	// String frageC;	
 	String antwortA;
-	String frageB;
+	String antwortB;
 	String hinweis;
 	
 	private RadioGroup radioGroup;
@@ -37,24 +48,47 @@ public class MainActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
-		frageA = " ";
-		antwortA = " ";
-		frageB = " ";
-		hinweis = " ";
+		// frageA = "Dient Git der Versionsverwaltung für Software?";
+		// frageB = "Ist Slack ein webbasierter Instant-Messanger?";
+		// frageC = "Ist Trello eine Projektmanagementsoftware?";		
+		antwortA = "Ja lautet die Antwort! Gut gemacht!";
+		antwortB = "Die Antwort ist leider falsch!";
+		hinweis = "Frage wurde für später gespeichert!";
 		quiz = (Button) findViewById(R.id.quiz);
 		buttonAnswer = (Button) findViewById(R.id.buttonAnswer);
 		pause = (Button) findViewById(R.id.pause);
+		back = (Button) findViewById(R.id.back);
 		weiter = (Button) findViewById(R.id.weiter);
 		anzeige = (TextView) findViewById(R.id.totaloutput);
+		anzeige.setText(question[setNextQuestion]);
 		wiki = (Button) findViewById(R.id.wiki);
-				
+		google = (Button) findViewById(R.id.google);
+		close = (Button) findViewById(R.id.close);
+		
 		quiz.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				frageA = "Ist der BVB der beste Club der Welt?";
-				anzeige.setText("Frage: " + frageA);
+				// anzeige.setText("Frage: " + frageA);
+				anzeige.setText("Möchtest du beginnen? Klicke anschließend auf Weiter.");
+				}
+		});
+		
+		back.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				// anzeige.setText("Frage: " + frageA);
+				if(setNextQuestion==0){
+					setNextQuestion=5;
+				}
+				else
+				{
+					setNextQuestion--;
+				}
+				anzeige.setText(question[setNextQuestion]);
 				}
 		});
 		
@@ -63,7 +97,6 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				hinweis = "Frage wurde für später gespeichert!";
 				anzeige.setText("Achtung: " + hinweis);
 				}
 		});
@@ -73,8 +106,12 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				frageB = "Ist FC Bayern München kacke?";
-				anzeige.setText("Frage: " + frageB);
+				// anzeige.setText("Frage: " + frageB);
+				setNextQuestion++;
+				if(setNextQuestion == 6){
+					setNextQuestion=0;
+				}
+				anzeige.setText(question[setNextQuestion]);
 				}
 		});
 		
@@ -85,6 +122,23 @@ public class MainActivity extends AppCompatActivity {
 				  Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.wikipedia.de/"));
 				  startActivity(browserIntent);
 			}
+		});
+		
+		google.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				  Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.de/"));
+				  startActivity(browserIntent);
+			}
+		});
+		
+		close.setOnClickListener(new View.OnClickListener() {
+		     
+			@Override
+		     public void onClick(View v) {
+		        finish();
+		     }
 		});
 		
 		addListenerOnButton();
@@ -155,6 +209,8 @@ public class MainActivity extends AppCompatActivity {
     	radioGroup = (RadioGroup) findViewById(R.id.radioQuestion);
     	buttonAnswer = (Button) findViewById(R.id.buttonAnswer);
 
+    	final MediaPlayer mpButtonClick = MediaPlayer.create(this, R.raw.onclickyes);
+    	
     	buttonAnswer.setOnClickListener(new OnClickListener() {
 
     		@Override
@@ -167,14 +223,14 @@ public class MainActivity extends AppCompatActivity {
     		radioAnswerButton = (RadioButton) findViewById(selectedId);
 
             if(selectedId == R.id.radioYes){
-            antwortA = "Ja lautet die Antwort! Gut gemacht!";
     		anzeige.setText("Antwort: " + antwortA);
-            
+    		mpButtonClick.start();
+    		
     		Toast.makeText(MainActivity.this,
     		radioAnswerButton.getText(), Toast.LENGTH_SHORT).show();
             }
             else if(selectedId == R.id.radioNo){
-            anzeige.setText("Die Antwort ist leider falsch!");
+            anzeige.setText("Antwort: " + antwortB);
             
         	Toast.makeText(MainActivity.this,
         	radioAnswerButton.getText(), Toast.LENGTH_SHORT).show();
