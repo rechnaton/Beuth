@@ -1,21 +1,28 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/blue"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.SoftwareProject.beuth.MainActivity" >
 
+    <!-- Diese Small-Version ist für Handys geeignet.
+    Für Tabletts bitte folgende Änderungen vornehmen:
+    Large: marginTop="20dp" statt 18dp
+    and textSize="30sp" statt 15sp
+    and textAppearance="?android:attr/textAppearanceLarge" statt ...Small
+    -->
+    
     <TextView
         android:id="@+id/entry"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="@string/einleitung"
-    	android:textSize="30sp" />
+    	android:textSize="15sp" />
 
 	<Button
         android:id="@+id/quiz"
@@ -23,22 +30,34 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/entry"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="18dp"
         android:text="@string/StarteQuiz" />
+	
+	<TextView
+        android:id="@+id/totaloutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/quiz"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:layout_marginTop="18dp"
+        android:text=""
+    	android:textAppearance="?android:attr/textAppearanceSmall" />
 	
 	<RadioGroup
         android:id="@+id/radioQuestion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/quiz" >
+        android:orientation="horizontal"
+        android:layout_below="@+id/totaloutput" >
 
         <RadioButton
             android:id="@+id/radioYes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/radio_yes" 
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="18dp"
             android:checked="true" />
 
         <RadioButton
@@ -46,7 +65,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/radio_no"
-            android:layout_marginTop="20dp" />
+            android:layout_marginTop="18dp" />
 
     </RadioGroup>
 
@@ -56,48 +75,74 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/radioQuestion"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="18dp"
         android:text="@string/button_answer" />  
-              
-	<!-- <Button
-        android:id="@+id/score"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/buttonAnswer"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="@string/Score" /> -->
 	
-	<TextView
-        android:id="@+id/totaloutput"
+	<Button
+        android:id="@+id/back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/buttonAnswer"
         android:layout_centerHorizontal="true"
-        android:gravity="center"
-        android:layout_marginTop="20dp"
-        android:text=""
-    	android:textAppearance="?android:attr/textAppearanceLarge" />
+		android:orientation="horizontal"        
+		android:layout_toLeftOf="@+id/pause"
+		android:layout_below="@+id/buttonAnswer"
+        android:layout_marginTop="15dp"
+        android:text="@string/Back" />
 	
 	<Button
-        android:id="@+id/pause"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/totaloutput"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
-        android:text="@string/Hinweis" />
-	    
+		android:id="@+id/pause"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:orientation="horizontal"
+		android:layout_below="@+id/buttonAnswer"
+		android:layout_marginTop="15dp"
+		android:text="@string/Hinweis" />
+	
+	<Button
+		android:id="@+id/weiter"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:orientation="horizontal"
+		android:layout_toRightOf="@+id/pause"
+		android:layout_below="@+id/buttonAnswer"
+		android:layout_marginTop="15dp"
+		android:text="@string/Weiter" />
+	
 	<Button
         android:id="@+id/wiki"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/pause"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="20dp"
+		android:orientation="horizontal"        
+		android:layout_toLeftOf="@+id/google"
+		android:layout_below="@+id/pause"
+        android:layout_marginTop="15dp"
         android:text="@string/GotoWikipedia" />
 	
-	 <TextView
+	<Button
+        android:id="@+id/google"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+		android:orientation="horizontal"        
+		android:layout_below="@+id/pause"
+        android:layout_marginTop="15dp"
+        android:text="@string/GotoGoogle" />
+	
+	<Button
+		android:id="@+id/close"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:orientation="horizontal"
+		android:layout_toRightOf="@+id/google"
+		android:layout_below="@+id/pause"
+		android:layout_marginTop="15dp"
+		android:text="@string/Close" />
+	
+	<TextView
         android:id="@+id/textUserSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
