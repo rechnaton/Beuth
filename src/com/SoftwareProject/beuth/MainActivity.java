@@ -209,7 +209,8 @@ public class MainActivity extends AppCompatActivity {
     	radioGroup = (RadioGroup) findViewById(R.id.radioQuestion);
     	buttonAnswer = (Button) findViewById(R.id.buttonAnswer);
 
-    	final MediaPlayer mpButtonClick = MediaPlayer.create(this, R.raw.onclickyes);
+    	final MediaPlayer mpButtonClickYes = MediaPlayer.create(this, R.raw.onclickyes);
+    	final MediaPlayer mpButtonClickNo = MediaPlayer.create(this, R.raw.onclickno);
     	
     	buttonAnswer.setOnClickListener(new OnClickListener() {
 
@@ -224,13 +225,14 @@ public class MainActivity extends AppCompatActivity {
 
             if(selectedId == R.id.radioYes){
     		anzeige.setText("Antwort: " + antwortA);
-    		mpButtonClick.start();
+    		mpButtonClickYes.start();
     		
     		Toast.makeText(MainActivity.this,
     		radioAnswerButton.getText(), Toast.LENGTH_SHORT).show();
             }
             else if(selectedId == R.id.radioNo){
             anzeige.setText("Antwort: " + antwortB);
+            mpButtonClickNo.start();
             
         	Toast.makeText(MainActivity.this,
         	radioAnswerButton.getText(), Toast.LENGTH_SHORT).show();
