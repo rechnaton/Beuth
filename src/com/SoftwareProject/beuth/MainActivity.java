@@ -103,7 +103,7 @@ public class MainActivity extends AppCompatActivity {
 			
 			@Override
 			public void onClick(View v) {
-				stage.setText("Möchtest du beginnen? Klicke anschließend auf Weiter.");
+				stage.setText("Möchtest du beginnen? Klicke einfach auf Weiter.");
 			}
 		});
 		
