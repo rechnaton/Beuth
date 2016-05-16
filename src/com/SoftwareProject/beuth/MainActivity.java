@@ -1,6 +1,8 @@
 package com.SoftwareProject.beuth;
 
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.annotation.TargetApi;
 import android.content.Intent;
 import android.net.Uri;
@@ -25,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 	/**
 	 * Definition aller notwendigen Variablen
 	 */
-	Button quiz; // Button Frage, leitet das Spiel ein
+	Button start; // Button Frage, leitet das Spiel ein
 	Button buttonAnswer; // Button Antwort, ruft die Antwort zur aktuellen Frage auf
 	Button back; // Button #Repeat, ruft die zurueckliegende Frage auf
 	Button pause; // Button Pause, speichert/pausiert die aktuelle Frage
@@ -35,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
 	Button close; // Button Close, schliesst die Anwendung bzw. die App
 	
 	TextView stage; // Ausgabe, Mensch-Computer-Kommunikation
+	
+	public static final String LOG_TAG = MainActivity.class.getSimpleName();
+	private PeatDataSource dataSource;
 	
 	int setNextQuestion=0; // Zaehler-Mockup, setzt den Array-Index des Fragearrays auf 0
     String[] question={ // Fragen-Mockup als Array
@@ -67,7 +72,19 @@ public class MainActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);	
 
-		quiz = (Button) findViewById(R.id.start);
+	    dataSource = new PeatDataSource(this);
+	    Log.d(LOG_TAG, "Die Datenquelle wird geöffnet.");
+	    
+	    dataSource.open();
+	    //this.deleteDatabase("peat.db");
+	    dataSource.putNewQuestionTypeInDB("SimpleText", "Bitte geben Sie Ihre Antwort als Text ein. Achten Sie auf die Rechtschreibung.");
+	    dataSource.getAllTablesOfDB();
+	    String[] antwortFrageA = {"Ja"};
+	    Boolean[] isCorrectFrageA = {true};
+	    Question frageA = new Question("Wurde diese Frage in die DB gepackt?", "SimpleText", antwortFrageA, isCorrectFrageA);
+	    dataSource.putQuestionInDB(frageA);
+	    
+		start = (Button) findViewById(R.id.start);
 		
 		stage = (TextView) findViewById(R.id.stage);
 		stage.setText(question[setNextQuestion]);
@@ -82,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
 		google = (Button) findViewById(R.id.google);
 		close = (Button) findViewById(R.id.close);
 		
-		quiz.setOnClickListener(new View.OnClickListener() {
+		start.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
@@ -184,7 +201,6 @@ public class MainActivity extends AppCompatActivity {
 				startActivityForResult(i, RESULT_SETTINGS);
 				break;
 			}
-
 			return super.onOptionsItemSelected(item);
 		}
 		
@@ -197,8 +213,7 @@ public class MainActivity extends AppCompatActivity {
 				showUserSettings();
 				break;
 			}
- 
-		}
+ 		}
 		
 		private void showUserSettings() {
 			SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
