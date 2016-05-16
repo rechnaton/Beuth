@@ -1,6 +1,8 @@
 package com.SoftwareProject.beuth;
 
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.annotation.TargetApi;
 import android.content.Intent;
 import android.net.Uri;
@@ -21,7 +23,8 @@ import android.content.SharedPreferences;
 
 @TargetApi(Build.VERSION_CODES.HONEYCOMB)
 public class MainActivity extends AppCompatActivity {
-	
+	public static final String LOG_TAG = MainActivity.class.getSimpleName();
+	private PeatDataSource dataSource;
 	Button quiz, buttonAnswer, back, pause, weiter, wiki, google, close;
 	TextView anzeige;
 	int setNextQuestion=0;
@@ -50,7 +53,20 @@ public class MainActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_main);
 		// frageA = "Dient Git der Versionsverwaltung für Software?";
 		// frageB = "Ist Slack ein webbasierter Instant-Messanger?";
-		// frageC = "Ist Trello eine Projektmanagementsoftware?";		
+		// frageC = "Ist Trello eine Projektmanagementsoftware?";
+	    dataSource = new PeatDataSource(this);
+	    Log.d(LOG_TAG, "Die Datenquelle wird geöffnet.");
+	    
+	    dataSource.open();
+	    //this.deleteDatabase("peat.db");
+	    dataSource.putNewQuestionTypeInDB("SimpleText", "Bitte geben Sie Ihre Antwort als Text ein. Achten Sie auf die Rechtschreibung.");
+	    dataSource.getAllTablesOfDB();
+	    String[] antwortFrageA = {"Ja"};
+	    Boolean[] isCorrectFrageA = {true};
+	    Question frageA = new Question("Wurde diese Frage in die DB gepackt?", "SimpleText", antwortFrageA,
+	    		isCorrectFrageA);
+	    dataSource.putQuestionInDB(frageA);
+	    
 		antwortA = "Ja lautet die Antwort! Gut gemacht!";
 		antwortB = "Die Antwort ist leider falsch!";
 		hinweis = "Frage wurde für später gespeichert!";
