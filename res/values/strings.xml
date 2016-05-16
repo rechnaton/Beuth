@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- Definiton Corporate Design Farben -->
     <color name="blue">#51c8fc</color>
     
+    <!-- Definiton Buttontexte -->
     <string name="app_name">#peat</string>
     <string name="entry">Spielend lernen! Nie wieder vergessen!</string>
     <string name="start_quiz">Start</string>
@@ -13,9 +15,11 @@
     <string name="radio_yes">Ja</string>
     <string name="radio_no">Nein</string>
     <string name="button_answer">Antwort?</string>
-    <string name="back">#repeat</string>    
-    <string name="close">Close</string> 
+    <string name="back">#repeat</string>
+    <string name="close">Close</string>
+    <string name="add">Hinzufügen</string>
     
+    <!-- Definiton Texte Einstellungsmenü -->
     <string name="action_settings">Einstellungen</string>
     <string name="title_activity_einstellungen">Einstellungen</string>
     <string name="themes_list">Liste der Themen</string>
