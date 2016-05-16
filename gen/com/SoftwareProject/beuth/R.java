@@ -2088,13 +2088,13 @@ containing a value of this type.
         public static final int middle=0x7f0b0020;
         public static final int multiply=0x7f0b0014;
         public static final int never=0x7f0b001c;
+        public static final int next=0x7f0b005a;
         public static final int none=0x7f0b000f;
         public static final int normal=0x7f0b000b;
         public static final int parentPanel=0x7f0b002e;
         public static final int pause=0x7f0b0059;
         public static final int progress_circular=0x7f0b0007;
         public static final int progress_horizontal=0x7f0b0008;
-        public static final int quiz=0x7f0b0052;
         public static final int radio=0x7f0b003c;
         public static final int radioNo=0x7f0b0056;
         public static final int radioQuestion=0x7f0b0054;
@@ -2123,6 +2123,8 @@ containing a value of this type.
         public static final int src_atop=0x7f0b0016;
         public static final int src_in=0x7f0b0017;
         public static final int src_over=0x7f0b0018;
+        public static final int stage=0x7f0b0053;
+        public static final int start=0x7f0b0052;
         public static final int status_bar_latest_event_content=0x7f0b0061;
         public static final int submit_area=0x7f0b004d;
         public static final int tabMode=0x7f0b000c;
@@ -2134,10 +2136,8 @@ containing a value of this type.
         public static final int title=0x7f0b002b;
         public static final int title_template=0x7f0b0030;
         public static final int topPanel=0x7f0b002f;
-        public static final int totaloutput=0x7f0b0053;
         public static final int up=0x7f0b0001;
         public static final int useLogo=0x7f0b0013;
-        public static final int weiter=0x7f0b005a;
         public static final int wiki=0x7f0b005b;
         public static final int withText=0x7f0b001d;
         public static final int wrap_content=0x7f0b0009;
@@ -2228,16 +2228,6 @@ containing a value of this type.
         public static final int splashsound=0x7f060002;
     }
     public static final class string {
-        public static final int Back=0x7f0c001e;
-        public static final int Close=0x7f0c001f;
-        public static final int GotoGoogle=0x7f0c001a;
-        public static final int GotoWikipedia=0x7f0c0019;
-        public static final int Hinweis=0x7f0c0017;
-        public static final int StarteQuiz=0x7f0c0016;
-        public static final int Themen_default=0x7f0c0024;
-        public static final int Themen_title=0x7f0c0023;
-        public static final int Themenliste=0x7f0c0022;
-        public static final int Weiter=0x7f0c0018;
         /**  Content description for the action bar "home" affordance. [CHAR LIMIT=NONE] 
          */
         public static final int abc_action_bar_home_description=0x7f0c0001;
@@ -2305,8 +2295,13 @@ containing a value of this type.
         public static final int abc_toolbar_collapse_description=0x7f0c0004;
         public static final int action_settings=0x7f0c0020;
         public static final int app_name=0x7f0c0014;
+        public static final int back=0x7f0c001e;
         public static final int button_answer=0x7f0c001d;
-        public static final int einleitung=0x7f0c0015;
+        public static final int close=0x7f0c001f;
+        public static final int entry=0x7f0c0015;
+        public static final int gotoGoogle=0x7f0c001a;
+        public static final int gotoWikipedia=0x7f0c0019;
+        public static final int next=0x7f0c0018;
         public static final int pref_send_report=0x7f0c0025;
         public static final int pref_send_report_summary=0x7f0c0026;
         public static final int pref_sync_frequency=0x7f0c0027;
@@ -2317,6 +2312,8 @@ containing a value of this type.
         public static final int pref_user_profile=0x7f0c002b;
         public static final int radio_no=0x7f0c001c;
         public static final int radio_yes=0x7f0c001b;
+        public static final int stage_pause=0x7f0c0017;
+        public static final int start_quiz=0x7f0c0016;
         /**  Text to use when the number in a notification info is too large
          (greater than status_bar_notification_info_maxnum, defined in
          values/config.xml) and must be truncated. May need to be localized
@@ -2324,6 +2321,9 @@ containing a value of this type.
          [CHAR LIMIT=4] 
          */
         public static final int status_bar_notification_info_overflow=0x7f0c0011;
+        public static final int themes_default=0x7f0c0024;
+        public static final int themes_list=0x7f0c0022;
+        public static final int themes_title=0x7f0c0023;
         public static final int title_activity_einstellungen=0x7f0c0021;
     }
     public static final class style {

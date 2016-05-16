@@ -34,7 +34,7 @@ public class MainActivity extends AppCompatActivity {
 	Button google; // Button Google, ruft die URL https://www.google.de/ auf
 	Button close; // Button Close, schliesst die Anwendung bzw. die App
 	
-	TextView anzeige; // Ausgab, Mensch-Computer-Kommunikation
+	TextView stage; // Ausgabe, Mensch-Computer-Kommunikation
 	
 	int setNextQuestion=0; // Zaehler-Mockup, setzt den Array-Index des Fragearrays auf 0
     String[] question={ // Fragen-Mockup als Array
@@ -46,11 +46,11 @@ public class MainActivity extends AppCompatActivity {
     		"Bedeutet APK Android Package File?"};
 	
     // Antwort-Mockup, Radio-Buttons Ja Nein
-    String antwortA = "Ja lautet die Antwort! Gut gemacht!";
-	String antwortB = "Die Antwort ist leider falsch!";
+    String answerA = "Ja lautet die Antwort! Gut gemacht!";
+	String answerB = "Die Antwort ist leider falsch!";
 	
 	// Hinweis, wenn Button-Pause geklickt wird
-	String hinweisPause = "Frage wurde für später gespeichert!";
+	String messagePause = "Frage wurde für später gespeichert!";
 	
 	// Definition einer Radio-Button-Gruppe für geschlossene Fragen (Ja-Nein-Fragen)
 	private RadioGroup radioGroup;
@@ -67,16 +67,16 @@ public class MainActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);	
 
-		quiz = (Button) findViewById(R.id.quiz);
+		quiz = (Button) findViewById(R.id.start);
 		
-		anzeige = (TextView) findViewById(R.id.totaloutput);
-		anzeige.setText(question[setNextQuestion]);
+		stage = (TextView) findViewById(R.id.stage);
+		stage.setText(question[setNextQuestion]);
 		
 		buttonAnswer = (Button) findViewById(R.id.buttonAnswer);
 		
 		back = (Button) findViewById(R.id.back);
 		pause = (Button) findViewById(R.id.pause);
-		next = (Button) findViewById(R.id.weiter);
+		next = (Button) findViewById(R.id.next);
 
 		wiki = (Button) findViewById(R.id.wiki);
 		google = (Button) findViewById(R.id.google);
@@ -86,7 +86,7 @@ public class MainActivity extends AppCompatActivity {
 			
 			@Override
 			public void onClick(View v) {
-				anzeige.setText("Möchtest du beginnen? Klicke anschließend auf Weiter.");
+				stage.setText("Möchtest du beginnen? Klicke anschließend auf Weiter.");
 			}
 		});
 		
@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
 				} else {
 					setNextQuestion--;
 				}
-				anzeige.setText(question[setNextQuestion]);
+				stage.setText(question[setNextQuestion]);
 			}
 		});
 		
@@ -107,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
 			
 			@Override
 			public void onClick(View v) {
-				anzeige.setText("Achtung: " + hinweisPause);
+				stage.setText("Achtung: " + messagePause);
 			}
 		});
 		
@@ -119,7 +119,7 @@ public class MainActivity extends AppCompatActivity {
 				if(setNextQuestion == 6){
 					setNextQuestion = 1;
 				}
-				anzeige.setText(question[setNextQuestion]);
+				stage.setText(question[setNextQuestion]);
 			}
 		});
 		
@@ -144,9 +144,9 @@ public class MainActivity extends AppCompatActivity {
 		close.setOnClickListener(new View.OnClickListener() {
 		     
 			@Override
-		     public void onClick(View v) {
+		    public void onClick(View v) {
 		        finish();
-		     }
+			}
 		});
 		
 		addListenerOnButton();
@@ -243,13 +243,13 @@ public class MainActivity extends AppCompatActivity {
     		radioAnswerButton = (RadioButton) findViewById(selectedId);
 
             	if(selectedId == R.id.radioYes){
-            		anzeige.setText("Antwort: " + antwortA);
+            		stage.setText("Antwort: " + answerA);
             		mpButtonClickYes.start();
             		Toast.makeText(MainActivity.this, radioAnswerButton.getText(), Toast.LENGTH_SHORT).show();
             	}
             	
             	else if(selectedId == R.id.radioNo){
-            		anzeige.setText("Antwort: " + antwortB);
+            		stage.setText("Antwort: " + answerB);
             		mpButtonClickNo.start();
                    	Toast.makeText(MainActivity.this, radioAnswerButton.getText(), Toast.LENGTH_SHORT).show();
             	}
