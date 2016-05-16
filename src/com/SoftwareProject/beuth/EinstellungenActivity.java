@@ -22,7 +22,7 @@ public class EinstellungenActivity extends PreferenceActivity
         		Toast.makeText(this, "Einstellungen gestartet.", Toast.LENGTH_SHORT).show();
         		Toast.makeText(this, "Zurück mit Back-Button.", Toast.LENGTH_SHORT).show();
         		
-        		Preference themenlistePref = findPreference(getString(R.string.Themen_title));
+        		Preference themenlistePref = findPreference(getString(R.string.themes_title));
         		themenlistePref.setOnPreferenceChangeListener(this);
 
         		// onPreferenceChange sofort aufrufen mit der in SharedPreferences gespeicherten Themenliste
