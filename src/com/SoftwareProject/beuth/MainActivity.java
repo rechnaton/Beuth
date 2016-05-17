@@ -21,7 +21,7 @@ import android.widget.TextView;
 import android.preference.PreferenceManager;
 import android.content.SharedPreferences;
 
-@TargetApi(Build.VERSION_CODES.HONEYCOMB)
+@TargetApi(Build.VERSION_CODES.M)
 public class MainActivity extends AppCompatActivity {
 
 	/**

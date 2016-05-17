@@ -9,7 +9,7 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.widget.Toast;
 
-@TargetApi(Build.VERSION_CODES.HONEYCOMB)
+@TargetApi(Build.VERSION_CODES.M)
 public class EinstellungenActivity extends PreferenceActivity
         implements Preference.OnPreferenceChangeListener {
     
