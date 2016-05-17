@@ -34,6 +34,10 @@ http://www.lac.ane.pl/pdf/5409.pdf
   * Multiple Choice Fragen: Select oder Check
 
 
+### SQLite
+
+Wir brauchen übrigens keine JDBC-Verbindung. Es gibt direkt Bibliotheken zum Ansteuern der SQLite-DB. Eine leere DB habe ich bereits angelegt. Jetzt bin ich dabei das SQL-Skript zur Erstellung der Tabellen zu schreiben. Als nächstes kommt jetzt Daten ein- und auslesen. Das mache ich zunächst für Fragen. Dann checke ich den Code ein.
+
 
 ---
 
