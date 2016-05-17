@@ -169,9 +169,10 @@ Thomas:
 - weiter an der neuen Activity zur PeatUser_has_Themes-Tabelle arbeiten
 
 Ausblick:
-- zeitnahen Termin (außerordentlich) finden
+- zeitnahen, internen Termin (außerordentlich) finden
 - Zielversion v2.0.0-0001: Datenbankanbindung ersetzt das Mockup-Fragen-Array
 - Organisatorisches: Asana, easyBacklog, etc
+- Prototyp für den 24.05.2016 zum Gruppenmeeting vorbereiten
 
 ------------------------------------------------------------------------------------------
 
