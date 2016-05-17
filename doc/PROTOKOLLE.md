@@ -144,6 +144,7 @@ Tasks:
 
 #17.05.2016 (Online Meeting via Moodle)
 21 Uhr
+Teilnehmer: Andreas, Thomas
 
 - verschoben vom 16.05.2016
 - Protokoll, Tasks und Statusbericht aktualisieren
@@ -157,9 +158,21 @@ Rückblick:
 - Thomas Lösung der Fehlermeldung *This version of the rendering library is more recent than your version of ADT plug-in. Please update ADT plug-in*: Android SDK öffnen > Android 5.1.1 (API22) installieren (ohne Images) > Eclipse neu starten > xml editieren > rechts oben im XML-Fenster beim grünen Roboter auf Version 5.1.1 umstellen > fertig
 - Lösung weiterer Fehlermeldung *The following classes could not be found: android.support.v7.internal.app.WindowDecorActionBar (Fix Build Path, Edit XML, Create Class)*: in res/values-v14/styles.xml Base.Theme.AppCompat.Light.DarkActionBar statt Theme.AppCompat.Light.DarkActionBar
 
+Tasks
+
+Andreas:
+- Release v1.0.0-0011 erstellen
+
 Thomas:
 - Feedback an Herrn Prof. Edlich senden
 - inkl. Prüfungsterminwunsch
+- weiter an der neuen Activity zur PeatUser_has_Themes-Tabelle arbeiten
+
+Ausblick:
+- zeitnahen Termin (außerordentlich) finden
+- Zielversion v2.0.0-0001: Datenbankanbindung ersetzt das Mockup-Fragen-Array
+- Organisatorisches: Asana, easyBacklog, etc
 
 ------------------------------------------------------------------------------------------
 
+# To be continued ;)
