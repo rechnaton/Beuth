@@ -11,7 +11,6 @@ public class Question {
 		QuestionTypeTitle = sType; 
 		answers = answersArray;
 		isCorrect = isCorrectArray;
-		
 	}
 	
 	public String getQuestionText(){

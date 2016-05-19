@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/blue"
@@ -148,4 +149,13 @@
         android:layout_height="wrap_content"
         tools:context=".MainActivity" />
 	
+	<Button
+        android:id="@+id/returnlanding"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/google"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:text="@string/return_landing" />
+		
 </RelativeLayout>

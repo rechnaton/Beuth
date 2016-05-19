@@ -3,8 +3,14 @@
 
     <!-- Definiton Corporate Design Farben -->
     <color name="blue">#51c8fc</color>
-    
-    <!-- Definiton Buttontexte -->
+
+    <!-- Definiton Buttontexte LandingActivity -->
+    <string name="game">Starte #peat</string>
+    <string name="question">Fülle #peat</string>
+    <string name="theme">Wähle dein Thema</string>
+    <string name="setting">Einstellungen</string>
+
+    <!-- Definiton Buttontexte MainActivity -->
     <string name="app_name">#peat</string>
     <string name="entry">Spielend lernen! Nie wieder vergessen!</string>
     <string name="start_quiz">Start</string>
@@ -17,15 +23,18 @@
     <string name="button_answer">Antwort?</string>
     <string name="back">#repeat</string>
     <string name="close">Close</string>
-    <string name="add">Hinzufügen</string>
+    <string name="return_landing">Hauptmenü</string>
     
+    <!-- Definiton Buttontexte UserThemeActivity -->
+    <string name="add">Hinzufügen</string>
+
     <!-- Definiton Texte Einstellungsmenü -->
     <string name="action_settings">Einstellungen</string>
     <string name="title_activity_einstellungen">Einstellungen</string>
     <string name="themes_list">Liste der Themen</string>
-	<string name="themes_title">Themen</string>
-	<string name="themes_default">Softwaretechnik, Entwicklung, Scrum</string>
-	<string name="pref_send_report">Absturzmeldungen senden</string>
+    <string name="themes_title">Themen</string>
+    <string name="themes_default">Softwaretechnik, Entwicklung, Scrum</string>
+    <string name="pref_send_report">Absturzmeldungen senden</string>
     <string name="pref_send_report_summary">Anhaken, um Fehler schneller zu beheben.</string>
     <string name="pref_sync_frequency">Wiederholungsrate</string>
     <string name="pref_sync_frequency_summary">Wie oft soll dir #peat Fragen stellen?</string>
@@ -33,5 +42,9 @@
     <string name="pref_user_name_summary">Ändere hier deinen Benutzernamen.</string>
     <string name="pref_user_profile">Benutzerprofil</string>
     <string name="pref_update_setting">Quiz-Einstellungen</string>
+    <string name="title_activity_question_input">QuestionInputActivity</string>
+    
+    <!-- Definiton Texte QuestionInputActivity -->
+    <string name="question_input">Gebe hier deine Fragen ein!</string>
 
 </resources>
