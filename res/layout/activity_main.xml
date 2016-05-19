@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:background="@color/blue"
@@ -21,23 +22,23 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/einleitung"
+        android:text="@string/entry"
     	android:textSize="15sp" />
 
 	<Button
-        android:id="@+id/quiz"
+        android:id="@+id/start"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/entry"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="18dp"
-        android:text="@string/StarteQuiz" />
+        android:text="@string/start_quiz" />
 	
 	<TextView
-        android:id="@+id/totaloutput"
+        android:id="@+id/stage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/quiz"
+        android:layout_below="@+id/start"
         android:layout_centerHorizontal="true"
         android:gravity="center"
         android:layout_marginTop="18dp"
@@ -50,7 +51,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:orientation="horizontal"
-        android:layout_below="@+id/totaloutput" >
+        android:layout_below="@+id/stage" >
 
         <RadioButton
             android:id="@+id/radioYes"
@@ -87,7 +88,7 @@
 		android:layout_toLeftOf="@+id/pause"
 		android:layout_below="@+id/buttonAnswer"
         android:layout_marginTop="15dp"
-        android:text="@string/Back" />
+        android:text="@string/back" />
 	
 	<Button
 		android:id="@+id/pause"
@@ -97,10 +98,10 @@
 		android:orientation="horizontal"
 		android:layout_below="@+id/buttonAnswer"
 		android:layout_marginTop="15dp"
-		android:text="@string/Hinweis" />
+		android:text="@string/stage_pause" />
 	
 	<Button
-		android:id="@+id/weiter"
+		android:id="@+id/next"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_centerHorizontal="true"
@@ -108,7 +109,7 @@
 		android:layout_toRightOf="@+id/pause"
 		android:layout_below="@+id/buttonAnswer"
 		android:layout_marginTop="15dp"
-		android:text="@string/Weiter" />
+		android:text="@string/next" />
 	
 	<Button
         android:id="@+id/wiki"
@@ -119,7 +120,7 @@
 		android:layout_toLeftOf="@+id/google"
 		android:layout_below="@+id/pause"
         android:layout_marginTop="15dp"
-        android:text="@string/GotoWikipedia" />
+        android:text="@string/gotoWikipedia" />
 	
 	<Button
         android:id="@+id/google"
@@ -129,7 +130,7 @@
 		android:orientation="horizontal"        
 		android:layout_below="@+id/pause"
         android:layout_marginTop="15dp"
-        android:text="@string/GotoGoogle" />
+        android:text="@string/gotoGoogle" />
 	
 	<Button
 		android:id="@+id/close"
@@ -140,7 +141,7 @@
 		android:layout_toRightOf="@+id/google"
 		android:layout_below="@+id/pause"
 		android:layout_marginTop="15dp"
-		android:text="@string/Close" />
+		android:text="@string/close" />
 	
 	<TextView
         android:id="@+id/textUserSettings"
@@ -148,4 +149,13 @@
         android:layout_height="wrap_content"
         tools:context=".MainActivity" />
 	
+	<Button
+        android:id="@+id/returnlanding"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/google"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:text="@string/return_landing" />
+		
 </RelativeLayout>

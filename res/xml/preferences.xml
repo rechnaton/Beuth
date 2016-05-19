@@ -5,9 +5,9 @@
     android:background="@color/blue" >
     
     <EditTextPreference
-        android:title="@string/Themenliste"
-        android:key="@string/Themen_title"
-        android:defaultValue="@string/Themen_default"
+        android:title="@string/themes_list"
+        android:key="@string/themes_title"
+        android:defaultValue="@string/themes_default"
         android:inputType="textMultiLine" />
     
     <PreferenceCategory android:title="@string/pref_user_profile" >

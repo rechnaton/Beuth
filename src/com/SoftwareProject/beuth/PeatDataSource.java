@@ -101,4 +101,3 @@ public class PeatDataSource {
     	Log.d(LOG_TAG, "Datenbank mit Hilfe des DbHelpers geschlossen.");
     }
 }
-

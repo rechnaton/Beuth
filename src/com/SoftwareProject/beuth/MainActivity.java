@@ -1,6 +1,5 @@
 package com.SoftwareProject.beuth;
 
-import android.support.v4.app.FragmentActivity;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.annotation.TargetApi;
@@ -21,39 +20,58 @@ import android.widget.TextView;
 import android.preference.PreferenceManager;
 import android.content.SharedPreferences;
 
-@TargetApi(Build.VERSION_CODES.HONEYCOMB)
+@TargetApi(Build.VERSION_CODES.M)
 public class MainActivity extends AppCompatActivity {
+
+	/**
+	 * Definition aller notwendigen Variablen
+	 */
+	Button start; // Button Frage, leitet das Spiel ein
+	Button buttonAnswer; // Button Antwort, ruft die Antwort zur aktuellen Frage auf
+	Button back; // Button #Repeat, ruft die zurueckliegende Frage auf
+	Button pause; // Button Pause, speichert/pausiert die aktuelle Frage
+	Button next; // Button Weiter, fuft die naechste Frage auf
+	Button wiki; // Button Wiki, ruft die URL https://www.wikipedia.de/ auf
+	Button google; // Button Google, ruft die URL https://www.google.de/ auf
+	Button close; // Button Close, schliesst die Anwendung bzw. die App
+	Button returnlanding; // Button return, ruft LandingActivity auf
+	
+	TextView stage; // Ausgabe, Mensch-Computer-Kommunikation
+	
 	public static final String LOG_TAG = MainActivity.class.getSimpleName();
 	private PeatDataSource dataSource;
-	Button quiz, buttonAnswer, back, pause, weiter, wiki, google, close;
-	TextView anzeige;
-	int setNextQuestion=0;
-    String[] question={
+	
+	int setNextQuestion=0; // Zaehler-Mockup, setzt den Array-Index des Fragearrays auf 0
+    String[] question={ // Fragen-Mockup als Array
     		" ",
     		"Dient Git der Versionsverwaltung für Software?",
     		"Ist Slack ein webbasierter Instant-Messanger?",
     		"Ist Trello eine Projektmanagementsoftware?",
     		"Ist Android u.a. auch ein Betriebssystem?",
     		"Bedeutet APK Android Package File?"};
-    // String frageA;
-	// String frageB;
-	// String frageC;	
-	String antwortA;
-	String antwortB;
-	String hinweis;
 	
+    // Antwort-Mockup, Radio-Buttons Ja Nein
+    String answerA = "Ja lautet die Antwort! Gut gemacht!";
+	String answerB = "Die Antwort ist leider falsch!";
+	
+	// Hinweis, wenn Button-Pause geklickt wird
+	String messagePause = "Frage wurde für später gespeichert!";
+	
+	// Definition einer Radio-Button-Gruppe für geschlossene Fragen (Ja-Nein-Fragen)
 	private RadioGroup radioGroup;
 	private RadioButton radioAnswerButton;
-	  
-	private static final int RESULT_SETTINGS = 1;
 	
+	// Variable für Einstellungen der App
+	private static final int RESULT_SETTINGS = 1;
+		
+	/**
+	 * Diese Klasse holt sich die Werte der einzelnen Buttons aus strings.xml und activity_main.xml
+	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
-		// frageA = "Dient Git der Versionsverwaltung für Software?";
-		// frageB = "Ist Slack ein webbasierter Instant-Messanger?";
-		// frageC = "Ist Trello eine Projektmanagementsoftware?";
+		setContentView(R.layout.activity_main);	
+
 	    dataSource = new PeatDataSource(this);
 	    Log.d(LOG_TAG, "Die Datenquelle wird geöffnet.");
 	    
@@ -63,72 +81,65 @@ public class MainActivity extends AppCompatActivity {
 	    dataSource.getAllTablesOfDB();
 	    String[] antwortFrageA = {"Ja"};
 	    Boolean[] isCorrectFrageA = {true};
-	    Question frageA = new Question("Wurde diese Frage in die DB gepackt?", "SimpleText", antwortFrageA,
-	    		isCorrectFrageA);
+	    Question frageA = new Question("Wurde diese Frage in die DB gepackt?", "SimpleText", antwortFrageA, isCorrectFrageA);
 	    dataSource.putQuestionInDB(frageA);
 	    
-		antwortA = "Ja lautet die Antwort! Gut gemacht!";
-		antwortB = "Die Antwort ist leider falsch!";
-		hinweis = "Frage wurde für später gespeichert!";
-		quiz = (Button) findViewById(R.id.quiz);
+		start = (Button) findViewById(R.id.start);
+		
+		stage = (TextView) findViewById(R.id.stage);
+		stage.setText(question[setNextQuestion]);
+		
 		buttonAnswer = (Button) findViewById(R.id.buttonAnswer);
-		pause = (Button) findViewById(R.id.pause);
+		
 		back = (Button) findViewById(R.id.back);
-		weiter = (Button) findViewById(R.id.weiter);
-		anzeige = (TextView) findViewById(R.id.totaloutput);
-		anzeige.setText(question[setNextQuestion]);
+		pause = (Button) findViewById(R.id.pause);
+		next = (Button) findViewById(R.id.next);
+
 		wiki = (Button) findViewById(R.id.wiki);
 		google = (Button) findViewById(R.id.google);
 		close = (Button) findViewById(R.id.close);
 		
-		quiz.setOnClickListener(new View.OnClickListener() {
+		returnlanding = (Button) findViewById(R.id.returnlanding);
+		
+		start.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				// anzeige.setText("Frage: " + frageA);
-				anzeige.setText("Möchtest du beginnen? Klicke anschließend auf Weiter.");
-				}
+				stage.setText("Möchtest du beginnen? Klicke einfach auf Weiter.");
+			}
 		});
 		
 		back.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				// anzeige.setText("Frage: " + frageA);
-				if(setNextQuestion==0){
-					setNextQuestion=5;
-				}
-				else
-				{
+				if(setNextQuestion == 1){
+					setNextQuestion = 5;
+				} else {
 					setNextQuestion--;
 				}
-				anzeige.setText(question[setNextQuestion]);
-				}
+				stage.setText(question[setNextQuestion]);
+			}
 		});
 		
 		pause.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				anzeige.setText("Achtung: " + hinweis);
-				}
+				stage.setText("Achtung: " + messagePause);
+			}
 		});
 		
-		weiter.setOnClickListener(new View.OnClickListener() {
+		next.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				// anzeige.setText("Frage: " + frageB);
 				setNextQuestion++;
 				if(setNextQuestion == 6){
-					setNextQuestion=0;
+					setNextQuestion = 1;
 				}
-				anzeige.setText(question[setNextQuestion]);
-				}
+				stage.setText(question[setNextQuestion]);
+			}
 		});
 		
 		wiki.setOnClickListener(new View.OnClickListener() {
@@ -152,14 +163,26 @@ public class MainActivity extends AppCompatActivity {
 		close.setOnClickListener(new View.OnClickListener() {
 		     
 			@Override
-		     public void onClick(View v) {
+		    public void onClick(View v) {
 		        finish();
-		     }
+			}
+		});
+		
+		returnlanding.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				Intent intent = new Intent(MainActivity.this, LandingActivity.class);
+				MainActivity.this.startActivity(intent);
+			}
 		});
 		
 		addListenerOnButton();
 	}
 
+	/**
+	 * Diese Klasse oeffnet das Menue, bzw. fuegt Menuepunkte hinzu, sofern diese existieren
+	 */	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
@@ -167,65 +190,72 @@ public class MainActivity extends AppCompatActivity {
 		return true;
 	}
 
-	@Override
-	public boolean onOptionsItemSelected(MenuItem item) {
-		// Handle action bar item clicks here. The action bar will
-		// automatically handle clicks on the Home/Up button, so long
-		// as you specify a parent activity in AndroidManifest.xml.
-		int id = item.getItemId();
-		if (id == R.id.action_settings) {
-			startActivity(new Intent(this, EinstellungenActivity.class));
-			return true;
+	/**
+	 * Die folgenden 3 Klassen erstellen das Einstellungsmenue
+	 * und holen Daten aus EinstellungenMain.java, strings.xml, preferences.xml und arrays.xml
+	 */
+		@Override
+		public boolean onOptionsItemSelected(MenuItem item) {
+			// Handle action bar item clicks here. The action bar will
+			// automatically handle clicks on the Home/Up button, so long
+			// as you specify a parent activity in AndroidManifest.xml.
+			int id = item.getItemId();
+			if (id == R.id.action_settings) {
+				startActivity(new Intent(this, EinstellungenActivity.class));
+				return true;
+			}
+			
+			switch (item.getItemId()) {
+			
+			case R.id.action_settings:
+				Intent i = new Intent(this, EinstellungenActivity.class);
+				startActivityForResult(i, RESULT_SETTINGS);
+				break;
+			}
+			return super.onOptionsItemSelected(item);
 		}
 		
-		switch (item.getItemId()) {
-        
-        case R.id.action_settings:
-            Intent i = new Intent(this, EinstellungenActivity.class);
-            startActivityForResult(i, RESULT_SETTINGS);
-            break;
-        }
-
-		return super.onOptionsItemSelected(item);
-	}
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
+		@Override
+		protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+			super.onActivityResult(requestCode, resultCode, data);
+			
+			switch (requestCode) {
+			case RESULT_SETTINGS:
+				showUserSettings();
+				break;
+			}
+ 		}
+		
+		private void showUserSettings() {
+			SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+			StringBuilder builder = new StringBuilder();
  
-        switch (requestCode) {
-        case RESULT_SETTINGS:
-            showUserSettings();
-            break;
-        }
- 
-    }
-
-    private void showUserSettings() {
-        SharedPreferences sharedPrefs = PreferenceManager
-                .getDefaultSharedPreferences(this);
- 
-        StringBuilder builder = new StringBuilder();
- 
-        builder.append("\n Benutzername: "
+			builder.append("\n Benutzername: "
                 + sharedPrefs.getString("prefUsername", "NULL"));
  
-        builder.append("\n Bericht senden:"
+			builder.append("\n Bericht senden:"
                 + sharedPrefs.getBoolean("prefSendReport", false));
  
-        builder.append("\n Wiederholung: "
+			builder.append("\n Wiederholung: "
                 + sharedPrefs.getString("prefSyncFrequency", "NULL"));
  
-        TextView settingsTextView = (TextView) findViewById(R.id.textUserSettings);
+			TextView settingsTextView = (TextView) findViewById(R.id.textUserSettings);
  
-        settingsTextView.setText(builder.toString());
-    }
+			settingsTextView.setText(builder.toString());
+		}
     
+	/**
+	 * Diese Klasse prueft, welcher Radio-Button ausgewaehlt wurde
+	 * und erzeugt je nach Wahl bei Klick auf Button Antwort
+	 * einen Sound und einen Toast
+	 */
     public void addListenerOnButton() {
 
     	radioGroup = (RadioGroup) findViewById(R.id.radioQuestion);
     	buttonAnswer = (Button) findViewById(R.id.buttonAnswer);
 
-    	final MediaPlayer mpButtonClick = MediaPlayer.create(this, R.raw.onclickyes);
+    	final MediaPlayer mpButtonClickYes = MediaPlayer.create(this, R.raw.onclickyes);
+    	final MediaPlayer mpButtonClickNo = MediaPlayer.create(this, R.raw.onclickno);
     	
     	buttonAnswer.setOnClickListener(new OnClickListener() {
 
@@ -238,23 +268,18 @@ public class MainActivity extends AppCompatActivity {
     		// find the radiobutton by returned id
     		radioAnswerButton = (RadioButton) findViewById(selectedId);
 
-            if(selectedId == R.id.radioYes){
-    		anzeige.setText("Antwort: " + antwortA);
-    		mpButtonClick.start();
-    		
-    		Toast.makeText(MainActivity.this,
-    		radioAnswerButton.getText(), Toast.LENGTH_SHORT).show();
-            }
-            else if(selectedId == R.id.radioNo){
-            anzeige.setText("Antwort: " + antwortB);
-            
-        	Toast.makeText(MainActivity.this,
-        	radioAnswerButton.getText(), Toast.LENGTH_SHORT).show();
-            }
-            
-    		}
-
+            	if(selectedId == R.id.radioYes){
+            		stage.setText("Antwort: " + answerA);
+            		mpButtonClickYes.start();
+            		Toast.makeText(MainActivity.this, radioAnswerButton.getText(), Toast.LENGTH_SHORT).show();
+            	}
+            	
+            	else if(selectedId == R.id.radioNo){
+            		stage.setText("Antwort: " + answerB);
+            		mpButtonClickNo.start();
+                   	Toast.makeText(MainActivity.this, radioAnswerButton.getText(), Toast.LENGTH_SHORT).show();
+            	}
+           }
     	});
-
       }
 }

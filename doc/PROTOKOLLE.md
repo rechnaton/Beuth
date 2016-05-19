@@ -132,7 +132,53 @@ Thomas:
 
 ------------------------------------------------------------------------------------------
 
-#16.05.2016 (Online Meeting via Team Viewer)
-21 Uhr
+#10.05.2016 (Online Meeting komplette Gruppe)
 
-- inkl. Feedback an Prof. Edlich
+Andreas:
+- den aktuellen Prototyp von #peat in die Dropbox legen und Link an Herrn Prof. Edlich senden: https://www.dropbox.com/sh/8djn2di76w9jqga/AABS1uvujSAhcy7iVWHPvo9oa?dl=0 - done
+
+Tasks:
+- zum nächsten Online Meeting mit allen am 24.05.2016 einen Prototyp präösentieren
+
+------------------------------------------------------------------------------------------
+
+#17.05.2016 (Online Meeting via Moodle)
+21 Uhr
+Teilnehmer: Andreas, Thomas
+
+- verschoben vom 16.05.2016
+- Protokoll, Tasks und Statusbericht aktualisieren
+- Prüfungsterminwunsch verabschieden: 08.07.2016 um 12:30 Uhr (ist noch frei)
+
+Rückblick:
+- Versionen v1.0.0-0008 bis v1.0.0-0010 (siehe https://github.com/andreasmosig/peat/releases)
+- Andreas postet Tutorials zu SQLite in Slack #peat, onClickNoSound hinzugefügt, Fragen-Array und Merged Pull Requests und löst Konflikte
+- Steven schreibt die Klassen PeatDbHelper.java und PeatDataSource.java und Question.java
+- Thomas schreibt user_themes.xml, eine neue Activity ging leider verloren
+- Thomas Lösung der Fehlermeldung *This version of the rendering library is more recent than your version of ADT plug-in. Please update ADT plug-in*: Android SDK öffnen > Android 5.1.1 (API22) installieren (ohne Images) > Eclipse neu starten > xml editieren > rechts oben im XML-Fenster beim grünen Roboter auf Version 5.1.1 umstellen > fertig
+- Lösung weiterer Fehlermeldung *The following classes could not be found: android.support.v7.internal.app.WindowDecorActionBar (Fix Build Path, Edit XML, Create Class)*: in res/values-v14/styles.xml Base.Theme.AppCompat.Light.DarkActionBar statt Theme.AppCompat.Light.DarkActionBar
+
+Tasks
+
+Andreas:
+- Release v1.0.0-0011 erstellen
+
+Thomas:
+- Feedback an Herrn Prof. Edlich senden
+- inkl. Prüfungsterminwunsch
+- weiter an der neuen Activity zur PeatUser_has_Themes-Tabelle arbeiten
+
+Ausblick:
+- zeitnahen, internen Termin (außerordentlich) finden
+- Zielversion v2.0.0-0001: Datenbankanbindung ersetzt das Mockup-Fragen-Array
+- Organisatorisches: Asana, easyBacklog, etc
+- Prototyp für den 24.05.2016 zum Gruppenmeeting vorbereiten
+
+------------------------------------------------------------------------------------------
+
+#21.05.2016 (voraussichtliches Meeting)
+15:30 Uhr
+Teilnehmer: Andreas, Thomas, Steven
+
+------------------------------------------------------------------------------------------
+

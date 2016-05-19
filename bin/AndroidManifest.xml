@@ -23,10 +23,19 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".LandingActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="com.SoftwareProject.beuth.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.SoftwareProject.beuth.MainActivity" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
@@ -38,6 +47,24 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY" 
                 android:value="com.SoftwareProject.beuth.MainActivity"/>
+        </activity>
+        <activity
+            android:name=".QuestionInputActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.SoftwareProject.beuth.QuestionInputActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".UserThemeActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.SoftwareProject.beuth.UserThemeActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>    
     </application>
 
