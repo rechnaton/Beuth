@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.os.Bundle;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.content.Intent;
 
 @TargetApi(Build.VERSION_CODES.M)
@@ -31,8 +30,8 @@ public class LandingActivity extends AppCompatActivity {
 			
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(LandingActivity.this, MainActivity.class);
-				LandingActivity.this.startActivity(intent);
+				Intent intentgame = new Intent(LandingActivity.this, MainActivity.class);
+				LandingActivity.this.startActivity(intentgame);
 			}
 		});
 
@@ -40,8 +39,8 @@ public class LandingActivity extends AppCompatActivity {
 			
 		 	@Override
 		 	public void onClick(View v) {
-		 		Intent intent = new Intent(LandingActivity.this, QuestionInputActivity.class);
-		 		LandingActivity.this.startActivity(intent);
+		 		Intent intentquest = new Intent(LandingActivity.this, QuestionInputActivity.class);
+		 		LandingActivity.this.startActivity(intentquest);
 		 	}
 		});
 		
@@ -49,8 +48,8 @@ public class LandingActivity extends AppCompatActivity {
 		 	
 		 	@Override
 		 	public void onClick(View v) {
-		 		Intent intent = new Intent(LandingActivity.this, UserThemeActivity.class);
-		 		LandingActivity.this.startActivity(intent);
+		 		Intent intenttheme = new Intent(LandingActivity.this, UserThemeActivity.class);
+		 		LandingActivity.this.startActivity(intenttheme);
 		 	}
 		});
 
@@ -58,8 +57,8 @@ public class LandingActivity extends AppCompatActivity {
 		 	
 		    @Override
 		 	public void onClick(View v) {
-		 		Intent intent = new Intent(LandingActivity.this, EinstellungenActivity.class);
-				LandingActivity.this.startActivity(intent);
+		 		Intent intentset = new Intent(LandingActivity.this, EinstellungenActivity.class);
+				LandingActivity.this.startActivity(intentset);
 			}
 		});
 	}

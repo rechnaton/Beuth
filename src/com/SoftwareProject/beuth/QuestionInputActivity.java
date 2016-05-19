@@ -1,6 +1,7 @@
 package com.SoftwareProject.beuth;
 
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
 import android.annotation.TargetApi;
 import android.os.Build;
 import android.os.Bundle;
@@ -12,6 +13,8 @@ public class QuestionInputActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_question_input);
+		
+		Toast.makeText(this, "Zurück mit Back-Button.", Toast.LENGTH_SHORT).show();
 	}
 	
 	// Hier muss dann der Code für die Eingabe der Fragen hin.
