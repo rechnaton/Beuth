@@ -77,8 +77,8 @@ public class MainActivity extends AppCompatActivity {
 	    
 	    dataSource.open();
 	    //this.deleteDatabase("peat.db");
-	    dataSource.putNewQuestionTypeInDB("SimpleText", "Bitte geben Sie Ihre Antwort als Text ein. Achten Sie auf die Rechtschreibung.");
-	    dataSource.getAllTablesOfDB();
+	    //dataSource.putNewQuestionTypeInDB("SimpleText", "Bitte geben Sie Ihre Antwort als Text ein. Achten Sie auf die Rechtschreibung.");
+	    //dataSource.getAllTablesOfDB();
 	    String[] antwortFrageA = {"Ja"};
 	    Boolean[] isCorrectFrageA = {true};
 	    Question frageA = new Question("Wurde diese Frage in die DB gepackt?", "SimpleText", antwortFrageA, isCorrectFrageA);
