@@ -11,7 +11,7 @@ TextView error;
 protected void onCreate(Bundle savedInstanceState) {
 super.onCreate(savedInstanceState);
 Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler(this));
-setContentView(R.layout.activity_question_input);
+setContentView(R.layout.activity_main);
 error = (TextView) findViewById(R.id.error);
 error.setText(getIntent().getStringExtra("error"));
 }
