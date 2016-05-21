@@ -68,9 +68,10 @@ public class MainActivity extends AppCompatActivity {
 	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		try {
+		//try {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);	
+		Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler(this)); 
+		setContentView(R.layout.activity_main);
 
 	    dataSource = new PeatDataSource(this);
 	    Log.d(LOG_TAG, "Die Datenquelle wird geöffnet.");
@@ -178,9 +179,11 @@ public class MainActivity extends AppCompatActivity {
 		});
 		
 		addListenerOnButton();
-		} catch (Exception e) {
-			System.out.println(e.toString());
-		}
+		// } catch (Exception e) {
+			// System.out.println(e.toString());
+			// Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show();
+		//	Toast.makeText(getApplicationContext(), e.getLocalizedMessage(), Toast.LENGTH_LONG).show(); 
+		// }
 	}
 
 	/**

@@ -65,7 +65,12 @@
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
-        </activity>    
+        </activity>
+        <activity
+			android:name="com.SoftwareProject.beuth.CrashActivity" 
+			android:label="@string/app_name" > 
+		</activity>
+        
     </application>
 
 </manifest>
