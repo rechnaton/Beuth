@@ -16,7 +16,6 @@ public class EinstellungenActivity extends PreferenceActivity
         	@Override
         	public void onCreate(Bundle savedInstanceState) {
         		super.onCreate(savedInstanceState);
-        		
         		addPreferencesFromResource(R.xml.preferences);
  
         		Toast.makeText(this, "Zurück mit Back-Button.", Toast.LENGTH_SHORT).show();

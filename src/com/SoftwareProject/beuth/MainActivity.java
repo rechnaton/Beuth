@@ -22,7 +22,6 @@ import android.content.SharedPreferences;
 
 @TargetApi(Build.VERSION_CODES.M)
 public class MainActivity extends AppCompatActivity {
-
 	/**
 	 * Definition aller notwendigen Variablen
 	 */
@@ -69,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
 	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		try {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);	
 
@@ -172,12 +172,15 @@ public class MainActivity extends AppCompatActivity {
 			
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(MainActivity.this, LandingActivity.class);
-				MainActivity.this.startActivity(intent);
+				Intent intentreturn = new Intent(MainActivity.this, LandingActivity.class);
+				MainActivity.this.startActivity(intentreturn);
 			}
 		});
 		
 		addListenerOnButton();
+		} catch (Exception e) {
+			System.out.println(e.toString());
+		}
 	}
 
 	/**
