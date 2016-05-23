@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.SoftwareProject.beuth.QuestionInputActivity" >
+
+    <TextView
+        android:id="@+id/headQuestionType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:textSize="22sp"
+        android:text="@string/headQuestionType" />
+    
+    <!-- Linie -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="18dp"
+        android:background="#FF000000" />
+
+    <Button
+        android:id="@+id/addQuestionTypeOpen"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginBottom="18dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/questionTypeOpen" />
+    
+    <Button
+        android:id="@+id/addQuestionTypeClosed"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginBottom="18dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/questionTypeClosed" />
+
+    <Button
+        android:id="@+id/addQuestionTypeSingleChoice"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginBottom="18dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/questionTypeSingleChoice" />
+
+    <Button
+        android:id="@+id/addQuestionTypeMultipleChoice"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginBottom="18dp"
+        android:layout_marginTop="18dp"
+        android:text="@string/questionTypeMultipleChoice" />
+
+</LinearLayout>
