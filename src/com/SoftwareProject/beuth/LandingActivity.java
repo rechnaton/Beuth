@@ -39,7 +39,7 @@ public class LandingActivity extends AppCompatActivity {
 			
 		 	@Override
 		 	public void onClick(View v) {
-		 		Intent intentquest = new Intent(LandingActivity.this, QuestionInputActivity.class);
+		 		Intent intentquest = new Intent(LandingActivity.this, QuestionTypeActivity.class);
 		 		LandingActivity.this.startActivity(intentquest);
 		 	}
 		});
