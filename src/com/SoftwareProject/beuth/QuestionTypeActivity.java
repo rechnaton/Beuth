@@ -27,7 +27,7 @@ public class QuestionTypeActivity extends AppCompatActivity {
 			
 			@Override
 			public void onClick(View v) {
-				Intent intentgame = new Intent(QuestionTypeActivity.this, QuestionTypeOpenActivity.class);
+				Intent intentgame = new Intent(QuestionTypeActivity.this, QuestionInputActivity.class);
 				QuestionTypeActivity.this.startActivity(intentgame);
 			}
 		});
@@ -36,7 +36,7 @@ public class QuestionTypeActivity extends AppCompatActivity {
 			
 		 	@Override
 		 	public void onClick(View v) {
-		 		Intent intentquest = new Intent(QuestionTypeActivity.this, QuestionTypeOpenActivity.class);
+		 		Intent intentquest = new Intent(QuestionTypeActivity.this, QuestionInputActivity.class);
 		 		QuestionTypeActivity.this.startActivity(intentquest);
 		 	}
 		});
@@ -45,7 +45,7 @@ public class QuestionTypeActivity extends AppCompatActivity {
 		 	
 		 	@Override
 		 	public void onClick(View v) {
-		 		Intent intenttheme = new Intent(QuestionTypeActivity.this, QuestionTypeOpenActivity.class);
+		 		Intent intenttheme = new Intent(QuestionTypeActivity.this, QuestionInputActivity.class);
 		 		QuestionTypeActivity.this.startActivity(intenttheme);
 		 	}
 		});
@@ -54,7 +54,7 @@ public class QuestionTypeActivity extends AppCompatActivity {
 		 	
 		    @Override
 		 	public void onClick(View v) {
-		 		Intent intentset = new Intent(QuestionTypeActivity.this, QuestionTypeOpenActivity.class);
+		 		Intent intentset = new Intent(QuestionTypeActivity.this, QuestionInputActivity.class);
 		 		QuestionTypeActivity.this.startActivity(intentset);
 			}
 		});
