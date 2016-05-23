@@ -70,7 +70,7 @@ public class QuestionInputActivity extends AppCompatActivity {
 				// 1. Question-Objekt erzeugen
 				Question oQuestion = new Question(questionText, QuestionTypeTitle, answers, isCorrect);
 				// 2. Speichermethode auf dem Question-Objekt aufrufen
-				putQuestionInDB(oQuestion);
+				// putQuestionInDB(oQuestion);
 				
 			    // Aktualisieren der Anzeige
 			}
