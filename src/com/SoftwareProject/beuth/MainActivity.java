@@ -22,7 +22,6 @@ import android.content.SharedPreferences;
 
 @TargetApi(Build.VERSION_CODES.M)
 public class MainActivity extends AppCompatActivity {
-
 	/**
 	 * Definition aller notwendigen Variablen
 	 */
@@ -69,8 +68,10 @@ public class MainActivity extends AppCompatActivity {
 	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
+		//try {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);	
+		Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler(this)); 
+		setContentView(R.layout.activity_main);
 
 	    dataSource = new PeatDataSource(this);
 	    Log.d(LOG_TAG, "Die Datenquelle wird geöffnet.");
@@ -172,12 +173,17 @@ public class MainActivity extends AppCompatActivity {
 			
 			@Override
 			public void onClick(View v) {
-				Intent intent = new Intent(MainActivity.this, LandingActivity.class);
-				MainActivity.this.startActivity(intent);
+				Intent intentreturn = new Intent(MainActivity.this, LandingActivity.class);
+				MainActivity.this.startActivity(intentreturn);
 			}
 		});
 		
 		addListenerOnButton();
+		// } catch (Exception e) {
+			// System.out.println(e.toString());
+			// Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show();
+		//	Toast.makeText(getApplicationContext(), e.getLocalizedMessage(), Toast.LENGTH_LONG).show(); 
+		// }
 	}
 
 	/**

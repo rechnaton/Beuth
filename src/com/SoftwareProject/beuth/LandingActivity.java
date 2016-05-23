@@ -20,7 +20,7 @@ public class LandingActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_landing);
-	
+		
 		game = (Button) findViewById(R.id.game);
 		question = (Button) findViewById(R.id.question);
 		theme = (Button) findViewById(R.id.theme);
