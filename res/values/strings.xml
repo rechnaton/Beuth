@@ -25,7 +25,7 @@
     <string name="back">#repeat</string>
     <string name="close">Close</string>
     <string name="return_landing">Hauptmenü</string>
-    
+
     <!-- Definiton Buttontexte UserThemeActivity -->
     <string name="add">Hinzufügen</string>
 
@@ -35,14 +35,14 @@
     <string name="questionTypeClosed">Geschlossene Frage</string>
     <string name="questionTypeSingleChoice">Single Choice</string>
     <string name="questionTypeMultipleChoice">Multiple Choice</string>
-    
+
     <!-- Definiton Texte Fragment QuestionTypeOpen -->
     <string name="headQuestionTypeOpen">Offene Frage einfügen</string>
     <string name="hintQuestionTypeOpenTheme">Geben Sie hier das Thema ein</string>
     <string name="hintQuestionTypeOpenQuestion">Geben Sie hier die Frage ein</string>
     <string name="hintQuestionTypeOpenAnswer">Geben Sie hier die Antwort ein</string>
     <string name="saveQuestionTypeOpen">Frage speichern</string>
-    
+
     <!-- Definiton Texte Einstellungsmenü -->
     <string name="action_settings">Einstellungen</string>
     <string name="title_activity_einstellungen">Einstellungen</string>
@@ -58,8 +58,11 @@
     <string name="pref_user_profile">Benutzerprofil</string>
     <string name="pref_update_setting">Quiz-Einstellungen</string>
     <string name="title_activity_question_input">QuestionInputActivity</string>
-    
+
     <!-- Definiton Texte QuestionInputActivity -->
     <string name="question_input">Neue</string>
+    <string name="title_activity_question_type">QuestionTypeActivity</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_question_type_open">QuestionTypeOpenActivity</string>
 
 </resources>
