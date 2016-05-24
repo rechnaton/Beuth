@@ -40,11 +40,6 @@ public class MainActivity extends AppCompatActivity {
 	public static final String LOG_TAG = MainActivity.class.getSimpleName();
 	private PeatDataSource dataSource;
 	
-	String questionTypeTitle;
-	String questionText;
-	String[] answers;
-	Boolean[] isCorrect;
-	
 	int setNextQuestion=0; // Zaehler-Mockup, setzt den Array-Index des Fragearrays auf 0
     String[] question={ // Fragen-Mockup als Array
     		" ",
@@ -146,13 +141,6 @@ public class MainActivity extends AppCompatActivity {
 				}
 				stage.setText(question[setNextQuestion]);
 			}
-			
-			// Auslesen der Fragen aus der SQLite Datenbank
-			// 1. Question-Objekt erzeugen
-			// Question oQuestion = new Question(questionText, questionTypeTitle, answers, isCorrect);
-			// 2. Fragen via Question-Objekt abrufen
-			// getQuestion (oQuestion);
-			
 		});
 		
 		wiki.setOnClickListener(new View.OnClickListener() {

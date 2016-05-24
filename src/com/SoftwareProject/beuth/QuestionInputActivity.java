@@ -78,4 +78,7 @@ public class QuestionInputActivity extends AppCompatActivity {
 		
 		Toast.makeText(this, "Zurück mit Back-Button.", Toast.LENGTH_SHORT).show();
 	}
+	
+	// Hier muss dann der Code für die Eingabe der Fragen hin.
+	
 }
