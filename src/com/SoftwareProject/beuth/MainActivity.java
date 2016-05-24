@@ -128,7 +128,7 @@ public class MainActivity extends AppCompatActivity {
 			// 1. Question-Objekt erzeugen  
 			// Question oQuestion = new Question(questionText, questionTypeTitle, answers, isCorrect);  
 			// 2. Fragen via Question-Objekt abrufen  
-			// getQuestion (oQuestion);
+			// dataSource.getQuestion(oQuestion);
 			
 		});
 		
@@ -155,7 +155,7 @@ public class MainActivity extends AppCompatActivity {
 			// 1. Question-Objekt erzeugen  
 			// Question oQuestion = new Question(questionText, questionTypeTitle, answers, isCorrect);  
 			// 2. Fragen via Question-Objekt abrufen  
-			// getQuestion (oQuestion);  
+			// dataSource.getQuestion(oQuestion); 
 
 		});
 		
