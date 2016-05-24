@@ -14,6 +14,7 @@ import android.view.inputmethod.InputMethodManager;
 @TargetApi(Build.VERSION_CODES.M)
 public class QuestionInputActivity extends AppCompatActivity {
 	
+	private PeatDataSource dataSource;
 	String QuestionTypeTitle;
 	String questionText;
 	String[] answers;
@@ -24,6 +25,7 @@ public class QuestionInputActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_question_input);
 		
+		dataSource = new PeatDataSource(this); 
 		Button addQuestion = (Button) findViewById(R.id.saveQuestionTypeOpen);
 		
 		addQuestion.setOnClickListener(new View.OnClickListener() {
@@ -70,7 +72,7 @@ public class QuestionInputActivity extends AppCompatActivity {
 				// 1. Question-Objekt erzeugen
 				Question oQuestion = new Question(questionText, QuestionTypeTitle, answers, isCorrect);
 				// 2. Speichermethode auf dem Question-Objekt aufrufen
-				// putQuestionInDB(oQuestion);
+				dataSource.putQuestionInDB(oQuestion);
 				
 			    // Aktualisieren der Anzeige
 			}
