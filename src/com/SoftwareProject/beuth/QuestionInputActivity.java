@@ -26,6 +26,7 @@ public class QuestionInputActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_question_input);
 		
 		dataSource = new PeatDataSource(this); 
+
 		Button addQuestion = (Button) findViewById(R.id.saveQuestionTypeOpen);
 		
 		addQuestion.setOnClickListener(new View.OnClickListener() {

@@ -38,6 +38,10 @@ http://www.lac.ane.pl/pdf/5409.pdf
 
 Wir brauchen übrigens keine JDBC-Verbindung. Es gibt direkt Bibliotheken zum Ansteuern der SQLite-DB. Eine leere DB habe ich bereits angelegt. Jetzt bin ich dabei das SQL-Skript zur Erstellung der Tabellen zu schreiben. Als nächstes kommt jetzt Daten ein- und auslesen. Das mache ich zunächst für Fragen. Dann checke ich den Code ein.
 
+---
+
+* was ist der USP der App
+* Geschäftsmodell: wie soll mal Geld verdient werden?
 
 ---
 
@@ -46,3 +50,4 @@ Wir brauchen übrigens keine JDBC-Verbindung. Es gibt direkt Bibliotheken zum An
 * Statt lokale Datenbank SQLite einen „Backend-as-a-Service“-Anbieter wie Parse: http://t3n.de/news/backend-as-a-service-parse-504596/
 * Rating von Fragen / Selbstreinigung
 * Community: Contributors von Fragen <> Follower
+* statt lokaler DB eine Remote-DB auf einem Server
