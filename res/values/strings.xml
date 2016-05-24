@@ -43,10 +43,6 @@
     <string name="hintQuestionTypeOpenAnswer">Geben Sie hier die Antwort ein</string>
     <string name="saveQuestionTypeOpen">Frage speichern</string>
     <string name="editText_errorMessage">Ein Feld ist leer. Ihre Frage kann nicht gespeichert werden. Bitte alle Felder ausfüllen.</string>
-    <string name="question_input">Neue</string>
-    <string name="title_activity_question_type">QuestionTypeActivity</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="title_activity_question_type_open">QuestionTypeOpenActivity</string>
 
     <!-- Definiton Texte Einstellungsmenü -->
     <string name="action_settings">Einstellungen</string>
@@ -62,6 +58,5 @@
     <string name="pref_user_name_summary">Ändere hier deinen Benutzernamen.</string>
     <string name="pref_user_profile">Benutzerprofil</string>
     <string name="pref_update_setting">Quiz-Einstellungen</string>
-    <string name="title_activity_question_input">QuestionInputActivity</string>
 
 </resources>
