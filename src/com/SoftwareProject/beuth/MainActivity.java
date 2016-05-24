@@ -123,6 +123,13 @@ public class MainActivity extends AppCompatActivity {
 				}
 				stage.setText(question[setNextQuestion]);
 			}
+			
+			// Auslesen der Fragen aus der SQLite Datenbank  
+			// 1. Question-Objekt erzeugen  
+			// Question oQuestion = new Question(questionText, questionTypeTitle, answers, isCorrect);  
+			// 2. Fragen via Question-Objekt abrufen  
+			// getQuestion (oQuestion);
+			
 		});
 		
 		pause.setOnClickListener(new View.OnClickListener() {

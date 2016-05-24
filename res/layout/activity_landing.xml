@@ -10,12 +10,20 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.SoftwareProject.beuth.LandingActivity" >
     
+	<ImageView
+		android:id="@+id/splash"
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:src="@drawable/splash" />
+	
 	<Button
         android:id="@+id/game"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="18dp"
+        android:layout_below="@+id/splash"
         android:text="@string/game" />  
 	
 	<Button

@@ -85,6 +85,15 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".UnderConstructionActivity"
+            android:label="@string/app_name" >
+			<intent-filter>
+                <action android:name="com.SoftwareProject.beuth.UnderConstructionActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".CrashActivity"
             android:label="@string/app_name" >
 			<intent-filter>

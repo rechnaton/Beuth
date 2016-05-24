@@ -28,6 +28,10 @@
     <!-- Definiton Buttontexte UserThemeActivity -->
     <string name="add">Hinzufügen</string>
 
+    <!-- Definiton Texte UnderConstructionActivity -->
+    <string name="title_construction">Under Construction!</string>
+    <string name="text_construction">Hier wirst du bald einen anderen Fragentyp anlegen können.</string>
+    
     <!-- Definiton Texte QuestionTypeActivity -->
     <string name="headQuestionType">Wähle einen Fragentyp</string>
     <string name="questionTypeOpen">Offene Frage</string>
