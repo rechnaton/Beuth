@@ -58,6 +58,24 @@
             </intent-filter>
         </activity>
         <activity
+            android:name=".QuestionTypeActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.SoftwareProject.beuth.QuestionTypeActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".QuestionTypeOpenActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.SoftwareProject.beuth.QuestionTypeOpenActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
             android:name=".UserThemeActivity"
             android:label="@string/app_name" >
             <intent-filter>
@@ -69,15 +87,11 @@
         <activity
             android:name=".CrashActivity"
             android:label="@string/app_name" >
-        </activity>
-        <activity
-            android:name=".QuestionTypeActivity"
-            android:label="@string/title_activity_question_type" >
-        </activity>
-        <activity
-            android:name=".QuestionTypeOpenActivity"
-            android:label="@string/title_activity_question_type_open" >
+            <intent-filter>
+                <action android:name="com.SoftwareProject.beuth.CrashActivity" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
     </application>
-
 </manifest>
