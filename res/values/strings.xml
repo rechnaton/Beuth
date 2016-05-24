@@ -23,12 +23,15 @@
     <string name="radio_no">Nein</string>
     <string name="button_answer">Antwort?</string>
     <string name="back">#repeat</string>
-    <string name="close">Close</string>
-    <string name="return_landing">Hauptmenü</string>
+    <string name="return_landing">Menü</string>
 
     <!-- Definiton Buttontexte UserThemeActivity -->
     <string name="add">Hinzufügen</string>
 
+    <!-- Definiton Texte UnderConstructionActivity -->
+    <string name="title_construction">Under Construction!</string>
+    <string name="text_construction">Hier wirst du bald einen anderen Fragentyp anlegen können.</string>
+    
     <!-- Definiton Texte QuestionTypeActivity -->
     <string name="headQuestionType">Wähle einen Fragentyp</string>
     <string name="questionTypeOpen">Offene Frage</string>

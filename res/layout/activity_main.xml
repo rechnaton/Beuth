@@ -133,7 +133,7 @@
         android:text="@string/gotoGoogle" />
 	
 	<Button
-		android:id="@+id/close"
+		android:id="@+id/returnlanding"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_centerHorizontal="true"
@@ -141,22 +141,13 @@
 		android:layout_toRightOf="@+id/google"
 		android:layout_below="@+id/pause"
 		android:layout_marginTop="15dp"
-		android:text="@string/close" />
+		android:text="@string/return_landing" />
 	
 	<TextView
         android:id="@+id/textUserSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:context=".MainActivity" />
-	
-	<Button
-        android:id="@+id/returnlanding"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/google"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="18dp"
-        android:text="@string/return_landing" />
 	
 	<TextView 
 		android:id="@+id/error" 
