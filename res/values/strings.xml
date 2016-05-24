@@ -23,8 +23,7 @@
     <string name="radio_no">Nein</string>
     <string name="button_answer">Antwort?</string>
     <string name="back">#repeat</string>
-    <string name="close">Close</string>
-    <string name="return_landing">Hauptmenü</string>
+    <string name="return_landing">Menü</string>
 
     <!-- Definiton Buttontexte UserThemeActivity -->
     <string name="add">Hinzufügen</string>

@@ -32,7 +32,6 @@ public class MainActivity extends AppCompatActivity {
 	Button next; // Button Weiter, fuft die naechste Frage auf
 	Button wiki; // Button Wiki, ruft die URL https://www.wikipedia.de/ auf
 	Button google; // Button Google, ruft die URL https://www.google.de/ auf
-	Button close; // Button Close, schliesst die Anwendung bzw. die App
 	Button returnlanding; // Button return, ruft LandingActivity auf
 	
 	TextView stage; // Ausgabe, Mensch-Computer-Kommunikation
@@ -103,8 +102,6 @@ public class MainActivity extends AppCompatActivity {
 
 		wiki = (Button) findViewById(R.id.wiki);
 		google = (Button) findViewById(R.id.google);
-		close = (Button) findViewById(R.id.close);
-		
 		returnlanding = (Button) findViewById(R.id.returnlanding);
 		
 		start.setOnClickListener(new View.OnClickListener() {
@@ -170,14 +167,6 @@ public class MainActivity extends AppCompatActivity {
 			public void onClick(View v) {
 				  Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.de/"));
 				  startActivity(browserIntent);
-			}
-		});
-		
-		close.setOnClickListener(new View.OnClickListener() {
-		     
-			@Override
-		    public void onClick(View v) {
-		        finish();
 			}
 		});
 		
