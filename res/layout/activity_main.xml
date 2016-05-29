@@ -143,6 +143,51 @@
 		android:layout_marginTop="15dp"
 		android:text="@string/return_landing" />
 	
+	<!-- Linie Start -->
+    <TextView
+        android:id="@+id/line"
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="18dp"
+        android:layout_below="@+id/google"
+        android:background="#FF000000" />
+    <!-- Linie Ende -->
+    
+	<EditText
+	    android:id="@+id/commentAnswer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+	    android:layout_below="@+id/line"
+	    android:layout_gravity="start"
+	    android:background="@color/blueFields"
+	    android:hint="@string/comment_Answer"
+	    android:inputType="textMultiLine"
+	    android:minHeight="25dp" />
+	
+	<RadioGroup
+        android:id="@+id/radioComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+		android:layout_below="@+id/commentAnswer" >
+
+        <RadioButton
+            android:id="@+id/radioNotCorrect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/radio_notCorrect" 
+            android:layout_marginTop="0dp" />
+
+    </RadioGroup>
+    
+	<Button
+	    android:id="@+id/saveComment"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_toRightOf="@+id/google"
+	    android:layout_below="@+id/commentAnswer"
+	    android:text="@string/save_Comment" />
+		
 	<TextView
         android:id="@+id/textUserSettings"
         android:layout_width="wrap_content"

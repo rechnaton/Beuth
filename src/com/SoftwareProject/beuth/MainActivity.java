@@ -1,24 +1,26 @@
 package com.SoftwareProject.beuth;
 
-import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.annotation.TargetApi;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
-import android.media.MediaPlayer;
+import android.preference.PreferenceManager;
+import android.support.v7.app.AppCompatActivity;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.Toast;
 import android.widget.TextView;
-import android.preference.PreferenceManager;
-import android.content.SharedPreferences;
+import android.widget.Toast;
 
 @TargetApi(Build.VERSION_CODES.M)
 public class MainActivity extends AppCompatActivity {
@@ -33,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
 	Button wiki; // Button Wiki, ruft die URL https://www.wikipedia.de/ auf
 	Button google; // Button Google, ruft die URL https://www.google.de/ auf
 	Button returnlanding; // Button return, ruft LandingActivity auf
+	Button saveComments; // Button save, speichert Kommentare
 	
 	TextView stage; // Ausgabe, Mensch-Computer-Kommunikation
 	
@@ -41,6 +44,7 @@ public class MainActivity extends AppCompatActivity {
 	
 	String questionTypeTitle;
 	String questionText;
+	String commentAnswers;
 	String[] answers;
 	Boolean[] isCorrect;
 
@@ -62,6 +66,7 @@ public class MainActivity extends AppCompatActivity {
 	
 	// Definition einer Radio-Button-Gruppe für geschlossene Fragen (Ja-Nein-Fragen)
 	private RadioGroup radioGroup;
+	private RadioGroup radioGroupComment;
 	private RadioButton radioAnswerButton;
 	
 	// Variable für Einstellungen der App
@@ -104,6 +109,10 @@ public class MainActivity extends AppCompatActivity {
 		google = (Button) findViewById(R.id.google);
 		returnlanding = (Button) findViewById(R.id.returnlanding);
 		
+		saveComments = (Button) findViewById(R.id.saveComment);
+		
+		radioGroupComment = (RadioGroup) findViewById(R.id.radioComment);
+				
 		start.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
@@ -183,6 +192,20 @@ public class MainActivity extends AppCompatActivity {
 			public void onClick(View v) {
 				Intent intentreturn = new Intent(MainActivity.this, LandingActivity.class);
 				MainActivity.this.startActivity(intentreturn);
+			}
+		});
+		
+		EditText commentAnswer = (EditText) findViewById(R.id.commentAnswer);
+		// Eingabe in einen String umwandeln
+		commentAnswers = commentAnswer.getText().toString();
+		// Textfeld leeren
+		commentAnswer.setText("");
+		
+		saveComments.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+            		Toast.makeText(MainActivity.this, "Kommentar gespeichert.", Toast.LENGTH_LONG).show();
 			}
 		});
 		

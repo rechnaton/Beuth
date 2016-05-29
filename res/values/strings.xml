@@ -24,7 +24,10 @@
     <string name="button_answer">Antwort?</string>
     <string name="back">#repeat</string>
     <string name="return_landing">Menü</string>
-
+	<string name="comment_Answer">Frage bewerten?</string>
+	<string name="radio_notCorrect">Antwort ist falsch!</string>
+	<string name="save_Comment">Speichern</string>
+	
     <!-- Definiton Buttontexte UserThemeActivity -->
     <string name="add">Hinzufügen</string>
 
@@ -33,20 +36,22 @@
     <string name="text_construction">Hier wirst du bald einen anderen Fragentyp anlegen können.</string>
     
     <!-- Definiton Texte QuestionTypeActivity -->
-    <string name="headQuestionType">Wähle einen Fragentyp</string>
+    <string name="headQuestionType">Wähle einen Fragentyp!</string>
     <string name="questionTypeOpen">Offene Frage</string>
     <string name="questionTypeClosed">Geschlossene Frage</string>
     <string name="questionTypeSingleChoice">Single Choice</string>
     <string name="questionTypeMultipleChoice">Multiple Choice</string>
 
     <!-- Definiton Texte QuestionInputActivity -->
-    <string name="headQuestionTypeOpen">Offene Frage einfügen</string>
-    <string name="hintQuestionTypeOpenTheme">Geben Sie hier das Thema ein</string>
-    <string name="hintQuestionTypeOpenQuestion">Geben Sie hier die Frage ein</string>
-    <string name="hintQuestionTypeOpenAnswer">Geben Sie hier die Antwort ein</string>
-    <string name="saveQuestionTypeOpen">Frage speichern</string>
+    <string name="headQuestionTypeOpen">Offene Frage einfügen!</string>
+    <string name="hintQuestionTypeOpenTheme">Geben Sie hier das Thema ein!</string>
+    <string name="hintQuestionTypeOpenQuestion">Geben Sie hier die Frage ein!</string>
+    <string name="hintQuestionTypeOpenAnswer">Geben Sie hier die Antwort ein!</string>
+    <string name="saveQuestionTypeOpen">Speichern</string>
     <string name="editText_errorMessage">Ein Feld ist leer. Ihre Frage kann nicht gespeichert werden. Bitte alle Felder ausfüllen.</string>
-
+	<string name="radio_true">Ist richtig!</string>
+	<string name="radio_false">Ist falsch!</string>
+	
     <!-- Definiton Texte Einstellungsmenü -->
     <string name="action_settings">Einstellungen</string>
     <string name="title_activity_einstellungen">Einstellungen</string>

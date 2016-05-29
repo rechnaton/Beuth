@@ -8,6 +8,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 import android.view.inputmethod.InputMethodManager;
 
@@ -20,9 +21,12 @@ public class QuestionInputActivity extends AppCompatActivity {
 	String[] answers;
 	Boolean[] isCorrect;
 	
+	private RadioGroup radioGroupCorrect;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler(this));
 		setContentView(R.layout.activity_question_input);
 		
 		dataSource = new PeatDataSource(this); 
@@ -76,9 +80,14 @@ public class QuestionInputActivity extends AppCompatActivity {
 				dataSource.putQuestionInDB(oQuestion);
 				
 			    // Aktualisieren der Anzeige
+				
+				radioGroupCorrect = (RadioGroup) findViewById(R.id.radioQuestionCorrect);
+				
+		        Toast.makeText(QuestionInputActivity.this, "Frage gespeichert.", Toast.LENGTH_LONG).show();
+		        
 			}
 		});
-		
+
 		Toast.makeText(this, "Zurück mit Back-Button.", Toast.LENGTH_SHORT).show();
 	}
 	
