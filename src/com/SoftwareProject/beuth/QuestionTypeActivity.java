@@ -8,6 +8,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.annotation.TargetApi;
 import android.os.Build;
@@ -21,6 +23,7 @@ public class QuestionTypeActivity extends AppCompatActivity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler(this));
 		setContentView(R.layout.activity_question_type);
 		
 		Button openQuestion = (Button) findViewById(R.id.addQuestionTypeOpen);
