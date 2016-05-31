@@ -25,7 +25,7 @@ Stand (17.05.2016)
 - Sprint 5) Erstellung des Datenbankschemas - Done 08.05.2016
 - Sprint 6) Einrichten der Datenbank im Android-Projekt - PENDING
   - SQLite-Datei inkl. Java-Klassen
-  - Zielversion v2.0.0-0001
+  - Zielversion v1.1.0-0000
 - Sprint 7) Erzeugung weiterer Prototypen bzw. Versionen - IN PROGRESS
   - Versionshistory siehe https://github.com/andreasmosig/peat/releases
 - Sprint 8) Erzeugung des Abgabe-Prototypen (App) - PENDING
