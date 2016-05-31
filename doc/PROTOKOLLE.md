@@ -176,9 +176,54 @@ Ausblick:
 
 ------------------------------------------------------------------------------------------
 
-#21.05.2016 (voraussichtliches Meeting)
-15:30 Uhr
+#21.05.2016 (Meeting nach der Präsenz)
+15:30 Uhr - ca. 16:30 Uhr
 Teilnehmer: Andreas, Thomas, Steven
+
+Ergebnisse:
+- zeitnahen, internen Termin (außerordentlich) finden > hiermit erledigt
+- Fehlersuche für App-Absturz mittels Try-Catch erfolglos, weil Stack zu diesem Zeitpunkt nicht nachvollziehbar
+- Einigung auf die Umsetzung des Single-Choice Fragetypen für den Prototypen zur Präsentation am 24.05.2016
+
+Tasks:
+
+Andreas:
+- Exception-Handler intergrieren um Fehlermeldung analysieren zu können
+- .gitignore um bin/ und gen/ ergänzen (Herrn Edlichs Vorschlag umsetzen)
+- Button "Close" durch Button "Menü" ersetzen
+
+Steven:
+- Datenbank-Fehlersuche
+
+Thomas:
+- GUI inkl. Datenbankanbindung für Single-Choice-Fragetyp
+
+Alle:
+- Kurz-Meeting unmittelbar vor der Präsentation am 24.05.2016 zwecks Absprache Schwerpunkte der Präsentation
 
 ------------------------------------------------------------------------------------------
 
+#24.05.2016 (Online Meeting komplette Gruppe)
+
+Ergebnisse:
+- Prototyp nicht ganz fertig geworden: keine Datenbankanbindung
+- Präsentation der App per ADK-Emulator durch Andreas
+- Hinweis Herr Edlich:
+-- weitere Fragetypen mit einplanen --> war für Enddokumentation für den Ausblick bereits vorgesehen
+-- USP und Geschäftsmodell herausarbeiten
+
+Andreas:
+- Under-Construction-Activity für die Fragetypen, die noch nicht umgesetzt sind erstellen
+
+Thomas:
+- notieren der Hinweise von Herrn edlich in Enddokumentation
+
+------------------------------------------------------------------------------------------
+
+#31.05.2016 (Online Meeting via Moodle)
+21 Uhr
+Teilnehmer: Andreas, Thomas
+
+- Protokoll, Tasks und Statusbericht aktualisieren
+- weiteres Vorgehen besprechen
+- Prüfungsterminwunsch nachfragen, da Zusage für 08.07.2016 um 12:30 Uhr, in Moodle jedoch jetzt Tagliatelle vermerkt statt #peat
