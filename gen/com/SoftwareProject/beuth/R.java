@@ -2075,9 +2075,9 @@ containing a value of this type.
         public static final int decor_content_parent=0x7f0b0040;
         public static final int default_activity_button=0x7f0b0027;
         public static final int disableHome=0x7f0b000d;
-        public static final int editQuestionTypeOpenAnswer=0x7f0b006d;
-        public static final int editQuestionTypeOpenQuestion=0x7f0b006c;
-        public static final int editQuestionTypeOpenTheme=0x7f0b006b;
+        public static final int editQuestionTypeClosedAnswer=0x7f0b006d;
+        public static final int editQuestionTypeClosedQuestion=0x7f0b006c;
+        public static final int editQuestionTypeClosedTheme=0x7f0b006b;
         public static final int edit_query=0x7f0b0044;
         public static final int end=0x7f0b001f;
         public static final int end_padder=0x7f0b0086;
@@ -2088,7 +2088,7 @@ containing a value of this type.
         public static final int game=0x7f0b0052;
         public static final int google=0x7f0b0061;
         public static final int headQuestionType=0x7f0b0072;
-        public static final int headQuestionTypeOpen=0x7f0b006a;
+        public static final int headQuestionTypeClosed=0x7f0b006a;
         public static final int headUserThemes=0x7f0b0087;
         public static final int home=0x7f0b0000;
         public static final int homeAsUp=0x7f0b000e;
@@ -2125,7 +2125,7 @@ containing a value of this type.
         public static final int radioYes=0x7f0b005a;
         public static final int returnlanding=0x7f0b0062;
         public static final int saveComment=0x7f0b0067;
-        public static final int saveQuestionTypeOpen=0x7f0b006f;
+        public static final int saveQuestionTypeClosed=0x7f0b006f;
         public static final int screen=0x7f0b0015;
         public static final int scrollIndicatorDown=0x7f0b0036;
         public static final int scrollIndicatorUp=0x7f0b0033;
@@ -2357,10 +2357,10 @@ containing a value of this type.
         public static final int headQuestionType=0x7f0c002a;
         /**  Definiton Texte QuestionInputActivity 
          */
-        public static final int headQuestionTypeOpen=0x7f0c002f;
-        public static final int hintQuestionTypeOpenAnswer=0x7f0c0032;
-        public static final int hintQuestionTypeOpenQuestion=0x7f0c0031;
-        public static final int hintQuestionTypeOpenTheme=0x7f0c0030;
+        public static final int headQuestionTypeClosed=0x7f0c002f;
+        public static final int hintQuestionTypeClosedAnswer=0x7f0c0032;
+        public static final int hintQuestionTypeClosedQuestion=0x7f0c0031;
+        public static final int hintQuestionTypeClosedTheme=0x7f0c0030;
         public static final int next=0x7f0c001c;
         public static final int pref_send_report=0x7f0c003c;
         public static final int pref_send_report_summary=0x7f0c003d;
@@ -2381,7 +2381,7 @@ containing a value of this type.
         public static final int radio_true=0x7f0c0035;
         public static final int radio_yes=0x7f0c001f;
         public static final int return_landing=0x7f0c0023;
-        public static final int saveQuestionTypeOpen=0x7f0c0033;
+        public static final int saveQuestionTypeClosed=0x7f0c0033;
         public static final int save_Comment=0x7f0c0026;
         public static final int setting=0x7f0c0017;
         public static final int stage_pause=0x7f0c001b;

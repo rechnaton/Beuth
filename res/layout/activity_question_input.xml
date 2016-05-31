@@ -12,12 +12,12 @@
     tools:context="com.SoftwareProject.beuth.QuestionInputActivity" >
     
     <TextView
-        android:id="@+id/headQuestionTypeOpen"
+        android:id="@+id/headQuestionTypeClosed"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:textSize="22sp"
-        android:text="@string/headQuestionTypeOpen" />
+        android:text="@string/headQuestionTypeClosed" />
     
     <!-- Linie Start -->
     <TextView
@@ -29,7 +29,7 @@
     <!-- Linie Ende -->
     
 	<EditText
-	    android:id="@+id/editQuestionTypeOpenTheme"
+	    android:id="@+id/editQuestionTypeClosedTheme"
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
 	    android:layout_gravity="start"
@@ -37,10 +37,10 @@
 	    android:background="@color/blueFields"
 	    android:inputType="text"
 	    android:minHeight="36dp"
-	    android:hint="@string/hintQuestionTypeOpenTheme" />
+	    android:hint="@string/hintQuestionTypeClosedTheme" />
 	
 	<EditText
-	    android:id="@+id/editQuestionTypeOpenQuestion"
+	    android:id="@+id/editQuestionTypeClosedQuestion"
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
 	    android:layout_gravity="start"
@@ -48,16 +48,16 @@
 	    android:background="@color/blueFields"
 	    android:inputType="text"
 	    android:minHeight="36dp"
-	    android:hint="@string/hintQuestionTypeOpenQuestion" />
+	    android:hint="@string/hintQuestionTypeClosedQuestion" />
 	
 	<EditText
-	    android:id="@+id/editQuestionTypeOpenAnswer"
+	    android:id="@+id/editQuestionTypeClosedAnswer"
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
 	    android:gravity="start|top"
 	    android:layout_marginBottom="18dp"
 	    android:background="@color/blueFields"
-	    android:hint="@string/hintQuestionTypeOpenAnswer"
+	    android:hint="@string/hintQuestionTypeClosedAnswer"
 	    android:inputType="textMultiLine"
 	    android:minHeight="108dp" />
 	
@@ -67,7 +67,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:orientation="horizontal"
-        android:layout_below="@+id/saveQuestionTypeOpen" >
+        android:layout_below="@+id/saveQuestionTypeClosed" >
 
         <RadioButton
             android:id="@+id/radioQuestionTrue"
@@ -86,10 +86,10 @@
 
     </RadioGroup>
     
-	<Button android:id="@+id/saveQuestionTypeOpen"
+	<Button android:id="@+id/saveQuestionTypeClosed"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
 		android:layout_gravity="end"
-		android:text="@string/saveQuestionTypeOpen" />
+		android:text="@string/saveQuestionTypeClosed" />
 
 </LinearLayout>
