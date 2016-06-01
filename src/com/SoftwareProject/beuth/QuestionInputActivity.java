@@ -31,7 +31,7 @@ public class QuestionInputActivity extends AppCompatActivity {
 		
 		dataSource = new PeatDataSource(this); 
 
-		Button addQuestion = (Button) findViewById(R.id.saveQuestionTypeOpen);
+		Button addQuestion = (Button) findViewById(R.id.saveQuestionTypeClosed);
 		
 		addQuestion.setOnClickListener(new View.OnClickListener() {
 			
@@ -45,7 +45,7 @@ public class QuestionInputActivity extends AppCompatActivity {
 				// ?
 				
 				// Auslesen Textfeld Frage
-				EditText editQuestionTypeOpenTheme = (EditText) findViewById(R.id.editQuestionTypeOpenQuestion);
+				EditText editQuestionTypeOpenTheme = (EditText) findViewById(R.id.editQuestionTypeClosedQuestion);
 				// Eingabe in einen String umwandeln
 				questionText = editQuestionTypeOpenTheme.getText().toString();
 				// Prüfen, ob Feld leer ist
@@ -57,7 +57,7 @@ public class QuestionInputActivity extends AppCompatActivity {
 				editQuestionTypeOpenTheme.setText("");
 				
 				// Auslesen Textfeld Antwort
-				EditText editQuestionTypeOpenAnswer = (EditText) findViewById(R.id.editQuestionTypeOpenAnswer);
+				EditText editQuestionTypeOpenAnswer = (EditText) findViewById(R.id.editQuestionTypeClosedAnswer);
 				// Eingabe in einen String umwandeln
 				String answersTemp = editQuestionTypeOpenAnswer.getText().toString();
 				answers[0]= answersTemp;

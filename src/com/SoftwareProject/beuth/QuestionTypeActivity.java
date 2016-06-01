@@ -35,7 +35,7 @@ public class QuestionTypeActivity extends AppCompatActivity {
 			
 			@Override
 			public void onClick(View v) {
-				Intent intentopen = new Intent(QuestionTypeActivity.this, QuestionInputActivity.class);
+				Intent intentopen = new Intent(QuestionTypeActivity.this, UnderConstructionActivity.class);
 				QuestionTypeActivity.this.startActivity(intentopen);
 			}
 		});
@@ -44,7 +44,7 @@ public class QuestionTypeActivity extends AppCompatActivity {
 			
 		 	@Override
 		 	public void onClick(View v) {
-		 		Intent intentclosed = new Intent(QuestionTypeActivity.this, UnderConstructionActivity.class);
+		 		Intent intentclosed = new Intent(QuestionTypeActivity.this, QuestionInputActivity.class);
 		 		QuestionTypeActivity.this.startActivity(intentclosed);
 		 	}
 		});

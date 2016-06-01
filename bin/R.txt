@@ -494,9 +494,9 @@ int id customPanel 0x7f0b0037
 int id decor_content_parent 0x7f0b0040
 int id default_activity_button 0x7f0b0027
 int id disableHome 0x7f0b000d
-int id editQuestionTypeOpenAnswer 0x7f0b006d
-int id editQuestionTypeOpenQuestion 0x7f0b006c
-int id editQuestionTypeOpenTheme 0x7f0b006b
+int id editQuestionTypeClosedAnswer 0x7f0b006d
+int id editQuestionTypeClosedQuestion 0x7f0b006c
+int id editQuestionTypeClosedTheme 0x7f0b006b
 int id edit_query 0x7f0b0044
 int id end 0x7f0b001f
 int id end_padder 0x7f0b0086
@@ -507,7 +507,7 @@ int id expanded_menu 0x7f0b0039
 int id game 0x7f0b0052
 int id google 0x7f0b0061
 int id headQuestionType 0x7f0b0072
-int id headQuestionTypeOpen 0x7f0b006a
+int id headQuestionTypeClosed 0x7f0b006a
 int id headUserThemes 0x7f0b0087
 int id home 0x7f0b0000
 int id homeAsUp 0x7f0b000e
@@ -544,7 +544,7 @@ int id radioQuestionTrue 0x7f0b0070
 int id radioYes 0x7f0b005a
 int id returnlanding 0x7f0b0062
 int id saveComment 0x7f0b0067
-int id saveQuestionTypeOpen 0x7f0b006f
+int id saveQuestionTypeClosed 0x7f0b006f
 int id screen 0x7f0b0015
 int id scrollIndicatorDown 0x7f0b0036
 int id scrollIndicatorUp 0x7f0b0033
@@ -679,10 +679,10 @@ int string game 0x7f0c0014
 int string gotoGoogle 0x7f0c001e
 int string gotoWikipedia 0x7f0c001d
 int string headQuestionType 0x7f0c002a
-int string headQuestionTypeOpen 0x7f0c002f
-int string hintQuestionTypeOpenAnswer 0x7f0c0032
-int string hintQuestionTypeOpenQuestion 0x7f0c0031
-int string hintQuestionTypeOpenTheme 0x7f0c0030
+int string headQuestionTypeClosed 0x7f0c002f
+int string hintQuestionTypeClosedAnswer 0x7f0c0032
+int string hintQuestionTypeClosedQuestion 0x7f0c0031
+int string hintQuestionTypeClosedTheme 0x7f0c0030
 int string next 0x7f0c001c
 int string pref_send_report 0x7f0c003c
 int string pref_send_report_summary 0x7f0c003d
@@ -703,7 +703,7 @@ int string radio_notCorrect 0x7f0c0025
 int string radio_true 0x7f0c0035
 int string radio_yes 0x7f0c001f
 int string return_landing 0x7f0c0023
-int string saveQuestionTypeOpen 0x7f0c0033
+int string saveQuestionTypeClosed 0x7f0c0033
 int string save_Comment 0x7f0c0026
 int string setting 0x7f0c0017
 int string stage_pause 0x7f0c001b
