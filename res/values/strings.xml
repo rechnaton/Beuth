@@ -43,11 +43,11 @@
     <string name="questionTypeMultipleChoice">Multiple Choice</string>
 
     <!-- Definiton Texte QuestionInputActivity -->
-    <string name="headQuestionTypeOpen">Offene Frage einfügen!</string>
-    <string name="hintQuestionTypeOpenTheme">Geben Sie hier das Thema ein!</string>
-    <string name="hintQuestionTypeOpenQuestion">Geben Sie hier die Frage ein!</string>
-    <string name="hintQuestionTypeOpenAnswer">Geben Sie hier die Antwort ein!</string>
-    <string name="saveQuestionTypeOpen">Speichern</string>
+    <string name="headQuestionTypeClosed">Offene Frage einfügen!</string>
+    <string name="hintQuestionTypeClosedTheme">Geben Sie hier das Thema ein!</string>
+    <string name="hintQuestionTypeClosedQuestion">Geben Sie hier die Frage ein!</string>
+    <string name="hintQuestionTypeClosedAnswer">Geben Sie hier die Antwort ein!</string>
+    <string name="saveQuestionTypeClosed">Speichern</string>
     <string name="editText_errorMessage">Ein Feld ist leer. Ihre Frage kann nicht gespeichert werden. Bitte alle Felder ausfüllen.</string>
 	<string name="radio_true">Ist richtig!</string>
 	<string name="radio_false">Ist falsch!</string>
