@@ -28,7 +28,7 @@ public class QuestionInputActivity extends AppCompatActivity {
 		Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler(this));
 		setContentView(R.layout.activity_question_input);
 		
-		Button addQuestion = (Button) findViewById(R.id.saveQuestionTypeOpen);
+		Button addQuestion = (Button) findViewById(R.id.saveQuestionTypeClosed);
 		
 		addQuestion.setOnClickListener(new View.OnClickListener() {
 			
@@ -74,7 +74,7 @@ public class QuestionInputActivity extends AppCompatActivity {
 				// 1. Question-Objekt erzeugen
 				Question oQuestion = new Question(questionText, QuestionTypeTitle, answers, isCorrect);
 				// 2. Speichermethode auf dem Question-Objekt aufrufen
-				dataSource.putQuestionInDB(oQuestion);
+				// dataSource.putQuestionInDB(oQuestion);
 				
 			    // Aktualisieren der Anzeige
 				
