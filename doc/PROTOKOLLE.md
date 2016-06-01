@@ -227,3 +227,32 @@ Teilnehmer: Andreas, Thomas
 - Protokoll, Tasks und Statusbericht aktualisieren
 - weiteres Vorgehen besprechen
 - Prüfungsterminwunsch nachfragen, da Zusage für 08.07.2016 um 12:30 Uhr, in Moodle jedoch jetzt Tagliatelle vermerkt statt #peat
+
+------------------------------------------------------------------------------------------
+
+#01.06.2016 (Online Meeting via Moodle)
+21 Uhr
+Teilnehmer: Steven, Andreas, Thomas
+
+Tasks:
+
+Steven:
+- Pushen deines Repositorys nach origin/master (Andreas)
+- Fehlerbehebung Datenbank
+- Mock für Andreas-Task schreiben
+
+Andreas:
+- Funktion "Frage aus Datenbank holen" implementieren
+
+Thomas:
+- Lösung für Problem "Zugriff Datenbank-Objekt " finden
+- Funktion "neue Frage speichern"
+
+Alle:
+- Protokoll, Tasks lesen und für Sonntag weiteren Projekt-Fahrplan vorbereiten
+
+------------------------------------------------------------------------------------------
+
+#05.06.2016 (Online Meeting via Moodle)
+20:15 Uhr
+Teilnehmer: Steven, Andreas, Thomas
