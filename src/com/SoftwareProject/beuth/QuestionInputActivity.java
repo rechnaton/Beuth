@@ -15,7 +15,6 @@ import android.view.inputmethod.InputMethodManager;
 @TargetApi(Build.VERSION_CODES.M)
 public class QuestionInputActivity extends AppCompatActivity {
 	
-	private PeatDataSource dataSource;
 	String QuestionTypeTitle;
 	String questionText;
 	String[] answers;
@@ -29,9 +28,7 @@ public class QuestionInputActivity extends AppCompatActivity {
 		Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler(this));
 		setContentView(R.layout.activity_question_input);
 		
-		dataSource = new PeatDataSource(this); 
-
-		Button addQuestion = (Button) findViewById(R.id.saveQuestionTypeClosed);
+		Button addQuestion = (Button) findViewById(R.id.saveQuestionTypeOpen);
 		
 		addQuestion.setOnClickListener(new View.OnClickListener() {
 			
