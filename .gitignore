@@ -47,7 +47,7 @@ Temporary Items
 .apdisk
 doku_expose/EXPOSE.md
 
-#hiernach kommen alle dirs und files fuer Android (Stand 21.05.2016, AM)
+# hiernach kommen alle dirs und files fuer Android (Stand 21.05.2016, AM)
 # Built application files 
 *.apk 
 *.ap_ 

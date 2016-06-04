@@ -1,9 +1,12 @@
 package com.SoftwareProject.beuth;
 
 import android.annotation.TargetApi;
+import android.media.Image;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.os.Bundle;
 import android.view.View;
 import android.content.Intent;
@@ -15,11 +18,15 @@ public class LandingActivity extends AppCompatActivity {
 	Button question; // Button question, ruft Eingabe der Fragen auf
 	Button theme; // Button theme, ruft user_themes auf
 	Button setting; // Button setting, ruft Settings auf	
+	ImageView splash;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_landing);
+		
+		ImageView iv = (ImageView)findViewById(R.id.splash);
+		iv.setImageResource(R.drawable.splash);
 		
 		game = (Button) findViewById(R.id.game);
 		question = (Button) findViewById(R.id.question);
@@ -39,7 +46,7 @@ public class LandingActivity extends AppCompatActivity {
 			
 		 	@Override
 		 	public void onClick(View v) {
-		 		Intent intentquest = new Intent(LandingActivity.this, QuestionInputActivity.class);
+		 		Intent intentquest = new Intent(LandingActivity.this, QuestionTypeActivity.class);
 		 		LandingActivity.this.startActivity(intentquest);
 		 	}
 		});

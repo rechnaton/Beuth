@@ -23,26 +23,35 @@
     <string name="radio_no">Nein</string>
     <string name="button_answer">Antwort?</string>
     <string name="back">#repeat</string>
-    <string name="close">Close</string>
-    <string name="return_landing">Hauptmenü</string>
-    
+    <string name="return_landing">Menü</string>
+	<string name="comment_Answer">Frage bewerten?</string>
+	<string name="radio_notCorrect">Antwort ist falsch!</string>
+	<string name="save_Comment">Speichern</string>
+	
     <!-- Definiton Buttontexte UserThemeActivity -->
     <string name="add">Hinzufügen</string>
 
-    <!-- Definiton Texte Fragment QuestionTypeLanding -->
-    <string name="headQuestionType">Wähle einen Fragentyp</string>
+    <!-- Definiton Texte UnderConstructionActivity -->
+    <string name="title_construction">Under Construction!</string>
+    <string name="text_construction">Hier wirst du bald einen anderen Fragentyp anlegen können.</string>
+    
+    <!-- Definiton Texte QuestionTypeActivity -->
+    <string name="headQuestionType">Wähle einen Fragentyp!</string>
     <string name="questionTypeOpen">Offene Frage</string>
     <string name="questionTypeClosed">Geschlossene Frage</string>
     <string name="questionTypeSingleChoice">Single Choice</string>
     <string name="questionTypeMultipleChoice">Multiple Choice</string>
-    
-    <!-- Definiton Texte Fragment QuestionTypeOpen -->
-    <string name="headQuestionTypeOpen">Offene Frage einfügen</string>
-    <string name="hintQuestionTypeOpenTheme">Geben Sie hier das Thema ein</string>
-    <string name="hintQuestionTypeOpenQuestion">Geben Sie hier die Frage ein</string>
-    <string name="hintQuestionTypeOpenAnswer">Geben Sie hier die Antwort ein</string>
-    <string name="saveQuestionTypeOpen">Frage speichern</string>
-    
+
+    <!-- Definiton Texte QuestionInputActivity -->
+    <string name="headQuestionTypeClosed">Offene Frage einfügen!</string>
+    <string name="hintQuestionTypeClosedTheme">Geben Sie hier das Thema ein!</string>
+    <string name="hintQuestionTypeClosedQuestion">Geben Sie hier die Frage ein!</string>
+    <string name="hintQuestionTypeClosedAnswer">Geben Sie hier die Antwort ein!</string>
+    <string name="saveQuestionTypeClosed">Speichern</string>
+    <string name="editText_errorMessage">Ein Feld ist leer. Ihre Frage kann nicht gespeichert werden. Bitte alle Felder ausfüllen.</string>
+	<string name="radio_true">Ist richtig!</string>
+	<string name="radio_false">Ist falsch!</string>
+	
     <!-- Definiton Texte Einstellungsmenü -->
     <string name="action_settings">Einstellungen</string>
     <string name="title_activity_einstellungen">Einstellungen</string>
@@ -57,9 +66,5 @@
     <string name="pref_user_name_summary">Ändere hier deinen Benutzernamen.</string>
     <string name="pref_user_profile">Benutzerprofil</string>
     <string name="pref_update_setting">Quiz-Einstellungen</string>
-    <string name="title_activity_question_input">QuestionInputActivity</string>
-    
-    <!-- Definiton Texte QuestionInputActivity -->
-    <string name="question_input">Neue</string>
 
 </resources>
