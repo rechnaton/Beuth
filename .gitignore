@@ -88,3 +88,5 @@ captures/
 
 # Keystore files 
 *.jks
+/bin/
+/gen/
