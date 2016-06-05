@@ -21,8 +21,12 @@ public final class R {
         public static final int abc_slide_out_top=0x7f040009;
     }
     public static final class array {
+        public static final int repQuestions=0x7f0e0002;
+        public static final int repQuestionsValues=0x7f0e0003;
         public static final int syncFrequency=0x7f0e0000;
         public static final int syncFrequencyValues=0x7f0e0001;
+        public static final int timeAnswers=0x7f0e0004;
+        public static final int timeAnswersValues=0x7f0e0005;
     }
     public static final class attr {
         /**  Custom divider drawable to use for elements in the action bar. 
@@ -2362,14 +2366,20 @@ containing a value of this type.
         public static final int hintQuestionTypeClosedQuestion=0x7f0c0031;
         public static final int hintQuestionTypeClosedTheme=0x7f0c0030;
         public static final int next=0x7f0c001c;
-        public static final int pref_send_report=0x7f0c003c;
-        public static final int pref_send_report_summary=0x7f0c003d;
-        public static final int pref_sync_frequency=0x7f0c003e;
-        public static final int pref_sync_frequency_summary=0x7f0c003f;
-        public static final int pref_update_setting=0x7f0c0043;
-        public static final int pref_user_name=0x7f0c0040;
-        public static final int pref_user_name_summary=0x7f0c0041;
-        public static final int pref_user_profile=0x7f0c0042;
+        public static final int pref_rep_questions=0x7f0c0044;
+        public static final int pref_rep_questions_summary=0x7f0c0045;
+        public static final int pref_send_push=0x7f0c0040;
+        public static final int pref_send_push_summary=0x7f0c0041;
+        public static final int pref_send_report=0x7f0c0048;
+        public static final int pref_send_report_summary=0x7f0c0049;
+        public static final int pref_sync_frequency=0x7f0c0042;
+        public static final int pref_sync_frequency_summary=0x7f0c0043;
+        public static final int pref_time_answers=0x7f0c0046;
+        public static final int pref_time_answers_summary=0x7f0c0047;
+        public static final int pref_update_setting=0x7f0c003f;
+        public static final int pref_user_name=0x7f0c003d;
+        public static final int pref_user_name_summary=0x7f0c003e;
+        public static final int pref_user_profile=0x7f0c003c;
         public static final int question=0x7f0c0015;
         public static final int questionTypeClosed=0x7f0c002c;
         public static final int questionTypeMultipleChoice=0x7f0c002e;

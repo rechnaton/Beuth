@@ -120,12 +120,16 @@ public class MainActivity extends AppCompatActivity {
 			
 			@Override
 			public void onClick(View v) {
+				try {
 				if(setNextQuestion == 1){
 					setNextQuestion = 5;
 				} else {
 					setNextQuestion--;
 				}
 				stage.setText(question[setNextQuestion]);
+				} catch (Exception e) {
+					Toast.makeText(MainActivity.this, "Wende dich an den Support!", Toast.LENGTH_LONG).show();
+		    	}
 			}
 			
 			// Auslesen der Fragen aus der SQLite Datenbank  

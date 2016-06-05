@@ -21,17 +21,39 @@
     <PreferenceCategory android:title="@string/pref_update_setting" >
         <CheckBoxPreference
             android:defaultValue="false"
-            android:key="prefSendReport"
-            android:summary="@string/pref_send_report_summary"
-            android:title="@string/pref_send_report" >
+            android:key="prefSendPush"
+            android:summary="@string/pref_send_push_summary"
+            android:title="@string/pref_send_push" >
         </CheckBoxPreference>
- 
+        
         <ListPreference
             android:key="prefSyncFrequency"
             android:entries="@array/syncFrequency"
             android:summary="@string/pref_sync_frequency_summary"
             android:entryValues="@array/syncFrequencyValues"
             android:title="@string/pref_sync_frequency" />
+        
+        <ListPreference
+            android:key="prefRepQuestions"
+            android:entries="@array/repQuestions"
+            android:summary="@string/pref_rep_questions_summary"
+            android:entryValues="@array/repQuestionsValues"
+            android:title="@string/pref_rep_questions" />
+        
+        <ListPreference
+            android:key="prefTimeAnswers"
+            android:entries="@array/timeAnswers"
+            android:summary="@string/pref_time_answers_summary"
+            android:entryValues="@array/timeAnswersValues"
+            android:title="@string/pref_time_answers" />
+        
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="prefSendReport"
+            android:summary="@string/pref_send_report_summary"
+            android:title="@string/pref_send_report" >
+        </CheckBoxPreference>
+        
     </PreferenceCategory>
     
 </PreferenceScreen>
