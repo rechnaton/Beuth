@@ -81,19 +81,13 @@ public class MainActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler(this)); 
 		setContentView(R.layout.activity_main);
-
+		this.deleteDatabase("peat.db");
 	    dataSource = new PeatDataSource(this);
 	    Log.d(LOG_TAG, "Die Datenquelle wird geöffnet.");
 	    
 	    dataSource.open();
-	    //this.deleteDatabase("peat.db");
-	    //dataSource.putNewQuestionTypeInDB("SimpleText", "Bitte geben Sie Ihre Antwort als Text ein. Achten Sie auf die Rechtschreibung.");
-	    //dataSource.getAllTablesOfDB();
-	    String[] antwortFrageA = {"Ja"};
-	    Boolean[] isCorrectFrageA = {true};
-	    Question frageA = new Question("Wurde diese Frage in die DB gepackt?", "SimpleText", antwortFrageA, isCorrectFrageA);
-	    dataSource.putQuestionInDB(frageA);
-	    
+	    Question frage = dataSource.getNextQuestion();
+	    Log.d(LOG_TAG, frage.getQuestionText());
 		start = (Button) findViewById(R.id.start);
 		
 		stage = (TextView) findViewById(R.id.stage);
