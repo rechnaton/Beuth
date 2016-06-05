@@ -33,17 +33,23 @@ public class PeatDataSource {
     }
     
     public void putQuestionInDB(Question oQuestion) {
-    	database.execSQL("INSERT INTO " + dbHelper.TABLE_QUESTIONS + " (QuestionType_idQuestionType,text) VALUES(" + getIdFromQuestionTypeTitle(oQuestion.getQuestionTypeTitle()) + 
+    	String[] answers;
+    	Boolean[] bool_isCorrect;
+    	Integer i;
+    	database.execSQL("INSERT INTO " + dbHelper.TABLE_QUESTIONS + " (qst_idQuestionType,qst_text) VALUES(" + getIdFromQuestionTypeTitle(oQuestion.getQuestionTypeTitle()) + 
     			", '" + oQuestion.getQuestionText() +"')");
+    	answers = oQuestion.getAnswers();
+    	bool_isCorrect = oQuestion.getIsCorrectAnswers();
+        for (i=0; i<answers.length; i++) {
+        	database.execSQL("INSERT INTO Answers (as_idQuestion, as_text, as_isCorrect) VALUES (SELECT MAX(idQuestion) FROM Question WHERE qst_text='" + oQuestion.getQuestionText() + "', " + answers[i] + ", " + bool_isCorrect[i] + ")");
+        }
     }
     
-    public void putNewQuestionTypeInDB(String title, String explanation){
-    	database.execSQL("INSERT INTO QuestionType (title,explanation) VALUES('" + title + 
-    			"', '" + explanation +"')");
+    public void getAllTypes() {
     	Cursor mCursor = database.rawQuery("SELECT * FROM QuestionType", null);
     	mCursor.moveToFirst();
-    	Log.d(LOG_TAG, mCursor.getString(mCursor.getColumnIndex("title")) + ", " +
-    			mCursor.getString(mCursor.getColumnIndex("explanation")));
+    	Log.d(LOG_TAG, mCursor.getString(mCursor.getColumnIndex("qt_title")) + ", " +
+    			mCursor.getString(mCursor.getColumnIndex("qt_explanation")));
     }
     
     public void getAllTablesOfDB(){
@@ -56,33 +62,41 @@ public class PeatDataSource {
     	}
     }
     
-    public Question getQuestion(){
+    public Question getNextQuestion(){
     	//TODO
-    	
-    	Question oQuestion;
-    	String[] answersArray;
-    	Boolean[] isCorrectArray;
-    	answersArray = new String[1];
-    	isCorrectArray = new Boolean[1];
-    	String sIsCorrect;
-    	Cursor mCursor = database.rawQuery("SELECT * FROM Questions JOIN QuestionType ON idQuestionType = QuestionType_idQuestionType JOIN Anwers ON idQuestions = Questions_idQuestions", null);
-    	mCursor.moveToFirst();
-    	String QuestionText = mCursor.getString(mCursor.getColumnIndex("QuestionText"));
-    	String QuestionTypeTitle = mCursor.getString(mCursor.getColumnIndex("TypeTitle"));
-    	Integer i=0;
-    	while(!mCursor.isAfterLast()) {
-    		answersArray[i] = mCursor.getString(mCursor.getColumnIndex("AnswerText"));
-    		sIsCorrect = mCursor.getString(mCursor.getColumnIndex("isCorrect"));
-    		if (sIsCorrect == "True") {
-				isCorrectArray[i] = true;
-    		}else {
-    			isCorrectArray[i] = false;
-    		}
-    		mCursor.moveToNext();
-    		i=i+1;
+    	try {
+	    	Question oQuestion;
+	    	String[] answersArray;
+	    	Boolean[] isCorrectArray;
+	    	answersArray = new String[1];
+	    	isCorrectArray = new Boolean[1];
+	    	String sIsCorrect;
+	    	//Cursor mCursor = database.rawQuery("SELECT * FROM Questions JOIN QuestionType ON idQuestionType = qst_idQuestionType JOIN Answers ON idQuestions = as_idQuestions WHERE idQuestions NOT IN (SELECT uhq_idQuestions FROM PeatUser_has_Questions)", null);
+	    	Cursor mCursor = database.rawQuery("SELECT * FROM Questions JOIN QuestionType ON idQuestionType = qst_idQuestionType "+
+	    	"JOIN Answers ON idQuestions = as_idQuestions", null);
+	    	mCursor.moveToFirst();
+	    	String QuestionText = mCursor.getString(mCursor.getColumnIndex("qst_text"));
+	    	String QuestionTypeTitle = mCursor.getString(mCursor.getColumnIndex("qt_title"));
+	    	database.execSQL("INSERT INTO PeatUser_has_Questions (uhq_idQuestions, uhq_isIgnore, uhq_idPeatUser) VALUES(" + mCursor.getColumnIndex("idQuestions") + ", 0, (SELECT MAX(idPeatUser) FROM PeatUser WHERE us_name = 'Steven'))");
+	    	Integer i=0;
+	    	while(!mCursor.isAfterLast()) {
+	    		answersArray[i] = mCursor.getString(mCursor.getColumnIndex("as_text"));
+	    		sIsCorrect = mCursor.getString(mCursor.getColumnIndex("as_isCorrect"));
+	    		if (sIsCorrect == "True") {
+					isCorrectArray[i] = true;
+	    		}else {
+	    			isCorrectArray[i] = false;
+	    		}
+	    		mCursor.moveToNext();
+	    		i=i+1;
+	    	}
+	    	oQuestion = new Question(QuestionText, QuestionTypeTitle, answersArray, isCorrectArray);
+	    	return oQuestion;
+    	} catch (Exception e) {
+    	    String[] antwortFrageA = {"Ja", "Nein"};
+    	    Boolean[] isCorrectFrageA = {false, true};
+    	    return new Question("Wurde diese Frage in die DB gepackt?", "SimpleText", antwortFrageA, isCorrectFrageA);
     	}
-    	oQuestion = new Question(QuestionText, QuestionTypeTitle, answersArray, isCorrectArray);
-    	return oQuestion;
     }
     
     private String[] addStringToArray(String[] array, String string){
@@ -91,7 +105,7 @@ public class PeatDataSource {
     }
     
     public Integer getIdFromQuestionTypeTitle(String title){
-    	Cursor mCursor = database.rawQuery("SELECT * FROM QuestionType WHERE title = '" + title +"'", null);
+    	Cursor mCursor = database.rawQuery("SELECT * FROM QuestionType WHERE qt_title = '" + title +"'", null);
     	mCursor.moveToFirst();
     	return mCursor.getInt(mCursor.getColumnIndex("idQuestionType"));
     }

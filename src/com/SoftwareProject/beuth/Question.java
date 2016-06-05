@@ -25,6 +25,10 @@ public class Question {
 		return answers;
 	}
 	
+	public void putQuestionText(String text) {
+		questionText = text;
+	}
+	
 	public Boolean[] getIsCorrectAnswers(){
 		return isCorrect;
 	}
