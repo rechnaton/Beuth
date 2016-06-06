@@ -51,15 +51,16 @@ public class MainActivity extends AppCompatActivity {
 	int setNextQuestion=0; // Zaehler-Mockup, setzt den Array-Index des Fragearrays auf 0
     String[] question={ // Fragen-Mockup als Array
     		" ",
-    		"Dient Git der Versionsverwaltung für Software?",
-    		"Ist Slack ein webbasierter Instant-Messanger?",
-    		"Ist Trello eine Projektmanagementsoftware?",
-    		"Ist Android u.a. auch ein Betriebssystem?",
-    		"Bedeutet APK Android Package File?"};
-	
+    		"M1:Dient Git der Versionsverwaltung für Software?",
+    		"M2:Ist Slack ein webbasierter Instant-Messanger?",
+    		"M3:Ist Trello eine Projektmanagementsoftware?",
+    		"M4:Ist Android u.a. auch ein Betriebssystem?",
+    		"M5:Bedeutet APK Android Package File?"};
+   
     // Antwort-Mockup, Radio-Buttons Ja Nein
     String answerA = "Ja lautet die Antwort! Gut gemacht!";
 	String answerB = "Die Antwort ist leider falsch!";
+	
 	
 	// Hinweis, wenn Button-Pause geklickt wird
 	String messagePause = "Frage wurde für später gespeichert!";
@@ -88,10 +89,10 @@ public class MainActivity extends AppCompatActivity {
 	    dataSource.open();
 	    Question frage = dataSource.getNextQuestion();
 	    Log.d(LOG_TAG, frage.getQuestionText());
-		start = (Button) findViewById(R.id.start);
+		// start = (Button) findViewById(R.id.start);
 		
 		stage = (TextView) findViewById(R.id.stage);
-		stage.setText(question[setNextQuestion]);
+		stage.setText("Welcome Back! Klicke auf Weiter!");
 		
 		buttonAnswer = (Button) findViewById(R.id.buttonAnswer);
 		
@@ -107,24 +108,28 @@ public class MainActivity extends AppCompatActivity {
 		
 		radioGroupComment = (RadioGroup) findViewById(R.id.radioComment);
 				
-		start.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				stage.setText("Möchtest du beginnen? Klicke einfach auf Weiter.");
-			}
-		});
+		//start.setOnClickListener(new View.OnClickListener() {
+		//	
+		//	@Override
+		//	public void onClick(View v) {
+		//		stage.setText("Möchtest du beginnen? Klicke einfach auf Weiter.");
+		//	}
+		// });
 		
 		back.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
+				try {
 				if(setNextQuestion == 1){
 					setNextQuestion = 5;
 				} else {
 					setNextQuestion--;
 				}
 				stage.setText(question[setNextQuestion]);
+				} catch (Exception e) {
+					Toast.makeText(MainActivity.this, "Wende dich an den Support!", Toast.LENGTH_LONG).show();
+		    	}
 			}
 			
 			// Auslesen der Fragen aus der SQLite Datenbank  
@@ -147,11 +152,11 @@ public class MainActivity extends AppCompatActivity {
 			
 			@Override
 			public void onClick(View v) {
-				setNextQuestion++;
-				if(setNextQuestion == 6){
-					setNextQuestion = 1;
-				}
-				stage.setText(question[setNextQuestion]);
+				//setNextQuestion++;
+				//if(setNextQuestion == 6){
+				//	setNextQuestion = 1;
+				//}
+				stage.setText(dataSource.getNextQuestion().getQuestionText());
 			}
 			
 			// Auslesen der Fragen aus der SQLite Datenbank  

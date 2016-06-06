@@ -14,14 +14,13 @@
     <!-- Definiton Buttontexte MainActivity -->
     <string name="app_name">#peat</string>
     <string name="entry">Spielend lernen! Nie wieder vergessen!</string>
-    <string name="start_quiz">Start</string>
     <string name="stage_pause">Pause</string>
     <string name="next">Weiter</string>
     <string name="gotoWikipedia">Wiki</string>
     <string name="gotoGoogle">Google</string>
     <string name="radio_yes">Ja</string>
     <string name="radio_no">Nein</string>
-    <string name="button_answer">Antwort?</string>
+    <string name="button_answer">Gib mir die Antwort!</string>
     <string name="back">#repeat</string>
     <string name="return_landing">Menü</string>
 	<string name="comment_Answer">Frage bewerten?</string>
@@ -58,13 +57,19 @@
     <string name="themes_list">Liste der Themen</string>
     <string name="themes_title">Themen</string>
     <string name="themes_default">Softwaretechnik, Entwicklung, Scrum</string>
-    <string name="pref_send_report">Absturzmeldungen senden</string>
-    <string name="pref_send_report_summary">Anhaken, um Fehler schneller zu beheben.</string>
-    <string name="pref_sync_frequency">Wiederholungsrate</string>
-    <string name="pref_sync_frequency_summary">Wie oft soll dir #peat Fragen stellen?</string>
+    <string name="pref_user_profile">Benutzerprofil</string>
     <string name="pref_user_name">Benutzername</string>
     <string name="pref_user_name_summary">Ändere hier deinen Benutzernamen.</string>
-    <string name="pref_user_profile">Benutzerprofil</string>
     <string name="pref_update_setting">Quiz-Einstellungen</string>
-
+    <string name="pref_send_push">Push-Nachrichten senden</string>
+    <string name="pref_send_push_summary">Anhaken, damit dir #peat Fragen stellt.</string>
+    <string name="pref_sync_frequency">Wiederholungsrate</string>
+    <string name="pref_sync_frequency_summary">Wie oft soll dir #peat Fragen stellen?</string>
+	<string name="pref_rep_questions">Wiederholungsmuster</string>
+    <string name="pref_rep_questions_summary">Welche Fragen soll #peat dir stellen?</string>
+    <string name="pref_time_answers">Antwortzeit</string>
+    <string name="pref_time_answers_summary">Wie viel Zeit benötigst du zur Antwort?</string>
+    <string name="pref_send_report">Absturzmeldungen senden</string>
+    <string name="pref_send_report_summary">Anhaken, um Fehler schneller zu beheben.</string>
+    
 </resources>
