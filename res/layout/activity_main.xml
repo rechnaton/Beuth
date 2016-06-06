@@ -19,32 +19,45 @@
     
     <TextView
         android:id="@+id/entry"
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="@string/entry"
-    	android:textSize="15sp" />
+        android:ems="10"
+        android:textSize="22sp"
+        android:text="@string/entry" />
 
-	<Button
+	<!-- <Button
         android:id="@+id/start"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/entry"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="18dp"
-        android:text="@string/start_quiz" />
+        android:text="@string/start_quiz" /> -->
 	
+	<!-- Linie Start -->
+    <TextView
+        android:id="@+id/lineone"
+        android:layout_width="match_parent"
+        android:layout_height="2dip"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="18dp"
+        android:layout_below="@+id/entry"
+        android:background="#FF000000" />
+    <!-- Linie Ende -->
+    
 	<TextView
         android:id="@+id/stage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/start"
         android:layout_centerHorizontal="true"
         android:gravity="center"
         android:layout_marginTop="18dp"
         android:text=""
-    	android:textAppearance="?android:attr/textAppearanceSmall" />
-	
+        android:layout_below="@+id/lineone"
+    	android:textAppearance="?android:attr/textAppearanceMedium" />
+		<!-- android:layout_below="@+id/start" -->
+		
 	<RadioGroup
         android:id="@+id/radioQuestion"
         android:layout_width="wrap_content"
@@ -72,7 +85,7 @@
 
     <Button
         android:id="@+id/buttonAnswer"
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/radioQuestion"
         android:layout_centerHorizontal="true"
@@ -145,7 +158,7 @@
 	
 	<!-- Linie Start -->
     <TextView
-        android:id="@+id/line"
+        android:id="@+id/linetwo"
         android:layout_width="match_parent"
         android:layout_height="2dip"
         android:layout_marginTop="2dp"
@@ -158,7 +171,7 @@
 	    android:id="@+id/commentAnswer"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-	    android:layout_below="@+id/line"
+	    android:layout_below="@+id/linetwo"
 	    android:layout_gravity="start"
 	    android:background="@color/blueFields"
 	    android:hint="@string/comment_Answer"

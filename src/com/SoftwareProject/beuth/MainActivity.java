@@ -89,10 +89,10 @@ public class MainActivity extends AppCompatActivity {
 	    dataSource.open();
 	    Question frage = dataSource.getNextQuestion();
 	    Log.d(LOG_TAG, frage.getQuestionText());
-		start = (Button) findViewById(R.id.start);
+		// start = (Button) findViewById(R.id.start);
 		
 		stage = (TextView) findViewById(R.id.stage);
-		stage.setText(question[setNextQuestion]);
+		stage.setText("Welcome Back! Klicke auf Weiter!");
 		
 		buttonAnswer = (Button) findViewById(R.id.buttonAnswer);
 		
@@ -108,13 +108,13 @@ public class MainActivity extends AppCompatActivity {
 		
 		radioGroupComment = (RadioGroup) findViewById(R.id.radioComment);
 				
-		start.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				stage.setText("Möchtest du beginnen? Klicke einfach auf Weiter.");
-			}
-		});
+		//start.setOnClickListener(new View.OnClickListener() {
+		//	
+		//	@Override
+		//	public void onClick(View v) {
+		//		stage.setText("Möchtest du beginnen? Klicke einfach auf Weiter.");
+		//	}
+		// });
 		
 		back.setOnClickListener(new View.OnClickListener() {
 			

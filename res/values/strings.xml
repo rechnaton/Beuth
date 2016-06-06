@@ -14,14 +14,13 @@
     <!-- Definiton Buttontexte MainActivity -->
     <string name="app_name">#peat</string>
     <string name="entry">Spielend lernen! Nie wieder vergessen!</string>
-    <string name="start_quiz">Start</string>
     <string name="stage_pause">Pause</string>
     <string name="next">Weiter</string>
     <string name="gotoWikipedia">Wiki</string>
     <string name="gotoGoogle">Google</string>
     <string name="radio_yes">Ja</string>
     <string name="radio_no">Nein</string>
-    <string name="button_answer">Antwort?</string>
+    <string name="button_answer">Gib mir die Antwort!</string>
     <string name="back">#repeat</string>
     <string name="return_landing">Menü</string>
 	<string name="comment_Answer">Frage bewerten?</string>
