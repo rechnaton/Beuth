@@ -256,3 +256,24 @@ Alle:
 #05.06.2016 (Online Meeting via Moodle)
 20:15 Uhr
 Teilnehmer: Steven, Andreas, Thomas
+
+Ergebnis:
+- Steven hat Datenbank-Fehler behoben und Repository gepusht
+
+Tasks:
+
+Steven:
+- in MainActivity die Datenbankverbindung schließen (close)
+- es fehlt noch für den Button zurück eine Methode getLastQuestion (Gegenpart zu getNextQuestion)
+
+Andreas:
+- mit aktuellem Repository Funktion "Frage aus Datenbank holen" implementieren
+
+Thomas:
+- mit aktuellem Repository Funktion "neue Frage speichern" implementieren
+
+------------------------------------------------------------------------------------------
+
+#08.06.2016 (Online Meeting via Moodle)
+20:00 Uhr
+Teilnehmer: Steven, Andreas, Thomas
