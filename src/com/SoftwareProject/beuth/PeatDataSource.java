@@ -93,7 +93,8 @@ public class PeatDataSource {
 	    	oQuestion = new Question(QuestionText, QuestionTypeTitle, answersArray, isCorrectArray);
 	    	return oQuestion;
     	} catch (Exception e) {
-    	    String[] antwortFrageA = {"Ja", "Nein"};
+    		Log.d(LOG_TAG, e.toString());
+    		String[] antwortFrageA = {"Ja", "Nein"};
     	    Boolean[] isCorrectFrageA = {false, true};
     	    return new Question("Wurde diese Frage in die DB gepackt?", "SimpleText", antwortFrageA, isCorrectFrageA);
     	}
