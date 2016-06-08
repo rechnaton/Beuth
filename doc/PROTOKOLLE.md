@@ -277,3 +277,14 @@ Thomas:
 #08.06.2016 (Online Meeting via Moodle)
 20:00 Uhr
 Teilnehmer: Steven, Andreas, Thomas
+
+Ergebnisse:
+- Steven hat noch einen Fehler entdeckt und korrigiert bis morgen den Code
+- Andreas & Thomas erarbeiten eine erste Gliederung für die Dokumentation
+- nächstes Treffen 9.6.: Ziel: Lesen aus und Speichern in Datenbank
+
+------------------------------------------------------------------------------------------
+
+#09.06.2016 (Online Meeting via Moodle)
+18:00 Uhr
+Teilnehmer: Steven, Andreas, Thomas
