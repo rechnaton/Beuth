@@ -274,6 +274,46 @@ Thomas:
 
 ------------------------------------------------------------------------------------------
 
-#08.06.2016 (Online Meeting via Moodle)
-20:00 Uhr
-Teilnehmer: Steven, Andreas, Thomas
+#09.06.2016 (Online Meeting via Moodle)
+18:00 Uhr
+Teilnehmer: Andreas, Thomas
+
+Ergebnis:
+- Gliederung besprochen (wird am Samstag, den 11.06. gemeinsam verabschiedet und zugeteilt)
+- Bearbeitung der Dokumentation erfolgt über GoogleDocs: https://docs.google.com/document/d/1lXp826fNUOqA218F46cWIHy61nWo_skWwVwSv0FM8x8/edit
+- Dokumentation im MD-Format gepflegt
+
+Tasks:
+
+Steven: 
+- Lösung des Übergabe-Problems in/aus der Datenbank
+- in MainActivity die Datenbankverbindung schließen (close)
+- es fehlt noch für den Button zurück eine Methode getLastQuestion (Gegenpart zu getNextQuestion) 
+
+Andreas:
+- mit aktuellem Repository Funktion "Frage aus Datenbank holen" implementieren
+
+Thomas:
+- mit aktuellem Repository Funktion "neue Frage speichern" implementieren
+
+------------------------------------------------------------------------------------------
+
+#11.06.2016 (Präsenz)
+11:30 Uhr
+Teilnehmer: Andreas, Thomas, Steven
+
+Achtung: Bitte Zeit einplanen (bis ca. 14:30 Uhr)!
+
+Ergebnis:
+- 
+
+Tasks:
+
+Steven:
+- 
+
+Andreas:
+- 
+
+Thomas:
+- 
