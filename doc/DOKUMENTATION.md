@@ -63,3 +63,7 @@ Wir brauchen übrigens keine JDBC-Verbindung. Es gibt direkt Bibliotheken zum An
 * Statt lokaler DB eine Remote-DB auf einem Server
 * Angebot mehrerer Fragekategorien
 * Erweiterung der Funktionalitäten der EinstellungenActivity
+* Webpage (u.a. zum Download der App, Speichern von Fragen/Antworten)
+![PeatLanding] (https://github.com/andreasmosig/peat/blob/master/doc/MOCKUPS/WEB/1_peatlanding.png)
+![PeatSave] (https://github.com/andreasmosig/peat/blob/master/doc/MOCKUPS/WEB/2_füllepeat.png)
+![PeatFeedback] (https://github.com/andreasmosig/peat/blob/master/doc/MOCKUPS/WEB/3_feedbackpeat.png)
