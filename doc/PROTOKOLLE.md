@@ -304,6 +304,13 @@ Teilnehmer: Andreas, Thomas, Steven
 
 Achtung: Bitte Zeit einplanen (bis ca. 14:30 Uhr)!
 
+Agenda:
+- GetLastQuestion ("Back")
+- Geschlossene Frage in DB speichern
+- GUI noch ändern hins. Antwort und Sound
+- Klick auf "Weiter" sollte immer wieder bei 1 beginnen
+- Funktion für "Pause"?
+
 Ergebnis:
 - 
 
