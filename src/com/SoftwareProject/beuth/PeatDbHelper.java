@@ -204,7 +204,7 @@ public class PeatDbHelper extends SQLiteOpenHelper{
     	mCursor.moveToFirst();
     	Log.d(LOG_TAG, "Alle Fragen:");
     	while(!mCursor.isAfterLast()) {
-    		Log.d(LOG_TAG, mCursor.getString(mCursor.getColumnIndex("qst_text")));
+    		Log.d(LOG_TAG, mCursor.getString(mCursor.getColumnIndex("qst_text")) + "   " + mCursor.getString(mCursor.getColumnIndex("idQuestions")));
     		mCursor.moveToNext();
     	}
     }

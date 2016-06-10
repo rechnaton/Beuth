@@ -62,32 +62,47 @@ public class PeatDataSource {
     	}
     }
     
+    public void getAllUserQuestionIDs() {
+    	Cursor mCursor = database.rawQuery("SELECT uhq_idQuestions FROM PeatUser_has_Questions", null);
+    	mCursor.moveToFirst();
+    	Log.d(LOG_TAG, "Alle IDs von User_Fragen:");
+    	while(!mCursor.isAfterLast()) {
+    		Log.d(LOG_TAG, mCursor.getString(mCursor.getColumnIndex("uhq_idQuestions")));
+    		mCursor.moveToNext();
+    	}
+    }
+      
     public Question getNextQuestion(){
     	//TODO
     	try {
 	    	Question oQuestion;
 	    	String[] answersArray;
 	    	Boolean[] isCorrectArray;
-	    	answersArray = new String[1];
-	    	isCorrectArray = new Boolean[1];
+	    	answersArray = new String[0];
+	    	isCorrectArray = new Boolean[0];
 	    	String sIsCorrect;
-	    	//Cursor mCursor = database.rawQuery("SELECT * FROM Questions JOIN QuestionType ON idQuestionType = qst_idQuestionType JOIN Answers ON idQuestions = as_idQuestions WHERE idQuestions NOT IN (SELECT uhq_idQuestions FROM PeatUser_has_Questions)", null);
-	    	Cursor mCursor = database.rawQuery("SELECT * FROM Questions JOIN QuestionType ON idQuestionType = qst_idQuestionType "+
-	    	"JOIN Answers ON idQuestions = as_idQuestions", null);
-	    	mCursor.moveToFirst();
-	    	String QuestionText = mCursor.getString(mCursor.getColumnIndex("qst_text"));
-	    	String QuestionTypeTitle = mCursor.getString(mCursor.getColumnIndex("qt_title"));
-	    	database.execSQL("INSERT INTO PeatUser_has_Questions (uhq_idQuestions, uhq_isIgnore, uhq_idPeatUser) VALUES(" + mCursor.getColumnIndex("idQuestions") + ", 0, (SELECT MAX(idPeatUser) FROM PeatUser WHERE us_name = 'Steven'))");
+	    	getAllUserQuestionIDs();
+	    	Cursor mCursorQuestions = database.rawQuery("SELECT * FROM Questions JOIN QuestionType ON idQuestionType = qst_idQuestionType WHERE idQuestions NOT IN (SELECT uhq_idQuestions FROM PeatUser_has_Questions);", null);
+	    	//Cursor mCursor = database.rawQuery("SELECT * FROM Questions JOIN QuestionType ON idQuestionType = qst_idQuestionType JOIN Answers ON idQuestions = as_idQuestions", null);
+	    	mCursorQuestions.moveToFirst();
+	    	String QuestionText = mCursorQuestions.getString(mCursorQuestions.getColumnIndex("qst_text"));
+	    	String idQuestion = mCursorQuestions.getString(mCursorQuestions.getColumnIndex("idQuestions"));
+	    	String QuestionTypeTitle = mCursorQuestions.getString(mCursorQuestions.getColumnIndex("qt_title"));
+	    	
+	    	database.execSQL("INSERT INTO PeatUser_has_Questions (uhq_idQuestions, uhq_isIgnore, uhq_idPeatUser) VALUES(" + idQuestion + ", 0, (SELECT MAX(idPeatUser) FROM PeatUser WHERE us_name = 'Steven'))");
+	    	Cursor mCursorAnswers = database.rawQuery("SELECT * FROM Answers WHERE as_idQuestions = " + idQuestion, null);
+	    	mCursorAnswers.moveToFirst();
 	    	Integer i=0;
-	    	while(!mCursor.isAfterLast()) {
-	    		answersArray[i] = mCursor.getString(mCursor.getColumnIndex("as_text"));
-	    		sIsCorrect = mCursor.getString(mCursor.getColumnIndex("as_isCorrect"));
+	    	while(!mCursorAnswers.isAfterLast()) {
+	    		String asText = mCursorAnswers.getString(mCursorAnswers.getColumnIndex("as_text"));
+	    		answersArray = addStringToArray(answersArray, asText);
+	    		sIsCorrect = mCursorAnswers.getString(mCursorAnswers.getColumnIndex("as_isCorrect"));
 	    		if (sIsCorrect == "True") {
-					isCorrectArray[i] = true;
+					isCorrectArray = addBooleanToArray(isCorrectArray, true);
 	    		}else {
-	    			isCorrectArray[i] = false;
+	    			isCorrectArray = addBooleanToArray(isCorrectArray, true);
 	    		}
-	    		mCursor.moveToNext();
+	    		mCursorAnswers.moveToNext();
 	    		i=i+1;
 	    	}
 	    	oQuestion = new Question(QuestionText, QuestionTypeTitle, answersArray, isCorrectArray);
@@ -101,8 +116,16 @@ public class PeatDataSource {
     }
     
     private String[] addStringToArray(String[] array, String string){
-    	//TODO
-    	return array;
+    	Integer length = array.length;
+    	String[] bufferArray = new String[length + 1];
+    	bufferArray[length] = string;
+    	return bufferArray;
+    }
+    
+    private Boolean[] addBooleanToArray(Boolean[] array, Boolean bool){
+    	Boolean[] bufferArray = new Boolean[array.length + 1];
+    	bufferArray[array.length] = bool;
+    	return bufferArray;
     }
     
     public Integer getIdFromQuestionTypeTitle(String title){
