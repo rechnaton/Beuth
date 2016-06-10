@@ -89,6 +89,8 @@ public class MainActivity extends AppCompatActivity {
 	    dataSource.open();
 	    Question frage = dataSource.getNextQuestion();
 	    Log.d(LOG_TAG, frage.getQuestionText());
+	    frage = dataSource.getNextQuestion();
+	    Log.d(LOG_TAG, frage.getQuestionText());
 		// start = (Button) findViewById(R.id.start);
 		
 		stage = (TextView) findViewById(R.id.stage);
