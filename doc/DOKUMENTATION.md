@@ -41,6 +41,13 @@ Wir brauchen übrigens keine JDBC-Verbindung. Es gibt direkt Bibliotheken zum An
 
 ---
 
+### Architektur
+
+https://de.wikipedia.org/wiki/Model_View_ViewModel
+
+
+---
+
 * Was ist der USP der App?
   * Einfaches Handling, auf die wichtigsten Funktionen reduziert.
   * Man kann sich selbst seine eigenen Fragen stellen lassen. Karteikarten sind obsolet.
