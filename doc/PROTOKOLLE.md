@@ -324,7 +324,12 @@ Agenda:
 - Funktion für "Pause"?
 
 Ergebnis:
-- 
+- Abspeichern Fragethema bzw. Fragethema in allen Activities berücksichtigen
+- Quiz I: Antworten aus DB anzeigen und Sound entsprechend
+- Quiz II: getLastQuestion
+- Quiz III: Vorgehen am Ende des Fragelaufs
+- Frage Speichern: für Choice fertig programmieren
+- Userverwaltung: Standarduser BENUTZER#1, andere Benutzer eingeben
 
 Tasks:
 
