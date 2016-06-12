@@ -35,13 +35,21 @@ public class PeatDataSource {
     public void putQuestionInDB(Question oQuestion) {
     	String[] answers;
     	Boolean[] bool_isCorrect;
+    	Integer boolSqlite =0;
     	Integer i;
     	database.execSQL("INSERT INTO " + dbHelper.TABLE_QUESTIONS + " (qst_idQuestionType,qst_text) VALUES(" + getIdFromQuestionTypeTitle(oQuestion.getQuestionTypeTitle()) + 
     			", '" + oQuestion.getQuestionText() +"')");
     	answers = oQuestion.getAnswers();
     	bool_isCorrect = oQuestion.getIsCorrectAnswers();
+
         for (i=0; i<answers.length; i++) {
-        	database.execSQL("INSERT INTO Answers (as_idQuestion, as_text, as_isCorrect) VALUES (SELECT MAX(idQuestion) FROM Question WHERE qst_text='" + oQuestion.getQuestionText() + "', " + answers[i] + ", " + bool_isCorrect[i] + ")");
+        	if (bool_isCorrect [i] == true) {
+        		boolSqlite = 1;
+        	}
+        	else {
+        		boolSqlite = 0;
+        	}
+        	database.execSQL("INSERT INTO Answers (as_idQuestions, as_text, as_isCorrect) VALUES ((SELECT MAX(idQuestions) FROM Questions WHERE qst_text='" + oQuestion.getQuestionText() + "'), '" + answers[i] + "', " + boolSqlite +")");
         }
     }
     
@@ -68,6 +76,16 @@ public class PeatDataSource {
     	Log.d(LOG_TAG, "Alle IDs von User_Fragen:");
     	while(!mCursor.isAfterLast()) {
     		Log.d(LOG_TAG, mCursor.getString(mCursor.getColumnIndex("uhq_idQuestions")));
+    		mCursor.moveToNext();
+    	}
+    }
+    
+    public void logAllQuestionsOfDB() {
+    	Cursor mCursor = database.rawQuery("SELECT * FROM Questions;", null);
+    	mCursor.moveToFirst();
+    	Log.d(LOG_TAG, "Alle Fragen:");
+    	while(!mCursor.isAfterLast()) {
+    		Log.d(LOG_TAG, mCursor.getString(mCursor.getColumnIndex("qst_text")) + "   " + mCursor.getString(mCursor.getColumnIndex("idQuestions")));
     		mCursor.moveToNext();
     	}
     }
