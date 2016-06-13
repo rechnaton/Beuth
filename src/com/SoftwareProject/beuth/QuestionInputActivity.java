@@ -15,16 +15,21 @@ import android.view.inputmethod.InputMethodManager;
 @TargetApi(Build.VERSION_CODES.M)
 public class QuestionInputActivity extends AppCompatActivity {
 	
-	String QuestionTypeTitle;
-	String questionText;
-	String[] answers;
-	Boolean[] isCorrect;
+	private String QuestionTypeTitle;
+	private String questionText;
+	private String[] answers;
+	private Boolean[] isCorrect;
 	
 	private RadioGroup radioGroupCorrect;
+	private PeatDataSource dataSource;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		dataSource = new PeatDataSource(this);
+		dataSource.open();
+		answers = new String[1];
+		isCorrect = new Boolean[1];
 		Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler(this));
 		setContentView(R.layout.activity_question_input);
 		
@@ -36,7 +41,7 @@ public class QuestionInputActivity extends AppCompatActivity {
 			public void onClick(View v) {
 			    
 				// Auslesen verstecktes Feld Fragetyp - für Prototyp erstmal hartcodiert
-				QuestionTypeTitle = "Open";
+				QuestionTypeTitle = "Choice";
 				
 				// Auslesen Textfeld Thema
 				// ?
@@ -74,7 +79,8 @@ public class QuestionInputActivity extends AppCompatActivity {
 				// 1. Question-Objekt erzeugen
 				Question oQuestion = new Question(questionText, QuestionTypeTitle, answers, isCorrect);
 				// 2. Speichermethode auf dem Question-Objekt aufrufen
-				// dataSource.putQuestionInDB(oQuestion);
+				dataSource.putQuestionInDB(oQuestion);
+				dataSource.logAllQuestionsOfDB();
 				
 			    // Aktualisieren der Anzeige
 				

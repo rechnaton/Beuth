@@ -20,7 +20,7 @@
     <string name="gotoGoogle">Google</string>
     <string name="radio_yes">Ja</string>
     <string name="radio_no">Nein</string>
-    <string name="button_answer">Gib mir die Antwort!</string>
+    <string name="button_answer">Meine Antwort prüfen</string>
     <string name="back">#repeat</string>
     <string name="return_landing">Menü</string>
 	<string name="comment_Answer">Frage bewerten?</string>
@@ -37,19 +37,19 @@
     <!-- Definiton Texte QuestionTypeActivity -->
     <string name="headQuestionType">Wähle einen Fragentyp!</string>
     <string name="questionTypeOpen">Offene Frage</string>
-    <string name="questionTypeClosed">Geschlossene Frage</string>
+    <string name="questionTypeClosed">Ja/Nein-Frage</string>
     <string name="questionTypeSingleChoice">Single Choice</string>
     <string name="questionTypeMultipleChoice">Multiple Choice</string>
 
     <!-- Definiton Texte QuestionInputActivity -->
-    <string name="headQuestionTypeClosed">Offene Frage einfügen!</string>
-    <string name="hintQuestionTypeClosedTheme">Geben Sie hier das Thema ein!</string>
-    <string name="hintQuestionTypeClosedQuestion">Geben Sie hier die Frage ein!</string>
-    <string name="hintQuestionTypeClosedAnswer">Geben Sie hier die Antwort ein!</string>
+    <string name="headQuestionTypeClosed">Ja/Nein-Frage einfügen!</string>
+    <string name="hintQuestionTypeClosedTheme">Gib hier das Thema ein!</string>
+    <string name="hintQuestionTypeClosedQuestion">Gib hier die Frage ein!</string>
+    <string name="hintQuestionTypeClosedAnswer">Gib hier die Antwort ein!</string>
     <string name="saveQuestionTypeClosed">Speichern</string>
     <string name="editText_errorMessage">Ein Feld ist leer. Ihre Frage kann nicht gespeichert werden. Bitte alle Felder ausfüllen.</string>
-	<string name="radio_true">Ist richtig!</string>
-	<string name="radio_false">Ist falsch!</string>
+	<string name="radio_true">Ja</string>
+	<string name="radio_false">Nein</string>
 	
     <!-- Definiton Texte Einstellungsmenü -->
     <string name="action_settings">Einstellungen</string>
