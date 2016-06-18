@@ -1,4 +1,4 @@
-#Protokolle
+﻿#Protokolle
 
 #16.04.2016
 
@@ -277,3 +277,71 @@ Thomas:
 #08.06.2016 (Online Meeting via Moodle)
 20:00 Uhr
 Teilnehmer: Steven, Andreas, Thomas
+
+Ergebnisse:
+- Steven hat noch einen Fehler entdeckt und korrigiert bis morgen den Code
+- Andreas & Thomas erarbeiten eine erste Gliederung für die Dokumentation
+- nächstes Treffen 9.6.: Ziel: Lesen aus und Speichern in Datenbank
+
+------------------------------------------------------------------------------------------
+
+#09.06.2016 (Online Meeting via Moodle)
+18:00 Uhr
+Teilnehmer: Andreas, Thomas
+
+Ergebnis:
+- Gliederung besprochen (wird am Samstag, den 11.06. gemeinsam verabschiedet und zugeteilt)
+- Bearbeitung der Dokumentation erfolgt über GoogleDocs: https://docs.google.com/document/d/1lXp826fNUOqA218F46cWIHy61nWo_skWwVwSv0FM8x8/edit
+- Dokumentation im MD-Format gepflegt
+
+Tasks:
+
+Steven: 
+- Lösung des Übergabe-Problems in/aus der Datenbank
+- in MainActivity die Datenbankverbindung schließen (close)
+- es fehlt noch für den Button zurück eine Methode getLastQuestion (Gegenpart zu getNextQuestion) 
+
+Andreas:
+- mit aktuellem Repository Funktion "Frage aus Datenbank holen" implementieren
+
+Thomas:
+- mit aktuellem Repository Funktion "neue Frage speichern" implementieren
+
+------------------------------------------------------------------------------------------
+
+#11.06.2016 (Präsenz)
+11:30 Uhr
+Teilnehmer: Andreas, Thomas, Steven
+
+Agenda:
+- GetLastQuestion ("Back")
+- Geschlossene Frage in DB speichern - DONE
+![FehlermeldungSpeichern] (https://github.com/andreasmosig/peat/blob/master/doc/MOCKUPS/APP/FehlerFrageSpeichern.png)
+- GUI noch ändern hins. Antwort und Sound
+- Klick auf "Weiter" sollte am Ende  wieder bei 1 beginnen?
+- Funktion für "Pause"?
+
+Ergebnis:
+- Muss 1: Antwort (true, false) aus DB lesen und Sound entsprechend ausgeben
+- Muss II: getLastQuestion
+- Muss III: Frage Speichern für Choice fertig programmieren
+- Muss IV: Vorgehen am Ende des Fragelaufs (Score oder Start von Beginn an)
+- Kann I: Userverwaltung: Standarduser BENUTZER#1, andere Benutzer eingeben
+- Kann II: Abspeichern Fragethema bzw. Fragetyp in allen Activities berücksichtigen
+
+Tasks:
+
+Steven:
+- manuell gespeicherte Frage muss auch ausgegeben werden
+- Methode für Antworten-Übergabe
+- Methode für Themen-Speichern
+- Methode GetLastQuestion (Gegenpart zu getNextQuestion)
+- in MainActivity die Datenbankverbindung schließen (close)
+
+Andreas:
+- mit aktuellem Repository Funktion "Frage aus Datenbank holen" implementieren
+- Arbeiten an der Dokumentation
+
+Thomas:
+- mit aktuellem Repository Funktion "neue Frage speichern" implementieren
+- Arbeiten an der Dokumentation
