@@ -354,20 +354,22 @@ Thomas:
 Teilnehmer: Andreas, Thomas, Steven
 
 Agenda:
-- GetLastQuestion ("Back") - Pending
-- Geschlossene Frage in DB speichern - DONE
-![FehlermeldungSpeichern] (https://github.com/andreasmosig/peat/blob/master/doc/MOCKUPS/APP/FehlerFrageSpeichern.png) - DONE
-- GUI noch ändern hins. Antwort und Sound - Steven
-- Klick auf "Weiter" sollte am Ende  wieder bei 1 beginnen? - Pending
-- Funktion für "Pause"? - Pending
+- Ja/Nein Frage in DB speichern - DONE
+- Fehlermeldung bei Speichern - DONE
+- über GUI gespeicherte Fragen in Main-GUI ausgeben - In Progress (Steven)
+- GUI noch ändern hins. Antwort und Sound - In Progress (Steven)
+- Klick auf "#repeat" sollte die zuletzt gestellte Frage ausgeben - Pending (zurückgestellt für Version 2.0)
+- Klick auf "Weiter" sollte am Ende  wieder bei 1 beginnen? - Pending (zurückgestellt für Version 2.0)
+- Funktion für "Pause"? - Pending (zurückgestellt für Version 2.0)
+- GetLastQuestion ("Back") - Pending (zurückgestellt für Version 2.0)
 
 Ergebnis:
-- Muss 1: Antwort (true, false) aus DB lesen und Sound entsprechend ausgeben - In Progress
-- Muss II: getLastQuestion - Pending
-- Muss III: Frage Speichern für Choice fertig programmieren - DONE
-- Muss IV: Vorgehen am Ende des Fragelaufs (Score oder Start von Beginn an) - Pending
-- Kann I: Userverwaltung: Standarduser BENUTZER#1, andere Benutzer eingeben - Pending
-- Kann II: Abspeichern Fragethema bzw. Fragetyp in allen Activities berücksichtigen - In Progress
+- Muss 1: Antwort (true, false) aus DB lesen und Sound entsprechend ausgeben - In Progress (Steven)
+- Muss II: Frage Speichern für Choice fertig programmieren - DONE
+- Muss III: Abspeichern Fragethema bzw. Fragetyp in allen Activities berücksichtigen - In Progress (Thomas, Steven)
+- Kann I: getLastQuestion - Pending (zurückgestellt für Version 2.0)
+- Kann II: Vorgehen am Ende des Fragelaufs (Score oder Start von Beginn an) - Pending (zurückgestellt für Version 2.0)
+- Kann III: Userverwaltung: Standarduser BENUTZER#1, andere Benutzer eingeben - Pending (zurückgestellt für Version 2.0)
 
 Tasks:
 
@@ -375,10 +377,10 @@ Steven:
 - manuell gespeicherte Frage muss auch ausgegeben werden - In Progress
 - Methode für Antworten-Übergabe - In Progress
 - Methode für Themen-Speichern - In Progress
-- Methode GetLastQuestion (Gegenpart zu getNextQuestion) - Pending
 - in MainActivity die Datenbankverbindung schließen (close) - In Progress
 - User-Verwaltung - Pending
-
+- Methode GetLastQuestion (Gegenpart zu getNextQuestion) - Pending
+- 
 Andreas:
 - mit aktuellem Repository Funktion "Frage aus Datenbank holen" implementieren - übergeben an Steven (In Progress)
 - Arbeiten an der Dokumentation - In Progress
