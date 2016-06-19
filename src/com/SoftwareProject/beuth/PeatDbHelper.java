@@ -140,7 +140,7 @@ public class PeatDbHelper extends SQLiteOpenHelper{
             putNewQuestionTypeInDB("Choice", "Bitte wählen Sie die richtige Antwort.", db);
             String[] antwortFrageA = {"Ja", "Nein"};
     	    Boolean[] isCorrectFrageA = {true, false};
-    	    Question frageA = new Question("Dient Git der Versionsverwaltung für Software?", "Choice", antwortFrageA, isCorrectFrageA);
+    	    Question frageA = new Question("Git", "Dient Git der Versionsverwaltung für Software?", "Choice", antwortFrageA, isCorrectFrageA);
     	    putQuestionInDB(frageA, db);
     	    frageA.putQuestionText("Ist Slack ein webbasierter Instant-Messanger?");
     	    putQuestionInDB(frageA, db);
