@@ -1,4 +1,4 @@
-#Protokolle
+﻿#Protokolle
 
 #16.04.2016
 
@@ -313,31 +313,35 @@ Thomas:
 11:30 Uhr
 Teilnehmer: Andreas, Thomas, Steven
 
-Achtung: Bitte Zeit einplanen (bis ca. 14:30 Uhr)!
-
 Agenda:
 - GetLastQuestion ("Back")
-- Geschlossene Frage in DB speichern
+- Geschlossene Frage in DB speichern - DONE
 ![FehlermeldungSpeichern] (https://github.com/andreasmosig/peat/blob/master/doc/MOCKUPS/APP/FehlerFrageSpeichern.png)
 - GUI noch ändern hins. Antwort und Sound
-- Klick auf "Weiter" sollte immer wieder bei 1 beginnen
+- Klick auf "Weiter" sollte am Ende  wieder bei 1 beginnen?
 - Funktion für "Pause"?
 
 Ergebnis:
-- Abspeichern Fragethema bzw. Fragethema in allen Activities berücksichtigen
-- Quiz I: Antworten aus DB anzeigen und Sound entsprechend
-- Quiz II: getLastQuestion
-- Quiz III: Vorgehen am Ende des Fragelaufs
-- Frage Speichern: für Choice fertig programmieren
-- Userverwaltung: Standarduser BENUTZER#1, andere Benutzer eingeben
+- Muss 1: Antwort (true, false) aus DB lesen und Sound entsprechend ausgeben
+- Muss II: getLastQuestion
+- Muss III: Frage Speichern für Choice fertig programmieren
+- Muss IV: Vorgehen am Ende des Fragelaufs (Score oder Start von Beginn an)
+- Kann I: Userverwaltung: Standarduser BENUTZER#1, andere Benutzer eingeben
+- Kann II: Abspeichern Fragethema bzw. Fragetyp in allen Activities berücksichtigen
 
 Tasks:
 
 Steven:
-- 
+- manuell gespeicherte Frage muss auch ausgegeben werden
+- Methode für Antworten-Übergabe
+- Methode für Themen-Speichern
+- Methode GetLastQuestion (Gegenpart zu getNextQuestion)
+- in MainActivity die Datenbankverbindung schließen (close)
 
 Andreas:
-- 
+- mit aktuellem Repository Funktion "Frage aus Datenbank holen" implementieren
+- Arbeiten an der Dokumentation
 
 Thomas:
-- 
+- mit aktuellem Repository Funktion "neue Frage speichern" implementieren
+- Arbeiten an der Dokumentation
