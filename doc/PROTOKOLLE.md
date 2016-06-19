@@ -362,14 +362,16 @@ Agenda:
 - Klick auf "Weiter" sollte am Ende  wieder bei 1 beginnen? - Pending (zurückgestellt für Version 2.0)
 - Funktion für "Pause"? - Pending (zurückgestellt für Version 2.0)
 - GetLastQuestion ("Back") - Pending (zurückgestellt für Version 2.0)
+- Zuweisung der Gliederungspunkte der Dokumentation - DONE
 
 Ergebnis:
-- Muss 1: Antwort (true, false) aus DB lesen und Sound entsprechend ausgeben - In Progress (Steven)
+- Muss I: Antwort (true, false) aus DB lesen und Sound entsprechend ausgeben - In Progress (Steven)
 - Muss II: Frage Speichern für Choice fertig programmieren - DONE
 - Muss III: Abspeichern Fragethema bzw. Fragetyp in allen Activities berücksichtigen - In Progress (Thomas, Steven)
 - Kann I: getLastQuestion - Pending (zurückgestellt für Version 2.0)
 - Kann II: Vorgehen am Ende des Fragelaufs (Score oder Start von Beginn an) - Pending (zurückgestellt für Version 2.0)
 - Kann III: Userverwaltung: Standarduser BENUTZER#1, andere Benutzer eingeben - Pending (zurückgestellt für Version 2.0)
+- Thomas und Andreas treffen sich am 25.06. zur Arbeit an der Dokumentation
 
 Tasks:
 
@@ -378,8 +380,8 @@ Steven:
 - Methode für Antworten-Übergabe - In Progress
 - Methode für Themen-Speichern - In Progress
 - in MainActivity die Datenbankverbindung schließen (close) - In Progress
-- User-Verwaltung - Pending
-- Methode GetLastQuestion (Gegenpart zu getNextQuestion) - Pending
+- User-Verwaltung - Pending (zurückgestellt für Version 2.0)
+- Methode GetLastQuestion (Gegenpart zu getNextQuestion) - Pending (zurückgestellt für Version 2.0)
  
 Andreas:
 - mit aktuellem Repository Funktion "Frage aus Datenbank holen" implementieren - übergeben an Steven (In Progress)
@@ -388,3 +390,11 @@ Andreas:
 Thomas:
 - mit aktuellem Repository Funktion "neue Frage speichern" implementieren - DONE
 - Arbeiten an der Dokumentation - In Progress
+
+------------------------------------------------------------------------------------------
+
+#25.06.2016 (Online Meeting via Moodle)
+20:00 Uhr
+Teilnehmer: Andreas, Thomas, Steven
+
+Rücksprache hins. "In Progress" sowie Status der Dokumentation.
