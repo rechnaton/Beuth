@@ -380,7 +380,7 @@ Steven:
 - in MainActivity die Datenbankverbindung schließen (close) - In Progress
 - User-Verwaltung - Pending
 - Methode GetLastQuestion (Gegenpart zu getNextQuestion) - Pending
-- 
+ 
 Andreas:
 - mit aktuellem Repository Funktion "Frage aus Datenbank holen" implementieren - übergeben an Steven (In Progress)
 - Arbeiten an der Dokumentation - In Progress
