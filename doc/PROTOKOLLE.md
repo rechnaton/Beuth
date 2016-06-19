@@ -337,6 +337,7 @@ Steven:
 - Methode für Themen-Speichern
 - Methode GetLastQuestion (Gegenpart zu getNextQuestion)
 - in MainActivity die Datenbankverbindung schließen (close)
+- User-Verwaltung
 
 Andreas:
 - mit aktuellem Repository Funktion "Frage aus Datenbank holen" implementieren
@@ -345,3 +346,43 @@ Andreas:
 Thomas:
 - mit aktuellem Repository Funktion "neue Frage speichern" implementieren
 - Arbeiten an der Dokumentation
+
+------------------------------------------------------------------------------------------
+
+#19.06.2016 (Online Meeting via Moodle)
+20:00 Uhr
+Teilnehmer: Andreas, Thomas, Steven
+
+Agenda:
+- GetLastQuestion ("Back") - Pending
+- Geschlossene Frage in DB speichern - DONE
+![FehlermeldungSpeichern] (https://github.com/andreasmosig/peat/blob/master/doc/MOCKUPS/APP/FehlerFrageSpeichern.png) - DONE
+- GUI noch ändern hins. Antwort und Sound - Steven
+- Klick auf "Weiter" sollte am Ende  wieder bei 1 beginnen? - Pending
+- Funktion für "Pause"? - Pending
+
+Ergebnis:
+- Muss 1: Antwort (true, false) aus DB lesen und Sound entsprechend ausgeben - In Progress
+- Muss II: getLastQuestion - Pending
+- Muss III: Frage Speichern für Choice fertig programmieren - DONE
+- Muss IV: Vorgehen am Ende des Fragelaufs (Score oder Start von Beginn an) - Pending
+- Kann I: Userverwaltung: Standarduser BENUTZER#1, andere Benutzer eingeben - Pending
+- Kann II: Abspeichern Fragethema bzw. Fragetyp in allen Activities berücksichtigen - In Progress
+
+Tasks:
+
+Steven:
+- manuell gespeicherte Frage muss auch ausgegeben werden - In Progress
+- Methode für Antworten-Übergabe - In Progress
+- Methode für Themen-Speichern - In Progress
+- Methode GetLastQuestion (Gegenpart zu getNextQuestion) - Pending
+- in MainActivity die Datenbankverbindung schließen (close) - In Progress
+- User-Verwaltung - Pending
+
+Andreas:
+- mit aktuellem Repository Funktion "Frage aus Datenbank holen" implementieren - übergeben an Steven (In Progress)
+- Arbeiten an der Dokumentation - In Progress
+
+Thomas:
+- mit aktuellem Repository Funktion "neue Frage speichern" implementieren - DONE
+- Arbeiten an der Dokumentation - In Progress
