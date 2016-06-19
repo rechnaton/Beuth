@@ -4,6 +4,9 @@
     <!-- Definiton Corporate Design Farben -->
     <color name="blue">#51c8fc</color>
     <color name="blueFields">#a2c7d6</color>
+    
+    <!-- Definiton Corporate Identity -->
+    <string name="peatDescription">#peat - Erlerntes spielend wiederholen und nie wieder vergessen!</string>
 
     <!-- Definiton Buttontexte LandingActivity -->
     <string name="game">Starte #peat</string>
@@ -37,19 +40,21 @@
     <!-- Definiton Texte QuestionTypeActivity -->
     <string name="headQuestionType">Wähle einen Fragentyp!</string>
     <string name="questionTypeOpen">Offene Frage</string>
-    <string name="questionTypeClosed">Ja/Nein-Frage</string>
+    <string name="questionTypeYesNo">Ja/Nein-Frage</string>
     <string name="questionTypeSingleChoice">Single Choice</string>
     <string name="questionTypeMultipleChoice">Multiple Choice</string>
 
     <!-- Definiton Texte QuestionInputActivity -->
-    <string name="headQuestionTypeClosed">Ja/Nein-Frage einfügen!</string>
-    <string name="hintQuestionTypeClosedTheme">Gib hier das Thema ein!</string>
-    <string name="hintQuestionTypeClosedQuestion">Gib hier die Frage ein!</string>
-    <string name="hintQuestionTypeClosedAnswer">Gib hier die Antwort ein!</string>
-    <string name="saveQuestionTypeClosed">Speichern</string>
+    <string name="headQuestionTypeYesNo">Ja/Nein-Frage einfügen!</string>
+    <string name="hintQuestionTypeYesNoTheme">Gib hier das Thema ein!</string>
+    <string name="hintQuestionTypeYesNoQuestion">Gib hier die Frage ein!</string>
+    <string name="hintQuestionTypeYesNoAnswer">Gib hier die Antwort ein!</string>
+    <string name="saveQuestionTypeYesNo">Speichern</string>
     <string name="editText_errorMessage">Ein Feld ist leer. Ihre Frage kann nicht gespeichert werden. Bitte alle Felder ausfüllen.</string>
-	<string name="radio_true">Ja</string>
-	<string name="radio_false">Nein</string>
+	<string name="text_yes">Ja</string>
+	<string name="text_no">Nein</string>
+	<string name="radio_true">wahr/richtig</string>
+	<string name="text_answer">Gib hier an, welche Antwort richtig ist:</string>
 	
     <!-- Definiton Texte Einstellungsmenü -->
     <string name="action_settings">Einstellungen</string>

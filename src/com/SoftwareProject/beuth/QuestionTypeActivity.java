@@ -8,8 +8,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.annotation.TargetApi;
 import android.os.Build;
@@ -27,7 +25,7 @@ public class QuestionTypeActivity extends AppCompatActivity {
 		setContentView(R.layout.activity_question_type);
 		
 		Button openQuestion = (Button) findViewById(R.id.addQuestionTypeOpen);
-		Button closedQuestion = (Button) findViewById(R.id.addQuestionTypeClosed);
+		Button yesNoQuestion = (Button) findViewById(R.id.addQuestionTypeYesNo);
 		Button singleChoiceQuestion = (Button) findViewById(R.id.addQuestionTypeSingleChoice);
 		Button mulitpleChoiceQuestion = (Button) findViewById(R.id.addQuestionTypeMultipleChoice);
 		
@@ -40,7 +38,7 @@ public class QuestionTypeActivity extends AppCompatActivity {
 			}
 		});
 
-		closedQuestion.setOnClickListener(new View.OnClickListener() {
+		yesNoQuestion.setOnClickListener(new View.OnClickListener() {
 			
 		 	@Override
 		 	public void onClick(View v) {

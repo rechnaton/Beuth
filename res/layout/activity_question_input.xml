@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blue"
-    android:orientation="vertical"
+    android:orientation="horizontal"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -12,84 +12,131 @@
     tools:context="com.SoftwareProject.beuth.QuestionInputActivity" >
     
     <TextView
-        android:id="@+id/headQuestionTypeClosed"
+        android:id="@+id/headQuestionTypeYesNo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:textSize="22sp"
-        android:text="@string/headQuestionTypeClosed" />
+        android:text="@string/headQuestionTypeYesNo" />
     
     <!-- Linie Start -->
     <TextView
+        android:id="@+id/line"
         android:layout_width="match_parent"
         android:layout_height="2dip"
         android:layout_marginTop="2dp"
         android:layout_marginBottom="18dp"
+        android:layout_below="@id/headQuestionTypeYesNo"
         android:background="#FF000000" />
     <!-- Linie Ende -->
     
 	<EditText
-	    android:id="@+id/editQuestionTypeClosedTheme"
+	    android:id="@+id/editQuestionTypeYesNoTheme"
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
 	    android:layout_gravity="start"
 	    android:layout_marginBottom="18dp"
+	    android:layout_below="@id/line"
 	    android:background="@color/blueFields"
 	    android:inputType="text"
 	    android:minHeight="36dp"
-	    android:hint="@string/hintQuestionTypeClosedTheme" />
+	    android:hint="@string/hintQuestionTypeYesNoTheme" />
 	
 	<EditText
-	    android:id="@+id/editQuestionTypeClosedQuestion"
+	    android:id="@+id/editQuestionTypeYesNoQuestion"
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
 	    android:layout_gravity="start"
 	    android:layout_marginBottom="18dp"
+	    android:layout_below="@id/editQuestionTypeYesNoTheme"
 	    android:background="@color/blueFields"
 	    android:inputType="text"
 	    android:minHeight="36dp"
-	    android:hint="@string/hintQuestionTypeClosedQuestion" />
+	    android:hint="@string/hintQuestionTypeYesNoQuestion" />
 	
+	<!-- Für später für geschlossene Frage nur auskommentiert und nicht gelöscht 
 	<EditText
-	    android:id="@+id/editQuestionTypeClosedAnswer"
+	    android:id="@+id/editQuestionTypeYesNoAnswer"
 	    android:layout_width="match_parent"
 	    android:layout_height="wrap_content"
 	    android:gravity="start|top"
 	    android:layout_marginBottom="18dp"
 	    android:background="@color/blueFields"
-	    android:hint="@string/hintQuestionTypeClosedAnswer"
+	    android:hint="@string/hintQuestionTypeYesNoAnswer"
 	    android:inputType="textMultiLine"
 	    android:minHeight="108dp" />
+	 -->
+	
+	<TextView
+	    android:id="@+id/textAnswer"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentLeft="true"
+	    android:layout_alignParentStart="true"
+	    android:layout_below="@+id/editQuestionTypeYesNoQuestion"
+	    android:layout_marginTop="18dp"
+	    android:layout_marginBottom="18dp"
+	    android:text="@string/text_answer"
+	    android:textAppearance="?android:attr/textAppearanceSmall" />
+	
+	<TextView
+	    android:id="@+id/textYes"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="4dp"
+	    android:layout_marginBottom="12dp"
+	    android:layout_marginLeft="3dp"
+	    android:layout_marginStart="3dp"
+	    android:layout_below="@id/textAnswer"
+	    android:text="@string/text_yes"
+	    android:textAppearance="?android:attr/textAppearanceMedium" />
+	
+	<TextView
+	    android:id="@+id/textNo"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginBottom="18dp"
+	    android:layout_marginLeft="3dp"
+	    android:layout_marginStart="3dp"
+	    android:layout_below="@id/textYes"
+	    android:text="@string/text_no"
+	    android:textAppearance="?android:attr/textAppearanceMedium" />
 	
 	<RadioGroup
         android:id="@+id/radioQuestionCorrect"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:orientation="horizontal"
-        android:layout_below="@+id/saveQuestionTypeClosed" >
-
+	    android:layout_marginRight="72dp"
+	    android:layout_marginEnd="72dp"
+        android:layout_below="@id/textAnswer"
+        android:layout_toLeftOf="@id/textNo"
+        android:layout_toStartOf="@+id/saveQuestionTypeYesNo"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:orientation="vertical" >
+	    
         <RadioButton
-            android:id="@+id/radioQuestionTrue"
+            android:id="@+id/radioQuestionYes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/radio_true" 
-            android:layout_marginTop="18dp"
+            android:text="@string/radio_true"
             android:checked="true" />
 
         <RadioButton
-            android:id="@+id/radioQuestionFalse"
+            android:id="@+id/radioQuestionNo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/radio_false"
-            android:layout_marginTop="18dp" />
+            android:text="@string/radio_true" />
 
     </RadioGroup>
     
-	<Button android:id="@+id/saveQuestionTypeClosed"
+	<Button android:id="@id/saveQuestionTypeYesNo"
 		android:layout_width="wrap_content"
 		android:layout_height="wrap_content"
-		android:layout_gravity="end"
-		android:text="@string/saveQuestionTypeClosed" />
+		android:layout_marginTop="18dp"
+		android:layout_below="@id/radioQuestionCorrect"
+		android:layout_alignParentRight="true"
+		android:layout_alignParentEnd="true"
+		android:text="@string/saveQuestionTypeYesNo" />
 
-</LinearLayout>
+</RelativeLayout>
