@@ -2058,9 +2058,9 @@ containing a value of this type.
         public static final int action_settings=0x7f0b008c;
         public static final int activity_chooser_view_content=0x7f0b0024;
         public static final int addQuestionTypeMultipleChoice=0x7f0b0078;
-        public static final int addQuestionTypeOpen=0x7f0b0075;
+        public static final int addQuestionTypeOpen=0x7f0b0076;
         public static final int addQuestionTypeSingleChoice=0x7f0b0077;
-        public static final int addQuestionTypeYesNo=0x7f0b0076;
+        public static final int addQuestionTypeYesNo=0x7f0b0075;
         public static final int addTheme=0x7f0b008b;
         public static final int alertTitle=0x7f0b0030;
         public static final int always=0x7f0b0019;

@@ -85,7 +85,7 @@ public class QuestionInputActivity extends AppCompatActivity {
 				
 			    // Speichern der ausgelesenen Werte in die SQLite Datenbank
 				// 1. Question-Objekt erzeugen
-				Question oQuestion = new Question(questionText, QuestionTypeTitle, answers, isCorrect);
+				Question oQuestion = new Question(questionTheme, questionText, QuestionTypeTitle, answers, isCorrect);
 				// 2. Speichermethode auf dem Question-Objekt aufrufen
 				dataSource.putQuestionInDB(oQuestion);
 				dataSource.logAllQuestionsOfDB();
