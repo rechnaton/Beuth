@@ -150,6 +150,10 @@ public class PeatDbHelper extends SQLiteOpenHelper{
     	    putQuestionInDB(frageA, db);
     	    frageA.putQuestionText("Bedeutet APK Android Package File?");
     	    putQuestionInDB(frageA, db);
+    	    isCorrectFrageA[0] = false;
+    	    isCorrectFrageA[1] = true;
+    	    frageA.putQuestionText("Ist das Wetter immer sonnig?");
+    	    putQuestionInDB(frageA, db);
     	    logAllTablesofDB(db);
     	    logAllQuestionsOfDB(db);
     	    logAllAnswersOfDB(db);
@@ -214,7 +218,7 @@ public class PeatDbHelper extends SQLiteOpenHelper{
     	mCursor.moveToFirst();
     	Log.d(LOG_TAG, "Alle Antworten:");
     	while(!mCursor.isAfterLast()) {
-    		Log.d(LOG_TAG, mCursor.getString(mCursor.getColumnIndex("as_text")));
+    		Log.d(LOG_TAG, mCursor.getString(mCursor.getColumnIndex("as_text")) + "     " + mCursor.getString(mCursor.getColumnIndex("as_isCorrect")));
     		mCursor.moveToNext();
     	}
     }
