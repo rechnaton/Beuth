@@ -38,14 +38,14 @@
         android:text="@string/questionTypeOpen" />
     
     <Button
-        android:id="@+id/addQuestionTypeClosed"
+        android:id="@+id/addQuestionTypeYesNo"
         style="?android:attr/buttonStyleSmall"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
         android:layout_marginBottom="18dp"
         android:layout_marginTop="18dp"
-        android:text="@string/questionTypeClosed" />
+        android:text="@string/questionTypeYesNo" />
 
     <Button
         android:id="@+id/addQuestionTypeSingleChoice"
