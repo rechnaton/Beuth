@@ -77,7 +77,9 @@ public class QuestionInputActivity extends AppCompatActivity {
 				
 				if (answer1.isChecked()) {
 					isCorrect[0] = true;
+					isCorrect[1] = false;
 				} else {
+					isCorrect[0] = false;
 					isCorrect[1] = true;
 				}
 				
