@@ -3,12 +3,25 @@ package com.SoftwareProject.beuth;
 public class Question {
 	private String questionText;
 	private String QuestionTypeTitle;
+	private String questionTheme;
 	private String[] answers;
 	private Boolean[] isCorrect;
 	
+	public Question (String Thema, String Text, String sType, String[] answersArray, Boolean[] isCorrectArray){
+		questionText = Text;
+		questionTheme = Thema;
+		QuestionTypeTitle = sType;
+		answers = answersArray;
+		isCorrect = isCorrectArray;
+	}
+	
+	/**
+	 * Nur so lange die Datenbank um das Attribut "Thema" erweitert ist
+	 */
 	public Question (String Text, String sType, String[] answersArray, Boolean[] isCorrectArray){
 		questionText = Text;
-		QuestionTypeTitle = sType; 
+		questionTheme = "Test";
+		QuestionTypeTitle = sType;
 		answers = answersArray;
 		isCorrect = isCorrectArray;
 	}
@@ -31,5 +44,9 @@ public class Question {
 	
 	public Boolean[] getIsCorrectAnswers(){
 		return isCorrect;
+	}
+	
+	public String getQuestionTheme(){
+		return questionTheme;
 	}
 }
