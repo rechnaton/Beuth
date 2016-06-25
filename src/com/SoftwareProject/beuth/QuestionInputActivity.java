@@ -1,6 +1,7 @@
 package com.SoftwareProject.beuth;
 
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -23,6 +24,7 @@ public class QuestionInputActivity extends AppCompatActivity {
 	private String questionTheme;
 	private String[] answers;
 	private Boolean[] isCorrect;
+	Button backToMenu;
 	
 	private PeatDataSource dataSource;
 	
@@ -42,10 +44,14 @@ public class QuestionInputActivity extends AppCompatActivity {
 		Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler(this));
 		// Layoutauswahl
 		setContentView(R.layout.activity_question_input);
+		
+		// Button fuehrt zurueck in das Hauptmenue
+		backToMenu = (Button) findViewById(R.id.returnlanding);
+		
 		// Instantiierung eines Button-Objektes für den OnClickListener
 		Button addQuestion = (Button) findViewById(R.id.saveQuestionTypeYesNo);
-		
 		addQuestion.setOnClickListener(new View.OnClickListener() {
+		
 			
 			@Override
 			public void onClick(View v) {
@@ -101,6 +107,16 @@ public class QuestionInputActivity extends AppCompatActivity {
 			}
 		});
 
+        // Button fuehrt zurueck in das Hauptmenue (LandingActivity)
+		backToMenu.setOnClickListener(new View.OnClickListener() {
+			
+		@Override
+		public void onClick(View v) {
+			Intent intentreturnmenu = new Intent(QuestionInputActivity.this, LandingActivity.class);
+			QuestionInputActivity.this.startActivity(intentreturnmenu);
+		}
+		});
+		
 		Toast.makeText(this, "Zurück mit Back-Button.", Toast.LENGTH_SHORT).show();
 	}
 	

@@ -395,6 +395,47 @@ Thomas:
 
 #25.06.2016 (Online Meeting via Moodle)
 20:00 Uhr
+Teilnehmer: Andreas, Thomas
+
+Agenda:
+Rücksprache hins. "In Progress" sowie Status der Dokumentation.
+
+Ergebnis:
+- Steven ist abwesend.
+- Dokumentation wird Sonntag, 26.06. voraussichtlich fertig.
+- Meeting hins. Programmierung ("In Progress") vertagt auf Sonntag, 26.06. zw. 11:00 und 18:00 Uhr (Steven unterbreitet Vorschlag).
+
+Besprechung des weiteren Vorgehens:
+- Für Präsentation wird die pptx-Vorlage der Beuth-Hochschule verwendet.
+- Code säubern, kommentieren.
+- Letzte Tests durchführen.
+- Fertigstellung der Dokumentation und Einbindung in md-Format (GitHub).
+- Einigung auf
+  - Link-Syntax, statt Fußnoten
+  - Begriffklärung bzw. Schreibart
+
+------------------------------------------------------------------------------------------
+
+#26.06.2016 (Präsenz- und Online Meeting via Moodle)
+??:00 Uhr
 Teilnehmer: Andreas, Thomas, Steven
 
-Rücksprache hins. "In Progress" sowie Status der Dokumentation.
+Agenda:
+- Rücksprache hins. "In Progress" sowie Status der Dokumentation.
+- Präsentation vorbereiten.
+- Code säubern, kommentieren (javadoc?).
+- Weitere Tests durchführen.
+- Fertigstellung der Dokumentation und Einbindung in md-Format (GitHub).
+- Einigung auf
+  - Link-Syntax, statt Fußnoten
+  - Begriffklärung bzw. Schreibart
+- Themen Programmierung (bis spät. 03.07.)
+  - manuell gespeicherte Frage muss auch ausgegeben werden - In Progress
+  - mit aktuellem Repository Funktion "Frage aus Datenbank holen" implementieren - übergeben an Steven (In Progress)
+  - Methode für Antworten-Übergabe - In Progress
+  - Methode für Themen-Speichern - In Progress
+  - in MainActivity die Datenbankverbindung schließen (close) - In Progress
+  - User-Verwaltung - In Progress (ggf. zurückgestellt für Version 2.0)
+  - Methode GetLastQuestion (Gegenpart zu getNextQuestion) - Pending (zurückgestellt für Version 2.0)
+
+* ab Dienstag, 28.06., regelmäßige Abstimmung mit Steven, wie weit der Code ist.
