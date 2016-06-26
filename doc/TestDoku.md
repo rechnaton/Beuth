@@ -4,7 +4,7 @@
 Erlerntes spielend wiederholen und nie wieder vergessen!
 
 
-![peat](https://github.com/andreasmosig/peat/blob/master/res/drawable-hdpi/splash.png)
+![peat](https://github.com/andreasmosig/peat/blob/master/res/drawable-hdpi/ic_launcher.png)
 
 
 
@@ -20,7 +20,7 @@ Erlerntes spielend wiederholen und nie wieder vergessen!
 ###Stand: 03.07.2016
 
 
-###Beuth Hochschule für Technik Berlin, Wirtschaftsinformatik, 4. ###Semester, Sommersemester 2016
+###Beuth Hochschule fÃ¼r Technik Berlin, Wirtschaftsinformatik, 4. ###Semester, Sommersemester 2016
 
 
 
@@ -38,7 +38,7 @@ Erlerntes spielend wiederholen und nie wieder vergessen!
 
 ##2.1. Theoretische Aspekte einer Lernsoftware (fertig | Thomas)
 
-##2.2. Vision und Geschäftsmodell (fertig | Thomas)
+##2.2. Vision und GeschÃ¤ftsmodell (fertig | Thomas)
 
 ##2.3. Marktanalyse (fertig | Thomas)
 
@@ -50,7 +50,7 @@ Erlerntes spielend wiederholen und nie wieder vergessen!
 
 ##3.3. Design und Architektur (fertig | Andi)
 
-##3.4. Konzept der Qualitätssicherung (fast fertig | Thomas, Andi, Steven)
+##3.4. Konzept der QualitÃ¤tssicherung (fast fertig | Thomas, Andi, Steven)
 
 #4. Umsetzung
 
@@ -76,7 +76,7 @@ Erlerntes spielend wiederholen und nie wieder vergessen!
 
 ##5.3. Ausblick (fertig | Andi)
 
-#6. Weiterführende Links
+#6. WeiterfÃ¼hrende Links
 
 #7. Glossar
 
@@ -91,7 +91,7 @@ Legende zur Formatierung:
 
 --- = Trennlinie
 
-* = Aufzählung
+* = AufzÃ¤hlung
 
 ![Name](bild.png) = Bild einbinden
 
@@ -101,19 +101,19 @@ Legende zur Formatierung:
 
 ##1.1. Problemstellung und Zielsetzung der Arbeit (fertig | Andi)
 
-Das **Lerngebiet** des Softwareentwicklungsprojektes erstreckt sich über viele Aspekte der Softwaretechnik, d.h. u.a. in der praktischen Anwendung von Modellierungsprachen (wie z.B. [UML](https://de.wikipedia.org/wiki/Unified_Modeling_Language) sowie von Vorgehensmodellen der Softwareentwicklung (z.B. [SCRUM](https://de.wikipedia.org/wiki/Scrum).
+Das **Lerngebiet** des Softwareentwicklungsprojektes erstreckt sich Ã¼ber viele Aspekte der Softwaretechnik, d.h. u.a. in der praktischen Anwendung von Modellierungsprachen (wie z.B. [UML](https://de.wikipedia.org/wiki/Unified_Modeling_Language) sowie von Vorgehensmodellen der Softwareentwicklung (z.B. [SCRUM](https://de.wikipedia.org/wiki/Scrum).
 
 
-Das übergeordnete **Lernziel** ist, aus den in der Theorie erworbenen Inhalten, die individuellen sowie gruppenspezifischen Kompetenzen herauszubilden resp. zu verstärken. Diese sind u.a. die Fähigkeit zur selbständigen Bearbeitung einer Aufgabenstellung, die Anforderungsanalyse sowie die Modellierung prozessorientierter Systeme. Darüber hinaus lassen sich weitere Ziele nennen, wie ganz trivial die Realisierung in einer Gruppe, die daraus resultierende Forderung und Förderung der Teamfähigkeit und schließlich das Einüben systematischer Vorgehensweisen und Arbeitstechniken auf wissenschaftlicher Basis. Selbstverständlich sollen auch die Arbeitsergebnisse in Form einer lauffähigen Anwendung sowie der hier vorliegenden Dokumentation präsentiert werden.
+Das Ã¼bergeordnete **Lernziel** ist, aus den in der Theorie erworbenen Inhalten, die individuellen sowie gruppenspezifischen Kompetenzen herauszubilden resp. zu verstÃ¤rken. Diese sind u.a. die FÃ¤higkeit zur selbstÃ¤ndigen Bearbeitung einer Aufgabenstellung, die Anforderungsanalyse sowie die Modellierung prozessorientierter Systeme. DarÃ¼ber hinaus lassen sich weitere Ziele nennen, wie ganz trivial die Realisierung in einer Gruppe, die daraus resultierende Forderung und FÃ¶rderung der TeamfÃ¤higkeit und schlieÃŸlich das EinÃ¼ben systematischer Vorgehensweisen und Arbeitstechniken auf wissenschaftlicher Basis. SelbstverstÃ¤ndlich sollen auch die Arbeitsergebnisse in Form einer lauffÃ¤higen Anwendung sowie der hier vorliegenden Dokumentation prÃ¤sentiert werden.
 
 
-Das konkrete **Projektziel** ist das Entwickeln einer Implementierungsidee für ein (virtuelles) Start-UP, hin zu einem lauffähigen Prototypen. Dieser soll dem Auftraggeber, welcher sich als [Business Angel](https://de.wikipedia.org/wiki/Business_Angel) (BA) versteht, präsentiert werden, um seine finanzielle Beteiligung an dem Projekt in Höhe von 300.000 EUR zu erwirken. Während des Entwicklungsprozesses sollte des Weiteren eine ausführliche Dokumentation erstellt werden, die Ihnen hiermit vorliegt. Neben der Projektdokumentation lag der Fokus auf dem Kodieren (Applikation, Interfaces) und einer gesunden Gruppendynamik.
+Das konkrete **Projektziel** ist das Entwickeln einer Implementierungsidee fÃ¼r ein (virtuelles) Start-UP, hin zu einem lauffÃ¤higen Prototypen. Dieser soll dem Auftraggeber, welcher sich als [Business Angel](https://de.wikipedia.org/wiki/Business_Angel) (BA) versteht, prÃ¤sentiert werden, um seine finanzielle Beteiligung an dem Projekt in HÃ¶he von 300.000 EUR zu erwirken. WÃ¤hrend des Entwicklungsprozesses sollte des Weiteren eine ausfÃ¼hrliche Dokumentation erstellt werden, die Ihnen hiermit vorliegt. Neben der Projektdokumentation lag der Fokus auf dem Kodieren (Applikation, Interfaces) und einer gesunden Gruppendynamik.
 
 
-Das **Team #peat** bestand zu Beginn, d.h. in der Findungsphase einer Vision, noch aus zwei Mitgliedern. Schnell wurde klar, dass die gestellten Anforderungen an das Projekt noch eine weitere Kraft erfordern würden. Im Zuge der finalen Festlegung der Idee sowie der Gruppe, galt es die nächsten Ziele und Meilensteine zu definieren. Ein [Exposé](https://github.com/andreasmosig/peat/blob/master/doc/EXPOSE.md) sollte die ersten Weichen stellen. Hierin wurden Anforderungen, theoretische Grundlagen, technische Aspekte, wie z.B. Architektur und Entwicklungsumgebung sowie Meilensteine abgesteckt.
+Das **Team #peat** bestand zu Beginn, d.h. in der Findungsphase einer Vision, noch aus zwei Mitgliedern. Schnell wurde klar, dass die gestellten Anforderungen an das Projekt noch eine weitere Kraft erfordern wÃ¼rden. Im Zuge der finalen Festlegung der Idee sowie der Gruppe, galt es die nÃ¤chsten Ziele und Meilensteine zu definieren. Ein [ExposÃ©](https://github.com/andreasmosig/peat/blob/master/doc/EXPOSE.md) sollte die ersten Weichen stellen. Hierin wurden Anforderungen, theoretische Grundlagen, technische Aspekte, wie z.B. Architektur und Entwicklungsumgebung sowie Meilensteine abgesteckt.
 
 
-Die **Statusberichte** wurden alle ein bis zwei Wochen per E-Mail an den BA samt der Verlinkungen zu den in der Folge dieser Arbeit vorgestellten Projektmanagement- sowie Versionenverwaltungs-Anwendungen geschickt (s. [6.](#6. Weiterführende Links)).
+Die **Statusberichte** wurden alle ein bis zwei Wochen per E-Mail an den BA samt der Verlinkungen zu den in der Folge dieser Arbeit vorgestellten Projektmanagement- sowie Versionenverwaltungs-Anwendungen geschickt (s. [6.](#6. WeiterfÃ¼hrende Links)).
 
 ##1.2. Projekt-Stammdaten (fertig | Andi)
 
@@ -128,61 +128,61 @@ Die **Statusberichte** wurden alle ein bis zwei Wochen per E-Mail an den BA samt
 
 ###b) Projektdauer
 
-* Der Projektzeitraum erstreckte sich vom 7. April (Kick-Off) bis zum 8. Juli 2016, dem Tag der Präsentation der Arbeitsergebnisse.
+* Der Projektzeitraum erstreckte sich vom 7. April (Kick-Off) bis zum 8. Juli 2016, dem Tag der PrÃ¤sentation der Arbeitsergebnisse.
 
 
 ###c) Projektmanagement-Werkzeuge
 
-* Für den allgemeinen Austauch und für die Projekt- sowie interne Kommunikation mit dem BA und allen Kommilitonen, wurde eine allgemein zugängliche [Slack-Gruppe](http://beuthswtprojekt.slack.com) vom BA eingerichtet. Darüber hinaus verfügte jede Projektgruppe über  ihren eigenen, projektinternen Slack-Kanal. Für das vorliegende Projekt war es der Kanal **peat**.
+* FÃ¼r den allgemeinen Austauch und fÃ¼r die Projekt- sowie interne Kommunikation mit dem BA und allen Kommilitonen, wurde eine allgemein zugÃ¤ngliche [Slack-Gruppe](http://beuthswtprojekt.slack.com) vom BA eingerichtet. DarÃ¼ber hinaus verfÃ¼gte jede Projektgruppe Ã¼ber  ihren eigenen, projektinternen Slack-Kanal. FÃ¼r das vorliegende Projekt war es der Kanal **peat**.
 
 
 * Das Projektmanagement fand via [asana.com](https://app.asana.com/0/105766113985042/105766113985043) statt, welches synchron mit dem Projekt-Slack-Kanal verbunden war. Jegliche asana-Kommunikation war und ist im Slack-Kanal nachvollziehbar (s. [5.2.](##5.2. Erkenntnisse)).
 
 
-* Für die [agile Software-Entwicklung](https://de.wikipedia.org/wiki/Agile_Softwareentwicklung) mit Scrum war ursprünglich das Arbeiten mit dem Tool easyBacklog vorgesehen (s. [5.2.](##5.2. Erkenntnisse)).
+* FÃ¼r die [agile Software-Entwicklung](https://de.wikipedia.org/wiki/Agile_Softwareentwicklung) mit Scrum war ursprÃ¼nglich das Arbeiten mit dem Tool easyBacklog vorgesehen (s. [5.2.](##5.2. Erkenntnisse)).
 
 
-* Das Versionsmanagement erfolgte via GitHub ([Master-Branch](https://github.com/andreasmosig/peat)). Analog zu asana liefen alle Aktivitäten im privaten Slack-Kanal zusammen und waren für den BA einsehbar.
+* Das Versionsmanagement erfolgte via GitHub ([Master-Branch](https://github.com/andreasmosig/peat)). Analog zu asana liefen alle AktivitÃ¤ten im privaten Slack-Kanal zusammen und waren fÃ¼r den BA einsehbar.
 
 
 ###d) Entwicklungswerkzeuge
 
-* Für die verschiedenen Komponenten und Schnittstellen sind unterschiedliche Technologien und Werkzeuge notwendig gewesen. Zum Entwickeln der Android-App in Java wurde Eclipse sowie dafür notwendige Plugins (SDK/AVD, JUnit, etc.) verwendet.
+* FÃ¼r die verschiedenen Komponenten und Schnittstellen sind unterschiedliche Technologien und Werkzeuge notwendig gewesen. Zum Entwickeln der Android-App in Java wurde Eclipse sowie dafÃ¼r notwendige Plugins (SDK/AVD, JUnit, etc.) verwendet.
 
 
-* Für die Erstellung des konzeptuellen und logischen Datenbankschemas wurde der DBDesignerFork verwendet und daraus das entsprechende MySQL-DDL-Skript erzeugt und als Klasse in Eclipse eingebunden, da in der Entwicklungsumgebung bereits Bibliotheken zum Ansteuern der SQLite-DB vorhanden gewesen sind.
+* FÃ¼r die Erstellung des konzeptuellen und logischen Datenbankschemas wurde der DBDesignerFork verwendet und daraus das entsprechende MySQL-DDL-Skript erzeugt und als Klasse in Eclipse eingebunden, da in der Entwicklungsumgebung bereits Bibliotheken zum Ansteuern der SQLite-DB vorhanden gewesen sind.
 
 
-* Sonstige Tools waren Modellierungsprogramme, wie ArgoUML und UMLet, welche der theoretischen Konzeption der UML-Diagramme dienten (u.a. Use Cases, Paket-, Klassen-, Deployment- und Komponentendiagramm). Die Versionierung erfolgte über git, wie z.B. GitHub.
+* Sonstige Tools waren Modellierungsprogramme, wie ArgoUML und UMLet, welche der theoretischen Konzeption der UML-Diagramme dienten (u.a. Use Cases, Paket-, Klassen-, Deployment- und Komponentendiagramm). Die Versionierung erfolgte Ã¼ber git, wie z.B. GitHub.
 
 ##1.3. Projektidee, -ziel und -plan (fertig | Thomas)
 
-Die **Implementierungsidee** für das (virtuelle) Start-Up #peat entstand aus einem studentischen Grundbedürfnis (Lernen) sowie der Erfahrung heraus, gefestigtes Wissen länger zu behalten, als ungefestigtes Wissen. Daher lag es nahe, eine Anwendungssoftware zu entwickeln, die Lerninteressierte dabei unterstützt, erlerntes Wissen durch Wiederholung in **Frageform** zu festigen und damit den Lernerfolg langfristig zu maximieren.
+Die **Implementierungsidee** fÃ¼r das (virtuelle) Start-Up #peat entstand aus einem studentischen GrundbedÃ¼rfnis (Lernen) sowie der Erfahrung heraus, gefestigtes Wissen lÃ¤nger zu behalten, als ungefestigtes Wissen. Daher lag es nahe, eine Anwendungssoftware zu entwickeln, die Lerninteressierte dabei unterstÃ¼tzt, erlerntes Wissen durch Wiederholung in **Frageform** zu festigen und damit den Lernerfolg langfristig zu maximieren.
 
 
-Bei der Namensfindung für die Lernapplikation (Lernapp) spielten folgende Überlegungen eine Rolle:
+Bei der Namensfindung fÃ¼r die Lernapplikation (Lernapp) spielten folgende Ãœberlegungen eine Rolle:
 
 
-* “peat” stammt aus dem englischen Verb “repeat” (engl. wiederholen)
+* â€œpeatâ€ stammt aus dem englischen Verb â€œrepeatâ€ (engl. wiederholen)
 
-* ein menschlich klingender Name soll ganz allgemein die Einstellung zum Lernen sowie die Kommunikation bzgl. der Applikation positiv stärken: #peat als dein Freund
+* ein menschlich klingender Name soll ganz allgemein die Einstellung zum Lernen sowie die Kommunikation bzgl. der Applikation positiv stÃ¤rken: #peat als dein Freund
 
 * Hashtag # zur Optimierung des Namens aus Online-Marketingsicht
 
 
-Für den späteren wirtschaftlichen Erfolg der Lernapp im Allgemeinen sowie für eine erfolgreiche Unternehmenskommunikation im Speziellen, z.B. in einem App-Store, ist es u.a. wichtig, einen einprägsamen **Claim** bzw. **Slogan** zu haben. Für #peat ist das
+FÃ¼r den spÃ¤teren wirtschaftlichen Erfolg der Lernapp im Allgemeinen sowie fÃ¼r eine erfolgreiche Unternehmenskommunikation im Speziellen, z.B. in einem App-Store, ist es u.a. wichtig, einen einprÃ¤gsamen **Claim** bzw. **Slogan** zu haben. FÃ¼r #peat ist das
 
 
 *Erlerntes spielend wiederholen und nie wieder vergessen!*
 
 
-Eine **Kurzbeschreibung** zur knappen und marktgerechten Erläuterung der Anwendungsfunktionalitäten, z.B. für einen Appstore oder einen [SEO](https://de.wikipedia.org/wiki/Suchmaschinenoptimierung)-relevanten Text auf der Website, könnte wie folgt aussehen:
+Eine **Kurzbeschreibung** zur knappen und marktgerechten ErlÃ¤uterung der AnwendungsfunktionalitÃ¤ten, z.B. fÃ¼r einen Appstore oder einen [SEO](https://de.wikipedia.org/wiki/Suchmaschinenoptimierung)-relevanten Text auf der Website, kÃ¶nnte wie folgt aussehen:
 
 
-> #peat hilft dir, dein erworbenes Wissen durch intelligente Wiederholung zu verfestigen und damit ins Langzeitgedächtnis zu überführen. Und das funktioniert so: hinterlege in deinem Account offene oder geschlossene Fragen zu verschiedenen Themenbereichen sowie deren Antwortmöglichkeiten und sage #peat, wann bzw. wie häufig dich #peat abfragen soll. Fertig. #peat fragt dich ab sofort bequem per Push-Notification oder per Lernquizz auf deinem Smartphone ab und du kannst die Frage direkt beantworten oder ignorieren. Am Ende des Tages kannst du dir deinen Lernerfolg darstellen lassen. Re #peat!
+> #peat hilft dir, dein erworbenes Wissen durch intelligente Wiederholung zu verfestigen und damit ins LangzeitgedÃ¤chtnis zu Ã¼berfÃ¼hren. Und das funktioniert so: hinterlege in deinem Account offene oder geschlossene Fragen zu verschiedenen Themenbereichen sowie deren AntwortmÃ¶glichkeiten und sage #peat, wann bzw. wie hÃ¤ufig dich #peat abfragen soll. Fertig. #peat fragt dich ab sofort bequem per Push-Notification oder per Lernquizz auf deinem Smartphone ab und du kannst die Frage direkt beantworten oder ignorieren. Am Ende des Tages kannst du dir deinen Lernerfolg darstellen lassen. Re #peat!
 
 
-Wie in Punkt 1.1 bereits erwähnt, war das vorrangige **Projektziel** das Entwickeln einer Implementierungsidee hin zu einem lauffähigen, präsentierbaren Prototypen innerhalb von knapp 3 Monaten. Vor diesem Hintergrund war es daher zunächst erforderlich, das Gesamtziel in Teilziele zu zerlegen und dabei jeweils zu unterscheiden, was davon realistisch gesehen in dieser Zeit umgesetzt werden kann bzw. was davon in den Ausblick genommen werden muss. Der folgende Milestone-Plan zeigt das Ergebnis dieser Überlegungen, wobei die einzelnen Meilensteine in Anlehnung an die Scrum-Methode als “Sprints” bezeichnet werden:
+Wie in Punkt 1.1 bereits erwÃ¤hnt, war das vorrangige **Projektziel** das Entwickeln einer Implementierungsidee hin zu einem lauffÃ¤higen, prÃ¤sentierbaren Prototypen innerhalb von knapp 3 Monaten. Vor diesem Hintergrund war es daher zunÃ¤chst erforderlich, das Gesamtziel in Teilziele zu zerlegen und dabei jeweils zu unterscheiden, was davon realistisch gesehen in dieser Zeit umgesetzt werden kann bzw. was davon in den Ausblick genommen werden muss. Der folgende Milestone-Plan zeigt das Ergebnis dieser Ãœberlegungen, wobei die einzelnen Meilensteine in Anlehnung an die Scrum-Methode als â€œSprintsâ€ bezeichnet werden:
 
 
 * Sprint 0) Semesterstart (29.03.2016)
@@ -191,9 +191,9 @@ Wie in Punkt 1.1 bereits erwähnt, war das vorrangige **Projektziel** das Entwick
 
 * Sprint 2) UML-Diagramme, Architekturbild, GUI-Entwurf (18.04.2016)
 
-* Sprint 3) Abgabe Exposé (18.04.2016)
+* Sprint 3) Abgabe ExposÃ© (18.04.2016)
 
-* Sprint 4) Freigabe des Exposés/Projekts durch den BA (23.04.2016)
+* Sprint 4) Freigabe des ExposÃ©s/Projekts durch den BA (23.04.2016)
 
 * Sprint 5) Product Backlog in easyBacklog anlegen (01.05.2016)
 
@@ -209,45 +209,45 @@ Wie in Punkt 1.1 bereits erwähnt, war das vorrangige **Projektziel** das Entwick
 
 * Sprint 11) Lesen aus Datenbank: Wiederholungslogik in Form eines Quizz-Spiels (Datum)
 
-* Sprint 12) Eingabe für neue Ja-Nein-Frage speichern (19.06.2016)
+* Sprint 12) Eingabe fÃ¼r neue Ja-Nein-Frage speichern (19.06.2016)
 
 * Sprint 13) gespeicherte Frage Lesen und im Quizz darstellen (Datum)
 
-* Sprint 14) Quizz vor und zurück gehen ohne Fehler (Datum)
+* Sprint 14) Quizz vor und zurÃ¼ck gehen ohne Fehler (Datum)
 
 * Sprint 15) Erzeugung des Abgabe-Prototypen inkl. Tests (Datum)
 
 * Sprint 16) Fertigstellung der Enddokumentation (03.07.2016)
 
-* Sprint 17) Vorbereitung Präsentation (08.07.2016)
+* Sprint 17) Vorbereitung PrÃ¤sentation (08.07.2016)
 
-* Sprint 18) Abgabe und Präsentation (08.07.2016)
+* Sprint 18) Abgabe und PrÃ¤sentation (08.07.2016)
 
 
-Neben den inhaltlichen Aufgaben gehörte die **Projektkommunikation** mit dem BA als projektbezogene Aufgabe mit zu den Anforderungen: Während der gesamten Laufzeit des Projektes sollte es mit dem BA einen regelmäßigen (mind. 1-2 Wochen) Austausch in Form eines [Protokolls](https://github.com/andreasmosig/peat/blob/master/doc/PROTOKOLLE.md) sowie eines [Statusberichtes](https://github.com/andreasmosig/peat/blob/master/doc/STATUSBERICHTE.md) geben.
+Neben den inhaltlichen Aufgaben gehÃ¶rte die **Projektkommunikation** mit dem BA als projektbezogene Aufgabe mit zu den Anforderungen: WÃ¤hrend der gesamten Laufzeit des Projektes sollte es mit dem BA einen regelmÃ¤ÃŸigen (mind. 1-2 Wochen) Austausch in Form eines [Protokolls](https://github.com/andreasmosig/peat/blob/master/doc/PROTOKOLLE.md) sowie eines [Statusberichtes](https://github.com/andreasmosig/peat/blob/master/doc/STATUSBERICHTE.md) geben.
 
 #2. Vorbetrachtungen (IST-Analyse)
 
 ##2.1. Theoretische Aspekte einer Lernsoftware (fertig | Thomas)
 
-Für den Entwurf des Datenbankschemas sowie die Modellierung der Wiederholungslogik war es zunächst wichtig, sich in einem angemessenen Umfang mit dem Sachgebiet vertraut zu machen und die folgenden zentralen Fragen zu beantworten:
+FÃ¼r den Entwurf des Datenbankschemas sowie die Modellierung der Wiederholungslogik war es zunÃ¤chst wichtig, sich in einem angemessenen Umfang mit dem Sachgebiet vertraut zu machen und die folgenden zentralen Fragen zu beantworten:
 
 
-* Welche Fragekategorien gibt es, welchen Einfluss haben diese auf die Lernapplikation und welche sind tatsächlich relevant?
+* Welche Fragekategorien gibt es, welchen Einfluss haben diese auf die Lernapplikation und welche sind tatsÃ¤chlich relevant?
 
 * Welchen Einfluss haben Wiederholungsrate und -reihenfolge auf den Lernerfolg?
 
 
-Die Implementierungsidee zu #peat stützt sich im Allgemeinen auf die [Wiederholung als Lernmethode](https://de.wikipedia.org/wiki/Wiederholung_%28Lernmethode%29), die sich der [Fragetechnik](https://de.m.wikipedia.org/wiki/Fragetechnik) bedient. Die Kernfunktionalität von #peat umfasst daher alle relevanten **Fragekategorien** und die dazugehörigen Antwortformate. In formaler Hinsicht werden die folgenden Fragekategorien unterschieden:[^fußnote1]
+Die Implementierungsidee zu #peat stÃ¼tzt sich im Allgemeinen auf die [Wiederholung als Lernmethode](https://de.wikipedia.org/wiki/Wiederholung_%28Lernmethode%29), die sich der [Fragetechnik](https://de.m.wikipedia.org/wiki/Fragetechnik) bedient. Die KernfunktionalitÃ¤t von #peat umfasst daher alle relevanten **Fragekategorien** und die dazugehÃ¶rigen Antwortformate. In formaler Hinsicht werden die folgenden Fragekategorien unterschieden:[^fuÃŸnote1]
 
-[fußnote1]: Vgl. https://de.wikipedia.org/wiki/Fragetechnik#Fragekategorien und https://de.wikipedia.org/wiki/Multiple_Choice#Unterschiedliche_Formate_und_Begrifflichkeiten
+[fuÃŸnote1]: Vgl. https://de.wikipedia.org/wiki/Fragetechnik#Fragekategorien und https://de.wikipedia.org/wiki/Multiple_Choice#Unterschiedliche_Formate_und_Begrifflichkeiten
 
 
 * Offene Fragen (freies Antwortformat)
 
 * Geschlossene Fragen:
 
-  * Binär-/Entscheidungs-/Ja/Nein-Fragen (eine von zwei dichotomen Antworten trifft zu: wahr/falsch, ja/nein …)
+  * BinÃ¤r-/Entscheidungs-/Ja/Nein-Fragen (eine von zwei dichotomen Antworten trifft zu: wahr/falsch, ja/nein â€¦)
 
   * Single Choice (eine von n Antworten trifft zu)
 
@@ -256,74 +256,74 @@ Die Implementierungsidee zu #peat stützt sich im Allgemeinen auf die [Wiederholu
   * Multiple Choice: Check (eine unbekannte Anzahl von n Antworten trifft zu)
 
 
-Für #peat sind alle genannten Fragekategorien theoretisch wichtig und relevant, realistischerweise jedoch im Rahmen dieses Projektes nicht abschließend umsetzbar. Für das Prototyping musste diese Menge daher eingeschränkt werden und die Wahl fiel ganz im agilen Sinne auf die Fragekategorie mit der geringsten Komplexität, den Ja/Nein-Fragen. Der offene Fragetyp war nicht die erste Wahl, da die softwareseitige Eigenbewertung der Antwort für einen ersten Prototypen zu komplex und nebensächlich ist.
+FÃ¼r #peat sind alle genannten Fragekategorien theoretisch wichtig und relevant, realistischerweise jedoch im Rahmen dieses Projektes nicht abschlieÃŸend umsetzbar. FÃ¼r das Prototyping musste diese Menge daher eingeschrÃ¤nkt werden und die Wahl fiel ganz im agilen Sinne auf die Fragekategorie mit der geringsten KomplexitÃ¤t, den Ja/Nein-Fragen. Der offene Fragetyp war nicht die erste Wahl, da die softwareseitige Eigenbewertung der Antwort fÃ¼r einen ersten Prototypen zu komplex und nebensÃ¤chlich ist.
 
 
-Hinsichtlich des optimalen **Wiederholungsintervalls** gibt die [Vergessenskurve](https://de.wikipedia.org/wiki/Vergessenskurve) erste wichtige Anhaltspunkte für die spätere Modellierung des Wiederholungsalgorithmus, denn sie veranschaulicht den Grad des Vergessens im Zeitverlauf. Aus ihr lässt sich aufgrund zahlreicher wissenschaftlicher Studien ableiten, dass durch Wiederholung des Lernstoffes, der Grad des Vergessens verringert werden kann, wobei der Abstand der Zeitpunkte der Wiederholung einen relevanten Einfluss hat. Der sogenannte Spacingeffekt besagt, dass Wissen besser erinnert wird, wenn zwischen der Erstaufnahme und der ersten bzw. den folgenden Wiederholung(en) ein größerer Zeitraum liegt.[^fußnote2] In der Literatur zu Lernmethoden finden sich diesbezüglich u.a. konkrete Empfehlungen: “Weitere Repetitionen sollen nach 24 Stunden, einer Woche, einem Monat, einem halben Jahr erfolgen.”[^fußnote3]
+Hinsichtlich des optimalen **Wiederholungsintervalls** gibt die [Vergessenskurve](https://de.wikipedia.org/wiki/Vergessenskurve) erste wichtige Anhaltspunkte fÃ¼r die spÃ¤tere Modellierung des Wiederholungsalgorithmus, denn sie veranschaulicht den Grad des Vergessens im Zeitverlauf. Aus ihr lÃ¤sst sich aufgrund zahlreicher wissenschaftlicher Studien ableiten, dass durch Wiederholung des Lernstoffes, der Grad des Vergessens verringert werden kann, wobei der Abstand der Zeitpunkte der Wiederholung einen relevanten Einfluss hat. Der sogenannte Spacingeffekt besagt, dass Wissen besser erinnert wird, wenn zwischen der Erstaufnahme und der ersten bzw. den folgenden Wiederholung(en) ein grÃ¶ÃŸerer Zeitraum liegt.[^fuÃŸnote2] In der Literatur zu Lernmethoden finden sich diesbezÃ¼glich u.a. konkrete Empfehlungen: â€œWeitere Repetitionen sollen nach 24 Stunden, einer Woche, einem Monat, einem halben Jahr erfolgen.â€[^fuÃŸnote3]
 
 
-[fußnote2]: Vgl. http://lexikon.stangl.eu/9382/spacing-effect-intervall-effekt/
+[fuÃŸnote2]: Vgl. http://lexikon.stangl.eu/9382/spacing-effect-intervall-effekt/
 
-[fußnote3]: Vgl. https://www.uni-due.de/edit/selbstmanagement/content/content_k6_2.html)
-
-
-Diese Empfehlungen sind für ein erstes Prototyping bzw. für den Anfang sehr praktisch und lassen sich direkt in einen Wiederholungsalgorithmus übertragen. Eine Vielzahl an Forschungsergebnissen auf diesem Gebiet legt jedoch eine differenziertere Betrachtung nahe; nicht zuletzt mit Blick auf die späteren USP der Anwendung.[^fußnote4] Daneben finden sich auch Informationen zu konkreten, frei verfügbaren Algorithmen[^fußnote5], die jedoch den zeitlichen Rahmen dieses Projektes sprengen würden und damit in den Ausblick gehören.
+[fuÃŸnote3]: Vgl. https://www.uni-due.de/edit/selbstmanagement/content/content_k6_2.html)
 
 
-[fußnote4]: Vgl. https://en.wikipedia.org/wiki/SuperMemo#Algorithms
-
-[fußnote5]: Vgl. https://www.supermemo.com/english/algsm11.htm, https://www.supermemo.com/english/algsm8.htm, https://www.supermemo.com/english/ol/sm6.htm, http://www.lac.ane.pl/pdf/5409.pdf
-
-##2.2. Vision und Geschäftsmodell (fertig | Thomas)
-
-Die **Vision** zu #peat ist, das geliebte Lerntool schlechthin für Wissbegierige zu sein.
+Diese Empfehlungen sind fÃ¼r ein erstes Prototyping bzw. fÃ¼r den Anfang sehr praktisch und lassen sich direkt in einen Wiederholungsalgorithmus Ã¼bertragen. Eine Vielzahl an Forschungsergebnissen auf diesem Gebiet legt jedoch eine differenziertere Betrachtung nahe; nicht zuletzt mit Blick auf die spÃ¤teren USP der Anwendung.[^fuÃŸnote4] Daneben finden sich auch Informationen zu konkreten, frei verfÃ¼gbaren Algorithmen[^fuÃŸnote5], die jedoch den zeitlichen Rahmen dieses Projektes sprengen wÃ¼rden und damit in den Ausblick gehÃ¶ren.
 
 
-#peat soll nicht nur eine Plattform sein, auf der die User ihre persönlichen Wissensgebiete vertiefen, sondern auch mit anderen Usern teilen oder von professionellen Wissensträgern erwerben können. Thematisch soll #peat universal angelegt sein und bis auf wenige Ausnahmen (z.B. Gewalt) kein Fachgebiet auslassen.
+[fuÃŸnote4]: Vgl. https://en.wikipedia.org/wiki/SuperMemo#Algorithms
+
+[fuÃŸnote5]: Vgl. https://www.supermemo.com/english/algsm11.htm, https://www.supermemo.com/english/algsm8.htm, https://www.supermemo.com/english/ol/sm6.htm, http://www.lac.ane.pl/pdf/5409.pdf
+
+##2.2. Vision und GeschÃ¤ftsmodell (fertig | Thomas)
+
+Die **Vision** zu #peat ist, das geliebte Lerntool schlechthin fÃ¼r Wissbegierige zu sein.
 
 
-Der Schlüssel, die Vision zur Realität werden zu lassen, liegt dabei in deutlich wahrnehmbaren und für den Markt relevanten bzw. treffenden **USP**. Diese könnten sein:
+#peat soll nicht nur eine Plattform sein, auf der die User ihre persÃ¶nlichen Wissensgebiete vertiefen, sondern auch mit anderen Usern teilen oder von professionellen WissenstrÃ¤gern erwerben kÃ¶nnen. Thematisch soll #peat universal angelegt sein und bis auf wenige Ausnahmen (z.B. Gewalt) kein Fachgebiet auslassen.
 
 
-* #peat ist einfach: #peat ist auf die wichtigsten Funktionen reduziert, getreu dem Motto “Keep learning simple”.
+Der SchlÃ¼ssel, die Vision zur RealitÃ¤t werden zu lassen, liegt dabei in deutlich wahrnehmbaren und fÃ¼r den Markt relevanten bzw. treffenden **USP**. Diese kÃ¶nnten sein:
 
-* #peat ist individuell: frag dich selbst mit deinen eigenen Worten. Der Wiederholungsalgorithmus lernt mit und passt sich deinen Lernbedürfnissen an.
 
-* #peat ist riesig und vielfältig:
+* #peat ist einfach: #peat ist auf die wichtigsten Funktionen reduziert, getreu dem Motto â€œKeep learning simpleâ€.
 
-  * alle Wissensgebiete sind zugänglich. Karteikarten sind obsolet.
+* #peat ist individuell: frag dich selbst mit deinen eigenen Worten. Der Wiederholungsalgorithmus lernt mit und passt sich deinen LernbedÃ¼rfnissen an.
+
+* #peat ist riesig und vielfÃ¤ltig:
+
+  * alle Wissensgebiete sind zugÃ¤nglich. Karteikarten sind obsolet.
 
   * Community: jeder Teilnehmer kann seine eigenen Themen mit allen anderen teilen
 
 * #peat ist effektiv und effizient: der Wiederholungsalgorithmus basiert auf wissenschaftlichen Untersuchungen und optimiert den Lernprozess
 
-* #peat ist überall: als mobile App und für Desktop ist #peat immer dabei
+* #peat ist Ã¼berall: als mobile App und fÃ¼r Desktop ist #peat immer dabei
 
 
-Die für den Erfolg notwendigen Investitionen bedürfen eines tragfähigen **Geschäftsmodells**, um die Existenz auch langfristig zu sichern. Die zentrale Frage dabei ist “Wie soll mal Geld verdient werden?”. Wie ein Blick auf die Startup-Szene zeigt, sind Geschäftsmodelle durchaus keine starren Gebilde [(Beispiel)](http://www.gruenderszene.de/allgemein/book-a-tiger-festangestellte-reinigungskraefte), sondern können abgewandelt, erweitert oder angepasst werden. Folgende Ideensammlung kommt für eine spätere Auswahl in Frage:
+Die fÃ¼r den Erfolg notwendigen Investitionen bedÃ¼rfen eines tragfÃ¤higen **GeschÃ¤ftsmodells**, um die Existenz auch langfristig zu sichern. Die zentrale Frage dabei ist â€œWie soll mal Geld verdient werden?â€. Wie ein Blick auf die Startup-Szene zeigt, sind GeschÃ¤ftsmodelle durchaus keine starren Gebilde [(Beispiel)](http://www.gruenderszene.de/allgemein/book-a-tiger-festangestellte-reinigungskraefte), sondern kÃ¶nnen abgewandelt, erweitert oder angepasst werden. Folgende Ideensammlung kommt fÃ¼r eine spÃ¤tere Auswahl in Frage:
 
 
 * Free: werbefinanzierte Einnahmen
 
 * Freemium:
 
- * eine funktionsarme (z.B. nicht alle Frageformate stehen zur Verfügung) Gratis-Version für alle sowie eine Vollversion gegen Bezahlung
+ * eine funktionsarme (z.B. nicht alle Frageformate stehen zur VerfÃ¼gung) Gratis-Version fÃ¼r alle sowie eine Vollversion gegen Bezahlung
 
   * denkbar ist auch eine modulare Erweiterung (z.B. neue Frage-Wiederholungs-Logik), die je Update kostet
 
 * Bezahl-App: jeder Download kostet (beginnend ab einer bestimmten Zahl an Usern)
 
-* Marktplatzmodell (In-App-Kauf): Wissensträger können Inhalte in Form von Paketen oder Abonnements bereitstellen, z.B. Wissensgebiet “UML”. Diese Pakete bzw. Abonnements kosten je Download. Davon geht ein Teil an #peat, der Rest an den Verfasser.
+* Marktplatzmodell (In-App-Kauf): WissenstrÃ¤ger kÃ¶nnen Inhalte in Form von Paketen oder Abonnements bereitstellen, z.B. Wissensgebiet â€œUMLâ€. Diese Pakete bzw. Abonnements kosten je Download. Davon geht ein Teil an #peat, der Rest an den Verfasser.
 
  ##2.3. Marktanalyse (fertig | Thomas)
 
 Da der Projektfokus auf dem Programmieren lag, geht es bei der Marktanalyse eher um eine grobe Einordnung der Implementierungsidee in den Markt der Anwendungssoftware.
 
 
-Thematisch bewegt sich #peat auf dem Markt der Bildungsanwendungen, der mit knapp 10% Anteil an allen verfügbaren Apps im Appstore, das [drittstärkste Segment](http://de.statista.com/statistik/daten/studie/166976/umfrage/beliebteste-kategorien-im-app-store/) darstellt. Da das Segment Bildung noch zu allgemein gefasst ist, muss weiter eingegrenzt werden. Nach Auffassung der Autoren ist #peat den elektronischen Karteikarten / Lernkarten zuzuordnen, die auch das Segment der elektronischen Vokabeltrainer mit einschließen.
+Thematisch bewegt sich #peat auf dem Markt der Bildungsanwendungen, der mit knapp 10% Anteil an allen verfÃ¼gbaren Apps im Appstore, das [drittstÃ¤rkste Segment](http://de.statista.com/statistik/daten/studie/166976/umfrage/beliebteste-kategorien-im-app-store/) darstellt. Da das Segment Bildung noch zu allgemein gefasst ist, muss weiter eingegrenzt werden. Nach Auffassung der Autoren ist #peat den elektronischen Karteikarten / Lernkarten zuzuordnen, die auch das Segment der elektronischen Vokabeltrainer mit einschlieÃŸen.
 
 
-In diesem Bereich gab es in den Appstores von Apple und Google zum Zeitpunkt des Projektes bereits zahlreiche Anwendungen: eine Suche am 25.06.2016 nach “Karteikarten” ergab im iTunes App Store ca. 17 Apps für Karteikarten und im Google Play Store mehr als 20 Apps (Vokabeltrainer wurden nichtberücksichtigt). Für eine echte Software-Entwicklung wäre eine genauere Analyse der einzelnen Anwendungen und deren Funktionalitäten erforderlich. An dieser Stelle sollen jedoch die ersten [Hinweise](http://www.studis-online.de/Studieren/studi-apps.php) der Google-Suche bzw. von digitalen [Ratgebern](https://allmaxx.de/magazin-uniglobale/studieren/unsere-10-besten-apps-zum-lernen) ausreichen, nach der folgende Anwendungen am bekanntesten / beliebtesten sind:
+In diesem Bereich gab es in den Appstores von Apple und Google zum Zeitpunkt des Projektes bereits zahlreiche Anwendungen: eine Suche am 25.06.2016 nach â€œKarteikartenâ€ ergab im iTunes App Store ca. 17 Apps fÃ¼r Karteikarten und im Google Play Store mehr als 20 Apps (Vokabeltrainer wurden nichtberÃ¼cksichtigt). FÃ¼r eine echte Software-Entwicklung wÃ¤re eine genauere Analyse der einzelnen Anwendungen und deren FunktionalitÃ¤ten erforderlich. An dieser Stelle sollen jedoch die ersten [Hinweise](http://www.studis-online.de/Studieren/studi-apps.php) der Google-Suche bzw. von digitalen [Ratgebern](https://allmaxx.de/magazin-uniglobale/studieren/unsere-10-besten-apps-zum-lernen) ausreichen, nach der folgende Anwendungen am bekanntesten / beliebtesten sind:
 
 
 * [Flashcards Deluxe](http://orangeorapple.com/)
@@ -333,34 +333,34 @@ In diesem Bereich gab es in den Appstores von Apple und Google zum Zeitpunkt des
 * [AnkiDroid Karteikarten](https://ankidroid.org)
 
 
-Die Hürden für einen erfolgreichen Einstieg in diesen Markt liegen durch die hohe Zahl der Anbieter bereits etwas höher. Jedoch scheinen sich die aktuellen Angebote auf den ersten Blick an Endverbraucher zu richten (B2C). Ggf. ist die Entwicklung eines B2B-Modells eine aussichtsreiche Überlegung.
+Die HÃ¼rden fÃ¼r einen erfolgreichen Einstieg in diesen Markt liegen durch die hohe Zahl der Anbieter bereits etwas hÃ¶her. Jedoch scheinen sich die aktuellen Angebote auf den ersten Blick an Endverbraucher zu richten (B2C). Ggf. ist die Entwicklung eines B2B-Modells eine aussichtsreiche Ãœberlegung.
 
 #3. Produktdefinition und Systementwurf (SOLL-Konzept)
 
 ##3.1. Vorgehensweise (fertig | Thomas)
 
-Die Systementwicklung fand entsprechend der Projektgröße agil statt und sollte nach Vorgabe durch den Auftraggeber (BA) der SCRUM-Methode folgen. Die in der Theorie eindeutig verteilten Rollen des Product Owners, des Scrum Masters, des Teams und ggf. weiterer externer Rollen war im Rahmen dieses Projektes nicht immer eindeutig bestimmt. Es kam vor, dass alle Teilnehmer sporadisch in die Rolle des Product Owners geschlüpft sind oder jedes Teammitglied spontan in die Rolle des Scrum Masters gewechselt ist. Zu allen Zeitpunkten gab es jedoch immer den Product Owner und das Team.
+Die Systementwicklung fand entsprechend der ProjektgrÃ¶ÃŸe agil statt und sollte nach Vorgabe durch den Auftraggeber (BA) der SCRUM-Methode folgen. Die in der Theorie eindeutig verteilten Rollen des Product Owners, des Scrum Masters, des Teams und ggf. weiterer externer Rollen war im Rahmen dieses Projektes nicht immer eindeutig bestimmt. Es kam vor, dass alle Teilnehmer sporadisch in die Rolle des Product Owners geschlÃ¼pft sind oder jedes Teammitglied spontan in die Rolle des Scrum Masters gewechselt ist. Zu allen Zeitpunkten gab es jedoch immer den Product Owner und das Team.
 
 
 Der Entwicklungsprozess zu #peat richtete sich nach dem Scrum-Prozess:
 
 
-* Vision: die Vision stimmt mit der Implementierungsidee überein und markierte den Beginn der Lernapp #peat
+* Vision: die Vision stimmt mit der Implementierungsidee Ã¼berein und markierte den Beginn der Lernapp #peat
 
-* Product Backlog: als Product Backlog verstehen sich Teile des Exposés, insbesondere die in UML modellierten Anwendungsfälle
+* Product Backlog: als Product Backlog verstehen sich Teile des ExposÃ©s, insbesondere die in UML modellierten AnwendungsfÃ¤lle
 
-* Sprint Planning: die 1-2 wöchentlichen Online-Meetings dienten u.a. der Planung, Schätzung und Bewertung der einzelnen Backlogs. Auf dieser Basis wurden dann die notwendigen Schritte im Hinblick auf das Projektziel erörtert. Die Ziele dieser Teilschritte sind mit den Sprintzielen identisch. Das Sprint Planning lässt sich anhand des [Protokolls](https://github.com/andreasmosig/peat/blob/master/doc/PROTOKOLLE.md) nachvollziehen.
+* Sprint Planning: die 1-2 wÃ¶chentlichen Online-Meetings dienten u.a. der Planung, SchÃ¤tzung und Bewertung der einzelnen Backlogs. Auf dieser Basis wurden dann die notwendigen Schritte im Hinblick auf das Projektziel erÃ¶rtert. Die Ziele dieser Teilschritte sind mit den Sprintzielen identisch. Das Sprint Planning lÃ¤sst sich anhand des [Protokolls](https://github.com/andreasmosig/peat/blob/master/doc/PROTOKOLLE.md) nachvollziehen.
 
 * Selected Product Backlog & Sprint Backlog: die im Sprint Planning definierten Teilschritte enthielten jeweils die notwendig umzusetzenden Aufgaben (Backlogs)
 
-* Sprint: die Sprints an sich hatten einen 1-2 wöchentlichen Rhythmus
+* Sprint: die Sprints an sich hatten einen 1-2 wÃ¶chentlichen Rhythmus
 
-* New Functionality: jeder Sprint enthielt jeweils eine in sich geschlossene Funktionalität, die dann zum nächsten Treffen präsentierbar sein sollte (usable Software)
+* New Functionality: jeder Sprint enthielt jeweils eine in sich geschlossene FunktionalitÃ¤t, die dann zum nÃ¤chsten Treffen prÃ¤sentierbar sein sollte (usable Software)
 
-* Retrospective: insbesondere die Zusammenkünfte zu den Präsenzen dienten der taktischen/strategischen Rückschau. Kleinere Rückschauen gab es zu den 1-2 wöchentlichen Online-Meetings.
+* Retrospective: insbesondere die ZusammenkÃ¼nfte zu den PrÃ¤senzen dienten der taktischen/strategischen RÃ¼ckschau. Kleinere RÃ¼ckschauen gab es zu den 1-2 wÃ¶chentlichen Online-Meetings.
 
 
-In der ursprünglichen Planung sollte der SCRUM-Prozess durch das Tool easyBacklog unterstützt werden. Das wurde zu Beginn des Projektes auch versucht, stellte sich jedoch schnell für das Projekt als zu umständlich heraus. Die weitreichenden Funktionen von easyBacklog eignen sich besser für größere Projekte und ein mit easyBacklog immer aktuell gepflegtes Backlog hätte in diesem Projekt eher ein ressourcenbindenden Dokumentationscharakter gehabt. Daher wurde für den weiteren Verlauf auf dieses Tool verzichtet.
+In der ursprÃ¼nglichen Planung sollte der SCRUM-Prozess durch das Tool easyBacklog unterstÃ¼tzt werden. Das wurde zu Beginn des Projektes auch versucht, stellte sich jedoch schnell fÃ¼r das Projekt als zu umstÃ¤ndlich heraus. Die weitreichenden Funktionen von easyBacklog eignen sich besser fÃ¼r grÃ¶ÃŸere Projekte und ein mit easyBacklog immer aktuell gepflegtes Backlog hÃ¤tte in diesem Projekt eher ein ressourcenbindenden Dokumentationscharakter gehabt. Daher wurde fÃ¼r den weiteren Verlauf auf dieses Tool verzichtet.
 
 
 ![Auszug aus dem easyBacklog](https://github.com/andreasmosig/peat/blob/master/doc/DOKU/auszug-easyBacklog.png)
@@ -370,50 +370,50 @@ In der ursprünglichen Planung sollte der SCRUM-Prozess durch das Tool easyBacklo
 Im Rahmen des **Requirements Engineering** geht es im Allgemeinen um die Frage, welche Anforderungen an das zu erstellende Softwaresystem existieren. Da diese Anforderungserhebung immer im Zusammenhang mit bestimmten Personengruppen steht, ist es erforderlich sich mit den (Ziel-)Gruppen bzw. Stakeholdern auseinanderzusetzen, an die #peat sich richtet bzw. die von #peat in irgendeiner Form betroffen sind.
 
 
-Auf Basis dieser Überlegungen haben sich diverse technische Fragen ergeben, die es im Zuge der Entwicklung zu beantworten galt.
+Auf Basis dieser Ãœberlegungen haben sich diverse technische Fragen ergeben, die es im Zuge der Entwicklung zu beantworten galt.
 
 
-Für #peat stehen vor allem folgende Stakeholder bzw. Anspruchsgruppen im Fokus:
+FÃ¼r #peat stehen vor allem folgende Stakeholder bzw. Anspruchsgruppen im Fokus:
 
 
 * Benutzer,
 
 * Investoren,
 
-* Geschäftspartner (Kollegen, Lieferanten),
+* GeschÃ¤ftspartner (Kollegen, Lieferanten),
 
-* Öffentlichkeit und
+* Ã–ffentlichkeit und
 
 * Staat,
 
 
-wobei im Rahmen des Projektes ausschließlich die späteren Benutzer betrachtet wurden.
+wobei im Rahmen des Projektes ausschlieÃŸlich die spÃ¤teren Benutzer betrachtet wurden.
 
 
-Das Volere Requirements Specification Template empfiehlt an dieser Stelle eine ausführliche Beschreibung der einzelnen Stakeholder inklusive fiktiver Persona-Profile und Gewichtungen, was jedoch den Rahmen dieser Arbeit überschritten hätte.
+Das Volere Requirements Specification Template empfiehlt an dieser Stelle eine ausfÃ¼hrliche Beschreibung der einzelnen Stakeholder inklusive fiktiver Persona-Profile und Gewichtungen, was jedoch den Rahmen dieser Arbeit Ã¼berschritten hÃ¤tte.
 
 
 Um dem elementaren Charakter der Anforderungen gerecht zu werden, war geplant, die Anforderungen wie folgt zu managen:
 
 
-* Dokumentation von Anwendungsfällen in Form eines Use-Case-Diagramms
+* Dokumentation von AnwendungsfÃ¤llen in Form eines Use-Case-Diagramms
 
-* anschließende Konkretisierung der Requirements mit Hilfe des Tools easyBacklog im Rahmen der Product-Backlog-Erstellung
-
-
-Wie bereits im Punkt 3.1 erwähnt, wurde die Arbeit mit easyBacklog aufgegeben, so dass nur das Exposé-Use-Case-Diagramm existiert und damit dieser Punkt etwas zu kurz kam.
+* anschlieÃŸende Konkretisierung der Requirements mit Hilfe des Tools easyBacklog im Rahmen der Product-Backlog-Erstellung
 
 
-![visionäres Use-Case-Diagramm zu #peat](https://github.com/andreasmosig/peat/blob/master/doc/UML/peat-use-case.png)
+Wie bereits im Punkt 3.1 erwÃ¤hnt, wurde die Arbeit mit easyBacklog aufgegeben, so dass nur das ExposÃ©-Use-Case-Diagramm existiert und damit dieser Punkt etwas zu kurz kam.
+
+
+![visionÃ¤res Use-Case-Diagramm zu #peat](https://github.com/andreasmosig/peat/blob/master/doc/UML/peat-use-case.png)
 
 
 
-Mit Blick auf das Projektziel (ausführbarer Prototyp) war es notwendig, diese sehr weit gefassten Anwendungsfälle auf ein realistisches Maß zu reduzieren. Die nachfolgenden, ausschließlich funktionalen Anforderungen stellen das Ergebnis dieser Eingrenzung dar und bilden die Basis für die vom Prototypen zu erfüllenden Funktionalitäten. Die Schlüsselwörter "MUSS", "SOLL" und "KANN" sind dabei entsprechend der Definition im RFC 2119 zu interpretieren; Muss (Pflicht), Soll (Wunsch), Wird (Absicht) und Kann (Vorschlag).
+Mit Blick auf das Projektziel (ausfÃ¼hrbarer Prototyp) war es notwendig, diese sehr weit gefassten AnwendungsfÃ¤lle auf ein realistisches MaÃŸ zu reduzieren. Die nachfolgenden, ausschlieÃŸlich funktionalen Anforderungen stellen das Ergebnis dieser Eingrenzung dar und bilden die Basis fÃ¼r die vom Prototypen zu erfÃ¼llenden FunktionalitÃ¤ten. Die SchlÃ¼sselwÃ¶rter "MUSS", "SOLL" und "KANN" sind dabei entsprechend der Definition im RFC 2119 zu interpretieren; Muss (Pflicht), Soll (Wunsch), Wird (Absicht) und Kann (Vorschlag).
 
 
 ###Prototyp:
 
-* Muss I: Frage und Antwort speichern für Choice (Ja/Nein) - GUI und Datenbank
+* Muss I: Frage und Antwort speichern fÃ¼r Choice (Ja/Nein) - GUI und Datenbank
 
 * Muss II: Antwort (true, false) aus DB lesen und per Weiter-Button ausgeben - GUI und Datenbank
 
@@ -433,27 +433,27 @@ Mit Blick auf das Projektziel (ausführbarer Prototyp) war es notwendig, diese se
 
 * Wird I: Webbasierte Desktop-Version
 
-* Wird II: Alle Fragetyp-Varianten in allen Activities berücksichtigen (generischer Code)
+* Wird II: Alle Fragetyp-Varianten in allen Activities berÃ¼cksichtigen (generischer Code)
 
 
 * Kann I: Userverwaltung, Standarduser BENUTZER#1, andere Benutzer eingeben
 
-* Kann II: Abspeichern Fragethema, anderes Thema durch Benutzer auswählen
+* Kann II: Abspeichern Fragethema, anderes Thema durch Benutzer auswÃ¤hlen
 
-* Kann III: Eigenständige Verwaltung der Wiederholungslogik durch den Benutzer (settings)
+* Kann III: EigenstÃ¤ndige Verwaltung der Wiederholungslogik durch den Benutzer (settings)
 
 
-Nichtfunktionale Kriterien wurden im Rahmen dieses Projektes nicht berücksichtigt und werden im Ausblick kurz angerissen.
+Nichtfunktionale Kriterien wurden im Rahmen dieses Projektes nicht berÃ¼cksichtigt und werden im Ausblick kurz angerissen.
 
 ##3.3. Design und Architektur (fertig | Andi)
 
-In der Analysephase galt es zunächst herauszufinden, aus welchen Komponenten das System bestehen würde und welche (nicht-) funktionalen Anforderungen die Komponenten erfüllen sollen. Wie in dem vorangegangenen Kapitel zu lesen ist, hat man sich auf bestimmte Grade der Verbindlichkeit hins. der zu erfüllenden Kriterien der Lernapp konzentriert. In einem derart agilen Projekt ist es wichtig, einen Schwerpunkt zu setzen.
+In der Analysephase galt es zunÃ¤chst herauszufinden, aus welchen Komponenten das System bestehen wÃ¼rde und welche (nicht-) funktionalen Anforderungen die Komponenten erfÃ¼llen sollen. Wie in dem vorangegangenen Kapitel zu lesen ist, hat man sich auf bestimmte Grade der Verbindlichkeit hins. der zu erfÃ¼llenden Kriterien der Lernapp konzentriert. In einem derart agilen Projekt ist es wichtig, einen Schwerpunkt zu setzen.
 
 
-In den initialen Überlegungen, welche sich in diversen Entwürfen wiederspiegeln ([Web-GUI](https://github.com/andreasmosig/peat/tree/master/doc/MOCKUPS/WEB)), ist zunächst der Weg erkennbar gewesen, dass es zwei Benutzeroberflächen geben würde (Web, App), die auf eine gemeinsame, auf einem Webserver installierte Datenbank (z.B. LAMP) zugreifen sollten. Dabei sollte die Web-GUI zum Erfassen und Lesen von Daten dienen (Schreib-, Lesezugriff per Benutzerkonto), die App-GUI hingegen das Lesen der Daten sowie das Konfigurieren der Wiederholungslogik zulassen.
+In den initialen Ãœberlegungen, welche sich in diversen EntwÃ¼rfen wiederspiegeln ([Web-GUI](https://github.com/andreasmosig/peat/tree/master/doc/MOCKUPS/WEB)), ist zunÃ¤chst der Weg erkennbar gewesen, dass es zwei BenutzeroberflÃ¤chen geben wÃ¼rde (Web, App), die auf eine gemeinsame, auf einem Webserver installierte Datenbank (z.B. LAMP) zugreifen sollten. Dabei sollte die Web-GUI zum Erfassen und Lesen von Daten dienen (Schreib-, Lesezugriff per Benutzerkonto), die App-GUI hingegen das Lesen der Daten sowie das Konfigurieren der Wiederholungslogik zulassen.
 
 
-Der Ergebnisfokus für diese Projektarbeit lag jedoch auf der Entwicklung der App und demnach mündeten die Analyse und das daraus resultierende theoretische Konzept im Laufe eines iterativen Prozesses in dem Design respektive in der Entwicklung der App-UI. Mit der Version **v1.0.1** wurde schließlich die App-Benutzeroberfläche fertiggestellt. 
+Der Ergebnisfokus fÃ¼r diese Projektarbeit lag jedoch auf der Entwicklung der App und demnach mÃ¼ndeten die Analyse und das daraus resultierende theoretische Konzept im Laufe eines iterativen Prozesses in dem Design respektive in der Entwicklung der App-UI. Mit der Version **v1.0.1** wurde schlieÃŸlich die App-BenutzeroberflÃ¤che fertiggestellt. 
 
 
 ###Design
@@ -461,13 +461,13 @@ Der Ergebnisfokus für diese Projektarbeit lag jedoch auf der Entwicklung der App
 Unter (Software-)Design versteht man grob den Prozess zwischen Anforderungsanalyse und der Implementierung.
 
 
-Aufbauend auf den mehr oder weniger konkreten Vorstellungen hinsichtlich der zu entwickelnden App, wurde im Anschluss an das RE die grundlegende Architektur definiert, zunächst nur wenige Komponenten (i.e. Android-Activities) spezifiziert und die wichtigsten Interaktionen transparent gemacht. Das Design ist auch in dem vorliegenden Projekt die Grundlage für den Beginn der konkreten Implementierung der theoretischen und praktischen Aspekte der Lernapp gewesen.
+Aufbauend auf den mehr oder weniger konkreten Vorstellungen hinsichtlich der zu entwickelnden App, wurde im Anschluss an das RE die grundlegende Architektur definiert, zunÃ¤chst nur wenige Komponenten (i.e. Android-Activities) spezifiziert und die wichtigsten Interaktionen transparent gemacht. Das Design ist auch in dem vorliegenden Projekt die Grundlage fÃ¼r den Beginn der konkreten Implementierung der theoretischen und praktischen Aspekte der Lernapp gewesen.
 
 
-Die Designphase schloss sich (wie in der Theorie empfohlen) an die Analysephase an, weshalb ein Kern an Anwendungsfällen bezogen auf den Funktionsumfang der App bereits definiert wurde. In easyBacklog wurden, wie bereits eingangs beschrieben, zunächst die wichtigsten Use Cases mit Rollen, Ereignissen und Ergebnissen dokumentiert und schließlich in aus der Entwicklungsarbeit resultierenden Protokollen und fortlaufend aktualisierten Task-Aufstellungen aktualisiert. Man sollte zum Start einen möglichst guten Überblick haben, d.h. funktionale Anforderungen sollten bekannt sein (z.B. das Speichern und Lesen von Fragen und Antworten in die/aus der Datenbank) als auch nicht-funktionale Anforderungen (z.B. Usability der UI). Es fiel früh auf, dass man nicht alles vorher festlegen kann und ebenso, dass zu viele verschiedene Werkzeuge das Hauptaugenmerk, nämlich die Entwicklung/Programmierung, verwischen. Die Ersten Entwürfe, die mittels [Lumzy](www.lumzy.com) angefertigt worden sind, zeigten schon früh die Anforderungen an die zu entwickelnde Lernapp #peat:
+Die Designphase schloss sich (wie in der Theorie empfohlen) an die Analysephase an, weshalb ein Kern an AnwendungsfÃ¤llen bezogen auf den Funktionsumfang der App bereits definiert wurde. In easyBacklog wurden, wie bereits eingangs beschrieben, zunÃ¤chst die wichtigsten Use Cases mit Rollen, Ereignissen und Ergebnissen dokumentiert und schlieÃŸlich in aus der Entwicklungsarbeit resultierenden Protokollen und fortlaufend aktualisierten Task-Aufstellungen aktualisiert. Man sollte zum Start einen mÃ¶glichst guten Ãœberblick haben, d.h. funktionale Anforderungen sollten bekannt sein (z.B. das Speichern und Lesen von Fragen und Antworten in die/aus der Datenbank) als auch nicht-funktionale Anforderungen (z.B. Usability der UI). Es fiel frÃ¼h auf, dass man nicht alles vorher festlegen kann und ebenso, dass zu viele verschiedene Werkzeuge das Hauptaugenmerk, nÃ¤mlich die Entwicklung/Programmierung, verwischen. Die Ersten EntwÃ¼rfe, die mittels [Lumzy](www.lumzy.com) angefertigt worden sind, zeigten schon frÃ¼h die Anforderungen an die zu entwickelnde Lernapp #peat:
 
 
-####a) App (für Version **v1.0.1**):
+####a) App (fÃ¼r Version **v1.0.1**):
 
 ![Push] (https://github.com/andreasmosig/peat/blob/master/doc/MOCKUPS/APP/pushnotification.png)
 
@@ -479,14 +479,14 @@ Die Designphase schloss sich (wie in der Theorie empfohlen) an die Analysephase 
 
 ![Einstellungen] (https://github.com/andreasmosig/peat/blob/master/doc/MOCKUPS/APP/einstellungen.png)
 
-####b) Web (für Version **v2.0.1**):
+####b) Web (fÃ¼r Version **v2.0.1**):
 
 ![Landing] (https://github.com/andreasmosig/peat/blob/master/doc/MOCKUPS/WEB/landing.png)
 
 ![Konfiguration] (https://github.com/andreasmosig/peat/blob/master/doc/MOCKUPS/WEB/konfiguration.png)
 
 
-Es stellte sich früh heraus, dass bei agilen Methoden der Softwareentwicklung die Herangehensweise an das Design bzw. die Architektur eine grundlegend andere ist, als bei den klassischen Vorgehensweisen, wie dem Wasserfallmodell, bei denen auf eine lange Analyse- eine ebenfalls lange Designphase folgt. Aufgrund der zeitlichen Einschränkung und des geplanten Vorhabens, wurde auch bei dem Softwareprojekt #peat direkt mit einem Prototyp begonnen, der die grundlegende Architektur enthielt. Dies war möglich, da die installierten Eclipse-Plugins bereits das nachfolgend etwas näher beschriebene Model View ModelView- Architekturmuster mitlieferten (AVD/-SDK-Manager, XML- und Java-spezifische Bibliotheken, SQLite, etc.). Es wurden zu Beginn nur wenige Komponenten spezifiziert, wie bspw. die splash-Seite (inkl. Musik), die MainActivity mit dem Quiz sowie grundlengende Einstellungen und die [CI](https://de.wikipedia.org/wiki/Corporate_Identity) der App. D.h. der erste [Spike](https://de.wikipedia.org/wiki/Prototyping_(Softwareentwicklung)#Vertikales_Prototyping_.28Durchstich.29) repräsentierte bereits einen kleinen Ausschnitt aus dem Design der finalen App. Daraus konnte geschlossen werden, wo die Reise hingehen wird und welche Anforderungen initial nicht berücksichtigt wurden. In der Folge konnten Schwächen relativ früh aufgedeckt werden, unterstützt durch eine stetige Qualitätssicherung (Debuggen, Tests, ExceptionHandler, s. [3.4.](##3.4. Konzept der Qualitätssicherung)). Der jeweils nächste Meilenstein konnte den Designbereich stetig iterativ erweitern und optimieren.
+Es stellte sich frÃ¼h heraus, dass bei agilen Methoden der Softwareentwicklung die Herangehensweise an das Design bzw. die Architektur eine grundlegend andere ist, als bei den klassischen Vorgehensweisen, wie dem Wasserfallmodell, bei denen auf eine lange Analyse- eine ebenfalls lange Designphase folgt. Aufgrund der zeitlichen EinschrÃ¤nkung und des geplanten Vorhabens, wurde auch bei dem Softwareprojekt #peat direkt mit einem Prototyp begonnen, der die grundlegende Architektur enthielt. Dies war mÃ¶glich, da die installierten Eclipse-Plugins bereits das nachfolgend etwas nÃ¤her beschriebene Model View ModelView- Architekturmuster mitlieferten (AVD/-SDK-Manager, XML- und Java-spezifische Bibliotheken, SQLite, etc.). Es wurden zu Beginn nur wenige Komponenten spezifiziert, wie bspw. die splash-Seite (inkl. Musik), die MainActivity mit dem Quiz sowie grundlengende Einstellungen und die [CI](https://de.wikipedia.org/wiki/Corporate_Identity) der App. D.h. der erste [Spike](https://de.wikipedia.org/wiki/Prototyping_(Softwareentwicklung)#Vertikales_Prototyping_.28Durchstich.29) reprÃ¤sentierte bereits einen kleinen Ausschnitt aus dem Design der finalen App. Daraus konnte geschlossen werden, wo die Reise hingehen wird und welche Anforderungen initial nicht berÃ¼cksichtigt wurden. In der Folge konnten SchwÃ¤chen relativ frÃ¼h aufgedeckt werden, unterstÃ¼tzt durch eine stetige QualitÃ¤tssicherung (Debuggen, Tests, ExceptionHandler, s. [3.4.](##3.4. Konzept der QualitÃ¤tssicherung)). Der jeweils nÃ¤chste Meilenstein konnte den Designbereich stetig iterativ erweitern und optimieren.
 
 
 In dieser Phase wurden nach und nach die Komponenten (i.e. Activities, XML-Sheets und Java-Klassen/-Methoden, Android-Manifest) definiert und gestaltet. Daraus entwickelte sich die finale Struktur und Architektur. Hinzu kam die Logik und Persistenz der Datenbank.
@@ -513,98 +513,98 @@ Daraus ergab sich eine typische Mehrschichtenarchitektur (N-Tier) mit User Inter
 
 Die Verwendung einer Android-Plattform als Basis der App-Entwicklung gab quasi die [Architektur](https://de.wikipedia.org/wiki/Model_View_ViewModel) bereits vor ![MVVM-Konzept](https://github.com/andreasmosig/peat/blob/master/doc/MIS/MVVM-Konzept.png)
 
-Abbildung: Die Datenbindung (Data Binding) ermöglicht eine Trennung von der View (z. B. XAML-Markup oder HTML) und dem Model für die Darstellung.
+Abbildung: Die Datenbindung (Data Binding) ermÃ¶glicht eine Trennung von der View (z. B. XAML-Markup oder HTML) und dem Model fÃ¼r die Darstellung.
 
 
-Das Model View ViewModel (MVVM) ist ein Entwurfsmuster. Es dient zur Trennung von Darstellung und Logik der Benutzerschnittstelle (UI). Gegenüber dem MVC-Muster (Model-View-Controller) kann die Testbarkeit verbessert und der Implementierungsaufwand reduziert werden, da keine separaten Controller-Instanzen erforderlich sind.
+Das Model View ViewModel (MVVM) ist ein Entwurfsmuster. Es dient zur Trennung von Darstellung und Logik der Benutzerschnittstelle (UI). GegenÃ¼ber dem MVC-Muster (Model-View-Controller) kann die Testbarkeit verbessert und der Implementierungsaufwand reduziert werden, da keine separaten Controller-Instanzen erforderlich sind.
 
 
 Die drei Komponenten sind:
 
-* Model: Datenzugriffsschicht für die Inhalte, enthält die gesamte Geschäftslogik
+* Model: Datenzugriffsschicht fÃ¼r die Inhalte, enthÃ¤lt die gesamte GeschÃ¤ftslogik
 
-* View: durch grafische Benutzeroberfläche (GUI) angezeigte Elemente, austauschbar
+* View: durch grafische BenutzeroberflÃ¤che (GUI) angezeigte Elemente, austauschbar
 
 * ViewModel: UI-Logik (Model der View), Bindeglied, ruft Methoden oder Dienste auf
 
 
 
-Dieses Muster erlaubte eine gewisse Trennung der Rollen im Projektteam. Es gab UI-Designer (A. Mosig, T. Ricklinkat) und Entwickler (T. Ricklinkat, S. Pawelleck). Die Designer (v.a. A. Mosig) konnten ihren Fokus auf die sogenannte [User Experience](https://de.wikipedia.org/wiki/User_Experience) setzen und die Entwickler die UI- (v.a. T. Ricklinkat) sowie Datenbank-Logik (v.a. S. Pawelleck) schreiben. Daraus formte sich in effizienter Arbeitsteilung die lauffähige Anwendung #peat.
+Dieses Muster erlaubte eine gewisse Trennung der Rollen im Projektteam. Es gab UI-Designer (A. Mosig, T. Ricklinkat) und Entwickler (T. Ricklinkat, S. Pawelleck). Die Designer (v.a. A. Mosig) konnten ihren Fokus auf die sogenannte [User Experience](https://de.wikipedia.org/wiki/User_Experience) setzen und die Entwickler die UI- (v.a. T. Ricklinkat) sowie Datenbank-Logik (v.a. S. Pawelleck) schreiben. Daraus formte sich in effizienter Arbeitsteilung die lauffÃ¤hige Anwendung #peat.
 
-##3.4. Konzept der Qualitätssicherung (fast fertig | Thomas, Andi, Steven)
+##3.4. Konzept der QualitÃ¤tssicherung (fast fertig | Thomas, Andi, Steven)
 
-Da der Projektfokus auf dem Programmieren lag, geht es in diesem Punkt weniger um die Prozessqualität als vielmehr um die Qualität der Software an sich. Das Hauptinstrument zur Sicherstellung und Erhöhung der Softwarequalität sind Softwaretests, also automatische oder manuelle Verfahren zur Verifikation und Validierung von Software.
-
-
-Für #peat kamen in Anbetracht der Zeit insbesondere folgende Tests in Frage:
+Da der Projektfokus auf dem Programmieren lag, geht es in diesem Punkt weniger um die ProzessqualitÃ¤t als vielmehr um die QualitÃ¤t der Software an sich. Das Hauptinstrument zur Sicherstellung und ErhÃ¶hung der SoftwarequalitÃ¤t sind Softwaretests, also automatische oder manuelle Verfahren zur Verifikation und Validierung von Software.
 
 
-* Funktionale Tests bzw. Akzeptanztests: rückblickend waren manuelle Funktionstests die häufigsten Tests
+FÃ¼r #peat kamen in Anbetracht der Zeit insbesondere folgende Tests in Frage:
 
-* Unit-Tests: Assertions wären gut geeignet
+
+* Funktionale Tests bzw. Akzeptanztests: rÃ¼ckblickend waren manuelle Funktionstests die hÃ¤ufigsten Tests
+
+* Unit-Tests: Assertions wÃ¤ren gut geeignet
 
 * Grenzwert-Tests:  um das Funktionieren der Datenbank sicherzustellen, sollten Extremwerte genutzt werden
 
-* Installationstests: höchste Androidversion um möglichst viele Geräte abzudecken?
+* Installationstests: hÃ¶chste Androidversion um mÃ¶glichst viele GerÃ¤te abzudecken?
 
 
-Im Allgemeinen sollte die Programmierung folgenden Mindeststandards genügen:
+Im Allgemeinen sollte die Programmierung folgenden Mindeststandards genÃ¼gen:
 
 
-* Kommentare: jede sinnhaft zusammenhängende Codeeinheit soll kommentiert werden
+* Kommentare: jede sinnhaft zusammenhÃ¤ngende Codeeinheit soll kommentiert werden
 
 * Logdatei: wichtige Schritte bzw. Teilschritte eines Algorithmus sollen geloggt werden. Beispiel Logeintrag: 
 
-‘Log.d(LOG_TAG, "Eine Referenz auf die Datenbank wird jetzt angefragt.");’
+â€˜Log.d(LOG_TAG, "Eine Referenz auf die Datenbank wird jetzt angefragt.");â€™
 
-* Exception Handling: zur Erhöhung der Robustheit der Anwendung sollen alle kritischen Codestellen aufgefangen werden; frei nach Murphys Gesetz: was schief gehen kann, muss aufgefangen werden.
+* Exception Handling: zur ErhÃ¶hung der Robustheit der Anwendung sollen alle kritischen Codestellen aufgefangen werden; frei nach Murphys Gesetz: was schief gehen kann, muss aufgefangen werden.
 
 
 Ein wichtiger Punkt beim Exception Handling ist das Auffangen nicht behandelter Ausnahmen im Code. In diesem Projekt wurde dies mit folgendem Methodenaufruf realisiert:
 
 
-‘Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler(this));’
+â€˜Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler(this));â€™
 
 
-Eingesetzt in jede Activity, liefert dieser Aufruf den relevanten Auszug aus dem LogCat der Android-Entwicklungsumgebung. Hieraus ließ sich unmittelbar auf die Stelle im Code verweisen, die es zu debuggen galt.
+Eingesetzt in jede Activity, liefert dieser Aufruf den relevanten Auszug aus dem LogCat der Android-Entwicklungsumgebung. Hieraus lieÃŸ sich unmittelbar auf die Stelle im Code verweisen, die es zu debuggen galt.
 
 
-**Perspektivisch** sollte bei hinreichend hoher Anzahl der Testfälle eine Testsuite angelegt werden, also die Testfälle in ein eigenes Package ausgelagert werden.  
+**Perspektivisch** sollte bei hinreichend hoher Anzahl der TestfÃ¤lle eine Testsuite angelegt werden, also die TestfÃ¤lle in ein eigenes Package ausgelagert werden.  
 
-Für Android-Apps stehen darüberhinaus auch Testtools zur Verfügung wie z.B. Testdroid, einem Cloud-Service, für Installations- und JUnit-Tests. Für Last- und Performance-Tests gibt es ebenfalls Dienstleister, z.B. [NeoLoad](http://www.neotys.de/solutions/mobile-load-testing).
+FÃ¼r Android-Apps stehen darÃ¼berhinaus auch Testtools zur VerfÃ¼gung wie z.B. Testdroid, einem Cloud-Service, fÃ¼r Installations- und JUnit-Tests. FÃ¼r Last- und Performance-Tests gibt es ebenfalls Dienstleister, z.B. [NeoLoad](http://www.neotys.de/solutions/mobile-load-testing).
 
 #4. Umsetzung
 
-Vieles wurde bereits hinsichtlich der Abweichungen zur Ist- und Soll-Analyse/-Konzeption und der eigentlichen Vorgehensweise gesagt. Aufbauend auf den Vorgaben des BA und den anfänglich verwendeten Software-Tools, stand zunächst auch ein klarer Ablauf fest. In praxi wurde jedoch entschieden, sich auf relevante Belange zu fokussieren, i.e. der Programmierung und Implementierung der Muss-Kriterien. Parallel wurden Protokolle geführt, Aufgaben koordiniert und Statusberichte erstellt und diese wiederum an den BA alle zwei Wochen kommuniziert. Die aus der stetigen Kommunikation resultierende Transparenz ermöglichte auch ohne die eingangs genannten Projektmanagement-Werkzeuge eine strukturierte Umsetzung der an das Projektteam sowie an das System gestellten Anforderungen.
+Vieles wurde bereits hinsichtlich der Abweichungen zur Ist- und Soll-Analyse/-Konzeption und der eigentlichen Vorgehensweise gesagt. Aufbauend auf den Vorgaben des BA und den anfÃ¤nglich verwendeten Software-Tools, stand zunÃ¤chst auch ein klarer Ablauf fest. In praxi wurde jedoch entschieden, sich auf relevante Belange zu fokussieren, i.e. der Programmierung und Implementierung der Muss-Kriterien. Parallel wurden Protokolle gefÃ¼hrt, Aufgaben koordiniert und Statusberichte erstellt und diese wiederum an den BA alle zwei Wochen kommuniziert. Die aus der stetigen Kommunikation resultierende Transparenz ermÃ¶glichte auch ohne die eingangs genannten Projektmanagement-Werkzeuge eine strukturierte Umsetzung der an das Projektteam sowie an das System gestellten Anforderungen.
 
 
-Der tatsächliche Ablauf war wie folgt:
+Der tatsÃ¤chliche Ablauf war wie folgt:
 
-* Zunächst wurden in einem Kick-Off-Meeting mit dem BA und den künftigen Projektmitgliedern erste Informationen ausgetauscht sowie Restriktionen und Termine festgelegt. Das Team begann anschließend erste Ideen auszutauschen, sich zu einigen und Grundlagen zur Implementierung zu schaffen. Es wurden erste grobe Entwürfe gestaltet, welche wenige aber relevante Bestandteile der zu entwickelnden App enthalten sollten, aber auch bereits die Entwicklungsumgebung aufgesetzt. Entwickelt wurde mit Eclipse und den für die Entwicklung einer Android-App entsprechend notwendigen Plugins, wie z.B. den AVD- sowie den SDK-Manager.
-
-
-* Bevor man aber überhaupt beginnen konnte, musste ein das eigene Projekt einleitende und beschreibende Exposé inkl. eines Milestone-Plans erstellt und vom BA abgenommen werden.
+* ZunÃ¤chst wurden in einem Kick-Off-Meeting mit dem BA und den kÃ¼nftigen Projektmitgliedern erste Informationen ausgetauscht sowie Restriktionen und Termine festgelegt. Das Team begann anschlieÃŸend erste Ideen auszutauschen, sich zu einigen und Grundlagen zur Implementierung zu schaffen. Es wurden erste grobe EntwÃ¼rfe gestaltet, welche wenige aber relevante Bestandteile der zu entwickelnden App enthalten sollten, aber auch bereits die Entwicklungsumgebung aufgesetzt. Entwickelt wurde mit Eclipse und den fÃ¼r die Entwicklung einer Android-App entsprechend notwendigen Plugins, wie z.B. den AVD- sowie den SDK-Manager.
 
 
-* Wie bereits eingangs geschildert, war die Vorgabe des BA, das Projekt iterativ und agil anzugehen. Daher wurde im Anschluss an die kurze aber intensive Analysephase, welche u.a. das Erzeugen von Use Cases in easyBacklog sowie weiteren Modellen und Diagrammen zur Modellierung des Aufbaus und der Anforderungen an das zu entwickelnde System beinhaltete, direkt die Designphase inkl. Prototyping angesiedelt. Es wurden erste Funktionen (splash-Seite inkl. Sound, Titel sowie zwei erste Quiz-Buttons (quiz, score) integriert, welche aber zunächst nur zur Orientierung dienten.
+* Bevor man aber Ã¼berhaupt beginnen konnte, musste ein das eigene Projekt einleitende und beschreibende ExposÃ© inkl. eines Milestone-Plans erstellt und vom BA abgenommen werden.
 
 
-* Das Prototyping enthielt regelmäßige Releases/Versionen (in GitHub auch Tagging genannt) mit entsprechender Beschreibung der enthaltenen Erweiterungen. Der stets aktuellste und lauffähige Stand wurde als apk-Datei in einen für den BA sowie alle Projektmitglieder frei zugänglichen Dropbox-Ordner geladen. Mittels der bereits erwähnten AVD- und SDK-Manager, welche einen Emulator bereitstellten, aber auch in Verwendung der geladenen apk-Datei, konnten unmittelbar und umfassende Tests des jeweiligen Entwicklungsstandes der Lernapp erfolgen.
+* Wie bereits eingangs geschildert, war die Vorgabe des BA, das Projekt iterativ und agil anzugehen. Daher wurde im Anschluss an die kurze aber intensive Analysephase, welche u.a. das Erzeugen von Use Cases in easyBacklog sowie weiteren Modellen und Diagrammen zur Modellierung des Aufbaus und der Anforderungen an das zu entwickelnde System beinhaltete, direkt die Designphase inkl. Prototyping angesiedelt. Es wurden erste Funktionen (splash-Seite inkl. Sound, Titel sowie zwei erste Quiz-Buttons (quiz, score) integriert, welche aber zunÃ¤chst nur zur Orientierung dienten.
+
+
+* Das Prototyping enthielt regelmÃ¤ÃŸige Releases/Versionen (in GitHub auch Tagging genannt) mit entsprechender Beschreibung der enthaltenen Erweiterungen. Der stets aktuellste und lauffÃ¤hige Stand wurde als apk-Datei in einen fÃ¼r den BA sowie alle Projektmitglieder frei zugÃ¤nglichen Dropbox-Ordner geladen. Mittels der bereits erwÃ¤hnten AVD- und SDK-Manager, welche einen Emulator bereitstellten, aber auch in Verwendung der geladenen apk-Datei, konnten unmittelbar und umfassende Tests des jeweiligen Entwicklungsstandes der Lernapp erfolgen.
 
 
 * Eine weitreichende Erweiterung - und ebenfalls Muss-Kriterium der App - sollte die Erstellung und Implementierung des Datenbank-Schemas in das Android-Projekt und die Eclipse-Umgebung bedeuten (relevante Klassen: PeatDataSource, PeatDBHelper und Question).
 
 
-* Darauf aufbauend erfolgten weiterhin regelmäßige Tests und Erweiterungen, um die anfangs an das Projekt gestellten Anforderungen sowie Muss- und Soll-Kriterien in Form der modellierten Use Cases zu erfüllen.
+* Darauf aufbauend erfolgten weiterhin regelmÃ¤ÃŸige Tests und Erweiterungen, um die anfangs an das Projekt gestellten Anforderungen sowie Muss- und Soll-Kriterien in Form der modellierten Use Cases zu erfÃ¼llen.
 
 
-* Schließlich konnte ein lauffähiger Abgabe-Prototyp final getestet und erzeugt sowie die Enddkumentation des Projektes #peat abgeschlossen werden.
+* SchlieÃŸlich konnte ein lauffÃ¤higer Abgabe-Prototyp final getestet und erzeugt sowie die Enddkumentation des Projektes #peat abgeschlossen werden.
 
 
 * Die Abgabe der Arbeitsergebnisse erfolgte am 3. Juli.
 
 
-* Die Präsentation vor dem BA fand am 8. Juli an der Beuth Hochschule für Technik statt.
+* Die PrÃ¤sentation vor dem BA fand am 8. Juli an der Beuth Hochschule fÃ¼r Technik statt.
 
 ##4.1. Plattform (Thomas, Andi, Steven)
 
@@ -612,7 +612,7 @@ Android, SDK und AVD, Java, XML, SQLite
 
 ##4.2. GUI (Thomas, Andi)
 
-Das bereits beschriebene Architektur-Muster der Android-Entwicklungsumgebung ermöglicht es, dass zu jeder Komponente der App, in dem Fall zu jeder Activity, jeweils eine eigene Struktur gebaut werden kann. Die objektorientierte Programmierung wiederum stellt den globalen Zugriff und die Wiederverwendung von Objekten sicher. In der Android-Manifest-Datei wird die Hierarchie der Komponenten definiert. Nachstehend folgt ein Überblick über die wichtigsten Komponenten, aufbauend auf den Entwürfen der Designphase:
+Das bereits beschriebene Architektur-Muster der Android-Entwicklungsumgebung ermÃ¶glicht es, dass zu jeder Komponente der App, in dem Fall zu jeder Activity, jeweils eine eigene Struktur gebaut werden kann. Die objektorientierte Programmierung wiederum stellt den globalen Zugriff und die Wiederverwendung von Objekten sicher. In der Android-Manifest-Datei wird die Hierarchie der Komponenten definiert. Nachstehend folgt ein Ãœberblick Ã¼ber die wichtigsten Komponenten, aufbauend auf den EntwÃ¼rfen der Designphase:
 
 
 [Jeder sein Programmier-Anteil hins. XML]
@@ -630,7 +630,7 @@ Jeder sein Programmier-Anteil.
 
 ##4.4. Persistenz (Steven, Andi)
 
-Zu Beginn, d.h. für den ersten lauffähigen Prototyp in der Designphase, lag der Fokus darauf, die ersten Komponenten abzustecken und eine Idee zu entwickeln, wie die Version **v1.0.1** zum Abgabetermin im Juli aussehen könnte. Demnach wurden die ersten Fragen in ein starres Array geschrieben, welches wiederum mittels eines if-Statements ausgelesen wurde. Nachstehende Abbildungen zeigen beispielhaft erläutertes Szenario:
+Zu Beginn, d.h. fÃ¼r den ersten lauffÃ¤higen Prototyp in der Designphase, lag der Fokus darauf, die ersten Komponenten abzustecken und eine Idee zu entwickeln, wie die Version **v1.0.1** zum Abgabetermin im Juli aussehen kÃ¶nnte. Demnach wurden die ersten Fragen in ein starres Array geschrieben, welches wiederum mittels eines if-Statements ausgelesen wurde. Nachstehende Abbildungen zeigen beispielhaft erlÃ¤utertes Szenario:
 
 
 ![setNextQuestion-Array](https://github.com/andreasmosig/peat/blob/master/doc/MIS/setNextQuestionArray.png)
@@ -639,82 +639,82 @@ Zu Beginn, d.h. für den ersten lauffähigen Prototyp in der Designphase, lag der 
 ![setNextQuestion-ifStatement](https://github.com/andreasmosig/peat/blob/master/doc/MIS/setNextQuestionifStatement.png)
 
 
-Doch Persistenz bedeutet in der Informatik die Fähigkeit, Datenstrukturen in nicht-flüchtigen Speichermedien, wie Dateisystemen oder Datenbanken zu speichern. Für das Erstellen des hierfür notwendigen Datenbank-Schemas (Entity-Relationship-Modell) wurde die Anwendung DBDesigner-Fork verwendet. Dieses Schema bildete die Grundlage für die #peat-Datenbank und deren Java-Klassen (PeatDataSource, PeatDBHelper, Question):
+Doch Persistenz bedeutet in der Informatik die FÃ¤higkeit, Datenstrukturen in nicht-flÃ¼chtigen Speichermedien, wie Dateisystemen oder Datenbanken zu speichern. FÃ¼r das Erstellen des hierfÃ¼r notwendigen Datenbank-Schemas (Entity-Relationship-Modell) wurde die Anwendung DBDesigner-Fork verwendet. Dieses Schema bildete die Grundlage fÃ¼r die #peat-Datenbank und deren Java-Klassen (PeatDataSource, PeatDBHelper, Question):
 
 ![DBDesign] (https://github.com/andreasmosig/peat/blob/master/doc/DB/DBDesign.png)
 
 
-Hierbei machte es sich das Projektteam zu Nutze, dass z.B. keine JDBC-Verbindung benötigt wurde, sondern es bereits Bibliotheken zum Ansteuern der SQLite-Datenbank in der Android-/Eclipse-Entwicklungsumgebung gab.
+Hierbei machte es sich das Projektteam zu Nutze, dass z.B. keine JDBC-Verbindung benÃ¶tigt wurde, sondern es bereits Bibliotheken zum Ansteuern der SQLite-Datenbank in der Android-/Eclipse-Entwicklungsumgebung gab.
 
 
-Zunächst wurde eine leere Datenbank angelegt. Anschließend wurde ein entsprechendes SQL-Skript zur Erstellung der Tabellen geschrieben. Daran anknüpfend wurden entsprechende Methoden zum Ein- und Auslesen der Daten (Fragen, Antworten) codiert.
+ZunÃ¤chst wurde eine leere Datenbank angelegt. AnschlieÃŸend wurde ein entsprechendes SQL-Skript zur Erstellung der Tabellen geschrieben. Daran anknÃ¼pfend wurden entsprechende Methoden zum Ein- und Auslesen der Daten (Fragen, Antworten) codiert.
 
 ##4.5. Versionierung (fertig | Andi)
 
-Das Versions- und Release-Management sind zentraler Bestandteil des Projektmanagements. Dabei geht es darum, dass das gesamte Projekt in seinem Wachstum begleitet wird. Korrekte Auslieferungen und Codezustände müssen jederzeit sichergestellt und Entwicklungslinien stets nachvollzogen werden können.
+Das Versions- und Release-Management sind zentraler Bestandteil des Projektmanagements. Dabei geht es darum, dass das gesamte Projekt in seinem Wachstum begleitet wird. Korrekte Auslieferungen und CodezustÃ¤nde mÃ¼ssen jederzeit sichergestellt und Entwicklungslinien stets nachvollzogen werden kÃ¶nnen.
 
 
-Für das vorliegende Projekt wurde zur verteilten Versionskontrolle Git verwendet. Git ist eine freie Software zur Unterstützung der verteilten Versionsverwaltung von Quellcode. Da es sich hierbei um eine verteilte Versionskontrolle handelt, besaß jedes Projektmitglied sein eigenes lokales Repository, in das er Änderungen einpflegen konnte. Die einzelnen individuellen Repositories konnten über bestimmte Operationen (z.B. push, pull) Informationen austauschen. Die lokalen Repositories ermöglichten daher weitgehend unabhängiges Arbeiten.
+FÃ¼r das vorliegende Projekt wurde zur verteilten Versionskontrolle Git verwendet. Git ist eine freie Software zur UnterstÃ¼tzung der verteilten Versionsverwaltung von Quellcode. Da es sich hierbei um eine verteilte Versionskontrolle handelt, besaÃŸ jedes Projektmitglied sein eigenes lokales Repository, in das er Ã„nderungen einpflegen konnte. Die einzelnen individuellen Repositories konnten Ã¼ber bestimmte Operationen (z.B. push, pull) Informationen austauschen. Die lokalen Repositories ermÃ¶glichten daher weitgehend unabhÃ¤ngiges Arbeiten.
 
 
-Die Versionskontrolle sollte im Optimalfall Teil eines Gesamtzyklus (Continious Integration) sein, bestehend aus einem CVS, einem automatisierten Buildprozess (z.B. mit Ant), Tests zur Sicherstellung der Codequalität (z.B. mit JUnit) und der Fehlerbeseitiung/-verwaltung (z.B. mit Bugzilla). Aufgrund des relativ überschaubaren Projektes, wurde während dieses Projektes auf automatisierte Buildprozesse, Testsuiten o.ä. verzichtet.
+Die Versionskontrolle sollte im Optimalfall Teil eines Gesamtzyklus (Continious Integration) sein, bestehend aus einem CVS, einem automatisierten Buildprozess (z.B. mit Ant), Tests zur Sicherstellung der CodequalitÃ¤t (z.B. mit JUnit) und der Fehlerbeseitiung/-verwaltung (z.B. mit Bugzilla). Aufgrund des relativ Ã¼berschaubaren Projektes, wurde wÃ¤hrend dieses Projektes auf automatisierte Buildprozesse, Testsuiten o.Ã¤. verzichtet.
 
 
-Das Projekt hatte nichtsdestotrotz dank der iterativen und agilen Vorgehensweise und der das gesamte Projekt umfassenden Verwendung von GitHub zur Verwaltung aller Projektinhalte (Quellcode, Releases, Exposé, Protokolle, Dokumentation sowie aller sonstigen Einstellungen, Dateien und Zustände, die für das Funktionieren des Systems relevant sind) zeitnah und jederzeit einen lauffähigen Code resp. Prototyp ([Durchstich](https://de.wikipedia.org/wiki/Prototyping_(Softwareentwicklung)#Vertikales_Prototyping_.28Durchstich.29)) zur Folge. Zusammengefasst nennt man die Summe der beschriebenen Systeme (Verions-, Release- und Konfigurationsmanagement) **Change Management**.
+Das Projekt hatte nichtsdestotrotz dank der iterativen und agilen Vorgehensweise und der das gesamte Projekt umfassenden Verwendung von GitHub zur Verwaltung aller Projektinhalte (Quellcode, Releases, ExposÃ©, Protokolle, Dokumentation sowie aller sonstigen Einstellungen, Dateien und ZustÃ¤nde, die fÃ¼r das Funktionieren des Systems relevant sind) zeitnah und jederzeit einen lauffÃ¤higen Code resp. Prototyp ([Durchstich](https://de.wikipedia.org/wiki/Prototyping_(Softwareentwicklung)#Vertikales_Prototyping_.28Durchstich.29)) zur Folge. Zusammengefasst nennt man die Summe der beschriebenen Systeme (Verions-, Release- und Konfigurationsmanagement) **Change Management**.
 
 
-In GitHub konnten ständig Snapshots auf Versionsstände ([Releases](https://github.com/andreasmosig/peat/releases)) vorgenommen werden. Dies geschah mittels des sogenannten [Tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging) über die Git-Shell. Hierüber wurden auch Konflikte beim Mergen vom Code der einzelnen Repositories transparent gemacht und gelöst. Fehlerfreier Sourcecode wurde freigegeben und in das zentrale [Repository](https://github.com/andreasmosig/peat) übertragen. Zu Dokumentationszwecken konnte anhand der commits stets nachvollzogen werden, wer welche Änderung vorgenommen hat und welche Features integriert worden sind. Zum Download lag jederzeit die letzte auf ihre Lauffähigkeit hin getestete Version von #peat in einer Dropbox bereit: [Hol’ dir #peat](https://www.dropbox.com/sh/8djn2di76w9jqga/AABS1uvujSAhcy7iVWHPvo9oa?dl=0)!
+In GitHub konnten stÃ¤ndig Snapshots auf VersionsstÃ¤nde ([Releases](https://github.com/andreasmosig/peat/releases)) vorgenommen werden. Dies geschah mittels des sogenannten [Tagging](https://git-scm.com/book/en/v2/Git-Basics-Tagging) Ã¼ber die Git-Shell. HierÃ¼ber wurden auch Konflikte beim Mergen vom Code der einzelnen Repositories transparent gemacht und gelÃ¶st. Fehlerfreier Sourcecode wurde freigegeben und in das zentrale [Repository](https://github.com/andreasmosig/peat) Ã¼bertragen. Zu Dokumentationszwecken konnte anhand der commits stets nachvollzogen werden, wer welche Ã„nderung vorgenommen hat und welche Features integriert worden sind. Zum Download lag jederzeit die letzte auf ihre LauffÃ¤higkeit hin getestete Version von #peat in einer Dropbox bereit: [Holâ€™ dir #peat](https://www.dropbox.com/sh/8djn2di76w9jqga/AABS1uvujSAhcy7iVWHPvo9oa?dl=0)!
 
 #5. Schlussbetrachtung
 
 ##5.1. Zusammenfassung (Thomas, Andi, Steven)
 
-Was zu Beginn nur ein Spiel gewesen ist, könnte nun das Lernen vieler Schüler und Studenten, Auszubildenden und anderen Lerninteressierten erleichtern und vielleicht sogar Freude bereiten.
+Was zu Beginn nur ein Spiel gewesen ist, kÃ¶nnte nun das Lernen vieler SchÃ¼ler und Studenten, Auszubildenden und anderen Lerninteressierten erleichtern und vielleicht sogar Freude bereiten.
 
 
-Der erste Prototyp von #peat ist tatsächlich zu einer lauffähigen Android-App entwickelt worden. Der Fokus lag auf wenigen, aber relevanten Komponenten, deren Umsetzung bereits jetzt vielversprechend ist und den praktischen Einsatz der mobilen Applikation zulässt.
+Der erste Prototyp von #peat ist tatsÃ¤chlich zu einer lauffÃ¤higen Android-App entwickelt worden. Der Fokus lag auf wenigen, aber relevanten Komponenten, deren Umsetzung bereits jetzt vielversprechend ist und den praktischen Einsatz der mobilen Applikation zulÃ¤sst.
 
 
-#peat ermöglicht das Abspeichern eigener Fragen und Antworten und deren Wiedergabe innerhalb des Quiz sowie eine Themen- und Benutzerverwaltung.
+#peat ermÃ¶glicht das Abspeichern eigener Fragen und Antworten und deren Wiedergabe innerhalb des Quiz sowie eine Themen- und Benutzerverwaltung.
 
-Mit etwas Glück und dem richtigen Marketing wird #peat nicht nur die Nummer 1 auf dem Markt der Lernapps sein. Auch die sich in Planung befindliche Website wird zur neuen Startseite unseres peers.
+Mit etwas GlÃ¼ck und dem richtigen Marketing wird #peat nicht nur die Nummer 1 auf dem Markt der Lernapps sein. Auch die sich in Planung befindliche Website wird zur neuen Startseite unseres peers.
 
 ##5.2. Erkenntnisse (fertig | Andi)
 
-Im Zuge der Projektarbeit stellte sich heraus, nachdem anfänglich noch easyBlock für die Anlage der Use Cases resp. asana für die Projektorganisation verwendet worden waren, dass die Arbeit mit Slack und moodle (Projektkommunikation und -organisation) und GitHub (Versionierung, Dokumentation) sowie das iterative Entwickeln und Testen in der Eclipse/Android-Umgebung völlig ausreichend, zufriedenstellend und insbesondere iterativ und agil waren. Es ließ sich viel effizienter arbeiten, da nebenher nicht viel dokumentiert und modelliert wurde. Im Nachhinein konnte festgestellt werden, dass die Teilprojekte und Subtasks gleichermaßen erfüllt werden konnten, allein mit den zuletzt genannten Werkzeugen: Slack, moodle und GitHub.
+Im Zuge der Projektarbeit stellte sich heraus, nachdem anfÃ¤nglich noch easyBlock fÃ¼r die Anlage der Use Cases resp. asana fÃ¼r die Projektorganisation verwendet worden waren, dass die Arbeit mit Slack und moodle (Projektkommunikation und -organisation) und GitHub (Versionierung, Dokumentation) sowie das iterative Entwickeln und Testen in der Eclipse/Android-Umgebung vÃ¶llig ausreichend, zufriedenstellend und insbesondere iterativ und agil waren. Es lieÃŸ sich viel effizienter arbeiten, da nebenher nicht viel dokumentiert und modelliert wurde. Im Nachhinein konnte festgestellt werden, dass die Teilprojekte und Subtasks gleichermaÃŸen erfÃ¼llt werden konnten, allein mit den zuletzt genannten Werkzeugen: Slack, moodle und GitHub.
 
 
-Eine weitere Erkenntnis ergab sich aus dem Arbeiten mit GitHub. Eine theoretische Grundlage besaß jedes Mitglied des Teams. Allerdings wurde noch nie praktisch mit der Versionsverwaltung gearbeitet. Daraus resultierten beim Zusammenführen besagter Codefragmente diverse Konflikte, die es über die Git-Shell zu lösen galt.
+Eine weitere Erkenntnis ergab sich aus dem Arbeiten mit GitHub. Eine theoretische Grundlage besaÃŸ jedes Mitglied des Teams. Allerdings wurde noch nie praktisch mit der Versionsverwaltung gearbeitet. Daraus resultierten beim ZusammenfÃ¼hren besagter Codefragmente diverse Konflikte, die es Ã¼ber die Git-Shell zu lÃ¶sen galt.
 
 
-Doch es muss rückblickend durchaus auch kritisch beurteilt werden, was hinsichtlich der initialen Anforderungsanalyse und insbesondere die Einigung darauf, was tatsächlich umgesetzt werden sollte, gewissermaßen schief lief. Die Vorstellung darüber, was das System können sollte, war allen Teammitgliedern bewusst. Was das System allerdings tatsächlich können wird, offenbarte diverse Disparitäten. Denn die Erwartungen an die App waren recht groß, schlussendlich wohl übermotiviert und unrealistisch. Eine konkrete Aussage und Entscheidung, welche der Anforderungen für die Abgabe an den BA genügen werden müssten, wurden erst spät getroffen. Dies zeigte auch, dass es keine konkrete Führungsperson innerhalb der Projektgruppe gab. Je näher die Abgabe rückte, desto klarer wurde aber, dass es Entscheidungen bedurfte.
+Doch es muss rÃ¼ckblickend durchaus auch kritisch beurteilt werden, was hinsichtlich der initialen Anforderungsanalyse und insbesondere die Einigung darauf, was tatsÃ¤chlich umgesetzt werden sollte, gewissermaÃŸen schief lief. Die Vorstellung darÃ¼ber, was das System kÃ¶nnen sollte, war allen Teammitgliedern bewusst. Was das System allerdings tatsÃ¤chlich kÃ¶nnen wird, offenbarte diverse DisparitÃ¤ten. Denn die Erwartungen an die App waren recht groÃŸ, schlussendlich wohl Ã¼bermotiviert und unrealistisch. Eine konkrete Aussage und Entscheidung, welche der Anforderungen fÃ¼r die Abgabe an den BA genÃ¼gen werden mÃ¼ssten, wurden erst spÃ¤t getroffen. Dies zeigte auch, dass es keine konkrete FÃ¼hrungsperson innerhalb der Projektgruppe gab. Je nÃ¤her die Abgabe rÃ¼ckte, desto klarer wurde aber, dass es Entscheidungen bedurfte.
 
 
-In diesem Zusammenhang ist ebenfalls hervorzuheben, dass die Grundlagen und Kenntnisse in der Programmierung nicht derart ausgeprägt waren und sind, sodass man diesbezüglich häufig an seine eigenen Grenzen stieß. Die Rollenverteilung (UI-Designer und Entwickler) wurde dahingehend noch eindeutiger definiert. Man konnte allerdings feststellen, dass die Gruppe aus unterschiedlichen Charakteren bestand. Ganz im Sinne der [Teamrollen](https://de.wikipedia.org/wiki/Teamrolle) nach Belbin gab es in dem Team #peat die unterschiedlichsten Vertreter (Umsetzer, Macher, Koordinator, Spezialist). Die richtige Kombination von verschiedenen Teamrollen machte dieses Team - bis auf die angesprochene Entscheidungsfindung für das lauffähige Arbeitsergebnis - effizient.
+In diesem Zusammenhang ist ebenfalls hervorzuheben, dass die Grundlagen und Kenntnisse in der Programmierung nicht derart ausgeprÃ¤gt waren und sind, sodass man diesbezÃ¼glich hÃ¤ufig an seine eigenen Grenzen stieÃŸ. Die Rollenverteilung (UI-Designer und Entwickler) wurde dahingehend noch eindeutiger definiert. Man konnte allerdings feststellen, dass die Gruppe aus unterschiedlichen Charakteren bestand. Ganz im Sinne der [Teamrollen](https://de.wikipedia.org/wiki/Teamrolle) nach Belbin gab es in dem Team #peat die unterschiedlichsten Vertreter (Umsetzer, Macher, Koordinator, Spezialist). Die richtige Kombination von verschiedenen Teamrollen machte dieses Team - bis auf die angesprochene Entscheidungsfindung fÃ¼r das lauffÃ¤hige Arbeitsergebnis - effizient.
 
 ##5.3. Ausblick (fertig | Andi)
 
-Aus den vorangegangen Ausführungen ist zu entnehmen, dass diese Lernapp noch viel Erweiterungspotential birgt. In der angeraumten Zeit hat man sich aber auf die relevanten Bereichen und Komponenten und Activities fokussiert.
+Aus den vorangegangen AusfÃ¼hrungen ist zu entnehmen, dass diese Lernapp noch viel Erweiterungspotential birgt. In der angeraumten Zeit hat man sich aber auf die relevanten Bereichen und Komponenten und Activities fokussiert.
 
 
-Mögliche Erweiterungen der Nachfolgeversionen, beginnend bei **v2.0.1**, sind nachstehend stichpunktartig umrissen:
+MÃ¶gliche Erweiterungen der Nachfolgeversionen, beginnend bei **v2.0.1**, sind nachstehend stichpunktartig umrissen:
 
 
 ###a) Funktionale Anforderungen an die App:
 
 * Angebot: Die GUI wurde vorbereitet auf das geplante Angebot mehrerer Fragekategorien, welches in **v2.0.1** realisiert werden SOLL (s. [2.1.](##2.1. Theoretische Aspekte einer Lernsoftware)).
 
-* Settings: Eine Erweiterung der Funktionalitäten der Einstellungen-Activity SOLL erfolgen (intelligenter, selbstlernender Wiederholungsalgorithmus (s. [2.1.](##2.1. Theoretische Aspekte einer Lernsoftware)), Abbruch-/Fehlermeldung, Update-Steuerung, u.v.m.).
+* Settings: Eine Erweiterung der FunktionalitÃ¤ten der Einstellungen-Activity SOLL erfolgen (intelligenter, selbstlernender Wiederholungsalgorithmus (s. [2.1.](##2.1. Theoretische Aspekte einer Lernsoftware)), Abbruch-/Fehlermeldung, Update-Steuerung, u.v.m.).
 
-* Persistenz: Statt der Verwendung einer lokalen Datenbank (hier: SQLite), SOLL eine Anbindung an einen “[Backend-as-a-Service](http://t3n.de/news/backend-as-a-service-parse-504596/)”-Anbieter wie Parse realisiert werden (alternativ eine Remote-DB auf einem Server).
+* Persistenz: Statt der Verwendung einer lokalen Datenbank (hier: SQLite), SOLL eine Anbindung an einen â€œ[Backend-as-a-Service](http://t3n.de/news/backend-as-a-service-parse-504596/)â€-Anbieter wie Parse realisiert werden (alternativ eine Remote-DB auf einem Server).
 
-* Push-Notification: WIRD mit externen Diensten möglich gemacht:
+* Push-Notification: WIRD mit externen Diensten mÃ¶glich gemacht:
 
   * [Parse-Tutorial](]https://parse.com/tutorials/android-push-notifications)
 
   * [Parse-QuickStart](https://parse.com/apps/quickstart#parse_data/mobile/android/native/new)
 
-* Qualität: Bewertung von Fragen (Güte, Schwierigkeitsgrad) sowie eine gewisse Selbstreinigung ist hins. des Designs und der Anforderung definiert und umgesetzt. Die Logik geht allerdings mit einer Themen- und Nutzerverwaltung einher. Deren vollständige Ausarbeitung WIRD für die Version **v2.0.1** vorgesehen.
+* QualitÃ¤t: Bewertung von Fragen (GÃ¼te, Schwierigkeitsgrad) sowie eine gewisse Selbstreinigung ist hins. des Designs und der Anforderung definiert und umgesetzt. Die Logik geht allerdings mit einer Themen- und Nutzerverwaltung einher. Deren vollstÃ¤ndige Ausarbeitung WIRD fÃ¼r die Version **v2.0.1** vorgesehen.
 
 * Externer Webservice: KANN z.B. sein 
 
@@ -729,28 +729,28 @@ Mögliche Erweiterungen der Nachfolgeversionen, beginnend bei **v2.0.1**, sind na
 
 ![PeatLanding] (https://github.com/andreasmosig/peat/blob/master/doc/MOCKUPS/WEB/1_peatlanding.png)
 
-![PeatSave] (https://github.com/andreasmosig/peat/blob/master/doc/MOCKUPS/WEB/2_füllepeat.png)
+![PeatSave] (https://github.com/andreasmosig/peat/blob/master/doc/MOCKUPS/WEB/2_fÃ¼llepeat.png)
 
 ![PeatFeedback] (https://github.com/andreasmosig/peat/blob/master/doc/MOCKUPS/WEB/3_feedbackpeat.png)
 
 * Webserver: SOLLTE z.B. sein: SAAS, oder lokaler Webserver (z.B. LAMP/XAMPP, Zugriff per DynDNS).
 
-* Webframework: KÖNNTE z.B. sein: Bootstrap, ein auf CSS/LESS und JavaScript basierendes UI-Framework; für diverse Funktionaltitäten, wie Bentnutzerkontensteuerung und Authentifizierung sind gegebenfalls andere Frameworks und zusätlich ein Content Management System notwendig (z.B. Ruby on Rails, Silverstripe).
+* Webframework: KÃ–NNTE z.B. sein: Bootstrap, ein auf CSS/LESS und JavaScript basierendes UI-Framework; fÃ¼r diverse FunktionaltitÃ¤ten, wie Bentnutzerkontensteuerung und Authentifizierung sind gegebenfalls andere Frameworks und zusÃ¤tlich ein Content Management System notwendig (z.B. Ruby on Rails, Silverstripe).
 
 
 ###c) Nicht-Funktionale Anforderungen an die App und an die Website:
 
-* Look and feel: Die App und die Website SOLLEN für Jugendliche ab 13 Jahren verständlich und bedienbar sein.
+* Look and feel: Die App und die Website SOLLEN fÃ¼r Jugendliche ab 13 Jahren verstÃ¤ndlich und bedienbar sein.
 
-* Compliance: Die Verwendung der App und der Website SOLL an die Akzeptanz eines Verhaltenskodex geknüpft sein.
+* Compliance: Die Verwendung der App und der Website SOLL an die Akzeptanz eines Verhaltenskodex geknÃ¼pft sein.
 
 * Performance: Die Anwendung SOLL in der Lage sein, im ersten Jahr bis 500.000 User zu verwalten und in den darauf folgenden 3 Jahren bis zu 5 Millionen.
 
-* Community: Aus der Themen- und Nutzerverwaltung sowie der Bewertung von Fragen KANN, unterstützt durch eine webbasierte Lösung, der Gedanke von Contributors und Followern verfolgt werden.
+* Community: Aus der Themen- und Nutzerverwaltung sowie der Bewertung von Fragen KANN, unterstÃ¼tzt durch eine webbasierte LÃ¶sung, der Gedanke von Contributors und Followern verfolgt werden.
 
-#6. Weiterführende Links
+#6. WeiterfÃ¼hrende Links
 
-* Rückblick
+* RÃ¼ckblick
 
 * Aktueller Stand
 
@@ -768,13 +768,13 @@ BA    Business Angel
 
 bspw.    beispielsweise
 
-bzgl.    Bezüglich
+bzgl.    BezÃ¼glich
 
 bzw.    beziehungsweise
 
 CI    Corporate Identity
 
-d.h.     das heißt
+d.h.     das heiÃŸt
 
 ggf.    gegebenenfalls
 
