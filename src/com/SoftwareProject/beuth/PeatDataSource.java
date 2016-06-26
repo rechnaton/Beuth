@@ -98,7 +98,7 @@ public class PeatDataSource {
 	    	Boolean[] isCorrectArray;
 	    	answersArray = new String[0];
 	    	isCorrectArray = new Boolean[0];
-	    	String sIsCorrect;
+	    	Integer iIsCorrect;
 	    	getAllUserQuestionIDs();
 	    	Cursor mCursorQuestions = database.rawQuery("SELECT * FROM Questions JOIN QuestionType ON idQuestionType = qst_idQuestionType WHERE idQuestions NOT IN (SELECT uhq_idQuestions FROM PeatUser_has_Questions);", null);
 	    	//Cursor mCursor = database.rawQuery("SELECT * FROM Questions JOIN QuestionType ON idQuestionType = qst_idQuestionType JOIN Answers ON idQuestions = as_idQuestions", null);
@@ -114,11 +114,11 @@ public class PeatDataSource {
 	    	while(!mCursorAnswers.isAfterLast()) {
 	    		String asText = mCursorAnswers.getString(mCursorAnswers.getColumnIndex("as_text"));
 	    		answersArray = addStringToArray(answersArray, asText);
-	    		sIsCorrect = mCursorAnswers.getString(mCursorAnswers.getColumnIndex("as_isCorrect"));
-	    		if (sIsCorrect == "True") {
+	    		iIsCorrect = mCursorAnswers.getInt(mCursorAnswers.getColumnIndex("as_isCorrect"));
+	    		if (iIsCorrect == 1) {
 					isCorrectArray = addBooleanToArray(isCorrectArray, true);
 	    		}else {
-	    			isCorrectArray = addBooleanToArray(isCorrectArray, true);
+	    			isCorrectArray = addBooleanToArray(isCorrectArray, false);
 	    		}
 	    		mCursorAnswers.moveToNext();
 	    		i=i+1;
@@ -136,13 +136,24 @@ public class PeatDataSource {
     private String[] addStringToArray(String[] array, String string){
     	Integer length = array.length;
     	String[] bufferArray = new String[length + 1];
+    	Integer i = 0;
+    	while (i < length) {
+    		bufferArray[i] = array[i];
+    		i++;
+    	}
     	bufferArray[length] = string;
     	return bufferArray;
     }
     
     private Boolean[] addBooleanToArray(Boolean[] array, Boolean bool){
-    	Boolean[] bufferArray = new Boolean[array.length + 1];
-    	bufferArray[array.length] = bool;
+    	Integer length = array.length;
+    	Boolean[] bufferArray = new Boolean[length + 1];
+    	Integer i = 0;
+    	while (i < length) {
+    		bufferArray[i] = array[i];
+    		i++;
+    	}
+    	bufferArray[length] = bool;
     	return bufferArray;
     }
     

@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
 	Button google; // Button Google, ruft die URL https://www.google.de/ auf
 	Button returnlanding; // Button return, ruft LandingActivity auf
 	Button saveComments; // Button save, speichert Kommentare
+	private Question currentQuestion;
 	
 	TextView stage; // Ausgabe, Mensch-Computer-Kommunikation
 	
@@ -58,8 +59,8 @@ public class MainActivity extends AppCompatActivity {
     		"M5:Bedeutet APK Android Package File?"};
    
     // Antwort-Mockup, Radio-Buttons Ja Nein
-    String answerA = "Ja lautet die Antwort! Gut gemacht!";
-	String answerB = "Die Antwort ist leider falsch!";
+    String answerCorrect = "Ja lautet die Antwort! Gut gemacht!";
+	String answerNotCorrect = "Die Antwort ist leider falsch!";
 	
 	
 	// Hinweis, wenn Button-Pause geklickt wird
@@ -78,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
 	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		//try {
+
 		super.onCreate(savedInstanceState);
 		Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler(this)); 
 		setContentView(R.layout.activity_main);
@@ -87,11 +88,6 @@ public class MainActivity extends AppCompatActivity {
 	    Log.d(LOG_TAG, "Die Datenquelle wird geöffnet.");
 	    
 	    dataSource.open();
-	    Question frage = dataSource.getNextQuestion();
-	    Log.d(LOG_TAG, frage.getQuestionText());
-	    frage = dataSource.getNextQuestion();
-	    Log.d(LOG_TAG, frage.getQuestionText());
-		// start = (Button) findViewById(R.id.start);
 		
 		stage = (TextView) findViewById(R.id.stage);
 		stage.setText("Welcome Back! Klicke auf Weiter!");
@@ -109,14 +105,6 @@ public class MainActivity extends AppCompatActivity {
 		saveComments = (Button) findViewById(R.id.saveComment);
 		
 		radioGroupComment = (RadioGroup) findViewById(R.id.radioComment);
-				
-		//start.setOnClickListener(new View.OnClickListener() {
-		//	
-		//	@Override
-		//	public void onClick(View v) {
-		//		stage.setText("Möchtest du beginnen? Klicke einfach auf Weiter.");
-		//	}
-		// });
 		
 		back.setOnClickListener(new View.OnClickListener() {
 			
@@ -133,12 +121,6 @@ public class MainActivity extends AppCompatActivity {
 					Toast.makeText(MainActivity.this, "Wende dich an den Support!", Toast.LENGTH_LONG).show();
 		    	}
 			}
-			
-			// Auslesen der Fragen aus der SQLite Datenbank  
-			// 1. Question-Objekt erzeugen  
-			// Question oQuestion = new Question(questionText, questionTypeTitle, answers, isCorrect);  
-			// 2. Fragen via Question-Objekt abrufen  
-			// dataSource.getQuestion(oQuestion);
 			
 		});
 		
@@ -158,14 +140,9 @@ public class MainActivity extends AppCompatActivity {
 				//if(setNextQuestion == 6){
 				//	setNextQuestion = 1;
 				//}
-				stage.setText(dataSource.getNextQuestion().getQuestionText());
+				currentQuestion = dataSource.getNextQuestion();
+				stage.setText(currentQuestion.getQuestionText());
 			}
-			
-			// Auslesen der Fragen aus der SQLite Datenbank  
-			// 1. Question-Objekt erzeugen  
-			// Question oQuestion = new Question(questionText, questionTypeTitle, answers, isCorrect);  
-			// 2. Fragen via Question-Objekt abrufen  
-			// dataSource.getQuestion(oQuestion); 
 
 		});
 		
@@ -211,11 +188,6 @@ public class MainActivity extends AppCompatActivity {
 		});
 		
 		addListenerOnButton();
-		// } catch (Exception e) {
-			// System.out.println(e.toString());
-			// Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show();
-		//	Toast.makeText(getApplicationContext(), e.getLocalizedMessage(), Toast.LENGTH_LONG).show(); 
-		// }
 	}
 
 	/**
@@ -292,29 +264,36 @@ public class MainActivity extends AppCompatActivity {
     	radioGroup = (RadioGroup) findViewById(R.id.radioQuestion);
     	buttonAnswer = (Button) findViewById(R.id.buttonAnswer);
 
-    	final MediaPlayer mpButtonClickYes = MediaPlayer.create(this, R.raw.onclickyes);
-    	final MediaPlayer mpButtonClickNo = MediaPlayer.create(this, R.raw.onclickno);
+    	final MediaPlayer mpButtonClickCorrect = MediaPlayer.create(this, R.raw.onclickyes);
+    	final MediaPlayer mpButtonClickNotCorrect = MediaPlayer.create(this, R.raw.onclickno);
     	
     	buttonAnswer.setOnClickListener(new OnClickListener() {
 
     		@Override
     		public void onClick(View v) {
-
+    		Boolean[] isCorrectArray;
+    		Boolean correctAnswer = false;
     		// get selected radio button from radioGroup
     		int selectedId = radioGroup.getCheckedRadioButtonId();
 
     		// find the radiobutton by returned id
     		radioAnswerButton = (RadioButton) findViewById(selectedId);
-
-            	if(selectedId == R.id.radioYes){
-            		stage.setText("Antwort: " + answerA);
-            		mpButtonClickYes.start();
-            		Toast.makeText(MainActivity.this, radioAnswerButton.getText(), Toast.LENGTH_SHORT).show();
+    		//TODO
+    		isCorrectArray = currentQuestion.getIsCorrectAnswers();
+    		if (isCorrectArray[0] == true & selectedId == R.id.radioYes) {
+    			correctAnswer = true;
+    		}
+    		else if (isCorrectArray[1] == true & selectedId == R.id.radioNo) {
+    			correctAnswer = true;
+    		}
+            	if(correctAnswer == true){
+            		stage.setText("Antwort: " + answerCorrect);
+            		mpButtonClickCorrect.start();
+            		Toast.makeText(MainActivity.this, radioAnswerButton.getText(), Toast.LENGTH_SHORT).show();	
             	}
-            	
-            	else if(selectedId == R.id.radioNo){
-            		stage.setText("Antwort: " + answerB);
-            		mpButtonClickNo.start();
+            	else {
+            		stage.setText("Antwort: " + answerNotCorrect);
+            		mpButtonClickNotCorrect.start();
                    	Toast.makeText(MainActivity.this, radioAnswerButton.getText(), Toast.LENGTH_SHORT).show();
             	}
            }
