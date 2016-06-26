@@ -511,7 +511,7 @@ Bei dem vorliegenden System #peat handelt es sich um eine Client-Server-Architek
 Daraus ergab sich eine typische Mehrschichtenarchitektur (N-Tier) mit User Interface (UI), Logiken und Persistenz/Datenbank.
 
 
-Die Verwendung einer Android-Plattform als Basis der App-Entwicklung gab quasi die [Architektur](https://de.wikipedia.org/wiki/Model_View_ViewModel) bereits vor ![MVVM-Konzept](https://github.com/andreasmosig/peat/blob/master/doc/MIS/MVVM-Konzept.png)
+Die Verwendung einer Android-Plattform als Basis der App-Entwicklung gab quasi die [Architektur](https://de.wikipedia.org/wiki/Model_View_ViewModel) bereits vor ![MVVM-Konzept](https://github.com/andreasmosig/peat/blob/master/doc/MOCKUPS/MIS/MVVM-Konzept.png)
 
 Abbildung: Die Datenbindung (Data Binding) ermöglicht eine Trennung von der View (z. B. XAML-Markup oder HTML) und dem Model für die Darstellung.
 
@@ -633,10 +633,10 @@ Jeder sein Programmier-Anteil.
 Zu Beginn, d.h. für den ersten lauffähigen Prototyp in der Designphase, lag der Fokus darauf, die ersten Komponenten abzustecken und eine Idee zu entwickeln, wie die Version **v1.0.1** zum Abgabetermin im Juli aussehen könnte. Demnach wurden die ersten Fragen in ein starres Array geschrieben, welches wiederum mittels eines if-Statements ausgelesen wurde. Nachstehende Abbildungen zeigen beispielhaft erläutertes Szenario:
 
 
-![setNextQuestion-Array](https://github.com/andreasmosig/peat/blob/master/doc/MIS/setNextQuestionArray.png)
+![setNextQuestion-Array](https://github.com/andreasmosig/peat/blob/master/doc/MOCKUPS/MIS/setNextQuestionArray.png)
 
 
-![setNextQuestion-ifStatement](https://github.com/andreasmosig/peat/blob/master/doc/MIS/setNextQuestionifStatement.png)
+![setNextQuestion-ifStatement](https://github.com/andreasmosig/peat/blob/master/doc/MOCKUPS/MIS/setNextQuestionifStatement.png)
 
 
 Doch Persistenz bedeutet in der Informatik die Fähigkeit, Datenstrukturen in nicht-flüchtigen Speichermedien, wie Dateisystemen oder Datenbanken zu speichern. Für das Erstellen des hierfür notwendigen Datenbank-Schemas (Entity-Relationship-Modell) wurde die Anwendung DBDesigner-Fork verwendet. Dieses Schema bildete die Grundlage für die #peat-Datenbank und deren Java-Klassen (PeatDataSource, PeatDBHelper, Question):
