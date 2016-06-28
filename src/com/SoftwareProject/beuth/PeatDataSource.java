@@ -4,6 +4,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
+import android.widget.Toast;
 
 /*Diese Klasse ist Data Access Object und für Verwalten der Daten verantwortlich
  * - unterhält die Datenbankverbindung 
@@ -37,8 +38,11 @@ public class PeatDataSource {
     	Boolean[] bool_isCorrect;
     	Integer boolSqlite =0;
     	Integer i;
-    	database.execSQL("INSERT INTO " + dbHelper.TABLE_QUESTIONS + " (qst_idQuestionType,qst_text) VALUES(" + getIdFromQuestionTypeTitle(oQuestion.getQuestionTypeTitle()) + 
-    			", '" + oQuestion.getQuestionText() +"')");
+    	String sSql;
+    	sSql = "INSERT INTO " + dbHelper.TABLE_QUESTIONS + " (qst_idQuestionType,qst_text) VALUES(" + getIdFromQuestionTypeTitle(oQuestion.getQuestionTypeTitle()) + 
+    			", '" + oQuestion.getQuestionText() +"')";
+    	Log.d(LOG_TAG, sSql);
+    	database.execSQL(sSql);
     	answers = oQuestion.getAnswers();
     	bool_isCorrect = oQuestion.getIsCorrectAnswers();
 
@@ -49,7 +53,10 @@ public class PeatDataSource {
         	else {
         		boolSqlite = 0;
         	}
-        	database.execSQL("INSERT INTO Answers (as_idQuestions, as_text, as_isCorrect) VALUES ((SELECT MAX(idQuestions) FROM Questions WHERE qst_text='" + oQuestion.getQuestionText() + "'), '" + answers[i] + "', " + boolSqlite +")");
+        	sSql="";
+        	sSql = "INSERT INTO Answers (as_idQuestions, as_text, as_isCorrect) VALUES ((SELECT MAX(idQuestions) FROM Questions WHERE qst_text='" + oQuestion.getQuestionText() + "'), '" + answers[i] + "', " + boolSqlite +")";
+        	Log.d(LOG_TAG, sSql);
+        	database.execSQL(sSql);
         }
     }
     
@@ -91,8 +98,6 @@ public class PeatDataSource {
     }
       
     public Question getNextQuestion(){
-    	//TODO
-    	try {
 	    	Question oQuestion;
 	    	String[] answersArray;
 	    	Boolean[] isCorrectArray;
@@ -125,12 +130,6 @@ public class PeatDataSource {
 	    	}
 	    	oQuestion = new Question(QuestionText, QuestionTypeTitle, answersArray, isCorrectArray);
 	    	return oQuestion;
-    	} catch (Exception e) {
-    		Log.d(LOG_TAG, e.toString());
-    		String[] antwortFrageA = {"Ja", "Nein"};
-    	    Boolean[] isCorrectFrageA = {false, true};
-    	    return new Question("Wurde diese Frage in die DB gepackt?", "SimpleText", antwortFrageA, isCorrectFrageA);
-    	}
     }
     
     private String[] addStringToArray(String[] array, String string){
@@ -161,6 +160,10 @@ public class PeatDataSource {
     	Cursor mCursor = database.rawQuery("SELECT * FROM QuestionType WHERE qt_title = '" + title +"'", null);
     	mCursor.moveToFirst();
     	return mCursor.getInt(mCursor.getColumnIndex("idQuestionType"));
+    }
+    
+    public void resetUserHasQuestions() {
+    	database.execSQL("DELETE FROM " + dbHelper.TABLE_PEATUSER_HAS_QUESTIONS);
     }
 
     public void close() {

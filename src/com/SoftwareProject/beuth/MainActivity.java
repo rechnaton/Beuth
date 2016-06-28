@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler(this)); 
 		setContentView(R.layout.activity_main);
-		this.deleteDatabase("peat.db");
+		//this.deleteDatabase("peat.db");
 	    dataSource = new PeatDataSource(this);
 	    Log.d(LOG_TAG, "Die Datenquelle wird geöffnet.");
 	    
@@ -140,8 +140,14 @@ public class MainActivity extends AppCompatActivity {
 				//if(setNextQuestion == 6){
 				//	setNextQuestion = 1;
 				//}
+				try {
 				currentQuestion = dataSource.getNextQuestion();
 				stage.setText(currentQuestion.getQuestionText());
+				}
+				catch (IndexOutOfBoundsException e){
+					dataSource.resetUserHasQuestions();
+					Toast.makeText(MainActivity.this, "Herzlichen Glückwunsch! Sie haben alle Fragen der abonnierten Themen beantwortet. Starten wir von vorn...", Toast.LENGTH_LONG).show();
+				}
 			}
 
 		});
