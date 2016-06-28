@@ -1,12 +1,10 @@
 package com.SoftwareProject.beuth;
 
 import android.annotation.TargetApi;
-import android.media.Image;
 import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 import android.os.Bundle;
 import android.view.View;
 import android.content.Intent;
