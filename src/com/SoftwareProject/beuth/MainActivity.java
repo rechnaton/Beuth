@@ -79,7 +79,7 @@ public class MainActivity extends AppCompatActivity {
 	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
-		//try {
+
 		super.onCreate(savedInstanceState);
 		Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler(this)); 
 		setContentView(R.layout.activity_main);
@@ -88,7 +88,6 @@ public class MainActivity extends AppCompatActivity {
 	    Log.d(LOG_TAG, "Die Datenquelle wird geöffnet.");
 	    
 	    dataSource.open();
-		// start = (Button) findViewById(R.id.start);
 		
 		stage = (TextView) findViewById(R.id.stage);
 		stage.setText("Welcome Back! Klicke auf Weiter!");
@@ -106,14 +105,6 @@ public class MainActivity extends AppCompatActivity {
 		saveComments = (Button) findViewById(R.id.saveComment);
 		
 		radioGroupComment = (RadioGroup) findViewById(R.id.radioComment);
-				
-		//start.setOnClickListener(new View.OnClickListener() {
-		//	
-		//	@Override
-		//	public void onClick(View v) {
-		//		stage.setText("Möchtest du beginnen? Klicke einfach auf Weiter.");
-		//	}
-		// });
 		
 		back.setOnClickListener(new View.OnClickListener() {
 			
@@ -130,12 +121,6 @@ public class MainActivity extends AppCompatActivity {
 					Toast.makeText(MainActivity.this, "Wende dich an den Support!", Toast.LENGTH_LONG).show();
 		    	}
 			}
-			
-			// Auslesen der Fragen aus der SQLite Datenbank  
-			// 1. Question-Objekt erzeugen  
-			// Question oQuestion = new Question(questionText, questionTypeTitle, answers, isCorrect);  
-			// 2. Fragen via Question-Objekt abrufen  
-			// dataSource.getQuestion(oQuestion);
 			
 		});
 		
@@ -158,12 +143,6 @@ public class MainActivity extends AppCompatActivity {
 				currentQuestion = dataSource.getNextQuestion();
 				stage.setText(currentQuestion.getQuestionText());
 			}
-			
-			// Auslesen der Fragen aus der SQLite Datenbank  
-			// 1. Question-Objekt erzeugen  
-			// Question oQuestion = new Question(questionText, questionTypeTitle, answers, isCorrect);  
-			// 2. Fragen via Question-Objekt abrufen  
-			// dataSource.getQuestion(oQuestion); 
 
 		});
 		
@@ -209,11 +188,6 @@ public class MainActivity extends AppCompatActivity {
 		});
 		
 		addListenerOnButton();
-		// } catch (Exception e) {
-			// System.out.println(e.toString());
-			// Toast.makeText(this, e.toString(), Toast.LENGTH_LONG).show();
-		//	Toast.makeText(getApplicationContext(), e.getLocalizedMessage(), Toast.LENGTH_LONG).show(); 
-		// }
 	}
 
 	/**

@@ -354,20 +354,24 @@ Thomas:
 Teilnehmer: Andreas, Thomas, Steven
 
 Agenda:
-- GetLastQuestion ("Back") - Pending
-- Geschlossene Frage in DB speichern - DONE
-![FehlermeldungSpeichern] (https://github.com/andreasmosig/peat/blob/master/doc/MOCKUPS/APP/FehlerFrageSpeichern.png) - DONE
-- GUI noch ändern hins. Antwort und Sound - Steven
-- Klick auf "Weiter" sollte am Ende  wieder bei 1 beginnen? - Pending
-- Funktion für "Pause"? - Pending
+- Ja/Nein Frage in DB speichern - DONE
+- Fehlermeldung bei Speichern - DONE
+- über GUI gespeicherte Fragen in Main-GUI ausgeben - In Progress (Steven)
+- GUI noch ändern hins. Antwort und Sound - In Progress (Steven)
+- Klick auf "#repeat" sollte die zuletzt gestellte Frage ausgeben - Pending (zurückgestellt für Version 2.0)
+- Klick auf "Weiter" sollte am Ende  wieder bei 1 beginnen? - Pending (zurückgestellt für Version 2.0)
+- Funktion für "Pause"? - Pending (zurückgestellt für Version 2.0)
+- GetLastQuestion ("Back") - Pending (zurückgestellt für Version 2.0)
+- Zuweisung der Gliederungspunkte der Dokumentation - DONE
 
 Ergebnis:
-- Muss 1: Antwort (true, false) aus DB lesen und Sound entsprechend ausgeben - In Progress
-- Muss II: getLastQuestion - Pending
-- Muss III: Frage Speichern für Choice fertig programmieren - DONE
-- Muss IV: Vorgehen am Ende des Fragelaufs (Score oder Start von Beginn an) - Pending
-- Kann I: Userverwaltung: Standarduser BENUTZER#1, andere Benutzer eingeben - Pending
-- Kann II: Abspeichern Fragethema bzw. Fragetyp in allen Activities berücksichtigen - In Progress
+- Muss I: Antwort (true, false) aus DB lesen und Sound entsprechend ausgeben - In Progress (Steven)
+- Muss II: Frage Speichern für Choice fertig programmieren - DONE
+- Muss III: Abspeichern Fragethema bzw. Fragetyp in allen Activities berücksichtigen - In Progress (Thomas, Steven)
+- Kann I: getLastQuestion - Pending (zurückgestellt für Version 2.0)
+- Kann II: Vorgehen am Ende des Fragelaufs (Score oder Start von Beginn an) - Pending (zurückgestellt für Version 2.0)
+- Kann III: Userverwaltung: Standarduser BENUTZER#1, andere Benutzer eingeben - Pending (zurückgestellt für Version 2.0)
+- Thomas und Andreas treffen sich am 25.06. zur Arbeit an der Dokumentation
 
 Tasks:
 
@@ -375,10 +379,10 @@ Steven:
 - manuell gespeicherte Frage muss auch ausgegeben werden - In Progress
 - Methode für Antworten-Übergabe - In Progress
 - Methode für Themen-Speichern - In Progress
-- Methode GetLastQuestion (Gegenpart zu getNextQuestion) - Pending
 - in MainActivity die Datenbankverbindung schließen (close) - In Progress
-- User-Verwaltung - Pending
-
+- User-Verwaltung - Pending (zurückgestellt für Version 2.0)
+- Methode GetLastQuestion (Gegenpart zu getNextQuestion) - Pending (zurückgestellt für Version 2.0)
+ 
 Andreas:
 - mit aktuellem Repository Funktion "Frage aus Datenbank holen" implementieren - übergeben an Steven (In Progress)
 - Arbeiten an der Dokumentation - In Progress
@@ -386,3 +390,52 @@ Andreas:
 Thomas:
 - mit aktuellem Repository Funktion "neue Frage speichern" implementieren - DONE
 - Arbeiten an der Dokumentation - In Progress
+
+------------------------------------------------------------------------------------------
+
+#25.06.2016 (Online Meeting via Moodle)
+20:00 Uhr
+Teilnehmer: Andreas, Thomas
+
+Agenda:
+Rücksprache hins. "In Progress" sowie Status der Dokumentation.
+
+Ergebnis:
+- Steven ist abwesend.
+- Dokumentation wird Sonntag, 26.06. voraussichtlich fertig.
+- Meeting hins. Programmierung ("In Progress") vertagt auf Sonntag, 26.06. zw. 11:00 und 18:00 Uhr (Steven unterbreitet Vorschlag).
+
+Besprechung des weiteren Vorgehens:
+- Für Präsentation wird die pptx-Vorlage der Beuth-Hochschule verwendet.
+- Code säubern, kommentieren.
+- Letzte Tests durchführen.
+- Fertigstellung der Dokumentation und Einbindung in md-Format (GitHub).
+- Einigung auf
+  - Link-Syntax, statt Fußnoten
+  - Begriffklärung bzw. Schreibart
+
+------------------------------------------------------------------------------------------
+
+#26.06.2016 (Präsenz- und Online Meeting via Moodle)
+??:00 Uhr
+Teilnehmer: Andreas, Thomas, Steven
+
+Agenda:
+- Rücksprache hins. "In Progress" sowie Status der Dokumentation.
+- Präsentation vorbereiten.
+- Code säubern, kommentieren (javadoc?).
+- Weitere Tests durchführen.
+- Fertigstellung der Dokumentation und Einbindung in md-Format (GitHub).
+- Einigung auf
+  - Link-Syntax, statt Fußnoten
+  - Begriffklärung bzw. Schreibart
+- Themen Programmierung (bis spät. 03.07.)
+  - manuell gespeicherte Frage muss auch ausgegeben werden - In Progress
+  - mit aktuellem Repository Funktion "Frage aus Datenbank holen" implementieren - übergeben an Steven (In Progress)
+  - Methode für Antworten-Übergabe - In Progress
+  - Methode für Themen-Speichern - In Progress
+  - in MainActivity die Datenbankverbindung schließen (close) - In Progress
+  - User-Verwaltung - In Progress (ggf. zurückgestellt für Version 2.0)
+  - Methode GetLastQuestion (Gegenpart zu getNextQuestion) - Pending (zurückgestellt für Version 2.0)
+
+* ab Dienstag, 28.06., regelmäßige Abstimmung mit Steven, wie weit der Code ist.
