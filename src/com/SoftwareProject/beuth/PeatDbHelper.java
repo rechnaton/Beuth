@@ -37,7 +37,7 @@ public class PeatDbHelper extends SQLiteOpenHelper{
 
 	public static final String SQL_CREATE_THEMES =
 		"CREATE TABLE " + TABLE_THEMES +
-		"(idThemes INTEGER NOT NULL , th_title VARCHAR(255), th_explanation VARCHAR(255), PRIMARY KEY(idThemes));";
+		"(idThemes INTEGER NOT NULL , th_title VARCHAR(255) NOT NULL UNIQUE, th_explanation VARCHAR(255), PRIMARY KEY(idThemes));";
 
 	public static final String SQL_CREATE_PEATUSER =
 		"CREATE TABLE " + TABLE_PEATUSER + 
@@ -135,12 +135,22 @@ public class PeatDbHelper extends SQLiteOpenHelper{
             CreateSQL(db, "Index 4", SQL_CREATE_INDEX4);
             CreateSQL(db, "Index 5", SQL_CREATE_INDEX5);
             CreateSQL(db, "Index 6", SQL_CREATE_INDEX6);
+            db.execSQL("INSERT INTO Peatuser (us_name) VALUES('Steven')");
+            putNewThemeInDB("Mathematik", "Allgemeine Fragen zu mathematischen Problemen", db);
+            putNewThemeInDB("Physik", "Allgemeine Fragen zur Physik", db);
+            putNewThemeInDB("Informatik", "Allgemeine Fragen zur Informatik und Computern", db);
+            putNewThemeInDB("Wirtschaft", "Allgemeine Fragen zur Wirtschaft", db);
+            putNewThemeInDB("Politik", "Allgemeine Fragen zur Politik", db);
+            putNewThemeInDB("Religion", "Allgemeine Fragen zur Religion", db);
+            putNewThemeInDB("Biologie", "Allgemeine Fragen zur Biologie", db);
+            putNewThemeInDB("Geschichte", "Allgemeine Fragen zur Geschichte", db);
+            putNewThemeInDB("Geografie", "Allgemeine Fragen zur Geografie", db);
             putNewQuestionTypeInDB("SimpleText", "Bitte geben Sie Ihre Antwort als Text ein. Achten Sie auf die Rechtschreibung.", db);
             putNewQuestionTypeInDB("MultipleChoice", "Bitte wählen Sie eine oder mehrere Antworten.", db);
             putNewQuestionTypeInDB("Choice", "Bitte wählen Sie die richtige Antwort.", db);
             String[] antwortFrageA = {"Ja", "Nein"};
     	    Boolean[] isCorrectFrageA = {true, false};
-    	    Question frageA = new Question("Git", "Dient Git der Versionsverwaltung für Software?", "Choice", antwortFrageA, isCorrectFrageA);
+    	    Question frageA = new Question("Informatik", "Dient Git der Versionsverwaltung für Software?", "Choice", antwortFrageA, isCorrectFrageA);
     	    putQuestionInDB(frageA, db);
     	    frageA.putQuestionText("Ist Slack ein webbasierter Instant-Messanger?");
     	    putQuestionInDB(frageA, db);
@@ -150,14 +160,13 @@ public class PeatDbHelper extends SQLiteOpenHelper{
     	    putQuestionInDB(frageA, db);
     	    frageA.putQuestionText("Bedeutet APK Android Package File?");
     	    putQuestionInDB(frageA, db);
-    	    isCorrectFrageA[0] = false;
-    	    isCorrectFrageA[1] = true;
-    	    frageA.putQuestionText("Ist das Wetter immer sonnig?");
-    	    putQuestionInDB(frageA, db);
+    	    String[] antwortFrageB = {"Ja", "Nein"};
+    	    Boolean[] isCorrectFrageB = {false, true};
+    	    Question frageB = new Question("Geografie", "Ist das Wetter immer sonnig?", "Choice", antwortFrageB, isCorrectFrageB);
+    	    putQuestionInDB(frageB, db);
     	    logAllTablesofDB(db);
     	    logAllQuestionsOfDB(db);
     	    logAllAnswersOfDB(db);
-    	    db.execSQL("INSERT INTO Peatuser (us_name) VALUES('Steven')");
         }
         catch (Exception ex) {
             Log.e(LOG_TAG, "Fehler beim Anlegen der Tabelle: " + ex.getMessage());
@@ -169,9 +178,12 @@ public class PeatDbHelper extends SQLiteOpenHelper{
         db.execSQL(SQL_CREATE);
     }
     
-    public void putNewQuestionTypeInDB(String title, String explanation, SQLiteDatabase db){
-    	db.execSQL("INSERT INTO QuestionType (qt_title,qt_explanation) VALUES('" + title + 
-    			"', '" + explanation +"')");
+    private void putNewQuestionTypeInDB(String title, String explanation, SQLiteDatabase db){
+    	db.execSQL("INSERT INTO QuestionType (qt_title, qt_explanation) VALUES('" + title + "', '" + explanation +"')");
+    }
+    
+    private void putNewThemeInDB (String title, String explanation, SQLiteDatabase db) {
+    	db.execSQL("INSERT INTO Themes (th_title, th_explanation) VALUES ('"+ title +"', '" + explanation + "')");
     }
     
     public void putQuestionInDB(Question oQuestion, SQLiteDatabase db) {
@@ -190,6 +202,13 @@ public class PeatDbHelper extends SQLiteOpenHelper{
         		i_correct = 0;
         	}
         	db.execSQL("INSERT INTO Answers (as_idQuestions, as_text, as_isCorrect) VALUES ((SELECT MAX(idQuestions) FROM Questions WHERE qst_text='" + oQuestion.getQuestionText() + "'), '" + answers[i] + "', " + i_correct + ")");
+        }
+        try {
+        	Log.d(LOG_TAG, oQuestion.getQuestionTheme());
+        db.execSQL("INSERT INTO " + TABLE_THEMES_HAS_QUESTIONS + " (thq_idQuestions, thq_idThemes) VALUES ((SELECT MAX(idQuestions) FROM Questions WHERE qst_text='" + oQuestion.getQuestionText() + "'), (SELECT MAX(idThemes) FROM " + TABLE_THEMES + " WHERE th_title='" + oQuestion.getQuestionTheme() + "'))");
+        }
+        catch (Exception e) {
+        	Log.d(LOG_TAG, e.toString());
         }
     }
     
