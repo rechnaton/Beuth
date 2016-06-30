@@ -19,6 +19,8 @@ public class Splash extends AppCompatActivity {
 		setContentView(R.layout.splash);
 		startSong = MediaPlayer.create(Splash.this, R.raw.splashsound);
 		startSong.start();
+		//In Produktion auskommentieren!
+		this.deleteDatabase("peat.db");
 		Thread timer = new Thread() {
 			public void run() {
 				try {
