@@ -57,7 +57,13 @@ public class PeatDataSource {
         	}
         	execSQL("INSERT INTO Answers (as_idQuestions, as_text, as_isCorrect) VALUES ((SELECT MAX(idQuestions) FROM Questions WHERE qst_text='" + oQuestion.getQuestionText() + "'), '" + answers[i] + "', " + boolSqlite +")");
         }
-        execSQL("INSERT INTO " + dbHelper.TABLE_THEMES_HAS_QUESTIONS + " (thq_idQuestions, thq_idThemes) VALUES ((SELECT MAX(idQuestions) FROM Questions WHERE qst_text='" + oQuestion.getQuestionText() + "'), (SELECT MAX(idThemes) FROM Themes WHERE th_title='" + theme + "'))");
+        try {
+        	execSQL("INSERT INTO " + dbHelper.TABLE_THEMES_HAS_QUESTIONS + " (thq_idQuestions, thq_idThemes) VALUES ((SELECT MAX(idQuestions) FROM Questions WHERE qst_text='" + oQuestion.getQuestionText() + "'), (SELECT MAX(idThemes) FROM Themes WHERE th_title='" + theme + "'))"); 
+        }
+        catch (Exception e) {
+        	execSQL("INSERT INTO " + dbHelper.TABLE_THEMES + "(th_title) VALUES ('" + oQuestion.getQuestionTheme() + "')");
+        	execSQL("INSERT INTO " + dbHelper.TABLE_THEMES_HAS_QUESTIONS + " (thq_idQuestions, thq_idThemes) VALUES ((SELECT MAX(idQuestions) FROM Questions WHERE qst_text='" + oQuestion.getQuestionText() + "'), (SELECT MAX(idThemes) FROM Themes WHERE th_title='" + theme + "'))");
+        }
     }
     
     public void logAllTypes() {

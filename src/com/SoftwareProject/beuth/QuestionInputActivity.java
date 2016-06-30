@@ -27,11 +27,12 @@ public class QuestionInputActivity extends AppCompatActivity {
 	Button backToMenu;
 	
 	private PeatDataSource dataSource;
+	private String[] themesArray;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		String[] themesArray;
+		
 		// Initialisierung der SQLite-Datenbank
 		dataSource = new PeatDataSource(this);
 		// Verbindung mit der SQLite-Datenbank aufbauen
