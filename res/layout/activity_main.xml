@@ -217,7 +217,8 @@
         android:layout_height="wrap_content"
         tools:context=".MainActivity" />
 	
-	<!-- Zum Anzeigen von Fehlermeldungen -->
+	<!-- Zum Anzeigen von Fehlermeldungen
+	aus dem ExceptionHandler bzw. der CrashActivity -->
 	<TextView 
 		android:id="@+id/error" 
 		android:layout_width="match_parent" 

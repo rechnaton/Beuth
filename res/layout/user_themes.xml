@@ -39,7 +39,7 @@
         android:ems="10"
         android:text="@string/themes_default" />
 
-    <!-- Fuegt Themen hinzu
+    <!-- Fuegt Thema hinzu
     ab Version v2.0.1 -->
     <Button
         android:id="@+id/addTheme"

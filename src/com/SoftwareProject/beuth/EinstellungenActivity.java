@@ -9,31 +9,36 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.widget.Toast;
 
+/**
+ * Einstellungen der App.
+ * 
+ * @author AndreasMosig
+ * @version v1.0.1
+ * 
+ */
 @TargetApi(Build.VERSION_CODES.M)
 public class EinstellungenActivity extends PreferenceActivity
-        implements Preference.OnPreferenceChangeListener {
+	implements Preference.OnPreferenceChangeListener {
     
-        	@Override
-        	public void onCreate(Bundle savedInstanceState) {
-        		super.onCreate(savedInstanceState);
-        		addPreferencesFromResource(R.xml.preferences);
-  
-        		Toast.makeText(this, "Zurück mit Back-Button.", Toast.LENGTH_SHORT).show();
-        		
-        		Preference themenlistePref = findPreference(getString(R.string.themes_title));
-        		themenlistePref.setOnPreferenceChangeListener(this);
+	@Override
+	public void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    addPreferencesFromResource(R.xml.preferences);
 
-        		// onPreferenceChange sofort aufrufen mit der in SharedPreferences gespeicherten Themenliste
-        		SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
-        		String gespeicherteThemenliste = sharedPrefs.getString(themenlistePref.getKey(), "");
-        		onPreferenceChange(themenlistePref, gespeicherteThemenliste);
-        		
-        	}
+    Toast.makeText(this, "Zurück mit Back-Button.", Toast.LENGTH_SHORT).show();
 
-        	@Override
-        	public boolean onPreferenceChange(Preference preference, Object value) {
-        		preference.setSummary(value.toString());
-        	    return true;
+    Preference themenlistePref = findPreference(getString(R.string.themes_title));
+	themenlistePref.setOnPreferenceChangeListener(this);
 
-        	}
+	/** onPreferenceChange sofort aufrufen mit der in SharedPreferences gespeicherten Themenliste */
+	SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+	String gespeicherteThemenliste = sharedPrefs.getString(themenlistePref.getKey(), "");
+	onPreferenceChange(themenlistePref, gespeicherteThemenliste);
+	}
+
+	@Override
+	public boolean onPreferenceChange(Preference preference, Object value) {
+    preference.setSummary(value.toString());
+    return true;
+	}
 }

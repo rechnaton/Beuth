@@ -8,9 +8,17 @@ import android.os.Bundle;
 import android.widget.Button;
 import android.view.View;
 
+/**
+ * Hierueber sollen Themengebiete ergaenzt werden koennen.
+ * Weiterentwicklung geplant fuer v2.0.1.
+ * 
+ * @author ThomasRicklinkat, AndreasMosig
+ * @version v1.0.1
+ * 
+ */
 @TargetApi(Build.VERSION_CODES.M)
 public class UserThemeActivity extends AppCompatActivity {
-	Button addTheme; // Button addTheme, fuegt neues Thema hinzu, ab Version v2.0.1
+	Button addTheme; /** Button addTheme, fuegt neues Thema hinzu, ab Version v2.0.1 */
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
