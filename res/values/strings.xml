@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
+    <!-- Defintion der CI sowie der Texte fuer Buttons, Edits und Headlines der App -->
+    
+    <!-- Definiton Corporate Identity -->
+    <!-- s. splash.xml (icon), Splash.java (sound) -->
+    <string name="peatDescription">#peat - Erlerntes spielend wiederholen und nie wieder vergessen!</string>
+	
     <!-- Definiton Corporate Design Farben -->
     <color name="blue">#51c8fc</color>
     <color name="blueFields">#a2c7d6</color>
     
-    <!-- Definiton Corporate Identity -->
-    <string name="peatDescription">#peat - Erlerntes spielend wiederholen und nie wieder vergessen!</string>
-
     <!-- Definiton Buttontexte LandingActivity -->
     <string name="game">Starte #peat</string>
     <string name="question">Neue Frage eingeben</string>
@@ -17,26 +20,21 @@
     <!-- Definiton Buttontexte MainActivity -->
     <string name="app_name">#peat</string>
     <string name="entry">Spielend lernen! Nie wieder vergessen!</string>
-    <string name="stage_pause">Pause</string>
-    <string name="next">Weiter</string>
-    <string name="gotoWikipedia">Wiki</string>
-    <string name="gotoGoogle">Google</string>
     <string name="radio_yes">Ja</string>
     <string name="radio_no">Nein</string>
     <string name="button_answer">Meine Antwort prüfen</string>
     <string name="back">#repeat</string>
+    <string name="pause">Pause</string>
+    <string name="next">Weiter</string>
+    <string name="gotoWikipedia">Wiki</string>
+    <string name="gotoGoogle">Google</string>
     <string name="return_landing">Menü</string>
-	<string name="comment_Answer">Frage bewerten?</string>
+    
+    <!-- Definiton Texte Bewertung MainActivity -->
+    <string name="comment_Answer">Frage bewerten?</string>
 	<string name="radio_notCorrect">Antwort ist falsch!</string>
 	<string name="save_Comment">Speichern</string>
 	
-    <!-- Definiton Buttontexte UserThemeActivity -->
-    <string name="add">Hinzufügen</string>
-
-    <!-- Definiton Texte UnderConstructionActivity -->
-    <string name="title_construction">Under Construction!</string>
-    <string name="text_construction">Hier wirst du bald einen anderen Fragentyp anlegen können.</string>
-    
     <!-- Definiton Texte QuestionTypeActivity -->
     <string name="headQuestionType">Wähle einen Fragentyp!</string>
     <string name="questionTypeOpen">Offene Frage</string>
@@ -56,16 +54,18 @@
 	<string name="radio_true">wahr/richtig</string>
 	<string name="text_answer">Gib hier an, welche Antwort richtig ist:</string>
 	
+	<!-- Definiton Buttontexte UserThemeActivity -->
+    <string name="add">Hinzufügen</string>
+    
     <!-- Definiton Texte Einstellungsmenü -->
     <string name="action_settings">Einstellungen</string>
-    <string name="title_activity_einstellungen">Einstellungen</string>
-    <string name="themes_list">Liste der Themen</string>
-    <string name="themes_title">Themen</string>
-    <string name="themes_default">Softwaretechnik, Entwicklung, Scrum</string>
     <string name="pref_user_profile">Benutzerprofil</string>
     <string name="pref_user_name">Benutzername</string>
     <string name="pref_user_name_summary">Ändere hier deinen Benutzernamen.</string>
-    <string name="pref_update_setting">Quiz-Einstellungen</string>
+    <string name="pref_quizz_setting">Quizz-Einstellungen</string>
+    <string name="themes_list">Liste der Themen</string>
+    <string name="themes_title">Themen</string>
+    <string name="themes_default">Softwaretechnik, Entwicklung, Scrum, eigene Fragen</string>
     <string name="pref_send_push">Push-Nachrichten senden</string>
     <string name="pref_send_push_summary">Anhaken, damit dir #peat Fragen stellt.</string>
     <string name="pref_sync_frequency">Wiederholungsrate</string>
@@ -76,5 +76,9 @@
     <string name="pref_time_answers_summary">Wie viel Zeit benötigst du zur Antwort?</string>
     <string name="pref_send_report">Absturzmeldungen senden</string>
     <string name="pref_send_report_summary">Anhaken, um Fehler schneller zu beheben.</string>
+    
+    <!-- Definiton Texte UnderConstructionActivity -->
+    <string name="title_construction">Under Construction!</string>
+    <string name="text_construction">Hier wirst du bald einen anderen Fragentyp anlegen können.</string>
     
 </resources>

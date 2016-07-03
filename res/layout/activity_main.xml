@@ -10,13 +10,16 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.SoftwareProject.beuth.MainActivity" >
 
-    <!-- Diese Small-Version ist für Handys geeignet.
-    Für Tabletts bitte folgende Änderungen vornehmen:
+    <!-- Layout zur MainActivity (Quizz) -->
+    
+    <!-- Diese Small-Version der Quizz-Activity ist fuer Handys geeignet.
+    Fuer Tabletts bitte folgende Aenderungen vornehmen:
     Large: marginTop="20dp" statt 18dp
-    and textSize="30sp" statt 15sp
-    and textAppearance="?android:attr/textAppearanceLarge" statt ...Small
+    and textSize="30sp" statt 22sp
+    and textAppearance="?android:attr/textAppearanceLarge" statt "Medium"
     -->
     
+    <!-- Slogan der App -->
     <TextView
         android:id="@+id/entry"
         android:layout_width="match_parent"
@@ -26,7 +29,7 @@
         android:textSize="22sp"
         android:text="@string/entry" />
 	
-	<!-- Linie Start -->
+	<!-- Trennlinie Start -->
     <TextView
         android:id="@+id/lineone"
         android:layout_width="match_parent"
@@ -35,8 +38,9 @@
         android:layout_marginBottom="18dp"
         android:layout_below="@+id/entry"
         android:background="#FF000000" />
-    <!-- Linie Ende -->
+    <!-- Trennlinie Ende -->
     
+	<!-- Ausgabe der Themen, Fragen, Antworten und Pause-Meldung -->
 	<TextView
         android:id="@+id/stage"
         android:layout_width="wrap_content"
@@ -47,8 +51,8 @@
         android:text=""
         android:layout_below="@+id/lineone"
     	android:textAppearance="?android:attr/textAppearanceMedium" />
-		<!-- android:layout_below="@+id/start" -->
 		
+	<!-- Ja/Nein-Auswahl zur Beantwortung der Fragen -->
 	<RadioGroup
         android:id="@+id/radioQuestion"
         android:layout_width="wrap_content"
@@ -71,9 +75,9 @@
             android:layout_height="wrap_content"
             android:text="@string/radio_no"
             android:layout_marginTop="18dp" />
-
     </RadioGroup>
 
+    <!-- Zur Ueberpruefung der Antwort-Auswahl -->
     <Button
         android:id="@+id/buttonAnswer"
         android:layout_width="wrap_content"
@@ -83,6 +87,7 @@
         android:layout_marginTop="18dp"
         android:text="@string/button_answer" />  
 	
+	<!-- Gibt die letzte/nicht beantwortete Frage aus -->
 	<Button
         android:id="@+id/back"
         android:layout_width="wrap_content"
@@ -94,6 +99,8 @@
         android:layout_marginTop="15dp"
         android:text="@string/back" />
 	
+	<!-- Speichert eine Frage fuer spaeter
+	ab Version v2.0.1 -->
 	<Button
 		android:id="@+id/pause"
 		android:layout_width="wrap_content"
@@ -102,8 +109,9 @@
 		android:orientation="horizontal"
 		android:layout_below="@+id/buttonAnswer"
 		android:layout_marginTop="15dp"
-		android:text="@string/stage_pause" />
+		android:text="@string/pause" />
 	
+	<!-- Gibt die naechste Frage aus -->
 	<Button
 		android:id="@+id/next"
 		android:layout_width="wrap_content"
@@ -115,6 +123,7 @@
 		android:layout_marginTop="15dp"
 		android:text="@string/next" />
 	
+	<!-- Oeffnet wikipedia.de im Browser -->
 	<Button
         android:id="@+id/wiki"
         android:layout_width="wrap_content"
@@ -126,6 +135,7 @@
         android:layout_marginTop="15dp"
         android:text="@string/gotoWikipedia" />
 	
+	<!-- Oeffnet google.de im Browser -->
 	<Button
         android:id="@+id/google"
         android:layout_width="wrap_content"
@@ -136,6 +146,7 @@
         android:layout_marginTop="15dp"
         android:text="@string/gotoGoogle" />
 	
+	<!-- Oeffnet das Menu der App -->
 	<Button
 		android:id="@+id/returnlanding"
 		android:layout_width="wrap_content"
@@ -147,7 +158,7 @@
 		android:layout_marginTop="15dp"
 		android:text="@string/return_landing" />
 	
-	<!-- Linie Start -->
+	<!-- Trennlinie Start -->
     <TextView
         android:id="@+id/linetwo"
         android:layout_width="match_parent"
@@ -156,8 +167,10 @@
         android:layout_marginBottom="18dp"
         android:layout_below="@+id/google"
         android:background="#FF000000" />
-    <!-- Linie Ende -->
+    <!-- Trennlinie Ende -->
     
+	<!-- Eingabemoeglichkeit zur Bewertung der Frage
+	ab Version v2.0.1 -->
 	<EditText
 	    android:id="@+id/commentAnswer"
         android:layout_width="fill_parent"
@@ -167,8 +180,12 @@
 	    android:background="@color/blueFields"
 	    android:hint="@string/comment_Answer"
 	    android:inputType="textMultiLine"
+	    android:enabled="false"
+	    android:focusable="false"
 	    android:minHeight="25dp" />
 	
+	<!-- Button zur Falsch-Anzeige einer Antwort 
+	ab Version v2.0.1 -->
 	<RadioGroup
         android:id="@+id/radioComment"
         android:layout_width="wrap_content"
@@ -181,9 +198,10 @@
             android:layout_height="wrap_content"
             android:text="@string/radio_notCorrect" 
             android:layout_marginTop="0dp" />
-
     </RadioGroup>
     
+	<!-- Speichern der Bewertung in DB
+	ab Version v2.0.1 -->
 	<Button
 	    android:id="@+id/saveComment"
 	    android:layout_width="wrap_content"
@@ -192,12 +210,14 @@
 	    android:layout_below="@+id/commentAnswer"
 	    android:text="@string/save_Comment" />
 		
+	<!-- Zum Anzeigen der Einstellungen -->
 	<TextView
         android:id="@+id/textUserSettings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:context=".MainActivity" />
 	
+	<!-- Zum Anzeigen von Fehlermeldungen -->
 	<TextView 
 		android:id="@+id/error" 
 		android:layout_width="match_parent" 

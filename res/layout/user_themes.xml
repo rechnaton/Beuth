@@ -11,6 +11,9 @@
     android:orientation="vertical"
     tools:context="com.SoftwareProject.beuth.UserThemeActivity" >
 
+    <!-- Layout zur UserThemeActivity (Hinzufuegen von Themen, ab Version v2.0.1) -->
+    
+    <!-- Ueberschrift der Themen-Activity -->
     <TextView
         android:id="@+id/headUserThemes"
         android:layout_width="match_parent"
@@ -19,23 +22,25 @@
         android:textSize="22sp"
         android:text="@string/themes_list" />
 
-    <!-- Linie -->
+    <!-- Trennlinie Start -->
     <TextView
         android:layout_width="fill_parent"
         android:layout_marginTop="2dp"
         android:layout_marginBottom="18dp"
         android:layout_height="2dip"
         android:background="#FF000000" />
+    <!-- Trennlinie Ende -->
     
+    <!-- Anzeige der initialen Themenliste bei App-Start -->
     <TextView
         android:id="@+id/userThemesList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:text="@string/themes_default" >
+        android:text="@string/themes_default" />
 
-</TextView>
-
+    <!-- Fuegt Themen hinzu
+    ab Version v2.0.1 -->
     <Button
         android:id="@+id/addTheme"
         style="?android:attr/buttonStyleSmall"

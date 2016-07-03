@@ -11,6 +11,9 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.SoftwareProject.beuth.QuestionTypeActivity" >
 
+    <!-- Layout zur QuestionTypeActivity (Auswahl des Frage-Typs) -->
+    
+    <!-- Ueberschrift der Frage-Typ-Activity -->
     <TextView
         android:id="@+id/headQuestionType"
         android:layout_width="match_parent"
@@ -19,14 +22,17 @@
         android:textSize="22sp"
         android:text="@string/headQuestionType" />
     
-    <!-- Linie -->
+    <!-- Trennlinie Start -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="2dip"
         android:layout_marginTop="2dp"
         android:layout_marginBottom="18dp"
         android:background="#FF000000" />
-
+	<!-- Trennlinie Ende -->
+	
+    
+    <!-- Oeffnet Ja/Nein-Frage-Typ -->
     <Button
         android:id="@+id/addQuestionTypeYesNo"
         style="?android:attr/buttonStyleSmall"
@@ -37,6 +43,8 @@
         android:layout_marginTop="18dp"
         android:text="@string/questionTypeYesNo" />
     
+    <!-- Oeffnet Offene Frage-Frage-Typ
+    av Version v2.0.1 -->
     <Button
         android:id="@+id/addQuestionTypeOpen"
         style="?android:attr/buttonStyleSmall"
@@ -47,6 +55,8 @@
         android:layout_marginTop="18dp"
         android:text="@string/questionTypeOpen" />
     
+    <!-- Oeffnet Single Choice-Frage-Typ
+    av Version v2.0.1 -->
     <Button
         android:id="@+id/addQuestionTypeSingleChoice"
         style="?android:attr/buttonStyleSmall"
@@ -57,6 +67,8 @@
         android:layout_marginTop="18dp"
         android:text="@string/questionTypeSingleChoice" />
 
+    <!-- Oeffnet Multiple Choice-Frage-Typ
+    av Version v2.0.1 -->
     <Button
         android:id="@+id/addQuestionTypeMultipleChoice"
         style="?android:attr/buttonStyleSmall"

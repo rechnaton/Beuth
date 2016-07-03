@@ -144,7 +144,7 @@ public class MainActivity extends AppCompatActivity {
 				}
 				catch (IndexOutOfBoundsException e){
 					dataSource.resetUserHasQuestions();
-					Toast.makeText(MainActivity.this, "Herzlichen Glückwunsch! Sie haben alle Fragen der abonnierten Themen beantwortet. Starten wir von vorn...", Toast.LENGTH_LONG).show();
+					Toast.makeText(MainActivity.this, "Herzlichen Glückwunsch! Du hast alle Fragen der abonnierten Themen beantwortet. Klicke auf Weiter und beginne von vorn!", Toast.LENGTH_LONG).show();
 					Log.d(LOG_TAG, e.toString());
 				}
 			}
