@@ -109,15 +109,13 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View v) {
 				try {
-				if(setNextQuestion == 1){
-					setNextQuestion = 5;
-				} else {
-					setNextQuestion--;
+				currentQuestion = dataSource.getNextQuestion(true);
+				stage.setText(currentQuestion.getQuestionTheme() + ":" + System.getProperty("line.separator") + currentQuestion.getQuestionText());
 				}
-				stage.setText(question[setNextQuestion]);
-				} catch (Exception e) {
-					Toast.makeText(MainActivity.this, "Wende dich an den Support!", Toast.LENGTH_LONG).show();
-		    	}
+				catch (IllegalStateException e){
+					Toast.makeText(MainActivity.this, "Sie können nicht weiter zurück navigieren.", Toast.LENGTH_LONG).show();
+					Log.d(LOG_TAG, e.toString());
+				}
 			}
 			
 		});
