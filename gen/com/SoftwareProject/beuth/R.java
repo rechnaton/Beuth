@@ -21,10 +21,17 @@ public final class R {
         public static final int abc_slide_out_top=0x7f040009;
     }
     public static final class array {
+        /**  Wiederholungsmuster Default-Werte 
+         */
         public static final int repQuestions=0x7f0e0002;
         public static final int repQuestionsValues=0x7f0e0003;
+        /**  Ergaenzung zu den Einstellungen der App 
+ Wiederholungsrate Default-Werte 
+         */
         public static final int syncFrequency=0x7f0e0000;
         public static final int syncFrequencyValues=0x7f0e0001;
+        /**  Antwortzeit Default-Werte 
+         */
         public static final int timeAnswers=0x7f0e0004;
         public static final int timeAnswersValues=0x7f0e0005;
     }
@@ -2342,64 +2349,68 @@ containing a value of this type.
         public static final int abc_toolbar_collapse_description=0x7f0c0004;
         /**  Definiton Texte Einstellungsmenü 
          */
-        public static final int action_settings=0x7f0c0039;
+        public static final int action_settings=0x7f0c0037;
         /**  Definiton Buttontexte UserThemeActivity 
          */
-        public static final int add=0x7f0c0027;
+        public static final int add=0x7f0c0036;
         /**  Definiton Buttontexte MainActivity 
          */
         public static final int app_name=0x7f0c0019;
-        public static final int back=0x7f0c0022;
-        public static final int button_answer=0x7f0c0021;
+        public static final int back=0x7f0c001e;
+        public static final int button_answer=0x7f0c001d;
+        /**  Definiton Texte Bewertung MainActivity 
+         */
         public static final int comment_Answer=0x7f0c0024;
-        public static final int editText_errorMessage=0x7f0c0034;
+        public static final int editText_errorMessage=0x7f0c0031;
         public static final int entry=0x7f0c001a;
         /**  Definiton Buttontexte LandingActivity 
          */
         public static final int game=0x7f0c0015;
-        public static final int gotoGoogle=0x7f0c001e;
-        public static final int gotoWikipedia=0x7f0c001d;
+        public static final int gotoGoogle=0x7f0c0022;
+        public static final int gotoWikipedia=0x7f0c0021;
         /**  Definiton Texte QuestionTypeActivity 
          */
-        public static final int headQuestionType=0x7f0c002a;
+        public static final int headQuestionType=0x7f0c0027;
         /**  Definiton Texte QuestionInputActivity 
          */
-        public static final int headQuestionTypeYesNo=0x7f0c002f;
-        public static final int hintQuestionTypeYesNoAnswer=0x7f0c0032;
-        public static final int hintQuestionTypeYesNoQuestion=0x7f0c0031;
-        public static final int hintQuestionTypeYesNoTheme=0x7f0c0030;
-        public static final int next=0x7f0c001c;
-        /**  Definiton Corporate Identity 
+        public static final int headQuestionTypeYesNo=0x7f0c002c;
+        public static final int hintQuestionTypeYesNoAnswer=0x7f0c002f;
+        public static final int hintQuestionTypeYesNoQuestion=0x7f0c002e;
+        public static final int hintQuestionTypeYesNoTheme=0x7f0c002d;
+        public static final int next=0x7f0c0020;
+        public static final int pause=0x7f0c001f;
+        /**  Defintion der CI sowie der Texte fuer Buttons, Edits und Headlines der App 
+ Definiton Corporate Identity 
+ s. splash.xml (icon), Splash.java (sound) 
          */
         public static final int peatDescription=0x7f0c0014;
-        public static final int pref_rep_questions=0x7f0c0046;
-        public static final int pref_rep_questions_summary=0x7f0c0047;
-        public static final int pref_send_push=0x7f0c0042;
-        public static final int pref_send_push_summary=0x7f0c0043;
-        public static final int pref_send_report=0x7f0c004a;
-        public static final int pref_send_report_summary=0x7f0c004b;
-        public static final int pref_sync_frequency=0x7f0c0044;
-        public static final int pref_sync_frequency_summary=0x7f0c0045;
-        public static final int pref_time_answers=0x7f0c0048;
-        public static final int pref_time_answers_summary=0x7f0c0049;
-        public static final int pref_update_setting=0x7f0c0041;
-        public static final int pref_user_name=0x7f0c003f;
-        public static final int pref_user_name_summary=0x7f0c0040;
-        public static final int pref_user_profile=0x7f0c003e;
+        public static final int pref_quizz_setting=0x7f0c003b;
+        public static final int pref_rep_questions=0x7f0c0043;
+        public static final int pref_rep_questions_summary=0x7f0c0044;
+        public static final int pref_send_push=0x7f0c003f;
+        public static final int pref_send_push_summary=0x7f0c0040;
+        public static final int pref_send_report=0x7f0c0047;
+        public static final int pref_send_report_summary=0x7f0c0048;
+        public static final int pref_sync_frequency=0x7f0c0041;
+        public static final int pref_sync_frequency_summary=0x7f0c0042;
+        public static final int pref_time_answers=0x7f0c0045;
+        public static final int pref_time_answers_summary=0x7f0c0046;
+        public static final int pref_user_name=0x7f0c0039;
+        public static final int pref_user_name_summary=0x7f0c003a;
+        public static final int pref_user_profile=0x7f0c0038;
         public static final int question=0x7f0c0016;
-        public static final int questionTypeMultipleChoice=0x7f0c002e;
-        public static final int questionTypeOpen=0x7f0c002b;
-        public static final int questionTypeSingleChoice=0x7f0c002d;
-        public static final int questionTypeYesNo=0x7f0c002c;
-        public static final int radio_no=0x7f0c0020;
+        public static final int questionTypeMultipleChoice=0x7f0c002b;
+        public static final int questionTypeOpen=0x7f0c0028;
+        public static final int questionTypeSingleChoice=0x7f0c002a;
+        public static final int questionTypeYesNo=0x7f0c0029;
+        public static final int radio_no=0x7f0c001c;
         public static final int radio_notCorrect=0x7f0c0025;
-        public static final int radio_true=0x7f0c0037;
-        public static final int radio_yes=0x7f0c001f;
+        public static final int radio_true=0x7f0c0034;
+        public static final int radio_yes=0x7f0c001b;
         public static final int return_landing=0x7f0c0023;
-        public static final int saveQuestionTypeYesNo=0x7f0c0033;
+        public static final int saveQuestionTypeYesNo=0x7f0c0030;
         public static final int save_Comment=0x7f0c0026;
         public static final int setting=0x7f0c0018;
-        public static final int stage_pause=0x7f0c001b;
         /**  Text to use when the number in a notification info is too large
          (greater than status_bar_notification_info_maxnum, defined in
          values/config.xml) and must be truncated. May need to be localized
@@ -2407,18 +2418,17 @@ containing a value of this type.
          [CHAR LIMIT=4] 
          */
         public static final int status_bar_notification_info_overflow=0x7f0c0011;
-        public static final int text_answer=0x7f0c0038;
-        public static final int text_construction=0x7f0c0029;
-        public static final int text_no=0x7f0c0036;
-        public static final int text_yes=0x7f0c0035;
+        public static final int text_answer=0x7f0c0035;
+        public static final int text_construction=0x7f0c004a;
+        public static final int text_no=0x7f0c0033;
+        public static final int text_yes=0x7f0c0032;
         public static final int theme=0x7f0c0017;
-        public static final int themes_default=0x7f0c003d;
-        public static final int themes_list=0x7f0c003b;
-        public static final int themes_title=0x7f0c003c;
-        public static final int title_activity_einstellungen=0x7f0c003a;
+        public static final int themes_default=0x7f0c003e;
+        public static final int themes_list=0x7f0c003c;
+        public static final int themes_title=0x7f0c003d;
         /**  Definiton Texte UnderConstructionActivity 
          */
-        public static final int title_construction=0x7f0c0028;
+        public static final int title_construction=0x7f0c0049;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f0d0044;
