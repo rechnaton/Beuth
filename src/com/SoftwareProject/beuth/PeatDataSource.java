@@ -20,6 +20,8 @@ public class PeatDataSource {
 
     private SQLiteDatabase database;
     private PeatDbHelper dbHelper;
+    private Boolean defaultBackButtonPush = false;
+    private String currentQuestionID = "";
 
 
     public PeatDataSource(Context context) {
@@ -112,24 +114,54 @@ public class PeatDataSource {
     		mCursor.moveToNext();
     	}
     }
-      
+    
     public Question getNextQuestion(){
+    	return getNextQuestion(defaultBackButtonPush);
+    }
+    
+    public Question getNextQuestion(Boolean backButtonPush){
 	    	Question oQuestion;
 	    	String[] answersArray;
 	    	Boolean[] isCorrectArray;
 	    	answersArray = new String[0];
 	    	isCorrectArray = new Boolean[0];
 	    	Integer iIsCorrect;
+	    	Cursor mCursorQuestions;
+	    	Boolean writeQuestionToTableUserHasQuestions = true;
 	    	logAllUserQuestionIDs();
-	    	Cursor mCursorQuestions = database.rawQuery("SELECT * FROM Questions JOIN QuestionType ON idQuestionType = qst_idQuestionType WHERE idQuestions NOT IN (SELECT uhq_idQuestions FROM PeatUser_has_Questions);", null);
-	    	//Cursor mCursor = database.rawQuery("SELECT * FROM Questions JOIN QuestionType ON idQuestionType = qst_idQuestionType JOIN Answers ON idQuestions = as_idQuestions", null);
+	    	if (currentQuestionID != "") {
+	    		if (backButtonPush) {
+	    			mCursorQuestions = database.rawQuery("SELECT * FROM Questions JOIN QuestionType ON idQuestionType = qst_idQuestionType WHERE idQuestions IN (SELECT uhq_idQuestions FROM PeatUser_has_Questions WHERE uhq_lastShown IN (SELECT MAX(uhq_lastShown) FROM PeatUser_has_Questions WHERE uhq_lastShown < (SELECT uhq_lastShown FROM PeatUser_has_Questions WHERE uhq_idQuestions = " + currentQuestionID + ")))", null);
+	    			if (mCursorQuestions.moveToFirst() == false) {
+	    				throw new IllegalStateException("Back Button bei erster Frage nicht moeglich.");
+	    			}
+	    			writeQuestionToTableUserHasQuestions = false;
+	    		}
+	    		else {
+	    			mCursorQuestions = database.rawQuery("SELECT * FROM Questions JOIN QuestionType ON idQuestionType = qst_idQuestionType WHERE idQuestions IN (SELECT uhq_idQuestions FROM PeatUser_has_Questions WHERE uhq_lastShown IN (SELECT MIN(uhq_lastShown) FROM PeatUser_has_Questions WHERE uhq_lastShown > (SELECT uhq_lastShown FROM PeatUser_has_Questions WHERE uhq_idQuestions = " + currentQuestionID + ")))", null);
+	    			if (mCursorQuestions.moveToFirst() == false) {
+	    				mCursorQuestions = database.rawQuery("SELECT * FROM Questions JOIN QuestionType ON idQuestionType = qst_idQuestionType WHERE idQuestions NOT IN (SELECT uhq_idQuestions FROM PeatUser_has_Questions);", null);
+	    			}
+	    			else {
+	    				writeQuestionToTableUserHasQuestions = false;
+	    			}
+	    		}
+	    	}
+	    	else {
+	    		if (backButtonPush != true) {
+	    			mCursorQuestions = database.rawQuery("SELECT * FROM Questions JOIN QuestionType ON idQuestionType = qst_idQuestionType WHERE idQuestions NOT IN (SELECT uhq_idQuestions FROM PeatUser_has_Questions);", null);
+	    		}
+	    		else throw new IllegalStateException("Back Button bei Start nicht moeglich.");
+	    	}
 	    	mCursorQuestions.moveToFirst();
 	    	String QuestionText = mCursorQuestions.getString(mCursorQuestions.getColumnIndex("qst_text"));
-	    	String idQuestion = mCursorQuestions.getString(mCursorQuestions.getColumnIndex("idQuestions"));
+	    	currentQuestionID = mCursorQuestions.getString(mCursorQuestions.getColumnIndex("idQuestions"));
 	    	String QuestionTypeTitle = mCursorQuestions.getString(mCursorQuestions.getColumnIndex("qt_title"));
-	    	
-	    	database.execSQL("INSERT INTO PeatUser_has_Questions (uhq_idQuestions, uhq_isIgnore, uhq_idPeatUser) VALUES(" + idQuestion + ", 0, (SELECT MAX(idPeatUser) FROM PeatUser WHERE us_name = 'Steven'))");
-	    	Cursor mCursorAnswers = database.rawQuery("SELECT * FROM Answers WHERE as_idQuestions = " + idQuestion, null);
+	    	 
+	    	if (writeQuestionToTableUserHasQuestions) {
+	    		database.execSQL("INSERT INTO PeatUser_has_Questions (uhq_idQuestions, uhq_isIgnore, uhq_idPeatUser) VALUES(" + currentQuestionID + ", 0, (SELECT MAX(idPeatUser) FROM PeatUser WHERE us_name = 'Steven'))");
+	    	}
+	    	Cursor mCursorAnswers = database.rawQuery("SELECT * FROM Answers WHERE as_idQuestions = " + currentQuestionID, null);
 	    	mCursorAnswers.moveToFirst();
 	    	while(!mCursorAnswers.isAfterLast()) {
 	    		String asText = mCursorAnswers.getString(mCursorAnswers.getColumnIndex("as_text"));
@@ -144,7 +176,7 @@ public class PeatDataSource {
 	    	}
 	    	
 	    	logAllQuestionsOfThemesofDB();
-	    	Cursor mCursorThemes = database.rawQuery("SELECT * FROM " + dbHelper.TABLE_THEMES_HAS_QUESTIONS + " JOIN " + dbHelper.TABLE_THEMES + " ON idThemes = thq_idThemes WHERE thq_idQuestions = " + idQuestion, null);
+	    	Cursor mCursorThemes = database.rawQuery("SELECT * FROM " + dbHelper.TABLE_THEMES_HAS_QUESTIONS + " JOIN " + dbHelper.TABLE_THEMES + " ON idThemes = thq_idThemes WHERE thq_idQuestions = " + currentQuestionID, null);
 	    	mCursorThemes.moveToFirst();
 	    	String sTheme = mCursorThemes.getString(mCursorThemes.getColumnIndex("th_title"));
 	    	oQuestion = new Question(sTheme, QuestionText, QuestionTypeTitle, answersArray, isCorrectArray);
