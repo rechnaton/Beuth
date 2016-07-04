@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
 				stage.setText(currentQuestion.getQuestionTheme() + ":" + System.getProperty("line.separator") + currentQuestion.getQuestionText());
 				}
 				catch (IllegalStateException e){
-					Toast.makeText(MainActivity.this, "Sie können nicht weiter zurück navigieren.", Toast.LENGTH_LONG).show();
+					Toast.makeText(MainActivity.this, "Weiter geht es nicht. Nächste Frage?!", Toast.LENGTH_LONG).show();
 					Log.d(LOG_TAG, e.toString());
 				}
 			}
