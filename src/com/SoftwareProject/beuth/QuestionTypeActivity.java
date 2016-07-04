@@ -67,24 +67,20 @@ public class QuestionTypeActivity extends AppCompatActivity {
 	}
 
 	/**
-	 * Diese Klasse oeffnet das Menue, bzw. fuegt Menuepunkte hinzu, sofern diese existieren
+	 * Diese Klasse oeffnet das Menue in der Aktionsleiste, bzw. fuegt Menuepunkte hinzu, sofern diese existieren
 	 */	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.question_type, menu);
 		return true;
 	}
 	
 	/**
-	 * Die folgenden 3 Klassen erstellen das Einstellungsmenue
-	 * und holen Daten aus EinstellungenMain.java, strings.xml, preferences.xml und arrays.xml
+	 * Die folgenden 3 Klassen verarbeiten Klicks auf das Einstellungsmenue in der Aktionsleiste
+	 * und holen Daten aus EinstellungenActivity, strings.xml, preferences.xml und arrays.xml
 	 */
 		@Override
 		public boolean onOptionsItemSelected(MenuItem item) {
-			// Handle action bar item clicks here. The action bar will
-			// automatically handle clicks on the Home/Up button, so long
-			// as you specify a parent activity in AndroidManifest.xml.
 			int id = item.getItemId();
 			if (id == R.id.action_settings) {
 				startActivity(new Intent(this, EinstellungenActivity.class));
