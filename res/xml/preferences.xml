@@ -5,27 +5,27 @@
     android:layout_height="match_parent"
     tools:context="com.SoftwareProject.beuth.EinstellungenActivity" >
     
-    <EditTextPreference
-        android:title="@string/themes_list"
-        android:key="@string/themes_title"
-        android:defaultValue="@string/themes_default"
-        android:inputType="textMultiLine" />
+    <!-- Verwaltung der Einstellungen der App -->
     
+    <!-- Benutzerprofil -->
     <PreferenceCategory android:title="@string/pref_user_profile" >
         <EditTextPreference
-                android:title="@string/pref_user_name"
-                android:summary="@string/pref_user_name_summary"
-                android:key="prefUsername"/>
+            android:title="@string/pref_user_name"
+            android:summary="@string/pref_user_name_summary"
+            android:key="prefUsername"/>
     </PreferenceCategory>
      
-    <PreferenceCategory android:title="@string/pref_update_setting" >
-        <CheckBoxPreference
-            android:defaultValue="false"
-            android:key="prefSendPush"
-            android:summary="@string/pref_send_push_summary"
-            android:title="@string/pref_send_push" >
-        </CheckBoxPreference>
-        
+    <!-- Quizz-Einstellungen -->
+    <PreferenceCategory android:title="@string/pref_quizz_setting" >
+        <!-- Themen -->
+        <EditTextPreference
+        	android:title="@string/themes_list"
+        	android:key="@string/themes_title"
+        	android:defaultValue="@string/themes_default"
+        	android:inputType="textMultiLine" />
+            
+        <!-- Wiederholungsrate
+        ab Version v2.0.1 -->
         <ListPreference
             android:key="prefSyncFrequency"
             android:entries="@array/syncFrequency"
@@ -33,6 +33,8 @@
             android:entryValues="@array/syncFrequencyValues"
             android:title="@string/pref_sync_frequency" />
         
+        <!-- Wiederholungsmuster
+        ab Version v2.0.1 -->
         <ListPreference
             android:key="prefRepQuestions"
             android:entries="@array/repQuestions"
@@ -40,6 +42,8 @@
             android:entryValues="@array/repQuestionsValues"
             android:title="@string/pref_rep_questions" />
         
+        <!-- Antwortzeit
+        ab Version v2.0.1 -->
         <ListPreference
             android:key="prefTimeAnswers"
             android:entries="@array/timeAnswers"
@@ -47,13 +51,23 @@
             android:entryValues="@array/timeAnswersValues"
             android:title="@string/pref_time_answers" />
         
+        <!-- Push-Nachrichten
+        ab Version v2.0.1 -->
         <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="prefSendPush"
+            android:summary="@string/pref_send_push_summary"
+            android:title="@string/pref_send_push" >
+        </CheckBoxPreference>
+        
+		<!-- Absturzmeldungen
+		ab Version v2.0.1 -->
+		<CheckBoxPreference
             android:defaultValue="false"
             android:key="prefSendReport"
             android:summary="@string/pref_send_report_summary"
             android:title="@string/pref_send_report" >
         </CheckBoxPreference>
-        
     </PreferenceCategory>
     
 </PreferenceScreen>

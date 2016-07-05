@@ -1,5 +1,5 @@
-#Status
-Stand (17.05.2016)
+﻿#Status
+(Stand 03.07.2016)
 
 - Sprint 0) Semesterstart (29.03.2016) - DONE
 - Sprint 1) Projekt-KickOff E-Mail durch den BA (07.04.2016) - DONE
@@ -16,20 +16,20 @@ Stand (17.05.2016)
 		- Erweiterung #peat um 3. Button (pause)
 		- Versionierung / Tagging in GitHub (Version v1.0.0-0001 > Prototyp für die Präsenz)
 	- (26.04.2016)
-		- Primäre Anforderungen an die Android App (Use Cases) in EasyBacklog eingetragen > https://easybacklog.com/users/sign_in
+		- Primäre Anforderungen an die Android App (Use Cases) in [EasyBacklog](https://easybacklog.com/users/sign_in) eingetragen
 		- Erweiterung #peat um Splashsound
-		- Export der peat.apk, Installation auf Android-Smartphone und erfolgreicher Test des Prototypen > https://www.dropbox.com/sh/8djn2di76w9jqga/AABS1uvujSAhcy7iVWHPvo9oa?dl=0
+		- Export der [peat.apk](https://www.dropbox.com/sh/8djn2di76w9jqga/AABS1uvujSAhcy7iVWHPvo9oa?dl=0), Installation auf Android-Smartphone und erfolgreicher Test des Prototypen
 		- Versionierung /Tagging in GitHub (Version v1.0.0-0002 > lauffähiger Prototyp, ohne Erfüllung der Use Cases)
 	- (bis 01.05.2016)
 		- Weitere Planung: vorläufige Ablaufplanung sowie Aufgabenverteilung (Datenbankschema, App-Entwicklung, Webserver, etc. : Online-Meeting 01.05.2016, 19:30 Uhr)
-- Sprint 5) Erstellung des Datenbankschemas - Done 08.05.2016
-- Sprint 6) Einrichten der Datenbank im Android-Projekt - PENDING
+- Sprint 5) Erstellung des Datenbankschemas (08.05.2016) - DONE
+- Sprint 6) Einrichten der Datenbank im Android-Projekt (17.05.2016) - DONE
   - SQLite-Datei inkl. Java-Klassen
-  - Zielversion v1.1.0-0000
+  - Zielversion **v1.0.1**
 - Sprint 7) Erzeugung weiterer Prototypen bzw. Versionen - IN PROGRESS
-  - Versionshistory siehe https://github.com/andreasmosig/peat/releases
-- Sprint 8) Erzeugung des Abgabe-Prototypen (App) - PENDING
+  - [Versionshistory](https://github.com/andreasmosig/peat/releases)
+- Sprint 8) Erzeugung des Abgabe-Prototypen (App) - IN PROGRESS
 - Sprint 9) Programmierung und Tests der Komponenten - IN PROGRESS
-- Sprint 10) Fertigstellung der Enddokumentation - PENDING
+- Sprint 10) Fertigstellung der Enddokumentation - IN PROGRESS
 - Sprint 11) Abgabe und Präsentation (08.07.2016)
 - Sprint 12) Entgegenahme des Preisgeldes :wink:

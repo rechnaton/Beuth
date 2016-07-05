@@ -20,6 +20,8 @@ public class PeatDataSource {
 
     private SQLiteDatabase database;
     private PeatDbHelper dbHelper;
+    private Boolean defaultBackButtonPush = false;
+    private String currentQuestionID = "";
 
 
     public PeatDataSource(Context context) {
@@ -35,6 +37,7 @@ public class PeatDataSource {
     
     public void putQuestionInDB(Question oQuestion) {
     	String[] answers;
+    	String theme;
     	Boolean[] bool_isCorrect;
     	Integer boolSqlite =0;
     	Integer i;
@@ -43,6 +46,7 @@ public class PeatDataSource {
     			", '" + oQuestion.getQuestionText() +"')";
     	Log.d(LOG_TAG, sSql);
     	database.execSQL(sSql);
+    	theme = oQuestion.getQuestionTheme();
     	answers = oQuestion.getAnswers();
     	bool_isCorrect = oQuestion.getIsCorrectAnswers();
 
@@ -53,21 +57,25 @@ public class PeatDataSource {
         	else {
         		boolSqlite = 0;
         	}
-        	sSql="";
-        	sSql = "INSERT INTO Answers (as_idQuestions, as_text, as_isCorrect) VALUES ((SELECT MAX(idQuestions) FROM Questions WHERE qst_text='" + oQuestion.getQuestionText() + "'), '" + answers[i] + "', " + boolSqlite +")";
-        	Log.d(LOG_TAG, sSql);
-        	database.execSQL(sSql);
+        	execSQL("INSERT INTO Answers (as_idQuestions, as_text, as_isCorrect) VALUES ((SELECT MAX(idQuestions) FROM Questions WHERE qst_text='" + oQuestion.getQuestionText() + "'), '" + answers[i] + "', " + boolSqlite +")");
+        }
+        try {
+        	execSQL("INSERT INTO " + dbHelper.TABLE_THEMES_HAS_QUESTIONS + " (thq_idQuestions, thq_idThemes) VALUES ((SELECT MAX(idQuestions) FROM Questions WHERE qst_text='" + oQuestion.getQuestionText() + "'), (SELECT MAX(idThemes) FROM Themes WHERE th_title='" + theme + "'))"); 
+        }
+        catch (Exception e) {
+        	execSQL("INSERT INTO " + dbHelper.TABLE_THEMES + "(th_title) VALUES ('" + oQuestion.getQuestionTheme() + "')");
+        	execSQL("INSERT INTO " + dbHelper.TABLE_THEMES_HAS_QUESTIONS + " (thq_idQuestions, thq_idThemes) VALUES ((SELECT MAX(idQuestions) FROM Questions WHERE qst_text='" + oQuestion.getQuestionText() + "'), (SELECT MAX(idThemes) FROM Themes WHERE th_title='" + theme + "'))");
         }
     }
     
-    public void getAllTypes() {
+    public void logAllTypes() {
     	Cursor mCursor = database.rawQuery("SELECT * FROM QuestionType", null);
     	mCursor.moveToFirst();
     	Log.d(LOG_TAG, mCursor.getString(mCursor.getColumnIndex("qt_title")) + ", " +
     			mCursor.getString(mCursor.getColumnIndex("qt_explanation")));
     }
     
-    public void getAllTablesOfDB(){
+    public void logAllTablesOfDB(){
     	Cursor mCursor = database.rawQuery("SELECT tbl_name FROM sqlite_master WHERE type='table';", null);
     	mCursor.moveToFirst();
     	Log.d(LOG_TAG, "Alle Tabellen:");
@@ -77,7 +85,7 @@ public class PeatDataSource {
     	}
     }
     
-    public void getAllUserQuestionIDs() {
+    public void logAllUserQuestionIDs() {
     	Cursor mCursor = database.rawQuery("SELECT uhq_idQuestions FROM PeatUser_has_Questions", null);
     	mCursor.moveToFirst();
     	Log.d(LOG_TAG, "Alle IDs von User_Fragen:");
@@ -96,26 +104,65 @@ public class PeatDataSource {
     		mCursor.moveToNext();
     	}
     }
-      
+    
+    public void logAllQuestionsOfThemesofDB() {
+    	Cursor mCursor = database.rawQuery("SELECT * FROM " + dbHelper.TABLE_THEMES_HAS_QUESTIONS, null);
+    	mCursor.moveToFirst();
+    	Log.d(LOG_TAG, "Alle Themenzuordnungen:");
+    	while(!mCursor.isAfterLast()) {
+    		Log.d(LOG_TAG, mCursor.getString(mCursor.getColumnIndex("thq_idQuestions")) + "   " + mCursor.getString(mCursor.getColumnIndex("thq_idThemes")));
+    		mCursor.moveToNext();
+    	}
+    }
+    
     public Question getNextQuestion(){
+    	return getNextQuestion(defaultBackButtonPush);
+    }
+    
+    public Question getNextQuestion(Boolean backButtonPush){
 	    	Question oQuestion;
 	    	String[] answersArray;
 	    	Boolean[] isCorrectArray;
 	    	answersArray = new String[0];
 	    	isCorrectArray = new Boolean[0];
 	    	Integer iIsCorrect;
-	    	getAllUserQuestionIDs();
-	    	Cursor mCursorQuestions = database.rawQuery("SELECT * FROM Questions JOIN QuestionType ON idQuestionType = qst_idQuestionType WHERE idQuestions NOT IN (SELECT uhq_idQuestions FROM PeatUser_has_Questions);", null);
-	    	//Cursor mCursor = database.rawQuery("SELECT * FROM Questions JOIN QuestionType ON idQuestionType = qst_idQuestionType JOIN Answers ON idQuestions = as_idQuestions", null);
+	    	Cursor mCursorQuestions;
+	    	Boolean writeQuestionToTableUserHasQuestions = true;
+	    	logAllUserQuestionIDs();
+	    	if (currentQuestionID != "") {
+	    		if (backButtonPush) {
+	    			mCursorQuestions = database.rawQuery("SELECT * FROM Questions JOIN QuestionType ON idQuestionType = qst_idQuestionType WHERE idQuestions IN (SELECT uhq_idQuestions FROM PeatUser_has_Questions WHERE uhq_lastShown IN (SELECT MAX(uhq_lastShown) FROM PeatUser_has_Questions WHERE uhq_lastShown < (SELECT uhq_lastShown FROM PeatUser_has_Questions WHERE uhq_idQuestions = " + currentQuestionID + ")))", null);
+	    			if (mCursorQuestions.moveToFirst() == false) {
+	    				throw new IllegalStateException("Back Button bei erster Frage nicht moeglich.");
+	    			}
+	    			writeQuestionToTableUserHasQuestions = false;
+	    		}
+	    		else {
+	    			mCursorQuestions = database.rawQuery("SELECT * FROM Questions JOIN QuestionType ON idQuestionType = qst_idQuestionType WHERE idQuestions IN (SELECT uhq_idQuestions FROM PeatUser_has_Questions WHERE uhq_lastShown IN (SELECT MIN(uhq_lastShown) FROM PeatUser_has_Questions WHERE uhq_lastShown > (SELECT uhq_lastShown FROM PeatUser_has_Questions WHERE uhq_idQuestions = " + currentQuestionID + ")))", null);
+	    			if (mCursorQuestions.moveToFirst() == false) {
+	    				mCursorQuestions = database.rawQuery("SELECT * FROM Questions JOIN QuestionType ON idQuestionType = qst_idQuestionType WHERE idQuestions NOT IN (SELECT uhq_idQuestions FROM PeatUser_has_Questions);", null);
+	    			}
+	    			else {
+	    				writeQuestionToTableUserHasQuestions = false;
+	    			}
+	    		}
+	    	}
+	    	else {
+	    		if (backButtonPush != true) {
+	    			mCursorQuestions = database.rawQuery("SELECT * FROM Questions JOIN QuestionType ON idQuestionType = qst_idQuestionType WHERE idQuestions NOT IN (SELECT uhq_idQuestions FROM PeatUser_has_Questions);", null);
+	    		}
+	    		else throw new IllegalStateException("Back Button bei Start nicht moeglich.");
+	    	}
 	    	mCursorQuestions.moveToFirst();
 	    	String QuestionText = mCursorQuestions.getString(mCursorQuestions.getColumnIndex("qst_text"));
-	    	String idQuestion = mCursorQuestions.getString(mCursorQuestions.getColumnIndex("idQuestions"));
+	    	currentQuestionID = mCursorQuestions.getString(mCursorQuestions.getColumnIndex("idQuestions"));
 	    	String QuestionTypeTitle = mCursorQuestions.getString(mCursorQuestions.getColumnIndex("qt_title"));
-	    	
-	    	database.execSQL("INSERT INTO PeatUser_has_Questions (uhq_idQuestions, uhq_isIgnore, uhq_idPeatUser) VALUES(" + idQuestion + ", 0, (SELECT MAX(idPeatUser) FROM PeatUser WHERE us_name = 'Steven'))");
-	    	Cursor mCursorAnswers = database.rawQuery("SELECT * FROM Answers WHERE as_idQuestions = " + idQuestion, null);
+	    	 
+	    	if (writeQuestionToTableUserHasQuestions) {
+	    		database.execSQL("INSERT INTO PeatUser_has_Questions (uhq_idQuestions, uhq_isIgnore, uhq_idPeatUser) VALUES(" + currentQuestionID + ", 0, (SELECT MAX(idPeatUser) FROM PeatUser WHERE us_name = 'Steven'))");
+	    	}
+	    	Cursor mCursorAnswers = database.rawQuery("SELECT * FROM Answers WHERE as_idQuestions = " + currentQuestionID, null);
 	    	mCursorAnswers.moveToFirst();
-	    	Integer i=0;
 	    	while(!mCursorAnswers.isAfterLast()) {
 	    		String asText = mCursorAnswers.getString(mCursorAnswers.getColumnIndex("as_text"));
 	    		answersArray = addStringToArray(answersArray, asText);
@@ -126,10 +173,29 @@ public class PeatDataSource {
 	    			isCorrectArray = addBooleanToArray(isCorrectArray, false);
 	    		}
 	    		mCursorAnswers.moveToNext();
-	    		i=i+1;
 	    	}
-	    	oQuestion = new Question(QuestionText, QuestionTypeTitle, answersArray, isCorrectArray);
+	    	
+	    	logAllQuestionsOfThemesofDB();
+	    	Cursor mCursorThemes = database.rawQuery("SELECT * FROM " + dbHelper.TABLE_THEMES_HAS_QUESTIONS + " JOIN " + dbHelper.TABLE_THEMES + " ON idThemes = thq_idThemes WHERE thq_idQuestions = " + currentQuestionID, null);
+	    	mCursorThemes.moveToFirst();
+	    	String sTheme = mCursorThemes.getString(mCursorThemes.getColumnIndex("th_title"));
+	    	oQuestion = new Question(sTheme, QuestionText, QuestionTypeTitle, answersArray, isCorrectArray);
 	    	return oQuestion;
+    }
+    
+    public String[] getAllThemes(){
+    	String[] themeArray = new String[0];
+    	String strThema;
+       	Cursor mCursor = database.rawQuery("SELECT * FROM " + dbHelper.TABLE_THEMES + " ORDER BY th_title", null);
+    	mCursor.moveToFirst();
+    	Log.d(LOG_TAG, "Themen:");
+    	while(!mCursor.isAfterLast()) {
+    		strThema = mCursor.getString(mCursor.getColumnIndex("th_title"));
+    		Log.d(LOG_TAG, strThema);
+    		themeArray = addStringToArray(themeArray, strThema);
+    		mCursor.moveToNext();
+    	}
+    	return themeArray;
     }
     
     private String[] addStringToArray(String[] array, String string){
@@ -169,5 +235,10 @@ public class PeatDataSource {
     public void close() {
     	dbHelper.close();
     	Log.d(LOG_TAG, "Datenbank mit Hilfe des DbHelpers geschlossen.");
+    }
+    
+    private void execSQL(String sSQL) {
+       	Log.d(LOG_TAG, sSQL);
+    	database.execSQL(sSQL);
     }
 }

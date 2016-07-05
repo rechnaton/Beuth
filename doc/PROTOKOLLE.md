@@ -417,25 +417,52 @@ Besprechung des weiteren Vorgehens:
 ------------------------------------------------------------------------------------------
 
 #26.06.2016 (Präsenz- und Online Meeting via Moodle)
-??:00 Uhr
+11:00 Uhr
 Teilnehmer: Andreas, Thomas, Steven
 
 Agenda:
 - Rücksprache hins. "In Progress" sowie Status der Dokumentation.
-- Präsentation vorbereiten.
-- Code säubern, kommentieren (javadoc?).
-- Weitere Tests durchführen.
-- Fertigstellung der Dokumentation und Einbindung in md-Format (GitHub).
-- Einigung auf
+
+Ergebnis:
+- Präsentation fertigstellen bis 06.07..
+- Code säubern, kommentieren (javadoc?) bis 06.07..
+- Weitere Tests durchführen bis 06.07..
+- Fertigstellung der Dokumentation und Einbindung in md-Format (GitHub) bis 06.07..
+- Einigung auf:
   - Link-Syntax, statt Fußnoten
   - Begriffklärung bzw. Schreibart
-- Themen Programmierung (bis spät. 03.07.)
-  - manuell gespeicherte Frage muss auch ausgegeben werden - In Progress
-  - mit aktuellem Repository Funktion "Frage aus Datenbank holen" implementieren - übergeben an Steven (In Progress)
-  - Methode für Antworten-Übergabe - In Progress
-  - Methode für Themen-Speichern - In Progress
-  - in MainActivity die Datenbankverbindung schließen (close) - In Progress
-  - User-Verwaltung - In Progress (ggf. zurückgestellt für Version 2.0)
-  - Methode GetLastQuestion (Gegenpart zu getNextQuestion) - Pending (zurückgestellt für Version 2.0)
+- Themen Programmierung (bis spät. 06.07.)
+  - manuell gespeicherte Frage muss auch ausgegeben werden - DONE
+  - mit aktuellem Repository Funktion "Frage aus Datenbank holen" implementieren - DONE
+  - Methode für Antworten-Übergabe - DONE
+  - Methode für Themen-Speichern - DONE
+  - in MainActivity die Datenbankverbindung schließen (close) - DONE
+  - User-Verwaltung - zurückgestellt für Version 2.0
+  - Methode GetLastQuestion (Gegenpart zu getNextQuestion) - Pending (ggf. zurückgestellt für Version 2.0)
 
 * ab Dienstag, 28.06., regelmäßige Abstimmung mit Steven, wie weit der Code ist.
+
+------------------------------------------------------------------------------------------
+
+#03.07.2016 (Online Meeting via Moodle)
+20:00 Uhr
+Teilnehmer: Andreas, Thomas, Steven
+
+Agenda:
+- Rücksprache hins. "Pending" sowie Status der Dokumentation sowie der Präsentation.
+
+Ergebnis:
+- bis 06.07.: lesen Dokumentation und kommentieren/ergänzen
+- bis 06.07.: Steven in Dokumentation ergänzen
+- bis 06.07.: GetLastQuestion (back-Button)
+
+------------------------------------------------------------------------------------------
+
+#06.07.2016 (Online Meeting via Moodle)
+15:00 Uhr + 17:00 Uhr
+Teilnehmer: Andreas, Thomas, Steven
+
+Agenda:
+- Dokumentation fertigstellen und in md-Format einbinden (GitHub)
+- Präsentation fertigstellen und aufteilen
+- Code kommentieren und säubern

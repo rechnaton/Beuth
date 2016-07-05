@@ -7,9 +7,9 @@ public class Question {
 	private String[] answers;
 	private Boolean[] isCorrect;
 	
-	public Question (String Thema, String Text, String sType, String[] answersArray, Boolean[] isCorrectArray){
+	public Question (String Theme, String Text, String sType, String[] answersArray, Boolean[] isCorrectArray){
 		questionText = Text;
-		questionTheme = Thema;
+		questionTheme = Theme;
 		QuestionTypeTitle = sType;
 		answers = answersArray;
 		isCorrect = isCorrectArray;

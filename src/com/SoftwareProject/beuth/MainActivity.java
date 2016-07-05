@@ -20,24 +20,28 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-
+/**
+ * 
+ * @author #peatTeam
+ * @version v1.0.1
+ */
 @TargetApi(Build.VERSION_CODES.M)
 public class MainActivity extends AppCompatActivity {
 	/**
 	 * Definition aller notwendigen Variablen
 	 */
-	Button start; // Button Frage, leitet das Spiel ein
-	Button buttonAnswer; // Button Antwort, ruft die Antwort zur aktuellen Frage auf
-	Button back; // Button #Repeat, ruft die zurueckliegende Frage auf
-	Button pause; // Button Pause, speichert/pausiert die aktuelle Frage
-	Button next; // Button Weiter, fuft die naechste Frage auf
-	Button wiki; // Button Wiki, ruft die URL https://www.wikipedia.de/ auf
-	Button google; // Button Google, ruft die URL https://www.google.de/ auf
-	Button returnlanding; // Button return, ruft LandingActivity auf
-	Button saveComments; // Button save, speichert Kommentare
+	Button start; /** Button Frage, leitet das Spiel ein */
+	Button buttonAnswer; /** Button Antwort, ruft die Antwort zur aktuellen Frage auf */
+	Button back; /** Button #Repeat, ruft die zurueckliegende Frage auf */
+	Button pause; /** Button Pause, speichert/pausiert die aktuelle Frage */
+	Button next; /** Button Weiter, fuft die naechste Frage auf */
+	Button wiki; /** Button Wiki, ruft die URL https://www.wikipedia.de/ auf */
+	Button google; /** Button Google, ruft die URL https://www.google.de/ auf */
+	Button returnlanding; /** Button return, ruft LandingActivity auf */
+	Button saveComments; /** Button save, speichert Kommentare */
 	private Question currentQuestion;
 	
-	TextView stage; // Ausgabe, Mensch-Computer-Kommunikation
+	TextView stage; /** Ausgabe, Mensch-Computer-Kommunikation */
 	
 	public static final String LOG_TAG = MainActivity.class.getSimpleName();
 	private PeatDataSource dataSource;
@@ -48,29 +52,22 @@ public class MainActivity extends AppCompatActivity {
 	String[] answers;
 	Boolean[] isCorrect;
 
-	int setNextQuestion=0; // Zaehler-Mockup, setzt den Array-Index des Fragearrays auf 0
-    String[] question={ // Fragen-Mockup als Array
-    		" ",
-    		"M1:Dient Git der Versionsverwaltung für Software?",
-    		"M2:Ist Slack ein webbasierter Instant-Messanger?",
-    		"M3:Ist Trello eine Projektmanagementsoftware?",
-    		"M4:Ist Android u.a. auch ein Betriebssystem?",
-    		"M5:Bedeutet APK Android Package File?"};
-   
-    // Antwort-Mockup, Radio-Buttons Ja Nein
+	/** Antwort-Mockup, Radio-Buttons Ja Nein */
     String answerCorrect = "Ja lautet die Antwort! Gut gemacht!";
 	String answerNotCorrect = "Die Antwort ist leider falsch!";
-	
-	
-	// Hinweis, wenn Button-Pause geklickt wird
+		
+	/** 
+	 * Hinweis, wenn Button-Pause geklickt wird
+	 * ab Version v2.0.1
+	 */
 	String messagePause = "Frage wurde für später gespeichert!";
 	
-	// Definition einer Radio-Button-Gruppe für geschlossene Fragen (Ja-Nein-Fragen)
+	/** Definition einer Radio-Button-Gruppe für geschlossene Fragen (Ja-Nein-Fragen) */
 	private RadioGroup radioGroup;
 	private RadioGroup radioGroupComment;
 	private RadioButton radioAnswerButton;
 	
-	// Variable für Einstellungen der App
+	/** Variable für Einstellungen der App */
 	private static final int RESULT_SETTINGS = 1;
 		
 	/**
@@ -82,7 +79,6 @@ public class MainActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler(this)); 
 		setContentView(R.layout.activity_main);
-		//this.deleteDatabase("peat.db");
 	    dataSource = new PeatDataSource(this);
 	    Log.d(LOG_TAG, "Die Datenquelle wird geöffnet.");
 	    
@@ -110,17 +106,14 @@ public class MainActivity extends AppCompatActivity {
 			@Override
 			public void onClick(View v) {
 				try {
-				if(setNextQuestion == 1){
-					setNextQuestion = 5;
-				} else {
-					setNextQuestion--;
+				currentQuestion = dataSource.getNextQuestion(true);
+				stage.setText(currentQuestion.getQuestionTheme() + ":" + System.getProperty("line.separator") + currentQuestion.getQuestionText());
 				}
-				stage.setText(question[setNextQuestion]);
-				} catch (Exception e) {
-					Toast.makeText(MainActivity.this, "Wende dich an den Support!", Toast.LENGTH_LONG).show();
-		    	}
+				catch (IllegalStateException e){
+					Toast.makeText(MainActivity.this, "Weiter geht es nicht. Nächste Frage?!", Toast.LENGTH_LONG).show();
+					Log.d(LOG_TAG, e.toString());
+				}
 			}
-			
 		});
 		
 		pause.setOnClickListener(new View.OnClickListener() {
@@ -135,20 +128,17 @@ public class MainActivity extends AppCompatActivity {
 			
 			@Override
 			public void onClick(View v) {
-				//setNextQuestion++;
-				//if(setNextQuestion == 6){
-				//	setNextQuestion = 1;
-				//}
 				try {
 				currentQuestion = dataSource.getNextQuestion();
-				stage.setText(currentQuestion.getQuestionText());
+				stage.setText(currentQuestion.getQuestionTheme() + ":" + System.getProperty("line.separator") + currentQuestion.getQuestionText());
 				}
 				catch (IndexOutOfBoundsException e){
 					dataSource.resetUserHasQuestions();
-					Toast.makeText(MainActivity.this, "Herzlichen Glückwunsch! Sie haben alle Fragen der abonnierten Themen beantwortet. Starten wir von vorn...", Toast.LENGTH_LONG).show();
+					Toast.makeText(MainActivity.this, "Herzlichen Glückwunsch! Du hast alle Fragen der abonnierten Themen beantwortet."
+							+ " Klicke auf Weiter und beginne von vorn!", Toast.LENGTH_LONG).show();
+					Log.d(LOG_TAG, e.toString());
 				}
 			}
-
 		});
 		
 		wiki.setOnClickListener(new View.OnClickListener() {
@@ -179,9 +169,9 @@ public class MainActivity extends AppCompatActivity {
 		});
 		
 		EditText commentAnswer = (EditText) findViewById(R.id.commentAnswer);
-		// Eingabe in einen String umwandeln
+		/** Eingabe in einen String umwandeln */
 		commentAnswers = commentAnswer.getText().toString();
-		// Textfeld leeren
+		/** Textfeld leeren */
 		commentAnswer.setText("");
 		
 		saveComments.setOnClickListener(new View.OnClickListener() {
@@ -196,24 +186,20 @@ public class MainActivity extends AppCompatActivity {
 	}
 
 	/**
-	 * Diese Klasse oeffnet das Menue, bzw. fuegt Menuepunkte hinzu, sofern diese existieren
+	 * Diese Klasse oeffnet das Menue in der Aktionsleiste, bzw. fuegt Menuepunkte hinzu, sofern diese existieren
 	 */	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 
 	/**
-	 * Die folgenden 3 Klassen erstellen das Einstellungsmenue
-	 * und holen Daten aus EinstellungenMain.java, strings.xml, preferences.xml und arrays.xml
+	 * Die folgenden 3 Klassen verarbeiten Klicks auf das Einstellungsmenue in der Aktionsleiste
+	 * und holen Daten aus EinstellungenActivity, strings.xml, preferences.xml und arrays.xml
 	 */
 		@Override
 		public boolean onOptionsItemSelected(MenuItem item) {
-			// Handle action bar item clicks here. The action bar will
-			// automatically handle clicks on the Home/Up button, so long
-			// as you specify a parent activity in AndroidManifest.xml.
 			int id = item.getItemId();
 			if (id == R.id.action_settings) {
 				startActivity(new Intent(this, EinstellungenActivity.class));
@@ -262,7 +248,7 @@ public class MainActivity extends AppCompatActivity {
 	/**
 	 * Diese Klasse prueft, welcher Radio-Button ausgewaehlt wurde
 	 * und erzeugt je nach Wahl bei Klick auf Button Antwort
-	 * einen Sound und einen Toast
+	 * einen Sound und einen Toast (Ja/Nein)
 	 */
     public void addListenerOnButton() {
 
@@ -278,12 +264,12 @@ public class MainActivity extends AppCompatActivity {
     		public void onClick(View v) {
     		Boolean[] isCorrectArray;
     		Boolean correctAnswer = false;
-    		// get selected radio button from radioGroup
+    		/** Holt ausgewaehlten Radio-Button von der RadioGroup */
     		int selectedId = radioGroup.getCheckedRadioButtonId();
 
-    		// find the radiobutton by returned id
+    		/** Findet den Radio-Button anhand der zurueckgegebenen ID */
     		radioAnswerButton = (RadioButton) findViewById(selectedId);
-    		//TODO
+
     		isCorrectArray = currentQuestion.getIsCorrectAnswers();
     		if (isCorrectArray[0] == true & selectedId == R.id.radioYes) {
     			correctAnswer = true;

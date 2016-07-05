@@ -9,14 +9,22 @@ import android.os.Bundle;
 import android.view.View;
 import android.content.Intent;
 
+/**
+ * Wird im Anschluss an die Splash-Activity aufgerufen.
+ * Stellt das Menue der App dar (landing page).
+ * 
+ * @author AndreasMosig
+ * @version v1.0.1
+ * 
+ */
 @TargetApi(Build.VERSION_CODES.M)
 public class LandingActivity extends AppCompatActivity {
 
-	Button game; // Button game, ruft MainActivity auf
-	Button question; // Button question, ruft Eingabe der Fragen auf
-	Button theme; // Button theme, ruft user_themes auf
-	Button setting; // Button setting, ruft Settings auf	
-	ImageView splash;
+	Button game; /** Button game, ruft MainActivity auf */
+	Button question; /** Button question, ruft Eingabe der Fragen auf */
+	Button theme; /** Button theme, ruft user_themes auf */
+	Button setting; /** Button setting, ruft Settings auf */
+	ImageView splash; /** Bild splash.png aus res/drawable */
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -67,5 +75,4 @@ public class LandingActivity extends AppCompatActivity {
 			}
 		});
 	}
-	
 }

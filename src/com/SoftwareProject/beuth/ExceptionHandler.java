@@ -6,6 +6,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Build;
 
+/**
+ * Faengt nicht behandelte Ausnahmen im Code auf.
+ * Thread UncaughtExceptionHandler wurde in jede Activity eingesetzt.
+ * Liefert mittels der CrashActivity den relevanten Auszug aus dem Log
+ * der Android-Entwicklungsumgebung sowie Informationen zum verwendeten Endgeraet.
+ * 
+ * @author AndreasMosig
+ * @version v1.0.1
+ * 
+ */
 public class ExceptionHandler implements
         java.lang.Thread.UncaughtExceptionHandler {
     private final AppCompatActivity myContext;
@@ -21,7 +31,6 @@ public class ExceptionHandler implements
         StringBuilder errorReport = new StringBuilder();
         errorReport.append("************ CAUSE OF ERROR ************\n\n");
         errorReport.append(stackTrace.toString());
-
         errorReport.append("\n************ DEVICE INFORMATION ***********\n");
         errorReport.append("Brand: ");
         errorReport.append(Build.BRAND);
@@ -56,5 +65,4 @@ public class ExceptionHandler implements
         android.os.Process.killProcess(android.os.Process.myPid());
         System.exit(10);
     }
-
 }

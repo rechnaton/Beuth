@@ -27,10 +27,12 @@ public class QuestionInputActivity extends AppCompatActivity {
 	Button backToMenu;
 	
 	private PeatDataSource dataSource;
+	private String[] themesArray;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		
 		// Initialisierung der SQLite-Datenbank
 		dataSource = new PeatDataSource(this);
 		// Verbindung mit der SQLite-Datenbank aufbauen
@@ -40,6 +42,7 @@ public class QuestionInputActivity extends AppCompatActivity {
 		answers[0] = "Ja";
 		answers[1] = "Nein";
 		isCorrect = new Boolean[2];
+		themesArray = dataSource.getAllThemes();
 		// Auffangen nicht behandelter Ausnahmen
 		Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler(this));
 		// Layoutauswahl
