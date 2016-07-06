@@ -7,12 +7,12 @@ import android.content.Intent;
 import android.os.Build;
 
 /**
- * Faengt nicht behandelte Ausnahmen im Code auf.
+ * ExceptionHandler faengt nicht behandelte Ausnahmen im Code auf.
  * Thread UncaughtExceptionHandler wurde in jede Activity eingesetzt.
  * Liefert mittels der CrashActivity den relevanten Auszug aus dem Log
  * der Android-Entwicklungsumgebung sowie Informationen zum verwendeten Endgeraet.
  * 
- * @author AndreasMosig
+ * @author #peatTeam
  * @version v1.0.1
  * 
  */
