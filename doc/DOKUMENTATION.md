@@ -2,7 +2,7 @@
 
 Erlerntes spielend wiederholen und nie wieder vergessen!
 
-![peat](https://github.com/andreasmosig/peat/blob/master/res/drawable-hdpi/ic_launcher.png)
+![peat](https://github.com/andreasmosig/peat/blob/master/doc/DOKU/peat.jpg)
 
 ###Version: v1.0.1
 
