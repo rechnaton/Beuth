@@ -31,6 +31,7 @@ Erlerntes spielend wiederholen und nie wieder vergessen!
 
 [1.4. Vorgehensweise](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#14-vorgehensweise)
   
+  
 [2. Vorbetrachtungen (IST-Analyse)](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#2-vorbetrachtungen-ist-analyse)
 
 [2.1. Theoretische Aspekte einer Lernsoftware](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#21-theoretische-aspekte-einer-lernsoftware)
@@ -39,6 +40,7 @@ Erlerntes spielend wiederholen und nie wieder vergessen!
 
 [2.3. Marktanalyse](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#23-marktanalyse)
   
+  
 [3. Produktdefinition und Systementwurf (SOLL-Konzept)](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#3-produktdefinition-und-systementwurf-soll-konzept)
 
 [3.1. Requirements](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#31-requirements)
@@ -46,6 +48,7 @@ Erlerntes spielend wiederholen und nie wieder vergessen!
 [3.2. Design und Architektur](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#32-design-und-architektur)
 
 [3.3. Konzept der Qualitätssicherung](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#33-konzept-der-qualit%C3%A4tssicherung)
+  
   
 [4. Umsetzung](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#4-umsetzung)
 
@@ -59,6 +62,7 @@ Erlerntes spielend wiederholen und nie wieder vergessen!
 
 [4.5. Versionierung](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#45-versionierung)
   
+  
 [5. Schlussbetrachtung](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#5-schlussbetrachtung)
 
 [5.1. Zusammenfassung](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#51-zusammenfassung)
@@ -67,7 +71,9 @@ Erlerntes spielend wiederholen und nie wieder vergessen!
 
 [5.3. Ausblick](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#53-ausblick)
   
+  
 [6. Anhang & weiterführende Links](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#6-anhang--weiterf%C3%BChrende-links)
+  
   
 [7. Glossar](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#7-glossar)
 
