@@ -1,4 +1,3 @@
-
 #Dokumentation Lernapp #peat
 
 Erlerntes spielend wiederholen und nie wieder vergessen!
@@ -89,7 +88,7 @@ Das konkrete **Projektziel** war das Entwickeln einer Implementierungsidee für 
 Das **Team \#peat** bestand zu Beginn, d.h. in der Findungsphase einer Vision, noch aus zwei Mitgliedern. Schnell wurde klar, dass die gestellten Anforderungen an das Projekt noch eine weitere Kraft erfordern würden. Im Zuge der finalen Festlegung der Idee sowie der Gruppe, galt es die nächsten Ziele und Meilensteine zu definieren. Ein [Exposé](https://github.com/andreasmosig/peat/blob/master/doc/EXPOSE.md) sollte die ersten Weichen stellen. Hierin wurden Anforderungen, theoretische Grundlagen, technische Aspekte, wie z.B. Architektur und Entwicklungsumgebung sowie Meilensteine abgesteckt.
 
 
-Die **Statusberichte** wurden alle ein bis zwei Wochen per E-Mail an den BA samt der Verlinkungen zu den Projektmanagement- sowie Versionsverwaltungsanwendungen geschickt (s. [6.][#6. Anhang & weiterführende Links]).
+Die **Statusberichte** wurden alle ein bis zwei Wochen per E-Mail an den BA samt der Verlinkungen zu den Projektmanagement- sowie Versionsverwaltungsanwendungen geschickt (s. [6.][6. Anhang & weiterführende Links]).
 
 ##1.2. Projekt-Stammdaten
 
