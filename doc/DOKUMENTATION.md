@@ -4,22 +4,22 @@ Erlerntes spielend wiederholen und nie wieder vergessen!
 
 ![peat](https://github.com/andreasmosig/peat/blob/master/doc/DOKU/peat.jpg)
 
-###Version: v1.0.1
+####Version: v1.0.1
 
-###Ausgabe: 1
+####Ausgabe: 1
 
-###Autoren/Entwickler:
-###Steven Pawellek, Thomas Ricklinkat, Andreas Mosig
+####Autoren/Entwickler:
+####Steven Pawellek, Thomas Ricklinkat, Andreas Mosig
 
-###Kontakt: mailtopeat@gmail.com
+####Kontakt: mailtopeat@gmail.com
 
-###Stand: 06.07.2016
+####Stand: 06.07.2016
 
-###Beuth Hochschule für Technik Berlin, Wirtschaftsinformatik, 4. Semester, Sommersemester 2016
+####Beuth Hochschule für Technik Berlin, Wirtschaftsinformatik, 4. Semester, Sommersemester 2016
 
 -----------------------------------------------------------------------------------------------
 
-##Gliederung
+#Gliederung
 
 [1. Einleitung](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#1-einleitung)
 
@@ -30,8 +30,7 @@ Erlerntes spielend wiederholen und nie wieder vergessen!
 [1.3. Projektidee, -ziel und -plan](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#13-projektidee--ziel-und--plan)
 
 [1.4. Vorgehensweise](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#14-vorgehensweise)
-
-
+  
 [2. Vorbetrachtungen (IST-Analyse)](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#2-vorbetrachtungen-ist-analyse)
 
 [2.1. Theoretische Aspekte einer Lernsoftware](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#21-theoretische-aspekte-einer-lernsoftware)
@@ -39,8 +38,7 @@ Erlerntes spielend wiederholen und nie wieder vergessen!
 [2.2. Vision und Geschäftsmodell](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#22-vision-und-gesch%C3%A4ftsmodell)
 
 [2.3. Marktanalyse](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#23-marktanalyse)
-
-
+  
 [3. Produktdefinition und Systementwurf (SOLL-Konzept)](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#3-produktdefinition-und-systementwurf-soll-konzept)
 
 [3.1. Requirements](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#31-requirements)
@@ -48,8 +46,7 @@ Erlerntes spielend wiederholen und nie wieder vergessen!
 [3.2. Design und Architektur](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#32-design-und-architektur)
 
 [3.3. Konzept der Qualitätssicherung](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#33-konzept-der-qualit%C3%A4tssicherung)
-
-
+  
 [4. Umsetzung](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#4-umsetzung)
 
 [4.1. Plattform](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#41-plattform)
@@ -61,8 +58,7 @@ Erlerntes spielend wiederholen und nie wieder vergessen!
 [4.4. Persistenz](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#44-persistenz)
 
 [4.5. Versionierung](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#45-versionierung)
-
-
+  
 [5. Schlussbetrachtung](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#5-schlussbetrachtung)
 
 [5.1. Zusammenfassung](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#51-zusammenfassung)
@@ -70,11 +66,9 @@ Erlerntes spielend wiederholen und nie wieder vergessen!
 [5.2. Erkenntnisse](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#52-erkenntnisse)
 
 [5.3. Ausblick](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#53-ausblick)
-
-
+  
 [6. Anhang & weiterführende Links](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#6-anhang--weiterf%C3%BChrende-links)
-
-
+  
 [7. Glossar](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#7-glossar)
 
 -----------------------------------------------------------------------------------------------
