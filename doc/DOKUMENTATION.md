@@ -34,8 +34,9 @@ Erlerntes spielend wiederholen und nie wieder vergessen!
 [1.3. Projektidee, -ziel und -plan](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#13-projektidee--ziel-und--plan)
 
 [1.4. Vorgehensweise](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#14-vorgehensweise)
-  
-  
+
+
+
 [2. Vorbetrachtungen (IST-Analyse)](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#2-vorbetrachtungen-ist-analyse)
 
 [2.1. Theoretische Aspekte einer Lernsoftware](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#21-theoretische-aspekte-einer-lernsoftware)
@@ -43,8 +44,9 @@ Erlerntes spielend wiederholen und nie wieder vergessen!
 [2.2. Vision und Geschäftsmodell](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#22-vision-und-gesch%C3%A4ftsmodell)
 
 [2.3. Marktanalyse](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#23-marktanalyse)
-  
-  
+
+
+
 [3. Produktdefinition und Systementwurf (SOLL-Konzept)](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#3-produktdefinition-und-systementwurf-soll-konzept)
 
 [3.1. Requirements](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#31-requirements)
@@ -52,8 +54,9 @@ Erlerntes spielend wiederholen und nie wieder vergessen!
 [3.2. Design und Architektur](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#32-design-und-architektur)
 
 [3.3. Konzept der Qualitätssicherung](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#33-konzept-der-qualit%C3%A4tssicherung)
-  
-  
+
+
+
 [4. Umsetzung](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#4-umsetzung)
 
 [4.1. Plattform](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#41-plattform)
@@ -65,8 +68,9 @@ Erlerntes spielend wiederholen und nie wieder vergessen!
 [4.4. Persistenz](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#44-persistenz)
 
 [4.5. Versionierung](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#45-versionierung)
-  
-  
+
+
+
 [5. Schlussbetrachtung](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#5-schlussbetrachtung)
 
 [5.1. Zusammenfassung](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#51-zusammenfassung)
@@ -74,11 +78,13 @@ Erlerntes spielend wiederholen und nie wieder vergessen!
 [5.2. Erkenntnisse](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#52-erkenntnisse)
 
 [5.3. Ausblick](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#53-ausblick)
-  
-  
+
+
+
 [6. Anhang & weiterführende Links](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#6-anhang--weiterf%C3%BChrende-links)
-  
-  
+
+
+
 [7. Glossar](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#7-glossar)
 
 -----------------------------------------------------------------------------------------------
@@ -103,7 +109,7 @@ Die **Statusberichte** wurden alle ein bis zwei Wochen per E-Mail an den BA samt
 
 ##1.2. Projekt-Stammdaten
 
-####a) Gruppenmitglieder
+#####a) Gruppenmitglieder
 
 * Thomas Ricklinkat (s58372@beuth-hochschule.de, Matr.-Nr. 821644)
 
@@ -112,12 +118,12 @@ Die **Statusberichte** wurden alle ein bis zwei Wochen per E-Mail an den BA samt
 * Steven Pawellek (s45848@beuth-hochschule.de, Matr.-Nr. 776340)
 
 
-####b) Projektdauer
+#####b) Projektdauer
 
 * Der Projektzeitraum erstreckte sich vom 7. April (Kick-Off) bis zum 8. Juli 2016, dem Tag der Präsentation der Arbeitsergebnisse.
 
 
-####c) Projektmanagement-Werkzeuge
+#####c) Projektmanagement-Werkzeuge
 
 * Für den allgemeinen Austausch und für die Projekt- sowie interne Kommunikation mit dem BA und allen Kommilitonen, wurde eine allgemein zugängliche [Slack-Gruppe](http://beuthswtprojekt.slack.com) vom BA eingerichtet. Darüber hinaus verfügte jede Projektgruppe über ihren eigenen, projektinternen Slack-Kanal. Für das vorliegende Projekt war es der Kanal **peat**.
 
@@ -168,7 +174,7 @@ Eine **Kurzbeschreibung** zur knappen und marktgerechten Erläuterung der Anwend
 > \#peat hilft dir, dein erworbenes Wissen durch intelligente Wiederholung zu verfestigen und damit ins Langzeitgedächtnis zu überführen. Und das funktioniert so: hinterlege in deinem Account offene oder geschlossene Fragen zu verschiedenen Themenbereichen sowie deren Antwortmöglichkeiten und sage \#peat, wann bzw. wie häufig dich \#peat abfragen soll. Fertig. \#peat fragt dich ab sofort bequem per Push-Notification oder per Lernquizz auf deinem Smartphone ab und du kannst die Frage direkt beantworten oder ignorieren. Am Ende des Tages kannst du dir deinen Lernerfolg darstellen lassen. Re \#peat!
 
 
-Wie in Punkt 1.1 bereits erwähnt, war das vorrangige **Projektziel** das Entwickeln einer Implementierungsidee hin zu einem lauffähigen, präsentierbaren Prototypen innerhalb von knapp drei Monaten. Vor diesem Hintergrund war es daher zunächst erforderlich, das Gesamtziel in Teilziele zu zerlegen und dabei jeweils zu unterscheiden, was davon realistisch gesehen in dieser Zeit umgesetzt werden kann bzw. was davon in den Ausblick genommen werden muss. Der folgende Milestone-Plan zeigt das Ergebnis dieser Überlegungen, wobei die einzelnen Meilensteine in Anlehnung an die Scrum-Methode als “Sprints” bezeichnet werden:
+Wie in Punkt [1.1](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#11-problemstellung-und-zielsetzung-der-arbeit) bereits erwähnt, war das vorrangige **Projektziel** das Entwickeln einer Implementierungsidee hin zu einem lauffähigen, präsentierbaren Prototypen innerhalb von knapp drei Monaten. Vor diesem Hintergrund war es daher zunächst erforderlich, das Gesamtziel in Teilziele zu zerlegen und dabei jeweils zu unterscheiden, was davon realistisch gesehen in dieser Zeit umgesetzt werden kann bzw. was davon in den Ausblick genommen werden muss. Der folgende Milestone-Plan zeigt das Ergebnis dieser Überlegungen, wobei die einzelnen Meilensteine in Anlehnung an die Scrum-Methode als “Sprints” bezeichnet werden:
 
 
 * Sprint 0) Semesterstart (29.03.2016)
@@ -372,7 +378,7 @@ Um dem elementaren Charakter der Anforderungen gerecht zu werden, war geplant, d
 * anschließende Konkretisierung der Requirements mit Hilfe des Tools easyBacklog im Rahmen der Product-Backlog-Erstellung
 
 
-Wie bereits im Punkt [1.4. Vorgehensweise](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#14-vorgehensweise)) erwähnt, wurde die Arbeit mit easyBacklog aufgegeben, so dass nur das Exposé-Use-Case-Diagramm existiert und damit dieser Punkt etwas zu kurz kam.
+Wie bereits im Punkt [1.4.](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#14-vorgehensweise) erwähnt, wurde die Arbeit mit easyBacklog aufgegeben, so dass nur das Exposé-Use-Case-Diagramm existiert und damit dieser Punkt etwas zu kurz kam.
 
 
 ![visionäres Use-Case-Diagramm zu \#peat](https://github.com/andreasmosig/peat/blob/master/doc/UML/peat-use-case.png)
@@ -443,7 +449,7 @@ Aufbauend auf den mehr oder weniger konkreten Vorstellungen hinsichtlich der zu 
 Die Designphase schloss sich (wie in der Theorie empfohlen) an die Analysephase an, weshalb ein Kern an Anwendungsfällen bezogen auf den Funktionsumfang der App bereits definiert wurde. In easyBacklog wurden, wie bereits eingangs beschrieben, zunächst die wichtigsten Use Cases mit Rollen, Ereignissen und Ergebnissen dokumentiert und schließlich in aus der Entwicklungsarbeit resultierenden Protokollen und fortlaufend aktualisierten Task-Aufstellungen aktualisiert. Man sollte zum Start einen möglichst guten Überblick haben, d.h. funktionale Anforderungen sollten bekannt sein (z.B. das Speichern und Lesen von Fragen und Antworten in die/aus der Datenbank) als auch nicht-funktionale Anforderungen (z.B. Usability der UI). Es fiel früh auf, dass man nicht alles vorher festlegen kann und ebenso, dass zu viele verschiedene Werkzeuge das Hauptaugenmerk, nämlich die Entwicklung/Programmierung, verwischen. Die Ersten Entwürfe, die mittels Lumzy angefertigt worden sind, zeigten schon früh die Anforderungen an die zu entwickelnde Lernapp \#peat:
 
 
-####a) App (für Version **v1.0.1**):
+#####a) App (für Version **v1.0.1**):
 
 ![Push] (https://github.com/andreasmosig/peat/blob/master/doc/MOCKUPS/APP/pushnotification.png)
 
@@ -455,7 +461,7 @@ Die Designphase schloss sich (wie in der Theorie empfohlen) an die Analysephase 
 
 ![Einstellungen] (https://github.com/andreasmosig/peat/blob/master/doc/MOCKUPS/APP/einstellungen.png)
 
-####b) Web (für Version **v2.0.1**):
+#####b) Web (für Version **v2.0.1**):
 
 ![Landing] (https://github.com/andreasmosig/peat/blob/master/doc/MOCKUPS/WEB/landing.png)
 
@@ -632,7 +638,7 @@ Das bereits beschriebene Architektur-Muster der Android-Entwicklungsumgebung ([M
 Nachstehend folgt ein Überblick über die wichtigsten Java-Klassen, aufbauend auf der Anforderungsphase sowie den Entwürfen der Designphase. Das Modell als Datenschicht wird durch die Klassen PeatDataSource, DBHelper und der dazugehörenden SQLite-Datenbank umgesetzt. Alle anderen Klassen sind der Modelview zuzuordnen und beinhalten die UI-Logik.
 
 
-####a) GUI und Logik
+#####a) GUI und Logik
 
 * Splash > Splash-Bild inkl. Sound (bei Öffnen der App)
 
@@ -655,7 +661,7 @@ Nachstehend folgt ein Überblick über die wichtigsten Java-Klassen, aufbauend a
 * UnderConstructionActivity > “Klasse in Arbeit” (Bsp. Fragentyp “Offene Fragen”)
 
 
-####b) Persistenz
+#####b) Persistenz
 
 * PeatDataSource > Data Access Object und für Verwalten der Daten verantwortlich
 
@@ -789,7 +795,7 @@ Aus den vorangegangen Ausführungen ist zu entnehmen, dass diese Lernapp noch vi
 Mögliche Erweiterungen der Nachfolgeversionen, beginnend bei **v2.0.1**, sind nachstehend stichpunktartig umrissen:
 
 
-####a) Funktionale Anforderungen an die App:
+#####a) Funktionale Anforderungen an die App:
 
 * Angebot: Die GUI wurde vorbereitet auf das geplante Angebot mehrerer Fragekategorien, welches in **v2.0.1** realisiert werden SOLL (s. [2.1. Theoretische Aspekte einer Lernsoftware](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#21-theoretische-aspekte-einer-lernsoftware)).
 
@@ -822,7 +828,7 @@ Mögliche Erweiterungen der Nachfolgeversionen, beginnend bei **v2.0.1**, sind n
   * https://www.mediawiki.org/wiki/API:Main_page/de
 
 
-####b) Funktionale Anforderungen an die Website:
+#####b) Funktionale Anforderungen an die Website:
 
 * Webpage-Prototyp: SOLL u.a. dem Download der App sowie dem Speichern, Import und Export von Fragen/Antworten dienen:
 
@@ -841,7 +847,7 @@ Mögliche Erweiterungen der Nachfolgeversionen, beginnend bei **v2.0.1**, sind n
 * Entwicklung mit Webframework z.B. Bootstrap, ein auf CSS/LESS und JavaScript basierendes UI-Framework; für diverse Funktionaltitäten, wie Bentnutzerkontensteuerung und Authentifizierung sind gegebenfalls andere Frameworks und zusätzlich ein Content Management System notwendig (z.B. Ruby on Rails, Silverstripe)
 
 
-####c) Nicht-Funktionale Anforderungen an die App und an die Website (beispielhaft):
+#####c) Nicht-Funktionale Anforderungen an die App und an die Website (beispielhaft):
 
 * Look and feel: Die App und die Website SOLLEN für Jugendliche ab 13 Jahren verständlich und bedienbar sein.
 
@@ -902,4 +908,3 @@ SEO    Search Engine Optimization
 u.a.    unter anderem
 
 USP    Unique Selling Proposition
-
