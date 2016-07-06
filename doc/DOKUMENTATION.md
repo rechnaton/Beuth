@@ -855,7 +855,7 @@ Mögliche Erweiterungen der Nachfolgeversionen, beginnend bei **v2.0.1**, sind n
 
 * [Tasks](https://github.com/andreasmosig/peat/blob/master/doc/TASKS.md)
 
-* [Abschlusspräsentation](https://github.com/andreasmosig/peat/blob/master/doc/DOKU/#peat.pptx)
+* [Abschlusspräsentation](https://github.com/andreasmosig/peat/blob/master/doc/DOKU/peat.pptx)
 
 * [GitHub](https://github.com/andreasmosig/peat)
 
