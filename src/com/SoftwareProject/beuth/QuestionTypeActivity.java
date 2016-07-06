@@ -13,6 +13,14 @@ import android.annotation.TargetApi;
 import android.os.Build;
 import android.preference.PreferenceManager;
 
+/**
+ * Diese Klasse QuestionTypeActivity stellt eine Art Auswahlmenue für die verschiedenen, zur Verfügung stehenden
+ * Fragetypen "Offene Frage", Ja-Nein-Frage, Single-Choice-Frage und Multiple-Choice-Frage dar. Der User waehlt
+ * den benoetigten Fragetyp aus und wird an die entsprechende Activity des Fragetyps weiter geleitet. 
+ * 
+ * @author #peatTeam
+ * @version v1.0.1
+ */
 @TargetApi(Build.VERSION_CODES.M)
 public class QuestionTypeActivity extends AppCompatActivity {
 	
@@ -24,11 +32,13 @@ public class QuestionTypeActivity extends AppCompatActivity {
 		Thread.setDefaultUncaughtExceptionHandler(new ExceptionHandler(this));
 		setContentView(R.layout.activity_question_type);
 		
+		/* Definition der Buttonobjekte fuer den onClickListener */
 		Button openQuestion = (Button) findViewById(R.id.addQuestionTypeOpen);
 		Button yesNoQuestion = (Button) findViewById(R.id.addQuestionTypeYesNo);
 		Button singleChoiceQuestion = (Button) findViewById(R.id.addQuestionTypeSingleChoice);
 		Button mulitpleChoiceQuestion = (Button) findViewById(R.id.addQuestionTypeMultipleChoice);
 		
+		/* Aufruf der entsprechenden Activity auf dem jeweiligen Button */
 		openQuestion.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
@@ -67,7 +77,8 @@ public class QuestionTypeActivity extends AppCompatActivity {
 	}
 
 	/**
-	 * Diese Klasse oeffnet das Menue in der Aktionsleiste, bzw. fuegt Menuepunkte hinzu, sofern diese existieren
+	 * Die ueberschriebene Methode onCreateOptionsMenu oeffnet das Menue in der Aktionsleiste, bzw. fuegt Menuepunkte hinzu,
+	 * sofern diese existieren
 	 */	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -75,8 +86,8 @@ public class QuestionTypeActivity extends AppCompatActivity {
 		return true;
 	}
 	
-	/**
-	 * Die folgenden 3 Klassen verarbeiten Klicks auf das Einstellungsmenue in der Aktionsleiste
+	/*
+	 * Die folgenden 3 Methoden verarbeiten Klicks auf das Einstellungsmenue in der Aktionsleiste
 	 * und holen Daten aus EinstellungenActivity, strings.xml, preferences.xml und arrays.xml
 	 */
 		@Override
