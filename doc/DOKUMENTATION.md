@@ -4,18 +4,22 @@ Erlerntes spielend wiederholen und nie wieder vergessen!
 
 ![peat](https://github.com/andreasmosig/peat/blob/master/doc/DOKU/peat.jpg)
 
-####Version: v1.0.1
+####Version:
+######v1.0.1
 
-####Ausgabe: 1
+####Ausgabe:
+######1
 
 ####Autoren/Entwickler:
-####Steven Pawellek, Thomas Ricklinkat, Andreas Mosig
+######Steven Pawellek, Thomas Ricklinkat, Andreas Mosig
 
-####Kontakt: mailtopeat@gmail.com
+####Kontakt:
+<mailtopeat@gmail.com>
 
-####Stand: 06.07.2016
+####Stand:
+######06.07.2016
 
-####Beuth Hochschule für Technik Berlin, Wirtschaftsinformatik, 4. Semester, Sommersemester 2016
+######Beuth Hochschule für Technik Berlin, Wirtschaftsinformatik, 4. Semester, Sommersemester 2016
 
 -----------------------------------------------------------------------------------------------
 
