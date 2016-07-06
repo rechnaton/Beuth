@@ -849,11 +849,13 @@ Mögliche Erweiterungen der Nachfolgeversionen, beginnend bei **v2.0.1**, sind n
 
 #6. Anhang & weiterführende Links
 
-* [Rückblick](https://github.com/andreasmosig/peat/blob/master/doc/PROTOKOLLE.md)
+* [Protokolle](https://github.com/andreasmosig/peat/blob/master/doc/PROTOKOLLE.md)
 
-* [Aktueller Stand](https://github.com/andreasmosig/peat/blob/master/doc/STATUSBERICHTE.md)
+* [Statusberichte](https://github.com/andreasmosig/peat/blob/master/doc/STATUSBERICHTE.md)
 
-* [Ausblick](https://github.com/andreasmosig/peat/blob/master/doc/TASKS.md)
+* [Tasks](https://github.com/andreasmosig/peat/blob/master/doc/TASKS.md)
+
+* [Abschlusspräsentation](https://github.com/andreasmosig/peat/blob/master/doc/DOKU/#peat.pptx)
 
 * [GitHub](https://github.com/andreasmosig/peat)
 
