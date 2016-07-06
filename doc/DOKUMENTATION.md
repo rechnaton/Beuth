@@ -19,58 +19,34 @@ Erlerntes spielend wiederholen und nie wieder vergessen!
 
 -----------------------------------------------------------------------------------------------
 
-#Gliederung
-
-#1. Einleitung
+Gliederung
+1. Einleitung
+1.1. Problemstellung und Zielsetzung der Arbeit
+1.2. Projekt-Stammdaten
+1.3. Projektidee, -ziel und -plan
+1.4. Vorgehensweise
+2. Vorbetrachtungen (IST-Analyse)
+2.1. Theoretische Aspekte einer Lernsoftware
+2.2. Vision und Geschäftsmodell
+2.3. Marktanalyse
+3. Produktdefinition und Systementwurf (SOLL-Konzept)
+3.1. Requirements
+3.2. Design und Architektur
+3.3. Konzept der Qualitätssicherung
+4. Umsetzung
+4.1. Plattform
+4.2. GUI
+4.3. Logik
+4.4. Persistenz
+4.5. Versionierung
+5. Schlussbetrachtung
+5.1. Zusammenfassung
+5.2. Erkenntnisse
+5.3. Ausblick
+6 Anhang & weiterführende Links
+7. Glossar
 
-##1.1. Problemstellung und Zielsetzung der Arbeit
-
-##1.2. Projekt-Stammdaten
-
-##1.3. Projektidee, -ziel und -plan
-
-##1.4. Vorgehensweise
-
-#2. Vorbetrachtungen (IST-Analyse)
-
-##2.1. Theoretische Aspekte einer Lernsoftware
-
-##2.2. Vision und Geschäftsmodell
-
-##2.3. Marktanalyse
-
-#3. Produktdefinition und Systementwurf (SOLL-Konzept)
-
-##3.1. Requirements
-
-##3.2. Design und Architektur
-
-##3.3. Konzept der Qualitätssicherung
-
-#4. Umsetzung
-
-##4.1. Plattform
-
-##4.2. GUI
-
-##4.3. Logik
-
-##4.4. Persistenz
-
-##4.5. Versionierung
-
-#5. Schlussbetrachtung
-
-##5.1. Zusammenfassung
-
-##5.2. Erkenntnisse
-
-##5.3. Ausblick
-
-#6 Anhang & weiterführende Links
-
-#7. Glossar
-
+-----------------------------------------------------------------------------------------------
 
 #1. Einleitung
 
@@ -88,7 +64,7 @@ Das konkrete **Projektziel** war das Entwickeln einer Implementierungsidee für 
 Das **Team \#peat** bestand zu Beginn, d.h. in der Findungsphase einer Vision, noch aus zwei Mitgliedern. Schnell wurde klar, dass die gestellten Anforderungen an das Projekt noch eine weitere Kraft erfordern würden. Im Zuge der finalen Festlegung der Idee sowie der Gruppe, galt es die nächsten Ziele und Meilensteine zu definieren. Ein [Exposé](https://github.com/andreasmosig/peat/blob/master/doc/EXPOSE.md) sollte die ersten Weichen stellen. Hierin wurden Anforderungen, theoretische Grundlagen, technische Aspekte, wie z.B. Architektur und Entwicklungsumgebung sowie Meilensteine abgesteckt.
 
 
-Die **Statusberichte** wurden alle ein bis zwei Wochen per E-Mail an den BA samt der Verlinkungen zu den Projektmanagement- sowie Versionsverwaltungsanwendungen geschickt (s. [6.](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION/#markdown-header-6 Anhang & weiterführende Links)).
+Die **Statusberichte** wurden alle ein bis zwei Wochen per E-Mail an den BA samt der Verlinkungen zu den Projektmanagement- sowie Versionsverwaltungsanwendungen geschickt (s. [6. Anhang & weiterführende Links](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION/#markdown-header-6-Anhang & weiterführende Links)).
 
 ##1.2. Projekt-Stammdaten
 
