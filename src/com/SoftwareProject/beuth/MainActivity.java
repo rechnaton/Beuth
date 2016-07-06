@@ -22,26 +22,28 @@ import android.widget.TextView;
 import android.widget.Toast;
 /**
  * 
+ * Die MainActivity ist das Herz von #peat, das Quizz.
+ * Hier werden die Daten aus der Datenbank geholt
+ * und entsprechend uber die stage ausgegeben.
+ * 
  * @author #peatTeam
  * @version v1.0.1
  */
 @TargetApi(Build.VERSION_CODES.M)
 public class MainActivity extends AppCompatActivity {
-	/**
-	 * Definition aller notwendigen Variablen
-	 */
-	Button start; /** Button Frage, leitet das Spiel ein */
-	Button buttonAnswer; /** Button Antwort, ruft die Antwort zur aktuellen Frage auf */
-	Button back; /** Button #Repeat, ruft die zurueckliegende Frage auf */
-	Button pause; /** Button Pause, speichert/pausiert die aktuelle Frage */
-	Button next; /** Button Weiter, fuft die naechste Frage auf */
-	Button wiki; /** Button Wiki, ruft die URL https://www.wikipedia.de/ auf */
-	Button google; /** Button Google, ruft die URL https://www.google.de/ auf */
-	Button returnlanding; /** Button return, ruft LandingActivity auf */
-	Button saveComments; /** Button save, speichert Kommentare */
+	// Definition aller notwendigen Variablen
+	Button start; // Button Frage, leitet das Spiel ein
+	Button buttonAnswer; // Button Antwort, ruft die Antwort zur aktuellen Frage auf
+	Button back; // Button #Repeat, ruft die zurueckliegende Frage auf
+	Button pause; // Button Pause, speichert/pausiert die aktuelle Frage
+	Button next; // Button Weiter, fuft die naechste Frage auf
+	Button wiki; // Button Wiki, ruft die URL https://www.wikipedia.de/ auf
+	Button google; // Button Google, ruft die URL https://www.google.de/ auf
+	Button returnlanding; // Button return, ruft LandingActivity auf
+	Button saveComments; // Button save, speichert Kommentare
 	private Question currentQuestion;
 	
-	TextView stage; /** Ausgabe, Mensch-Computer-Kommunikation */
+	TextView stage; // Ausgabe, Mensch-Computer-Kommunikation
 	
 	public static final String LOG_TAG = MainActivity.class.getSimpleName();
 	private PeatDataSource dataSource;
@@ -52,26 +54,24 @@ public class MainActivity extends AppCompatActivity {
 	String[] answers;
 	Boolean[] isCorrect;
 
-	/** Antwort-Mockup, Radio-Buttons Ja Nein */
+	// Antwort-Mockup, Radio-Buttons Ja Nein
     String answerCorrect = "Ja lautet die Antwort! Gut gemacht!";
 	String answerNotCorrect = "Die Antwort ist leider falsch!";
 		
-	/** 
-	 * Hinweis, wenn Button-Pause geklickt wird
-	 * ab Version v2.0.1
-	 */
+	// Hinweis, wenn Button-Pause geklickt wird, ab Version v2.0.1
 	String messagePause = "Frage wurde für später gespeichert!";
 	
-	/** Definition einer Radio-Button-Gruppe für geschlossene Fragen (Ja-Nein-Fragen) */
+	// Definition einer Radio-Button-Gruppe für geschlossene Fragen (Ja-Nein-Fragen)
 	private RadioGroup radioGroup;
 	private RadioGroup radioGroupComment;
 	private RadioButton radioAnswerButton;
 	
-	/** Variable für Einstellungen der App */
+	// Variable für Einstellungen der App
 	private static final int RESULT_SETTINGS = 1;
 		
 	/**
-	 * Diese Klasse holt sich die Werte der einzelnen Buttons aus strings.xml und activity_main.xml
+	 * Methode onCreate (Bundle savedInstancesState)
+	 * holt sich die Werte der einzelnen Buttons aus strings.xml und activity_main.xml
 	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -101,8 +101,11 @@ public class MainActivity extends AppCompatActivity {
 		
 		radioGroupComment = (RadioGroup) findViewById(R.id.radioComment);
 		
+		/**
+		 * back.setOnClickListener ruft mittels getNextQuestion aus der dataSource die letzte Frage zurueck
+		 */
 		back.setOnClickListener(new View.OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
 				try {
@@ -116,6 +119,9 @@ public class MainActivity extends AppCompatActivity {
 			}
 		});
 		
+		/**
+		 * pause.setOnClickListener fuer Version v2.0.1 geplant
+		 */
 		pause.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
@@ -124,6 +130,9 @@ public class MainActivity extends AppCompatActivity {
 			}
 		});
 		
+		/**
+		 * next.setOnClickListener ruft mittels getNextQuestion aus der dataSource die naechste Frage auf
+		 */
 		next.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
@@ -141,6 +150,9 @@ public class MainActivity extends AppCompatActivity {
 			}
 		});
 		
+		/**
+		 * wiki.setOnClickListener ruft bei Button-Klick URL wikipedia.de auf
+		 */
 		wiki.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
@@ -150,6 +162,9 @@ public class MainActivity extends AppCompatActivity {
 			}
 		});
 		
+		/**
+		 * google.setOnClickListener ruft bei Button-Klick URL google.de auf
+		 */
 		google.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
@@ -159,6 +174,9 @@ public class MainActivity extends AppCompatActivity {
 			}
 		});
 		
+		/**
+		 * returnlanding.setOnClickListener ruft bei Button-Klick LandingActivity auf
+		 */
 		returnlanding.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
@@ -168,10 +186,13 @@ public class MainActivity extends AppCompatActivity {
 			}
 		});
 		
+		/**
+		 * Bewertung der Frage, ab Version v2.0.1 gespeichert
+		 */
 		EditText commentAnswer = (EditText) findViewById(R.id.commentAnswer);
-		/** Eingabe in einen String umwandeln */
+		// Eingabe in einen String umwandeln
 		commentAnswers = commentAnswer.getText().toString();
-		/** Textfeld leeren */
+		// Textfeld leeren
 		commentAnswer.setText("");
 		
 		saveComments.setOnClickListener(new View.OnClickListener() {
@@ -186,7 +207,7 @@ public class MainActivity extends AppCompatActivity {
 	}
 
 	/**
-	 * Diese Klasse oeffnet das Menue in der Aktionsleiste, bzw. fuegt Menuepunkte hinzu, sofern diese existieren
+	 * onCreateOptionsMenu oeffnet das Menue in der Aktionsleiste, bzw. fuegt Menuepunkte hinzu, sofern diese existieren
 	 */	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -195,59 +216,60 @@ public class MainActivity extends AppCompatActivity {
 	}
 
 	/**
-	 * Die folgenden 3 Klassen verarbeiten Klicks auf das Einstellungsmenue in der Aktionsleiste
-	 * und holen Daten aus EinstellungenActivity, strings.xml, preferences.xml und arrays.xml
+	 * onOptionsItemSelected oeffnet bei Button-Klick in der Aktionsleiste die Activity
 	 */
-		@Override
-		public boolean onOptionsItemSelected(MenuItem item) {
-			int id = item.getItemId();
-			if (id == R.id.action_settings) {
-				startActivity(new Intent(this, EinstellungenActivity.class));
-				return true;
-			}
-			
-			switch (item.getItemId()) {
-			
-			case R.id.action_settings:
-				Intent i = new Intent(this, EinstellungenActivity.class);
-				startActivityForResult(i, RESULT_SETTINGS);
-				break;
-			}
-			return super.onOptionsItemSelected(item);
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		int id = item.getItemId();
+		if (id == R.id.action_settings) {
+			startActivity(new Intent(this, EinstellungenActivity.class));
+			return true;
 		}
 		
-		@Override
-		protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-			super.onActivityResult(requestCode, resultCode, data);
-			
-			switch (requestCode) {
-			case RESULT_SETTINGS:
-				showUserSettings();
-				break;
-			}
- 		}
+		switch (item.getItemId()) {
 		
-		private void showUserSettings() {
-			SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
-			StringBuilder builder = new StringBuilder();
- 
-			builder.append("\n Benutzername: "
-                + sharedPrefs.getString("prefUsername", "NULL"));
- 
-			builder.append("\n Bericht senden:"
-                + sharedPrefs.getBoolean("prefSendReport", false));
- 
-			builder.append("\n Wiederholung: "
-                + sharedPrefs.getString("prefSyncFrequency", "NULL"));
- 
-			TextView settingsTextView = (TextView) findViewById(R.id.textUserSettings);
- 
-			settingsTextView.setText(builder.toString());
+		case R.id.action_settings:
+			Intent i = new Intent(this, EinstellungenActivity.class);
+			startActivityForResult(i, RESULT_SETTINGS);
+			break;
 		}
+		return super.onOptionsItemSelected(item);
+	}
+		
+	/**
+	 * onActivityResult ruft showUserSettings auf, wenn RESULT_SETTINGS instanziiert wurde
+	 */
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		super.onActivityResult(requestCode, resultCode, data);
+		
+		switch (requestCode) {
+		case RESULT_SETTINGS:
+			showUserSettings();
+			break;
+		}
+ 	}
+		
+	/**
+	 * showUserSettings baut via preferences, arras sowie strings die EinstellungenActivity auf
+	 */
+	private void showUserSettings() {
+		SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
+		StringBuilder builder = new StringBuilder();
+ 			builder.append("\n Benutzername: "
+               + sharedPrefs.getString("prefUsername", "NULL"));
+ 			builder.append("\n Bericht senden:"
+               + sharedPrefs.getBoolean("prefSendReport", false));
+ 			builder.append("\n Wiederholung: "
+               + sharedPrefs.getString("prefSyncFrequency", "NULL"));
+ 			TextView settingsTextView = (TextView) findViewById(R.id.textUserSettings);
+ 			settingsTextView.setText(builder.toString());
+	}
     
 	/**
-	 * Diese Klasse prueft, welcher Radio-Button ausgewaehlt wurde
-	 * und erzeugt je nach Wahl bei Klick auf Button Antwort
+	 * addListenerOnButton prueft, welcher Radio-Button ausgewaehlt wurde
+	 * kommuniziert mit der dataSource via currentQuestion und getIsCorrectAnswers
+	 * und erzeugt je nach Wahl bei Klick auf Button Antwort (answerCorrect, answerNotCorrect)
 	 * einen Sound und einen Toast (Ja/Nein)
 	 */
     public void addListenerOnButton() {
@@ -264,10 +286,10 @@ public class MainActivity extends AppCompatActivity {
     		public void onClick(View v) {
     		Boolean[] isCorrectArray;
     		Boolean correctAnswer = false;
-    		/** Holt ausgewaehlten Radio-Button von der RadioGroup */
+    		// Holt ausgewaehlten Radio-Button von der RadioGroup
     		int selectedId = radioGroup.getCheckedRadioButtonId();
 
-    		/** Findet den Radio-Button anhand der zurueckgegebenen ID */
+    		// Findet den Radio-Button anhand der zurueckgegebenen ID
     		radioAnswerButton = (RadioButton) findViewById(selectedId);
 
     		isCorrectArray = currentQuestion.getIsCorrectAnswers();

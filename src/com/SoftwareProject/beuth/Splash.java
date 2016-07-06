@@ -8,11 +8,11 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
 /**
- * Wird initial beim Start der App aufgerufen.
+ * Splash wird initial beim Start der App aufgerufen.
  * Splash enthaelt Bild und Musik.
  * Auﬂerdem wird beim Start die Datenbank geloescht.
  * 
- * @author AndreasMosig
+ * @author #peatTeam
  * @version v1.0.1
  * 
  */
@@ -21,6 +21,11 @@ public class Splash extends AppCompatActivity {
 
 	MediaPlayer startSong;
 	
+	/**
+	 * onCreate(Bundle savedInstanceState) startet den MadiaPlayer aus res/raw,
+	 * oeffnet den splash aus res/drawable bzw. res/layout
+	 * und leitet weiter auf die MAIN (LandingActivity).
+	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -44,6 +49,9 @@ public class Splash extends AppCompatActivity {
 		timer.start();
 	}
 	
+	/**
+	 * onPause beendet den splashsound
+	 */
 	@Override
 	protected void onPause() {
 		super.onPause();

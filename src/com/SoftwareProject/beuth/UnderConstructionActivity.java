@@ -8,10 +8,10 @@ import android.os.Build;
 import android.os.Bundle;
 
 /**
- * Wird aufgerufen, sofern es eine bestimtmte Activity
+ * UnderConstructionActivity wird aufgerufen, sofern es eine bestimtmte Activity
  * noch nicht gibt bzw. in Arbeit ist, d.h. geplant fuer v2.0.1.
  * 
- * @author AndreasMosig
+ * @author #peatTeam
  * @version v1.0.1
  * 
  */
