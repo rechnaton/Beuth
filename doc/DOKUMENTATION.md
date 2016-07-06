@@ -20,31 +20,56 @@ Erlerntes spielend wiederholen und nie wieder vergessen!
 -----------------------------------------------------------------------------------------------
 
 Gliederung
-1. Einleitung
-1.1. Problemstellung und Zielsetzung der Arbeit
-1.2. Projekt-Stammdaten
-1.3. Projektidee, -ziel und -plan
-1.4. Vorgehensweise
-2. Vorbetrachtungen (IST-Analyse)
-2.1. Theoretische Aspekte einer Lernsoftware
-2.2. Vision und Geschäftsmodell
-2.3. Marktanalyse
-3. Produktdefinition und Systementwurf (SOLL-Konzept)
-3.1. Requirements
-3.2. Design und Architektur
-3.3. Konzept der Qualitätssicherung
-4. Umsetzung
-4.1. Plattform
-4.2. GUI
-4.3. Logik
-4.4. Persistenz
-4.5. Versionierung
-5. Schlussbetrachtung
-5.1. Zusammenfassung
-5.2. Erkenntnisse
-5.3. Ausblick
-6 Anhang & weiterführende Links
-7. Glossar
+
+[1. Einleitung](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#1-einleitung)
+
+[1.1. Problemstellung und Zielsetzung der Arbeit](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#11-problemstellung-und-zielsetzung-der-arbeit)
+
+[1.2. Projekt-Stammdaten](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#12-projekt-stammdaten)
+
+[1.3. Projektidee, -ziel und -plan](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#13-projektidee--ziel-und--plan)
+
+[1.4. Vorgehensweise](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#14-vorgehensweise)
+
+[2. Vorbetrachtungen (IST-Analyse)](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#2-vorbetrachtungen-ist-analyse)
+
+[2.1. Theoretische Aspekte einer Lernsoftware](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#21-theoretische-aspekte-einer-lernsoftware)
+
+[2.2. Vision und Geschäftsmodell](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#22-vision-und-gesch%C3%A4ftsmodell)
+
+[2.3. Marktanalyse](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#23-marktanalyse)
+
+[3. Produktdefinition und Systementwurf (SOLL-Konzept)](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#3-produktdefinition-und-systementwurf-soll-konzept)
+
+[3.1. Requirements](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#31-requirements)
+
+[3.2. Design und Architektur](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#32-design-und-architektur)
+
+[3.3. Konzept der Qualitätssicherung](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#33-konzept-der-qualit%C3%A4tssicherung)
+
+[4. Umsetzung](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#4-umsetzung)
+
+[4.1. Plattform](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#41-plattform)
+
+[4.2. GUI](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#42-gui)
+
+[4.3. Logik](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#43-logik)
+
+[4.4. Persistenz](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#44-persistenz)
+
+[4.5. Versionierung](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#45-versionierung)
+
+[5. Schlussbetrachtung](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#5-schlussbetrachtung)
+
+[5.1. Zusammenfassung](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#51-zusammenfassung)
+
+[5.2. Erkenntnisse](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#52-erkenntnisse)
+
+[5.3. Ausblick](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#53-ausblick)
+
+[6. Anhang & weiterführende Links](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#6-anhang--weiterf%C3%BChrende-links)
+
+[7. Glossar](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#7-glossar)
 
 -----------------------------------------------------------------------------------------------
 
@@ -64,7 +89,7 @@ Das konkrete **Projektziel** war das Entwickeln einer Implementierungsidee für 
 Das **Team \#peat** bestand zu Beginn, d.h. in der Findungsphase einer Vision, noch aus zwei Mitgliedern. Schnell wurde klar, dass die gestellten Anforderungen an das Projekt noch eine weitere Kraft erfordern würden. Im Zuge der finalen Festlegung der Idee sowie der Gruppe, galt es die nächsten Ziele und Meilensteine zu definieren. Ein [Exposé](https://github.com/andreasmosig/peat/blob/master/doc/EXPOSE.md) sollte die ersten Weichen stellen. Hierin wurden Anforderungen, theoretische Grundlagen, technische Aspekte, wie z.B. Architektur und Entwicklungsumgebung sowie Meilensteine abgesteckt.
 
 
-Die **Statusberichte** wurden alle ein bis zwei Wochen per E-Mail an den BA samt der Verlinkungen zu den Projektmanagement- sowie Versionsverwaltungsanwendungen geschickt (s. [6. Anhang & weiterführende Links](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#6-Anhang & weiterführende Links)).
+Die **Statusberichte** wurden alle ein bis zwei Wochen per E-Mail an den BA samt der Verlinkungen zu den Projektmanagement- sowie Versionsverwaltungsanwendungen geschickt (s. [6. Anhang & weiterführende Links](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#6-anhang--weiterf%C3%BChrende-links)).
 
 ##1.2. Projekt-Stammdaten
 
@@ -87,18 +112,18 @@ Die **Statusberichte** wurden alle ein bis zwei Wochen per E-Mail an den BA samt
 * Für den allgemeinen Austausch und für die Projekt- sowie interne Kommunikation mit dem BA und allen Kommilitonen, wurde eine allgemein zugängliche [Slack-Gruppe](http://beuthswtprojekt.slack.com) vom BA eingerichtet. Darüber hinaus verfügte jede Projektgruppe über ihren eigenen, projektinternen Slack-Kanal. Für das vorliegende Projekt war es der Kanal **peat**.
 
 
-* Das Projektmanagement fand via [asana.com](https://app.asana.com/0/105766113985042/105766113985043) statt, welches synchron mit dem Projekt-Slack-Kanal verbunden war. Jegliche asana-Kommunikation war und ist im Slack-Kanal nachvollziehbar (s. [5.2.][##5.2. Erkenntnisse]).
+* Das Projektmanagement fand via [asana.com](https://app.asana.com/0/105766113985042/105766113985043) statt, welches synchron mit dem Projekt-Slack-Kanal verbunden war. Jegliche asana-Kommunikation war und ist im Slack-Kanal nachvollziehbar (s. [5.2. Erkenntnisse](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#52-erkenntnisse)).
 
 
-* Für die agile Software-Entwicklung mit Scrum war ursprünglich das Arbeiten mit dem Tool [easyBacklog](https://easybacklog.com/) vorgesehen (s. [5.2.][##5.2. Erkenntnisse]).
+* Für die agile Software-Entwicklung mit Scrum war ursprünglich das Arbeiten mit dem Tool [easyBacklog](https://easybacklog.com/) vorgesehen (s. [5.2. Erkenntnisse](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#52-erkenntnisse)).
 
 
-* Das Versionsmanagement erfolgte via [GitHub](https://github.com/andreasmosig/peat). Analog zu asana liefen alle Aktivitäten im privaten Slack-Kanal zusammen und waren für den BA einsehbar (s. [5.2.][##5.2. Erkenntnisse]).
+* Das Versionsmanagement erfolgte via [GitHub](https://github.com/andreasmosig/peat). Analog zu asana liefen alle Aktivitäten im privaten Slack-Kanal zusammen und waren für den BA einsehbar (s. [5.2. Erkenntnisse](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#52-erkenntnisse)).
 
 
 ####d) Entwicklungswerkzeuge
 
-* Für die verschiedenen Komponenten und Schnittstellen sind unterschiedliche Technologien und Werkzeuge notwendig gewesen. Zum Entwickeln der [Android](https://de.wikipedia.org/wiki/Android_(Betriebssystem))-App in Java wurde Eclipse sowie dafür notwendige Plugins (SDK/AVD, (s. [4.1.][##4.1. Plattform])) verwendet.
+* Für die verschiedenen Komponenten und Schnittstellen sind unterschiedliche Technologien und Werkzeuge notwendig gewesen. Zum Entwickeln der [Android](https://de.wikipedia.org/wiki/Android_(Betriebssystem))-App in Java wurde Eclipse sowie dafür notwendige Plugins (SDK/AVD, (s. [4.1. Plattform](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#41-plattform))) verwendet.
 
 
 * Für die Erstellung des konzeptuellen und logischen Datenbankschemas wurde der DBDesigner-Fork verwendet und daraus das entsprechende SQL-DDL-Skript erzeugt und als Klasse in Eclipse eingebunden, da in der Entwicklungsumgebung bereits Bibliotheken zum Ansteuern der SQLite-Datenbank vorhanden gewesen sind.
@@ -166,7 +191,7 @@ Wie in Punkt 1.1 bereits erwähnt, war das vorrangige **Projektziel** das Entwic
 
 * Sprint 14) Quizz vor und zurück gehen (04.07.2016)
 
-* Sprint 15) Erzeugung des Abgabe-Prototypen inkl. Tests (06.07.2016)
+* Sprint 15) Erzeugung des Abgabe-Prototypen inkl. Tests (07.07.2016)
 
 * Sprint 16) Fertigstellung der Enddokumentation (06.07.2016)
 
@@ -337,7 +362,7 @@ Um dem elementaren Charakter der Anforderungen gerecht zu werden, war geplant, d
 * anschließende Konkretisierung der Requirements mit Hilfe des Tools easyBacklog im Rahmen der Product-Backlog-Erstellung
 
 
-Wie bereits im Punkt [1.4.][##1.4. Vorgehensweise]) erwähnt, wurde die Arbeit mit easyBacklog aufgegeben, so dass nur das Exposé-Use-Case-Diagramm existiert und damit dieser Punkt etwas zu kurz kam.
+Wie bereits im Punkt [1.4. Vorgehensweise](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#14-vorgehensweise)) erwähnt, wurde die Arbeit mit easyBacklog aufgegeben, so dass nur das Exposé-Use-Case-Diagramm existiert und damit dieser Punkt etwas zu kurz kam.
 
 
 ![visionäres Use-Case-Diagramm zu \#peat](https://github.com/andreasmosig/peat/blob/master/doc/UML/peat-use-case.png)
@@ -427,7 +452,7 @@ Die Designphase schloss sich (wie in der Theorie empfohlen) an die Analysephase 
 ![Konfiguration] (https://github.com/andreasmosig/peat/blob/master/doc/MOCKUPS/WEB/konfiguration.png)
 
 
-Es stellte sich früh heraus, dass bei agilen Methoden der Softwareentwicklung die Herangehensweise an das Design bzw. die Architektur eine grundlegend andere ist, als bei den klassischen Vorgehensweisen, wie dem Wasserfallmodell, bei denen auf eine lange Analyse- eine ebenfalls lange Designphase folgt. Aufgrund der zeitlichen Einschränkung und des geplanten Vorhabens, wurde auch bei dem Softwareprojekt \#peat direkt mit einem Prototyp begonnen, der die grundlegende Architektur enthielt. Dies war möglich, da die installierten Eclipse-Plugins bereits das nachfolgend etwas näher beschriebene Model View ModelView- Architekturmuster mitlieferten (AVD/-SDK-Manager, XML- und Java-spezifische Bibliotheken, SQLite, etc.). Es wurden zu Beginn nur wenige Komponenten spezifiziert, wie bspw. die splash-Seite (inkl. Musik), die MainActivity mit dem Quizz sowie grundlegende Einstellungen und die CI der App. D.h. der erste Spike repräsentierte bereits einen kleinen Ausschnitt aus dem Design der finalen App. Daraus konnte geschlossen werden, wo die Reise hingehen wird und welche Anforderungen initial nicht berücksichtigt wurden. In der Folge konnten Schwächen relativ früh aufgedeckt werden, unterstützt durch eine stetige Qualitätssicherung (Debuggen, manuelle Funktionstests, ExceptionHandler, s. [3.4.][##3.4. Konzept der Qualitätssicherung]). Der jeweils nächste Meilenstein konnte den Designbereich stetig iterativ erweitern und optimieren.
+Es stellte sich früh heraus, dass bei agilen Methoden der Softwareentwicklung die Herangehensweise an das Design bzw. die Architektur eine grundlegend andere ist, als bei den klassischen Vorgehensweisen, wie dem Wasserfallmodell, bei denen auf eine lange Analyse- eine ebenfalls lange Designphase folgt. Aufgrund der zeitlichen Einschränkung und des geplanten Vorhabens, wurde auch bei dem Softwareprojekt \#peat direkt mit einem Prototyp begonnen, der die grundlegende Architektur enthielt. Dies war möglich, da die installierten Eclipse-Plugins bereits das nachfolgend etwas näher beschriebene Model View ModelView- Architekturmuster mitlieferten (AVD/-SDK-Manager, XML- und Java-spezifische Bibliotheken, SQLite, etc.). Es wurden zu Beginn nur wenige Komponenten spezifiziert, wie bspw. die splash-Seite (inkl. Musik), die MainActivity mit dem Quizz sowie grundlegende Einstellungen und die CI der App. D.h. der erste Spike repräsentierte bereits einen kleinen Ausschnitt aus dem Design der finalen App. Daraus konnte geschlossen werden, wo die Reise hingehen wird und welche Anforderungen initial nicht berücksichtigt wurden. In der Folge konnten Schwächen relativ früh aufgedeckt werden, unterstützt durch eine stetige Qualitätssicherung (Debuggen, manuelle Funktionstests, ExceptionHandler, s. [3.3. Konzept der Qualitätssicherung](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#33-konzept-der-qualit%C3%A4tssicherung)). Der jeweils nächste Meilenstein konnte den Designbereich stetig iterativ erweitern und optimieren.
 
 
 In dieser Phase wurden nach und nach die Komponenten (i.e. XML-Sheets für das Layout der GUI und die Struktur der App (z.B. Android-Manifest) und Java-Klassen/-Methoden für die Logik) definiert und gestaltet. Daraus entwickelte sich die finale Struktur und Architektur. Hinzu kam die Persistenz / Datenbank.
@@ -498,7 +523,7 @@ Für \#peat kamen in Anbetracht der Zeit insbesondere folgende Tests in Frage:
 > android:targetSdkVersion="23" />
 
 
-Zur Qualitätssicherung gehörte ebenfalls, den Quellcode nachvollziehbar zu kommentieren und zu erläutern. Dies ist hilfreich für künftige Wartungen und Erweiterung (z.B. für die Version **v2.0.1**). Die geforderten und daraufhin entwickelten Funktionen (s. [3.1][##3.1. Requirements]) sind während der Erstellung und vor dem Projektabschluss auf ihre Funktionalität hin getestet worden (Funktionstest).
+Zur Qualitätssicherung gehörte ebenfalls, den Quellcode nachvollziehbar zu kommentieren und zu erläutern. Dies ist hilfreich für künftige Wartungen und Erweiterung (z.B. für die Version **v2.0.1**). Die geforderten und daraufhin entwickelten Funktionen (s. [3.1. Requirements](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#31-requirements)) sind während der Erstellung und vor dem Projektabschluss auf ihre Funktionalität hin getestet worden (Funktionstest).
 
 
 Im Allgemeinen sollte die Programmierung folgenden Mindeststandards genügen:
@@ -756,7 +781,7 @@ Mögliche Erweiterungen der Nachfolgeversionen, beginnend bei **v2.0.1**, sind n
 
 ####a) Funktionale Anforderungen an die App:
 
-* Angebot: Die GUI wurde vorbereitet auf das geplante Angebot mehrerer Fragekategorien, welches in **v2.0.1** realisiert werden SOLL (s. [2.1.][##2.1. Theoretische Aspekte einer Lernsoftware]).
+* Angebot: Die GUI wurde vorbereitet auf das geplante Angebot mehrerer Fragekategorien, welches in **v2.0.1** realisiert werden SOLL (s. [2.1. Theoretische Aspekte einer Lernsoftware](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#21-theoretische-aspekte-einer-lernsoftware)).
 
 * Quizz:
 
@@ -768,7 +793,7 @@ Mögliche Erweiterungen der Nachfolgeversionen, beginnend bei **v2.0.1**, sind n
 
 * Größe des Endgerätes: GUI (XML) SOLL auf ScrollableLayout oder FrameView umgestellt werden, um den verschiedenen Größen mobiler Endgeräte gerecht zu werden.
 
-* Settings: Eine Erweiterung der Funktionalitäten der Einstellungen-Activity SOLL erfolgen (intelligenter, selbstlernender Wiederholungsalgorithmus (s. [2.1.][##2.1. Theoretische Aspekte einer Lernsoftware]), Abbruch-/Fehlermeldung, Update-Steuerung, u.v.m.).
+* Settings: Eine Erweiterung der Funktionalitäten der Einstellungen-Activity SOLL erfolgen (intelligenter, selbstlernender Wiederholungsalgorithmus (s. [2.1. Theoretische Aspekte einer Lernsoftware](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#21-theoretische-aspekte-einer-lernsoftware)), Abbruch-/Fehlermeldung, Update-Steuerung, u.v.m.).
 
 * Persistenz: Es SOLL eine Synchronisation der lokalen Datenbank (hier: SQLite) mit einem “[Backend-as-a-Service](http://t3n.de/news/backend-as-a-service-parse-504596/)”-Anbieter wie Parse realisiert werden (alternativ mit einer Remote-Datenbank auf einem Server).
 
@@ -816,19 +841,19 @@ Mögliche Erweiterungen der Nachfolgeversionen, beginnend bei **v2.0.1**, sind n
 
 * Community: Aus der Themen- und Nutzerverwaltung sowie der Bewertung von Fragen KANN, unterstützt durch eine webbasierte Lösung, der Gedanke von Contributors und Followern verfolgt werden.
 
-#6 Anhang & weiterführende Links
+#6. Anhang & weiterführende Links
 
-* Rückblick
+* [Rückblick](https://github.com/andreasmosig/peat/blob/master/doc/PROTOKOLLE.md)
 
-* Aktueller Stand
+* [Aktueller Stand](https://github.com/andreasmosig/peat/blob/master/doc/STATUSBERICHTE.md)
 
-* Ausblick
+* [Ausblick](https://github.com/andreasmosig/peat/blob/master/doc/TASKS.md)
 
-* GitHub
+* [GitHub](https://github.com/andreasmosig/peat)
 
-* Projektmanagement (asana)
+* [Projektmanagement (asana)](https://app.asana.com/0/105766113985042/list)
 
-* Slack-Kanal
+* [Slack-Kanal](https://beuthswtprojekt.slack.com/?redir=%2Fmessages%2Fpeat%2F)
 
 #7. Glossar
 
