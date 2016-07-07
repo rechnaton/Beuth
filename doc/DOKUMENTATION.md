@@ -796,7 +796,7 @@ Mögliche Erweiterungen der Nachfolgeversionen, beginnend bei **v2.0.1**, sind n
 
 * Größe des Endgerätes: GUI (XML) SOLL auf ScrollableLayout oder FrameView umgestellt werden, um den verschiedenen Größen mobiler Endgeräte gerecht zu werden.
 
-* Settings: Eine Erweiterung der Funktionalitäten der Einstellungen-Activity SOLL erfolgen (intelligenter, selbstlernender Wiederholungsalgorithmus (s. [2.1. Theoretische Aspekte einer Lernsoftware](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#21-theoretische-aspekte-einer-lernsoftware)), Abbruch-/Fehlermeldung, Update-Steuerung, u.v.m.).
+* Settings: Eine Erweiterung der Funktionalitäten der Einstellungen-Activity SOLL erfolgen (intelligenter, selbstlernender Wiederholungsalgorithmus (s. [2.1. Theoretische Aspekte einer Lernsoftware](https://github.com/andreasmosig/peat/blob/master/doc/DOKUMENTATION.md#21-theoretische-aspekte-einer-lernsoftware)), Abbruch-/Fehlermeldung, Update-Steuerung, Benutzer- sowie Themenverwaltung u.v.m.).
 
 * Persistenz: Es SOLL eine Synchronisation der lokalen Datenbank (hier: SQLite) mit einem “[Backend-as-a-Service](http://t3n.de/news/backend-as-a-service-parse-504596/)”-Anbieter wie Parse realisiert werden (alternativ mit einer Remote-Datenbank auf einem Server).
 
