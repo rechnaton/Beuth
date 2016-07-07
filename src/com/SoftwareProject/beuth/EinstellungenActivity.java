@@ -10,9 +10,9 @@ import android.preference.PreferenceManager;
 import android.widget.Toast;
 
 /**
- * Einstellungen der App.
+ * EinstellungenActivity verwaltet die Einstellungen der App.
  * 
- * @author AndreasMosig
+ * @author #peatTeam
  * @version v1.0.1
  * 
  */
@@ -30,7 +30,7 @@ public class EinstellungenActivity extends PreferenceActivity
     Preference themenlistePref = findPreference(getString(R.string.themes_title));
 	themenlistePref.setOnPreferenceChangeListener(this);
 
-	/** onPreferenceChange sofort aufrufen mit der in SharedPreferences gespeicherten Themenliste */
+	// onPreferenceChange sofort aufrufen mit der in SharedPreferences gespeicherten Themenliste
 	SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
 	String gespeicherteThemenliste = sharedPrefs.getString(themenlistePref.getKey(), "");
 	onPreferenceChange(themenlistePref, gespeicherteThemenliste);

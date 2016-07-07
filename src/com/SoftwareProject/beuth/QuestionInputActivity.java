@@ -13,12 +13,17 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
+/**
+ * Die Klasse QuestionInputActivity liest die Eingabefelder für den Fragetyp "Ja-Nein-Frage" aus und ueberfuehrt diese
+ * in ein Frageobjekt, welches anschliessend in der Datenbank gespeichert wird. 
+ * 
+ * @author #peatTeam
+ * @version v1.0.1
+ */
 @TargetApi(Build.VERSION_CODES.M)
 public class QuestionInputActivity extends AppCompatActivity {
 	
-	/**
-	 * Deklaration aller für Erzeugung des Question-Objektes notwendigen Variablen sowie der SQLite-Datenbank
-	 */
+	/* Deklaration aller für Erzeugung des Question-Objektes notwendigen Variablen sowie der SQLite-Datenbank */
 	private String QuestionTypeTitle;
 	private String questionText;
 	private String questionTheme;
@@ -105,6 +110,7 @@ public class QuestionInputActivity extends AppCompatActivity {
 				RadioGroup radioGroupCorrect = (RadioGroup) findViewById(R.id.radioQuestionCorrect);
 				radioGroupCorrect.check(R.id.radioQuestionYes);
 				
+				// Erfolgsmeldung auf dem Bildschirm
 		        Toast.makeText(QuestionInputActivity.this, "Frage gespeichert.", Toast.LENGTH_LONG).show();
 		        
 			}
