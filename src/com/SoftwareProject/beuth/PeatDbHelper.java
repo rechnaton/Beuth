@@ -6,18 +6,22 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
-/*Hilfsklasse mit deren Hilfe die SQLite-Datenbank erstellt wird
+/** 
+ * Klasse mit deren Hilfe die SQLite-Datenbank erstellt wird und alle Methoden zum Loggen und Schreiben von Daten in die DB bereitgestellt wird
  * enthält weiterhin wichtige Konstanten
  * 		wie Tabellennamen,
  * 		Datenbankversion, 
- * 		oder Namen der Spalten 
- * */
+ * 		oder Namen der Spalten
+ * @author Steven Kühl-Pawellek
+ * @version v1.0.1
+ */
 public class PeatDbHelper extends SQLiteOpenHelper{
 
     private static final String LOG_TAG = PeatDbHelper.class.getSimpleName();
 
     public static final String DB_NAME = "peat.db";
     public static final int DB_VERSION = 1;
+    public static final Boolean isDebugVersion = true;
 
     public static final String TABLE_QUESTIONTYPE = "QuestionType";
     public static final String TABLE_THEMES = "Themes";
@@ -29,8 +33,6 @@ public class PeatDbHelper extends SQLiteOpenHelper{
     public static final String TABLE_PEATUSER_HAS_THEMES = "PeatUser_has_Themes";
     public static final String TABLE_HISTORIEREPLIES = "HistorieReplies";
 
-    
-  
     public static final String SQL_CREATE_QUESTIONTYPE =
     	"CREATE TABLE " + TABLE_QUESTIONTYPE +
     	"(idQuestionType INTEGER   NOT NULL , qt_title VARCHAR(255)   NOT NULL UNIQUE, qt_explanation VARCHAR(255), PRIMARY KEY(idQuestionType));";
@@ -110,13 +112,24 @@ public class PeatDbHelper extends SQLiteOpenHelper{
     	"CREATE INDEX HistorieReplies_FKIndex1 ON HistorieReplies (his_uhq_idPeatUser, his_uhq_idQuestions);" +
     	"CREATE INDEX IFK_Rel_09 ON HistorieReplies (his_uhq_idPeatUser, his_uhq_idQuestions);";
 
-
+	/**
+	 * Konstruktor der Klasse
+	 * - erzeugt die Datenbank
+	 * 
+	 * @param Context context
+	 */
     public PeatDbHelper(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
         Log.d(LOG_TAG, "DbHelper hat die Datenbank: " + getDatabaseName() + " erzeugt.");
     }
-
-    // Die onCreate-Methode wird nur aufgerufen, falls die Datenbank noch nicht existiert
+    
+    /**
+     * Die onCreate-Methode wird nur aufgerufen, falls die Datenbank noch nicht existiert.
+     * Alle Tabellen werden inkl. Verknüpfungen angelegt. Darüber hinaus werden initial die wichtigsten Daten eingefügt.
+     * @see android.database.sqlite.SQLiteOpenHelper#onCreate(android.database.sqlite.SQLiteDatabase)
+     * 
+     * @param SQLiteDatabase db Referenz zur Datenbank
+     */
     @Override
     public void onCreate(SQLiteDatabase db) {
         try {
@@ -135,7 +148,7 @@ public class PeatDbHelper extends SQLiteOpenHelper{
             CreateSQL(db, "Index 4", SQL_CREATE_INDEX4);
             CreateSQL(db, "Index 5", SQL_CREATE_INDEX5);
             CreateSQL(db, "Index 6", SQL_CREATE_INDEX6);
-            db.execSQL("INSERT INTO Peatuser (us_name) VALUES('Steven')");
+            execSQL("INSERT INTO Peatuser (us_name) VALUES('Steven')", db);
             putNewThemeInDB("Mathematik", "Allgemeine Fragen zu mathematischen Problemen", db);
             putNewThemeInDB("Physik", "Allgemeine Fragen zur Physik", db);
             putNewThemeInDB("Informatik", "Allgemeine Fragen zur Informatik und Computern", db);
@@ -173,45 +186,115 @@ public class PeatDbHelper extends SQLiteOpenHelper{
         }
     }
     
+    /**
+     * Hilfsmethode zum Anlegen von Tabellen inkl. Logging
+     * 
+     * @param SQLiteDatabase db Referenz zur Datenbank
+     * @param String tablename Name der neu anzulegenden Tabelle
+     * @param String SQL_CREATE SQL Befehl zum anlegen der Tabelle
+     */
     private void CreateSQL(SQLiteDatabase db, String tablename, String SQL_CREATE){
-    	Log.d(LOG_TAG, "Die Tabelle " + tablename + " wird mit SQL-Befehl: " + SQL_CREATE + " angelegt.");
-        db.execSQL(SQL_CREATE);
+        execSQL(SQL_CREATE, db);
     }
     
+    /**
+     * Methode zum Einfügen von Daten in die Tabelle QuestionType per SQL-Befehl INSERT
+     * Diese Tabelle verwaltet die Fragetypen.
+     * 
+     * @param SQLiteDatabase db Referenz zur Datenbank
+     * @param String title Name des neu anzulegenden Fragetyps
+     * @param String explanation Erklärung des Fragetyps
+     */
     private void putNewQuestionTypeInDB(String title, String explanation, SQLiteDatabase db){
-    	db.execSQL("INSERT INTO QuestionType (qt_title, qt_explanation) VALUES('" + title + "', '" + explanation +"')");
+    	execSQL("INSERT INTO QuestionType (qt_title, qt_explanation) VALUES('" + title + "', '" + explanation +"')", db);
     }
-    
+
+    /**
+     * Methode zum Einfügen von Daten in die Tabelle Themes per SQL-Befehl INSERT
+     * Diese Tabelle verwaltet die Themen.
+     * 
+     * @param SQLiteDatabase db Referenz zur Datenbank
+     * @param String title Name des neu anzulegenden Themas
+     * @param String explanation Erklärung des Themas
+     */    
     private void putNewThemeInDB (String title, String explanation, SQLiteDatabase db) {
-    	db.execSQL("INSERT INTO Themes (th_title, th_explanation) VALUES ('"+ title +"', '" + explanation + "')");
+    	execSQL("INSERT INTO Themes (th_title, th_explanation) VALUES ('"+ title +"', '" + explanation + "')", db);
     }
     
+    /**
+     * Methode zum Einfügen von Daten in die Tabelle Questions und Answers per SQL-Befehl INSERT
+     * Diese Tabelle verwalten die Fragen und Antworten. 
+     * 
+     * Besonderheiten: In der SQLite Datenbank werden Booleanwerte nicht als true und false gespeichert, sondern als 0 und 1.
+     * Daher müssen die Werte für die Datenbank "übersetzt" werden.
+     * 
+     * @param Question oQuestion Frageobjekt inkl. Antworten
+     * @param SQLiteDatabase db Referenz zur Datenbank
+     */    
     public void putQuestionInDB(Question oQuestion, SQLiteDatabase db) {
-    	db.execSQL("INSERT INTO Questions (qst_idQuestionType, qst_text) VALUES((SELECT MAX(idQuestionType) FROM QuestionType WHERE qt_title ='" + oQuestion.getQuestionTypeTitle() +"'), '" + oQuestion.getQuestionText() +"')");
     	String[] answers;
+    	String theme;
     	Boolean[] bool_isCorrect;
+    	Integer boolSqlite =0;
     	Integer i;
-    	Integer i_correct;
+    	String sSql;
+    	sSql = "INSERT INTO " + TABLE_QUESTIONS + " (qst_idQuestionType,qst_text) VALUES(" + getIdFromQuestionTypeTitle(oQuestion.getQuestionTypeTitle(), db) + 
+    			", '" + oQuestion.getQuestionText() +"')";
+    	Log.d(LOG_TAG, sSql);
+    	execSQL(sSql, db);
+    	theme = oQuestion.getQuestionTheme();
     	answers = oQuestion.getAnswers();
     	bool_isCorrect = oQuestion.getIsCorrectAnswers();
+
         for (i=0; i<answers.length; i++) {
-        	if (bool_isCorrect[i] == true) {
-        		i_correct = 1;
+        	if (bool_isCorrect [i] == true) {
+        		boolSqlite = 1;
         	}
         	else {
-        		i_correct = 0;
+        		boolSqlite = 0;
         	}
-        	db.execSQL("INSERT INTO Answers (as_idQuestions, as_text, as_isCorrect) VALUES ((SELECT MAX(idQuestions) FROM Questions WHERE qst_text='" + oQuestion.getQuestionText() + "'), '" + answers[i] + "', " + i_correct + ")");
+        	execSQL("INSERT INTO Answers (as_idQuestions, as_text, as_isCorrect) VALUES ((SELECT MAX(idQuestions) FROM Questions WHERE qst_text='" + oQuestion.getQuestionText() + "'), '" + answers[i] + "', " + boolSqlite +")", db);
         }
         try {
-        	Log.d(LOG_TAG, oQuestion.getQuestionTheme());
-        db.execSQL("INSERT INTO " + TABLE_THEMES_HAS_QUESTIONS + " (thq_idQuestions, thq_idThemes) VALUES ((SELECT MAX(idQuestions) FROM Questions WHERE qst_text='" + oQuestion.getQuestionText() + "'), (SELECT MAX(idThemes) FROM " + TABLE_THEMES + " WHERE th_title='" + oQuestion.getQuestionTheme() + "'))");
+        	execSQL("INSERT INTO " + TABLE_THEMES_HAS_QUESTIONS + " (thq_idQuestions, thq_idThemes) VALUES ((SELECT MAX(idQuestions) FROM Questions WHERE qst_text='" + oQuestion.getQuestionText() + "'), (SELECT MAX(idThemes) FROM Themes WHERE th_title='" + theme + "'))", db); 
         }
         catch (Exception e) {
-        	Log.d(LOG_TAG, e.toString());
+        	execSQL("INSERT INTO " + TABLE_THEMES + "(th_title) VALUES ('" + oQuestion.getQuestionTheme() + "')", db);
+        	execSQL("INSERT INTO " + TABLE_THEMES_HAS_QUESTIONS + " (thq_idQuestions, thq_idThemes) VALUES ((SELECT MAX(idQuestions) FROM Questions WHERE qst_text='" + oQuestion.getQuestionText() + "'), (SELECT MAX(idThemes) FROM Themes WHERE th_title='" + theme + "'))", db);
         }
     }
     
+    /**
+     * Methode führt SQL-Kommandos aus. Über eine globale Variable isDebugVersion wird gesteuert, ob das SQL-Kommando zusätzlich ins LogCat geschrieben wird.
+     * 
+     * @param String sSQL auszuführendes SQL Kommando
+     * @param SQLiteDatabase db Referenz zur Datenbank
+     */
+    public void execSQL(String sSQL, SQLiteDatabase db) {
+    	if (isDebugVersion) {
+    		Log.d(LOG_TAG, sSQL);
+    	}
+    	db.execSQL(sSQL);
+    }
+    
+    /**
+     * Methode ermittelt die ID eines Fragetyps.
+     * 
+     * @param String title Title des Fragetyps
+     * @param SQLiteDatabase db Referenz zur Datenbank
+     * @return Integer gibt die ID des angefragten Fragetyps als Integer zurück
+     */
+    public Integer getIdFromQuestionTypeTitle(String title, SQLiteDatabase db){
+    	Cursor mCursor = db.rawQuery("SELECT * FROM QuestionType WHERE qt_title = '" + title +"'", null);
+    	mCursor.moveToFirst();
+    	return mCursor.getInt(mCursor.getColumnIndex("idQuestionType"));
+    }
+    
+    /**
+     * Hilfsmethode
+     * Diese Methode gibt alle Tabellen im LogCat aus. Dies ermöglicht eine schnelle Fehlersuche.
+     * @param SQLiteDatabase db Referenz zur Datenbank
+     */
     public void logAllTablesofDB(SQLiteDatabase db){
     	Cursor mCursor = db.rawQuery("SELECT tbl_name FROM sqlite_master WHERE type='table';", null);
     	mCursor.moveToFirst();
@@ -222,6 +305,26 @@ public class PeatDbHelper extends SQLiteOpenHelper{
     	}
     }
     
+    /**
+     * Hilfsmethode
+     * Diese Methode gibt alle Fragetypen im LogCat aus. Dies ermöglicht eine schnelle Fehlersuche.
+     * @param SQLiteDatabase db Referenz zur Datenbank
+     */
+    public void logAllQuestionTypesofDB(SQLiteDatabase db){
+    	Cursor mCursor = db.rawQuery("SELECT * FROM QuestionType", null);
+    	mCursor.moveToFirst();
+    	Log.d(LOG_TAG, "Alle Fragetypen:");
+    	while(!mCursor.isAfterLast()) {
+    		Log.d(LOG_TAG, mCursor.getString(mCursor.getColumnIndex("qt_title")));
+    		mCursor.moveToNext();
+    	}
+    }
+
+    /**
+     * Hilfsmethode
+     * Diese Methode gibt alle Fragen mit der dazugehörigen ID im LogCat aus. Dies ermöglicht eine schnelle Fehlersuche.
+     * @param SQLiteDatabase db Referenz zur Datenbank
+     */    
     public void logAllQuestionsOfDB(SQLiteDatabase db) {
     	Cursor mCursor = db.rawQuery("SELECT * FROM Questions;", null);
     	mCursor.moveToFirst();
@@ -232,16 +335,60 @@ public class PeatDbHelper extends SQLiteOpenHelper{
     	}
     }
     
+    /**
+     * Hilfsmethode
+     * Diese Methode gibt alle Antworten mit dem Flag, ob es sich um eine korrekte oder falsche Antwort handelt, und mit der dazugehörigen ID im LogCat aus. Dies ermöglicht eine schnelle Fehlersuche.
+     * @param SQLiteDatabase db Referenz zur Datenbank
+     */  
     public void logAllAnswersOfDB(SQLiteDatabase db) {
     	Cursor mCursor = db.rawQuery("SELECT * FROM Answers;", null);
     	mCursor.moveToFirst();
     	Log.d(LOG_TAG, "Alle Antworten:");
     	while(!mCursor.isAfterLast()) {
-    		Log.d(LOG_TAG, mCursor.getString(mCursor.getColumnIndex("as_text")) + "     " + mCursor.getString(mCursor.getColumnIndex("as_isCorrect")));
+    		Log.d(LOG_TAG, mCursor.getString(mCursor.getColumnIndex("as_text")) + "     " + mCursor.getString(mCursor.getColumnIndex("as_isCorrect"))+ "     " + mCursor.getString(mCursor.getColumnIndex("idAnswers")));
     		mCursor.moveToNext();
     	}
     }
     
+    /**
+     * Hilfsmethode
+     * Diese Methode gibt die IDs der Fragen im LogCat aus, die Usern zugeordnet sind. Dies ermöglicht eine schnelle Fehlersuche.
+     * @param SQLiteDatabase db Referenz zur Datenbank
+     */  
+    public void logAllUserQuestionIDs(SQLiteDatabase db) {
+    	Cursor mCursor = db.rawQuery("SELECT uhq_idQuestions FROM PeatUser_has_Questions", null);
+    	mCursor.moveToFirst();
+    	Log.d(LOG_TAG, "Alle IDs von User_Fragen:");
+    	while(!mCursor.isAfterLast()) {
+    		Log.d(LOG_TAG, mCursor.getString(mCursor.getColumnIndex("uhq_idQuestions")));
+    		mCursor.moveToNext();
+    	}
+    }
+    
+    /**
+     * Hilfsmethode
+     * Diese Methode gibt alle Zuordnungen von Fragen zu Themen anhand der IDs im LogCat aus. Dies ermöglicht eine schnelle Fehlersuche.
+     * @param SQLiteDatabase db Referenz zur Datenbank
+     */  
+    public void logAllQuestionsOfThemesofDB(SQLiteDatabase db) {
+    	Cursor mCursor = db.rawQuery("SELECT * FROM Themes_has_Questions", null);
+    	mCursor.moveToFirst();
+    	Log.d(LOG_TAG, "Alle Themenzuordnungen:");
+    	while(!mCursor.isAfterLast()) {
+    		Log.d(LOG_TAG, mCursor.getString(mCursor.getColumnIndex("thq_idQuestions")) + "   " + mCursor.getString(mCursor.getColumnIndex("thq_idThemes")));
+    		mCursor.moveToNext();
+    	}
+    }
+    
+    /**
+     * Methode zum Durchführen von Datenbank Updates
+     * Im Prototyp werden Änderungen noch direkt auf der Datenbank durchgeführt. Dafür wird die ganze DB neu initialisiert.
+     * Für zukünftige Versionen ist ein Datenbank Update geplant.
+     * 
+     * @param SQLiteDatabase db Referenz zur Datenbank
+     * @param int oldVersion alte Version der Datenbank (vor Update)
+     * @param int newVersion neue Version der Datenbank (nach Update)
+     */  
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 

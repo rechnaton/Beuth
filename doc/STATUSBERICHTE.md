@@ -1,5 +1,5 @@
 ﻿#Status
-(Stand 03.07.2016)
+(Stand 07.07.2016)
 
 - Sprint 0) Semesterstart (29.03.2016) - DONE
 - Sprint 1) Projekt-KickOff E-Mail durch den BA (07.04.2016) - DONE
@@ -26,10 +26,10 @@
 - Sprint 6) Einrichten der Datenbank im Android-Projekt (17.05.2016) - DONE
   - SQLite-Datei inkl. Java-Klassen
   - Zielversion **v1.0.1**
-- Sprint 7) Erzeugung weiterer Prototypen bzw. Versionen - IN PROGRESS
+- Sprint 7) Erzeugung weiterer Prototypen bzw. Versionen (04.07.2016) - DONE
   - [Versionshistory](https://github.com/andreasmosig/peat/releases)
-- Sprint 8) Erzeugung des Abgabe-Prototypen (App) - IN PROGRESS
-- Sprint 9) Programmierung und Tests der Komponenten - IN PROGRESS
-- Sprint 10) Fertigstellung der Enddokumentation - IN PROGRESS
+- Sprint 8) Erzeugung des Abgabe-Prototypen (App) (07.07.2016) - DONE
+- Sprint 9) Programmierung und Tests der Komponenten (07.07.2016) - DONE
+- Sprint 10) Fertigstellung der Enddokumentation (07.07.2016) - DONE
 - Sprint 11) Abgabe und Präsentation (08.07.2016)
 - Sprint 12) Entgegenahme des Preisgeldes :wink:

@@ -21,7 +21,6 @@ import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 /**
- * 
  * Die MainActivity ist das Herz von #peat, das Quizz.
  * Hier werden die Daten aus der Datenbank geholt
  * und entsprechend uber die stage ausgegeben.
@@ -71,7 +70,10 @@ public class MainActivity extends AppCompatActivity {
 		
 	/**
 	 * Methode onCreate (Bundle savedInstancesState)
-	 * holt sich die Werte der einzelnen Buttons aus strings.xml und activity_main.xml
+	 * - holt sich die Werte der einzelnen Buttons aus strings.xml und activity_main.xml
+	 * - baut eine Datenverbindung über die Klasse PeatDataSource auf
+	 * - loggt wichtige Informationen im logCat
+	 * @param savedInstanceState
 	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -102,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
 		radioGroupComment = (RadioGroup) findViewById(R.id.radioComment);
 		
 		/**
-		 * back.setOnClickListener ruft mittels getNextQuestion aus der dataSource die letzte Frage zurueck
+		 * back.setOnClickListener ruft mittels getNextQuestion aus der dataSource die vorherige Frage auf.
 		 */
 		back.setOnClickListener(new View.OnClickListener() {
 
@@ -120,7 +122,8 @@ public class MainActivity extends AppCompatActivity {
 		});
 		
 		/**
-		 * pause.setOnClickListener fuer Version v2.0.1 geplant
+		 * pause.setOnClickListener
+		 * ab Version v2.0.1
 		 */
 		pause.setOnClickListener(new View.OnClickListener() {
 			
@@ -131,7 +134,7 @@ public class MainActivity extends AppCompatActivity {
 		});
 		
 		/**
-		 * next.setOnClickListener ruft mittels getNextQuestion aus der dataSource die naechste Frage auf
+		 * next.setOnClickListener ruft mittels getNextQuestion aus der dataSource die naechste Frage auf.
 		 */
 		next.setOnClickListener(new View.OnClickListener() {
 			
@@ -151,7 +154,7 @@ public class MainActivity extends AppCompatActivity {
 		});
 		
 		/**
-		 * wiki.setOnClickListener ruft bei Button-Klick URL wikipedia.de auf
+		 * wiki.setOnClickListener ruft bei Button-Klick URL wikipedia.de auf.
 		 */
 		wiki.setOnClickListener(new View.OnClickListener() {
 			
@@ -163,7 +166,7 @@ public class MainActivity extends AppCompatActivity {
 		});
 		
 		/**
-		 * google.setOnClickListener ruft bei Button-Klick URL google.de auf
+		 * google.setOnClickListener ruft bei Button-Klick URL google.de auf.
 		 */
 		google.setOnClickListener(new View.OnClickListener() {
 			
@@ -175,7 +178,7 @@ public class MainActivity extends AppCompatActivity {
 		});
 		
 		/**
-		 * returnlanding.setOnClickListener ruft bei Button-Klick LandingActivity auf
+		 * returnlanding.setOnClickListener ruft bei Button-Klick LandingActivity auf.
 		 */
 		returnlanding.setOnClickListener(new View.OnClickListener() {
 			
@@ -187,7 +190,8 @@ public class MainActivity extends AppCompatActivity {
 		});
 		
 		/**
-		 * Bewertung der Frage, ab Version v2.0.1 gespeichert
+		 * Bewertung der Frage
+		 * ab Version v2.0.1
 		 */
 		EditText commentAnswer = (EditText) findViewById(R.id.commentAnswer);
 		// Eingabe in einen String umwandeln
@@ -207,7 +211,7 @@ public class MainActivity extends AppCompatActivity {
 	}
 
 	/**
-	 * onCreateOptionsMenu oeffnet das Menue in der Aktionsleiste, bzw. fuegt Menuepunkte hinzu, sofern diese existieren
+	 * onCreateOptionsMenu oeffnet das Menue in der Aktionsleiste, bzw. fuegt Menuepunkte hinzu, sofern diese existieren.
 	 */	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
@@ -216,7 +220,7 @@ public class MainActivity extends AppCompatActivity {
 	}
 
 	/**
-	 * onOptionsItemSelected oeffnet bei Button-Klick in der Aktionsleiste die Activity
+	 * onOptionsItemSelected oeffnet bei Button-Klick in der Aktionsleiste die Activity.
 	 */
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
@@ -237,7 +241,7 @@ public class MainActivity extends AppCompatActivity {
 	}
 		
 	/**
-	 * onActivityResult ruft showUserSettings auf, wenn RESULT_SETTINGS instanziiert wurde
+	 * onActivityResult ruft showUserSettings auf, wenn RESULT_SETTINGS instanziiert wurde.
 	 */
 	@Override
 	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -251,7 +255,7 @@ public class MainActivity extends AppCompatActivity {
  	}
 		
 	/**
-	 * showUserSettings baut via preferences, arras sowie strings die EinstellungenActivity auf
+	 * showUserSettings baut via preferences, arras sowie strings die EinstellungenActivity auf.
 	 */
 	private void showUserSettings() {
 		SharedPreferences sharedPrefs = PreferenceManager.getDefaultSharedPreferences(this);
@@ -267,10 +271,10 @@ public class MainActivity extends AppCompatActivity {
 	}
     
 	/**
-	 * addListenerOnButton prueft, welcher Radio-Button ausgewaehlt wurde
+	 * addListenerOnButton prueft, welcher Radio-Button ausgewaehlt wurde,
 	 * kommuniziert mit der dataSource via currentQuestion und getIsCorrectAnswers
 	 * und erzeugt je nach Wahl bei Klick auf Button Antwort (answerCorrect, answerNotCorrect)
-	 * einen Sound und einen Toast (Ja/Nein)
+	 * einen Sound und einen Toast (Ja/Nein).
 	 */
     public void addListenerOnButton() {
 
