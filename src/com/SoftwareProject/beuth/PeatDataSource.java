@@ -6,12 +6,14 @@ import android.database.sqlite.SQLiteDatabase;
 import android.util.Log;
 import android.widget.Toast;
 
-/*Diese Klasse ist Data Access Object und für Verwalten der Daten verantwortlich
+/** Diese Klasse ist Data Access Object und für das Verwalten der Daten verantwortlich.
  * - unterhält die Datenbankverbindung 
  * - ist für Hinzufügen, Auslesen und Löschen von Datensätzen zuständig
  * - wandelt Datensätze in Java-Objekte um
  * 		(So dass Code der Benutzeroberfläche nicht direkt mit den Datensätzen arbeiten muss.
  * 		Dies nennt man auch mehrschichtige Architektur.)
+ * @author Steven Kühl-Pawellek
+ * @version 1.0
  * */
 
 public class PeatDataSource {
@@ -23,102 +25,118 @@ public class PeatDataSource {
     private Boolean defaultBackButtonPush = false;
     private String currentQuestionID = "";
 
-
+    /**
+     * Konstruktor zur Klasse
+     * - loggt wichtige Informationen
+     * - legt ein PeatDbHelper Objekt mit dem aktuellen Context an
+     * 
+     * @param Context context
+     */
     public PeatDataSource(Context context) {
         Log.d(LOG_TAG, "DataSource erzeugt dbHelper");
         dbHelper = new PeatDbHelper(context);
     }
     
+    /**
+     * Methode zum Öffnen der Datenbankverbindung
+     * - fragt Referenz zur Datenbank vom dbHelper Objekt ab
+     * - loggt wichtige Informationen
+     */
     public void open() {
 	    Log.d(LOG_TAG, "Eine Referenz auf die Datenbank wird jetzt angefragt.");
 	    database = dbHelper.getWritableDatabase();
 	    Log.d(LOG_TAG, "Datenbank-Referenz erhalten. Pfad zur Datenbank: " + database.getPath());
     }
     
-    public void putQuestionInDB(Question oQuestion) {
-    	String[] answers;
-    	String theme;
-    	Boolean[] bool_isCorrect;
-    	Integer boolSqlite =0;
-    	Integer i;
-    	String sSql;
-    	sSql = "INSERT INTO " + dbHelper.TABLE_QUESTIONS + " (qst_idQuestionType,qst_text) VALUES(" + getIdFromQuestionTypeTitle(oQuestion.getQuestionTypeTitle()) + 
-    			", '" + oQuestion.getQuestionText() +"')";
-    	Log.d(LOG_TAG, sSql);
-    	database.execSQL(sSql);
-    	theme = oQuestion.getQuestionTheme();
-    	answers = oQuestion.getAnswers();
-    	bool_isCorrect = oQuestion.getIsCorrectAnswers();
-
-        for (i=0; i<answers.length; i++) {
-        	if (bool_isCorrect [i] == true) {
-        		boolSqlite = 1;
-        	}
-        	else {
-        		boolSqlite = 0;
-        	}
-        	execSQL("INSERT INTO Answers (as_idQuestions, as_text, as_isCorrect) VALUES ((SELECT MAX(idQuestions) FROM Questions WHERE qst_text='" + oQuestion.getQuestionText() + "'), '" + answers[i] + "', " + boolSqlite +")");
-        }
-        try {
-        	execSQL("INSERT INTO " + dbHelper.TABLE_THEMES_HAS_QUESTIONS + " (thq_idQuestions, thq_idThemes) VALUES ((SELECT MAX(idQuestions) FROM Questions WHERE qst_text='" + oQuestion.getQuestionText() + "'), (SELECT MAX(idThemes) FROM Themes WHERE th_title='" + theme + "'))"); 
-        }
-        catch (Exception e) {
-        	execSQL("INSERT INTO " + dbHelper.TABLE_THEMES + "(th_title) VALUES ('" + oQuestion.getQuestionTheme() + "')");
-        	execSQL("INSERT INTO " + dbHelper.TABLE_THEMES_HAS_QUESTIONS + " (thq_idQuestions, thq_idThemes) VALUES ((SELECT MAX(idQuestions) FROM Questions WHERE qst_text='" + oQuestion.getQuestionText() + "'), (SELECT MAX(idThemes) FROM Themes WHERE th_title='" + theme + "'))");
-        }
-    }
     
+    /**
+     * Hilfsmethode
+     * Diese Methode gibt alle Fragetypen im LogCat aus. Dies ermöglicht eine schnelle Fehlersuche.
+     * 
+     * Besonderheit:
+     * Diese Methode hat keine eigene Implementierung. Sie nutzt die Methode der Klasse PeatDbHelper.
+     */
     public void logAllTypes() {
-    	Cursor mCursor = database.rawQuery("SELECT * FROM QuestionType", null);
-    	mCursor.moveToFirst();
-    	Log.d(LOG_TAG, mCursor.getString(mCursor.getColumnIndex("qt_title")) + ", " +
-    			mCursor.getString(mCursor.getColumnIndex("qt_explanation")));
+    	dbHelper.logAllQuestionTypesofDB(database);
     }
     
+    /**
+     * Hilfsmethode
+     * Diese Methode gibt alle Tabellen im LogCat aus. Dies ermöglicht eine schnelle Fehlersuche.
+     * 
+     * Besonderheit:
+     * Diese Methode hat keine eigene Implementierung. Sie nutzt die Methode der Klasse PeatDbHelper.
+     */
     public void logAllTablesOfDB(){
-    	Cursor mCursor = database.rawQuery("SELECT tbl_name FROM sqlite_master WHERE type='table';", null);
-    	mCursor.moveToFirst();
-    	Log.d(LOG_TAG, "Alle Tabellen:");
-    	while(!mCursor.isAfterLast()) {
-    		Log.d(LOG_TAG, mCursor.getString(mCursor.getColumnIndex("tbl_name")));
-    		mCursor.moveToNext();
-    	}
+    	dbHelper.logAllTablesofDB(database);
     }
     
-    public void logAllUserQuestionIDs() {
-    	Cursor mCursor = database.rawQuery("SELECT uhq_idQuestions FROM PeatUser_has_Questions", null);
-    	mCursor.moveToFirst();
-    	Log.d(LOG_TAG, "Alle IDs von User_Fragen:");
-    	while(!mCursor.isAfterLast()) {
-    		Log.d(LOG_TAG, mCursor.getString(mCursor.getColumnIndex("uhq_idQuestions")));
-    		mCursor.moveToNext();
-    	}
-    }
-    
+    /**
+     * Hilfsmethode
+     * Diese Methode gibt alle Fragen im LogCat aus. Dies ermöglicht eine schnelle Fehlersuche.
+     * 
+     * Besonderheit:
+     * Diese Methode hat keine eigene Implementierung. Sie nutzt die Methode der Klasse PeatDbHelper.
+     */
     public void logAllQuestionsOfDB() {
-    	Cursor mCursor = database.rawQuery("SELECT * FROM Questions;", null);
-    	mCursor.moveToFirst();
-    	Log.d(LOG_TAG, "Alle Fragen:");
-    	while(!mCursor.isAfterLast()) {
-    		Log.d(LOG_TAG, mCursor.getString(mCursor.getColumnIndex("qst_text")) + "   " + mCursor.getString(mCursor.getColumnIndex("idQuestions")));
-    		mCursor.moveToNext();
-    	}
+    	dbHelper.logAllQuestionsOfDB(database);
     }
     
+    /**
+     * Hilfsmethode
+     * Diese Methode gibt alle IDs der Fragen im LogCat aus, die Nutzern zugeordnet sind. Dies ermöglicht eine schnelle Fehlersuche.
+     * 
+     * Besonderheit:
+     * Diese Methode hat keine eigene Implementierung. Sie nutzt die Methode der Klasse PeatDbHelper.
+     */
+    public void logAllUserQuestionIDs() {
+    	dbHelper.logAllUserQuestionIDs(database);
+    }
+    
+    /**
+     * Hilfsmethode
+     * Diese Methode gibt alle Zuordnungen von Themen mit Fragen im LogCat aus. Dies ermöglicht eine schnelle Fehlersuche.
+     * 
+     * Besonderheit:
+     * Diese Methode hat keine eigene Implementierung. Sie nutzt die Methode der Klasse PeatDbHelper.
+     */
     public void logAllQuestionsOfThemesofDB() {
-    	Cursor mCursor = database.rawQuery("SELECT * FROM " + dbHelper.TABLE_THEMES_HAS_QUESTIONS, null);
-    	mCursor.moveToFirst();
-    	Log.d(LOG_TAG, "Alle Themenzuordnungen:");
-    	while(!mCursor.isAfterLast()) {
-    		Log.d(LOG_TAG, mCursor.getString(mCursor.getColumnIndex("thq_idQuestions")) + "   " + mCursor.getString(mCursor.getColumnIndex("thq_idThemes")));
-    		mCursor.moveToNext();
-    	}
+    	dbHelper.logAllQuestionsOfThemesofDB(database);
     }
     
+    /**
+     * Methode zum Speichern von Fragen in der Datenbank inkl. Antworten
+     *
+     *  Besonderheit: Diese Methode hat keine eigene Implementierung. Sie nutzt die Methode der Klasse PeatDbHelper.
+     * @param Question oQuestion Frageobjekt (inkl. Antworten)
+     */
+    public void putQuestionInDB(Question oQuestion) {
+    	dbHelper.putQuestionInDB(oQuestion, database);
+    }
+    
+    /**
+     * Methode dient für ein alternativen Aufruf der Methode getNextQuestion(Boolean backButtonPush) ohne Übergabeparameter. Dafür wurde als Default eine globale Variable festgelegt.
+     * @return Question Frageobjekt mit der Frage, die als nächstes in der GUI repräsentiert werden soll
+     */
     public Question getNextQuestion(){
     	return getNextQuestion(defaultBackButtonPush);
     }
     
+    /**
+     * Methode ermittelt die Nächste Frage. Der Zustand bestimmt, welche Frage als nächstes geliefert werden soll. Es sind 3 verschiedene Zustände möglich.
+     * Um zu navigieren wird in eine globale Variable die aktuell angezeigte Frage gespeichert.
+     * 1) Button Repeat (auch Back Button) wurde betätigt. Diese Methode sucht aus der Tabelle PeatUser_has_Questions die Frage aus, die vom Zeitstempel direkt vor der aktuell angezeigten Frage erstmalig angezeigt wurde.
+     * 2) Von einer bereits angezeigten Frage wird per Next Button die nächste Frage gewählt. Diese Methode sucht aus der Tabelle PeatUser_has_Questions die Frage aus, die vom Zeitstempel direkt nach der aktuell angezeigten Frage erstmalig angezeigt wurde.
+     * 3) Per Next Button wird die nächste Frage gewählt und die aktuelle Frage ist das Maximum aller Zeitstempel aus der Tabelle PeatUser_has_Questions. Diese Methode ermittel die nächste noch nicht angefragte Frage und legt einen Eintrag in der Tabelle PeatUser_has_Questions für diese Frage an. Kann keine Frage mehr ermittel werden, weil alle Fragen bereits angezeigt wurden, so wird eine.
+     * 
+     * Fehlerzustände:
+     * 1) Alle Fragen wurden bereits angezeigt und die Methode wird erneut aufgerufen. In diesem Fall wird eine IllegalStateException erzeugt.
+     * 2) Die Frage mit dem minimalen Zeitstempel wird angezeigt und der Parameter backButtonPush ist true. In diesem Fall wird eine IllegalStateException erzeugt.
+     * 3) Die Anwendung befindet sich am Start, es wurde noch keine Frage angezeigt und der Parameter backButtonPush ist true. In diesem Fall wird eine IllegalStateException erzeugt.
+     * 
+     *  @param Boolean backButtonPush gibt an, ob die vorherige oder die folgende Frage ausgegeben werden soll (backButtonPush=true heißt die vorherige wird ausgegeben)
+     *  @return Question Frageobjekt mit der Frage, die als nächstes in der GUI repräsentiert werden soll (abhängig von der Aktion s. o.)
+     */
     public Question getNextQuestion(Boolean backButtonPush){
 	    	Question oQuestion;
 	    	String[] answersArray;
@@ -159,7 +177,7 @@ public class PeatDataSource {
 	    	String QuestionTypeTitle = mCursorQuestions.getString(mCursorQuestions.getColumnIndex("qt_title"));
 	    	 
 	    	if (writeQuestionToTableUserHasQuestions) {
-	    		database.execSQL("INSERT INTO PeatUser_has_Questions (uhq_idQuestions, uhq_isIgnore, uhq_idPeatUser) VALUES(" + currentQuestionID + ", 0, (SELECT MAX(idPeatUser) FROM PeatUser WHERE us_name = 'Steven'))");
+	    		dbHelper.execSQL("INSERT INTO PeatUser_has_Questions (uhq_idQuestions, uhq_isIgnore, uhq_idPeatUser) VALUES(" + currentQuestionID + ", 0, (SELECT MAX(idPeatUser) FROM PeatUser WHERE us_name = 'Steven'))", database);
 	    	}
 	    	Cursor mCursorAnswers = database.rawQuery("SELECT * FROM Answers WHERE as_idQuestions = " + currentQuestionID, null);
 	    	mCursorAnswers.moveToFirst();
@@ -183,6 +201,10 @@ public class PeatDataSource {
 	    	return oQuestion;
     }
     
+    /**
+     * Methode liefert eine Übersicht aller in der Datenbank gespeicherten Themen als Array zurück.
+     * @return String[]  Array aller Themen als String
+     */
     public String[] getAllThemes(){
     	String[] themeArray = new String[0];
     	String strThema;
@@ -198,6 +220,13 @@ public class PeatDataSource {
     	return themeArray;
     }
     
+    /**
+     * Hilfsmethode
+     * Methode dient zum Erweitern eines bestehenden Arrays. Das Array wird in der Größe um einen Eintrag erweitert und der übergebene String an diese Stelle geschrieben.
+     * @param String[] array Array, das durch die Methode erweitert werden soll
+     * @param String string Text, der an die neue Stelle im Array geschrieben werden soll
+     * @return String[] erweitertes Array mit dem Text an der neuen Stelle
+     */
     private String[] addStringToArray(String[] array, String string){
     	Integer length = array.length;
     	String[] bufferArray = new String[length + 1];
@@ -210,6 +239,13 @@ public class PeatDataSource {
     	return bufferArray;
     }
     
+    /**
+     * Hilfsmethode
+     * Methode dient zum Erweitern eines bestehenden Arrays. Das Array wird in der Größe um einen Eintrag erweitert und der übergebene Boolean Wert an diese Stelle geschrieben.
+     * @param Boolean[] array Array, das durch die Methode erweitert werden soll
+     * @param Boolean bool Wert, der an die neue Stelle im Array geschrieben werden soll
+     * @return Boolean[] erweitertes Array mit dem Wert an der neuen Stelle
+     */
     private Boolean[] addBooleanToArray(Boolean[] array, Boolean bool){
     	Integer length = array.length;
     	Boolean[] bufferArray = new Boolean[length + 1];
@@ -222,23 +258,20 @@ public class PeatDataSource {
     	return bufferArray;
     }
     
-    public Integer getIdFromQuestionTypeTitle(String title){
-    	Cursor mCursor = database.rawQuery("SELECT * FROM QuestionType WHERE qt_title = '" + title +"'", null);
-    	mCursor.moveToFirst();
-    	return mCursor.getInt(mCursor.getColumnIndex("idQuestionType"));
-    }
-    
+    /**
+     * Methode zum Zurücksetzen der Tabelle PeatUser_has_Questions. Wenn bereits alle Fragen angezeigt wurden, so wird die Tabelle zurückgesetzt, um einen neuen Quizz-Lauf zu starten.
+     */
     public void resetUserHasQuestions() {
-    	database.execSQL("DELETE FROM " + dbHelper.TABLE_PEATUSER_HAS_QUESTIONS);
+    	dbHelper.execSQL("DELETE FROM " + dbHelper.TABLE_PEATUSER_HAS_QUESTIONS, database);
     }
 
+    /**
+     * Methode dient zum Schließen der Datenbank-Verbindung und erzeugt ein Log im LogCat.
+     */
     public void close() {
     	dbHelper.close();
     	Log.d(LOG_TAG, "Datenbank mit Hilfe des DbHelpers geschlossen.");
     }
     
-    private void execSQL(String sSQL) {
-       	Log.d(LOG_TAG, sSQL);
-    	database.execSQL(sSQL);
-    }
+
 }
