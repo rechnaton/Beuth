@@ -71,7 +71,9 @@ public class MainActivity extends AppCompatActivity {
 		
 	/**
 	 * Methode onCreate (Bundle savedInstancesState)
-	 * holt sich die Werte der einzelnen Buttons aus strings.xml und activity_main.xml
+	 * - holt sich die Werte der einzelnen Buttons aus strings.xml und activity_main.xml
+	 * - baut eine Datenverbindung über die Klasse PeatDataSource auf
+	 * - loggt wichtige Informationen im logCat
 	 */
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -102,7 +104,7 @@ public class MainActivity extends AppCompatActivity {
 		radioGroupComment = (RadioGroup) findViewById(R.id.radioComment);
 		
 		/**
-		 * back.setOnClickListener ruft mittels getNextQuestion aus der dataSource die letzte Frage zurueck
+		 * back.setOnClickListener ruft mittels getNextQuestion aus der dataSource die vorherige Frage auf
 		 */
 		back.setOnClickListener(new View.OnClickListener() {
 
