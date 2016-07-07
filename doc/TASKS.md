@@ -1,18 +1,17 @@
 ﻿#Tasks
-(Stand 03.07.2016)
+(Stand 07.07.2016)
 
-andauernde Tasks:
+**andauernde Tasks**:
 - Fachwissen aneignen und in Doku notieren (alle)
 - Doku parallel pflegen (alle)
 - Statusberichte zwei-wöchentlich an Herrn Prof. Edlich schicken (alle)
 - Sprints planen (alle)
 - Prototyp weiterentwickeln (nach jedem Sprint neue, lauffähige Version > releases in git) (alle)
+- Code kommentieren (alle)
+- Protokolle, Statusberichte pflegen (Thomas, Andreas)
 
-neue Tasks:
-- Projekt-Zielversion v1.0.1 bis 06.07.2016
-- Dokumentation und Präsentation fertigstellen bis 06.07.2016
-
-abschließende Tasks:
-- Use Cases (Exposé) für Enddoku aktualisieren (Thomas)
-- easyBacklog für Enddoku aktualisieren (alle)
-- DB-Schema (ERM) aktualisieren (Steven)
+**abschließende Tasks**:
+- bis 07.07.: javadoc des relevanten Codes
+- bis 07.07.: Projekt-Zielversion v1.0.1
+- bis 08.07.: Vorbereitung Präsentation
+- 08.07.: Präsentation
